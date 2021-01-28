@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FlexiForce Microview
+</name>
+</assembly>
+<members>
+<member name="T:FlexiMicro.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FlexiMicro.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FlexiMicro.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:FlexiMicro.mainForm.Form1_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+ close application and COM Port
+</member>
+<member name="M:FlexiMicro.mainForm.Form1_Load(System.Object,System.EventArgs)">
+ open Windows Form
+</member>
+<member name="M:FlexiMicro.mainForm.btnComOpen_Click(System.Object,System.EventArgs)">
+ Open Com Port 
+</member>
+<member name="M:FlexiMicro.mainForm.Button_Close_Click(System.Object,System.EventArgs)">
+ close ComPort
+</member>
+<member name="M:FlexiMicro.mainForm.Button_clear_Click(System.Object,System.EventArgs)">
+ clear TextBoxes
+</member>
+<member name="M:FlexiMicro.mainForm.Button_Record_Click(System.Object,System.EventArgs)">
+ Record
+</member>
+<member name="M:FlexiMicro.mainForm.Button_end_Click(System.Object,System.EventArgs)">
+ close app
+</member>
+<member name="M:FlexiMicro.mainForm.Button_Calibrate_Click(System.Object,System.EventArgs)">
+ Calibrate
+</member>
+<member name="M:FlexiMicro.mainForm.SerialPort1_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+ async read on secondary thread
+</member>
+<member name="M:FlexiMicro.mainForm.DoUpdate(System.Object,System.EventArgs)">
+ update received string in UI
+</member>
+</members>
+</doc>
