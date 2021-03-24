@@ -11,6 +11,14 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="position sensor data.vi" Type="VI" URL="../position sensor data.vi"/>
+		<Item Name="ProjectScale" Type="NI-DAQmx Scale">
+			<Property Name="Lin.Slope" Type="Str">1</Property>
+			<Property Name="Lin.YIntercept" Type="Str">0</Property>
+			<Property Name="Name" Type="Str">ProjectScale</Property>
+			<Property Name="PreScaledUnits" Type="Str">Volts</Property>
+			<Property Name="ScaledUnits" Type="Str"></Property>
+			<Property Name="ScaleType" Type="Str">Linear</Property>
+		</Item>
 		<Item Name="sensor input.vi" Type="VI" URL="../sensor input.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
