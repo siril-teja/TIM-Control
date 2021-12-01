@@ -1,0 +1,75 @@
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\bin\Debug\MiniComPort.exe
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\bin\Debug\MiniComPort.pdb
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\bin\Debug\MiniComPort.xml
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\ResolveAssemblyReference.cache
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.Resources.resources
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.mainForm.resources
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.exe
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.xml
+C:\Dokumente und Einstellungen\iernie\Eigene Dateien\Visual Studio 2008\Projects\MiniComPort\obj\Debug\MiniComPort.pdb
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.exe
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.xml
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.pdb
+D:\temp\Neuer Beitrag1\MiniComPort\bin\Debug\MiniComPort.exe
+D:\temp\Neuer Beitrag1\MiniComPort\bin\Debug\MiniComPort.pdb
+D:\temp\Neuer Beitrag1\MiniComPort\bin\Debug\MiniComPort.xml
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\ResolveAssemblyReference.cache
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.Resources.resources
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.mainForm.resources
+D:\temp\Neuer Beitrag1\MiniComPort\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.exe
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.xml
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.pdb
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\MiniComPort.exe
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\MiniComPort.pdb
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\MiniComPort.xml
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.vbprojResolveAssemblyReference.cache
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.Resources.resources
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.mainForm.resources
+C:\Users\rpodoloff\Desktop\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.vbprojResolveAssemblyReference.cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.Resources.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.mainForm.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.exe.config
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\bin\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\SerialPort Sample in VB.NET (C#)\VB\obj\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.exe.config
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\MiniComPort.vbprojResolveAssemblyReference.cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\MiniComPort.Resources.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\MiniComPort.mainForm.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\bin\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver2\VB\obj\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe.config
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\MiniComPort.vbprojResolveAssemblyReference.cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.Resources.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.mainForm.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\MiniComPort.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.application

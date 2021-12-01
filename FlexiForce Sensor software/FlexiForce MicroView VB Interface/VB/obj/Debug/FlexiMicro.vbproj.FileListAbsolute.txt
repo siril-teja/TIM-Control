@@ -1,0 +1,15 @@
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe.config
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.exe
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.pdb
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\bin\Debug\FlexiForce Microview.xml
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.Resources.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.mainForm.resources
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.vbproj.GenerateResource.Cache
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.exe.manifest
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiForce Microview.application
+C:\Users\rpodoloff\Desktop\Microview FlexiForce\FlexiForce MicroView VB Interface - Ver3\VB\obj\Debug\FlexiMicro.vbprojResolveAssemblyReference.cache
