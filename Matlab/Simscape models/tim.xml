@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="06/21/22||10:47:40" using="Simscape Multibody Link Version 7.2" from="SolidWorks 29.3.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="" uid="" version="104">
+<AssemblyFile name="" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="TIM assembly v6.step-1" uid="TIM assembly v6.step-1" grounded="true" entityUid="TIM assembly v6.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Thoracic vertebrae.step-1" uid="Thoracic vertebrae.step-1" grounded="true" entityUid="Thoracic vertebrae.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Ninth thoracic vertebra.step-1" uid="Ninth thoracic vertebra.step-1" grounded="true" entityUid="Ninth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Sixth thoracic vertebra.step-1" uid="Sixth thoracic vertebra.step-1" grounded="true" entityUid="Sixth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Tenth thoracic vertebra.step-1" uid="Tenth thoracic vertebra.step-1" grounded="true" entityUid="Tenth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Seventh thoracic vertebra.step-1" uid="Seventh thoracic vertebra.step-1" grounded="true" entityUid="Seventh thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Eleventh thoracic vertebra.step-1" uid="Eleventh thoracic vertebra.step-1" grounded="true" entityUid="Eleventh thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Fifth thoracic vertebra.step-1" uid="Fifth thoracic vertebra.step-1" grounded="true" entityUid="Fifth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Eighth thoracic vertebra.step-1" uid="Eighth thoracic vertebra.step-1" grounded="true" entityUid="Eighth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Fourth thoracic vertebra.step-1" uid="Fourth thoracic vertebra.step-1" grounded="true" entityUid="Fourth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="First thoracic vertebra.step-1" uid="First thoracic vertebra.step-1" grounded="true" entityUid="First thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Second thoracic vertebra.step-1" uid="Second thoracic vertebra.step-1" grounded="true" entityUid="Second thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Third thoracic vertebra.step-1" uid="Third thoracic vertebra.step-1" grounded="true" entityUid="Third thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Twelfth thoracic vertebra.step-1" uid="Twelfth thoracic vertebra.step-1" grounded="true" entityUid="Twelfth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Lumbar vertebrae.step-1" uid="Lumbar vertebrae.step-1" grounded="true" entityUid="Lumbar vertebrae.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Third lumbar vertebra.step-1" uid="Third lumbar vertebra.step-1" grounded="true" entityUid="Third lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="First lumbar vertebra.step-1" uid="First lumbar vertebra.step-1" grounded="true" entityUid="First lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Second lumbar vertebra.step-1" uid="Second lumbar vertebra.step-1" grounded="true" entityUid="Second lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Fifth lumbar vertebra.step-1" uid="Fifth lumbar vertebra.step-1" grounded="true" entityUid="Fifth lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Fourth lumbar vertebra.step-1" uid="Fourth lumbar vertebra.step-1" grounded="true" entityUid="Fourth lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Lumbar discs.step-1" uid="Lumbar discs.step-1" grounded="true" entityUid="Lumbar discs.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Intervertebral disk of third lumbar vertebra.step-1" uid="Intervertebral disk of third lumbar vertebra.step-1" grounded="true" entityUid="Intervertebral disk of third lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of fifth lumbar vertebra.step-1" uid="Intervertebral disk of fifth lumbar vertebra.step-1" grounded="true" entityUid="Intervertebral disk of fifth lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of fourth lumbar vertebra.step-1" uid="Intervertebral disk of fourth lumbar vertebra.step-1" grounded="true" entityUid="Intervertebral disk of fourth lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of first lumbar vertebra.step-1" uid="Intervertebral disk of first lumbar vertebra.step-1" grounded="true" entityUid="Intervertebral disk of first lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of second lumbar vertebra.step-1" uid="Intervertebral disk of second lumbar vertebra.step-1" grounded="true" entityUid="Intervertebral disk of second lumbar vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Thoracic discs.step-1" uid="Thoracic discs.step-1" grounded="true" entityUid="Thoracic discs.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Intervertebral disk of eleventh thoracic vertebra.step-1" uid="Intervertebral disk of eleventh thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of eleventh thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of ninth thoracic vertebra.step-1" uid="Intervertebral disk of ninth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of ninth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of tenth thoracic vertebra.step-1" uid="Intervertebral disk of tenth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of tenth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of twelfth thoracic vertebra.step-1" uid="Intervertebral disk of twelfth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of twelfth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of fifth thoracic vertebra.step-1" uid="Intervertebral disk of fifth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of fifth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of first thoracic vertebra.step-1" uid="Intervertebral disk of first thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of first thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of fourth thoracic vertebra.step-1" uid="Intervertebral disk of fourth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of fourth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of second thoracic vertebra.step-1" uid="Intervertebral disk of second thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of second thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of seventh thoracic vertebra.step-1" uid="Intervertebral disk of seventh thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of seventh thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of sixth thoracic vertebra.step-1" uid="Intervertebral disk of sixth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of sixth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of third thoracic vertebra.step-1" uid="Intervertebral disk of third thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of third thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Intervertebral disk of eighth thoracic vertebra.step-1" uid="Intervertebral disk of eighth thoracic vertebra.step-1" grounded="true" entityUid="Intervertebral disk of eighth thoracic vertebra.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Hip and Sacrum.step-1" uid="Hip and Sacrum.step-1" grounded="true" entityUid="Hip and Sacrum.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Sacrum.step-1" uid="Sacrum.step-1" grounded="true" entityUid="Sacrum.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right hip bone.step-1" uid="Right hip bone.step-1" grounded="true" entityUid="Right hip bone.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left hip bone.step-1" uid="Left hip bone.step-1" grounded="true" entityUid="Left hip bone.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="Ribcage.step-1" uid="Ribcage.step-1" grounded="true" entityUid="Ribcage.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="Left fifth costal cartilage.step-1" uid="Left fifth costal cartilage.step-1" grounded="true" entityUid="Left fifth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left seventh rib.step-1" uid="Left seventh rib.step-1" grounded="true" entityUid="Left seventh rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left third rib.step-1" uid="Left third rib.step-1" grounded="true" entityUid="Left third rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left sixth rib.step-1" uid="Left sixth rib.step-1" grounded="true" entityUid="Left sixth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left fifth rib.step-1" uid="Left fifth rib.step-1" grounded="true" entityUid="Left fifth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left second costal cartilage.step-1" uid="Left second costal cartilage.step-1" grounded="true" entityUid="Left second costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left eighth rib.step-1" uid="Left eighth rib.step-1" grounded="true" entityUid="Left eighth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left eighth costal cartilage.step-1" uid="Left eighth costal cartilage.step-1" grounded="true" entityUid="Left eighth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left first costal cartilage.step-1" uid="Left first costal cartilage.step-1" grounded="true" entityUid="Left first costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left ninth rib.step-1" uid="Left ninth rib.step-1" grounded="true" entityUid="Left ninth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left ninth costal cartilage.step-1" uid="Left ninth costal cartilage.step-1" grounded="true" entityUid="Left ninth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left fourth costal cartilage.step-1" uid="Left fourth costal cartilage.step-1" grounded="true" entityUid="Left fourth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left seventh costal cartilage.step-1" uid="Left seventh costal cartilage.step-1" grounded="true" entityUid="Left seventh costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left sixth costal cartilage.step-1" uid="Left sixth costal cartilage.step-1" grounded="true" entityUid="Left sixth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left tenth costal cartilage.step-1" uid="Left tenth costal cartilage.step-1" grounded="true" entityUid="Left tenth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left tenth rib.step-1" uid="Left tenth rib.step-1" grounded="true" entityUid="Left tenth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left eleventh rib.step-1" uid="Left eleventh rib.step-1" grounded="true" entityUid="Left eleventh rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left fourth rib.step-1" uid="Left fourth rib.step-1" grounded="true" entityUid="Left fourth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left third costal cartilage.step-1" uid="Left third costal cartilage.step-1" grounded="true" entityUid="Left third costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right sixth rib.step-1" uid="Right sixth rib.step-1" grounded="true" entityUid="Right sixth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right eighth costal cartilage.step-1" uid="Right eighth costal cartilage.step-1" grounded="true" entityUid="Right eighth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right eighth rib.step-1" uid="Right eighth rib.step-1" grounded="true" entityUid="Right eighth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right fifth rib.step-1" uid="Right fifth rib.step-1" grounded="true" entityUid="Right fifth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right seventh rib.step-1" uid="Right seventh rib.step-1" grounded="true" entityUid="Right seventh rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right third rib.step-1" uid="Right third rib.step-1" grounded="true" entityUid="Right third rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Manubrium.step-1" uid="Manubrium.step-1" grounded="true" entityUid="Manubrium.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right first costal cartilage.step-1" uid="Right first costal cartilage.step-1" grounded="true" entityUid="Right first costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right seventh costal cartilage.step-1" uid="Right seventh costal cartilage.step-1" grounded="true" entityUid="Right seventh costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Left twelfth rib.step-1" uid="Left twelfth rib.step-1" grounded="true" entityUid="Left twelfth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right eleventh rib.step-1" uid="Right eleventh rib.step-1" grounded="true" entityUid="Right eleventh rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right fifth costal cartilage.step-1" uid="Right fifth costal cartilage.step-1" grounded="true" entityUid="Right fifth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right fourth costal cartilage.step-1" uid="Right fourth costal cartilage.step-1" grounded="true" entityUid="Right fourth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right fourth rib.step-1" uid="Right fourth rib.step-1" grounded="true" entityUid="Right fourth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right ninth rib.step-1" uid="Right ninth rib.step-1" grounded="true" entityUid="Right ninth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right ninth costal cartilage.step-1" uid="Right ninth costal cartilage.step-1" grounded="true" entityUid="Right ninth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right sixth costal cartilage.step-1" uid="Right sixth costal cartilage.step-1" grounded="true" entityUid="Right sixth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right third costal cartilage.step-1" uid="Right third costal cartilage.step-1" grounded="true" entityUid="Right third costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Ribcage-0.step-1" uid="Ribcage-0.step-1" grounded="true" entityUid="Ribcage-0.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right second costal cartilage.step-1" uid="Right second costal cartilage.step-1" grounded="true" entityUid="Right second costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right tenth rib.step-1" uid="Right tenth rib.step-1" grounded="true" entityUid="Right tenth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right tenth costal cartilage.step-1" uid="Right tenth costal cartilage.step-1" grounded="true" entityUid="Right tenth costal cartilage.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Right twelfth rib.step-1" uid="Right twelfth rib.step-1" grounded="true" entityUid="Right twelfth rib.step*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="LungsSTL hollow.step-1" uid="LungsSTL hollow.step-1" grounded="true" entityUid="LungsSTL hollow.step" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="TIM assembly v6.step" uid="TIM assembly v6.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="TIM assembly v6.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Thoracic vertebrae.step" uid="Thoracic vertebrae.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Thoracic vertebrae.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Lumbar vertebrae.step" uid="Lumbar vertebrae.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Lumbar vertebrae.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Lumbar discs.step" uid="Lumbar discs.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Lumbar discs.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Thoracic discs.step" uid="Thoracic discs.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Thoracic discs.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Hip and Sacrum.step" uid="Hip and Sacrum.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Hip and Sacrum.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="Ribcage.step" uid="Ribcage.step" version="103">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="Ribcage.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="LungsSTL hollow.step" uid="LungsSTL hollow.step" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="LungsSTL hollow.step.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="Eighth thoracic vertebra.step" uid="Eighth thoracic vertebra.step*:*Default" version="102">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Eighth thoracic vertebra.step.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.02796582382254598</Mass>
+<CenterOfMass>-0.00065184603892573696 -0.040947539718904129 1.1917044275408832</CenterOfMass>
+<Inertia>9.3288418550132343e-06 5.3434857216359057e-06 1.0875476268613992e-05 1.5280939291932465e-06 -4.466047488514485e-09 -3.4966662440180744e-09</Inertia>
+</MassProperties>
+<GeometryFile name="Eighth thoracic vertebra.step_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.96470588235294119" g="0.96470588235294119" b="0.95294117647058818" a="1"/>
+<Diffuse r="0.96470588235294119" g="0.96470588235294119" b="0.95294117647058818" a="1"/>
+<Specular r="0.4823529411764706" g="0.4823529411764706" b="0.47647058823529409" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
