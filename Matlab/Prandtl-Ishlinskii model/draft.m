@@ -1,6 +1,7 @@
 clc;
 clear;
 
+%data=readtable('sampledata.xlsx','Range','1:350');
 
 % force=data.Force;
 % length=data.length;
