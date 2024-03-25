@@ -1,0 +1,1585 @@
+[2023-11-30 13:09:56.406] [info] Updating Model file from 20101 to latest format...
+[2023-11-30 13:09:56.479] [warning] MarkerSet name ' ' contains whitespace.
+[2023-11-30 13:09:56.479] [warning] It was renamed to ''.
+[2023-11-30 13:09:56.479] [info] Loaded model Lumbar_C_210 from file C:\Users\siril\OneDrive\Desktop\TIM-Control\OpenSim\Lumbar_C_210.osim
+[2023-11-30 13:09:56.482] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r5_R-P2'. The duplicate is being renamed to 'IL_r5_R-P2_0'.
+[2023-11-30 13:09:56.483] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r6_R-P2'. The duplicate is being renamed to 'IL_r6_R-P2_0'.
+[2023-11-30 13:09:56.483] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r7_R-P2'. The duplicate is being renamed to 'IL_r7_R-P2_0'.
+[2023-11-30 13:09:56.485] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r8_R-P2'. The duplicate is being renamed to 'IL_r8_R-P2_0'.
+[2023-11-30 13:09:56.485] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r9_R-P2'. The duplicate is being renamed to 'IL_r9_R-P2_0'.
+[2023-11-30 13:09:56.485] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r10_R-P2'. The duplicate is being renamed to 'IL_r10_R-P2_0'.
+[2023-11-30 13:09:56.485] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r11_R-P2'. The duplicate is being renamed to 'IL_r11_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r5_R-P2'. The duplicate is being renamed to 'IL_r5_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r6_R-P2'. The duplicate is being renamed to 'IL_r6_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r7_R-P2'. The duplicate is being renamed to 'IL_r7_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r8_R-P2'. The duplicate is being renamed to 'IL_r8_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r9_R-P2'. The duplicate is being renamed to 'IL_r9_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r10_R-P2'. The duplicate is being renamed to 'IL_r10_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'IL_r11_R-P2'. The duplicate is being renamed to 'IL_r11_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t3_R-P2'. The duplicate is being renamed to 'LTpT_t3_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t4_R-P2'. The duplicate is being renamed to 'LTpT_t4_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'LTpT_t5_r' has subcomponents with duplicate name 'LTpT_t5_R-P2'. The duplicate is being renamed to 'LTpT_t5_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t6_R-P2'. The duplicate is being renamed to 'LTpT_t6_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t7_R-P2'. The duplicate is being renamed to 'LTpT_t7_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t8_R-P2'. The duplicate is being renamed to 'LTpT_t8_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t8_R-P2'. The duplicate is being renamed to 'LTpT_t8_R-P2_1'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t9_R-P3'. The duplicate is being renamed to 'LTpT_t9_R-P3_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t9_R-P2'. The duplicate is being renamed to 'LTpT_t9_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t10_R-P2'. The duplicate is being renamed to 'LTpT_t10_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t10_R-P2'. The duplicate is being renamed to 'LTpT_t10_R-P2_1'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t11_R-P2'. The duplicate is being renamed to 'LTpT_t11_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t11_R-P2'. The duplicate is being renamed to 'LTpT_t11_R-P2_1'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t12_R-P2'. The duplicate is being renamed to 'LTpT_t12_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t12_R-P2'. The duplicate is being renamed to 'LTpT_t12_R-P2_1'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r4_R-P2'. The duplicate is being renamed to 'LTpT_r4_R-P2_0'.
+[2023-11-30 13:09:56.486] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r5_R-P2'. The duplicate is being renamed to 'LTpT_r5_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r6_R-P2'. The duplicate is being renamed to 'LTpT_r6_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r6_R-P2'. The duplicate is being renamed to 'LTpT_r6_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_2'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_2'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_2'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_2'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r11_R-P2'. The duplicate is being renamed to 'LTpT_r11_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_2'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t3_R-P2'. The duplicate is being renamed to 'LTpT_t3_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t4_R-P2'. The duplicate is being renamed to 'LTpT_t4_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'LTpT_t5_l' has subcomponents with duplicate name 'LTpT_t5_R-P2'. The duplicate is being renamed to 'LTpT_t5_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t6_R-P2'. The duplicate is being renamed to 'LTpT_t6_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t7_R-P2'. The duplicate is being renamed to 'LTpT_t7_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t8_R-P2'. The duplicate is being renamed to 'LTpT_t8_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t8_R-P2'. The duplicate is being renamed to 'LTpT_t8_R-P2_1'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t9_R-P3'. The duplicate is being renamed to 'LTpT_t9_R-P3_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t9_R-P2'. The duplicate is being renamed to 'LTpT_t9_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t10_R-P2'. The duplicate is being renamed to 'LTpT_t10_R-P2_0'.
+[2023-11-30 13:09:56.487] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t10_R-P2'. The duplicate is being renamed to 'LTpT_t10_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t11_R-P2'. The duplicate is being renamed to 'LTpT_t11_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t11_R-P2'. The duplicate is being renamed to 'LTpT_t11_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t12_R-P2'. The duplicate is being renamed to 'LTpT_t12_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_t12_R-P2'. The duplicate is being renamed to 'LTpT_t12_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r4_R-P2'. The duplicate is being renamed to 'LTpT_r4_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r5_R-P2'. The duplicate is being renamed to 'LTpT_r5_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r6_R-P2'. The duplicate is being renamed to 'LTpT_r6_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r6_R-P2'. The duplicate is being renamed to 'LTpT_r6_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r7_R-P2'. The duplicate is being renamed to 'LTpT_r7_R-P2_2'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r8_R-P2'. The duplicate is being renamed to 'LTpT_r8_R-P2_2'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r9_R-P2'. The duplicate is being renamed to 'LTpT_r9_R-P2_2'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r10_R-P2'. The duplicate is being renamed to 'LTpT_r10_R-P2_2'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r11_R-P2'. The duplicate is being renamed to 'LTpT_r11_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_1'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'LTpT_r12_R-P2'. The duplicate is being renamed to 'LTpT_r12_R-P2_2'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.488] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'geometrypath' has subcomponents with duplicate name 'pathpoint'. The duplicate is being renamed to 'pathpoint_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'QL_mid_L2-12.1_r' has subcomponents with duplicate name 'QL_mid_L2-12.1_l-P1'. The duplicate is being renamed to 'QL_mid_L2-12.1_l-P1_0'.
+[2023-11-30 13:09:56.489] [warning] GeometryPath 'QL_mid_L2-12.1_l' has subcomponents with duplicate name 'QL_mid_L2-12.1_l-P1'. The duplicate is being renamed to 'QL_mid_L2-12.1_l-P1_0'.
+[2023-11-30 13:11:40.812] [warning] Running tool Lumbar_C_210...
+[2023-11-30 13:11:40.812] [info] No external loads will be applied (external loads file not specified).
+[2023-11-30 13:11:40.841] [cout] [info] MODEL: Lumbar_C_210
+
+numStates = 462
+numCoordinates = 21
+numSpeeds = 21
+numActuators = 210
+numBodies = 10
+numConstraints = 16
+numProbes = 0
+
+ANALYSES (total: 2)
+analysis[0] = Un-named analysis.
+analysis[1] = Un-named analysis.
+
+BODIES (total: 10)
+body[0] = pelvis. mass: 0
+              moments of inertia:  ~[0,0,0]
+              products of inertia: ~[0,0,0]
+body[1] = sacrum. mass: 7.486
+              moments of inertia:  ~[0.075,0.08,0.03]
+              products of inertia: ~[0,0,0]
+body[2] = LB_wrap. mass: 0.01
+              moments of inertia:  ~[0.0001,0.0001,0.0001]
+              products of inertia: ~[0,0,0]
+body[3] = Abdomen. mass: 0.01
+              moments of inertia:  ~[0.0001,0.0001,0.0001]
+              products of inertia: ~[0,0,0]
+body[4] = lumbar5. mass: 1.824
+              moments of inertia:  ~[0.01219,0.01765,0.00546]
+              products of inertia: ~[0,0,0]
+body[5] = lumbar4. mass: 1.799
+              moments of inertia:  ~[0.01123,0.01643,0.0052]
+              products of inertia: ~[0,0,0]
+body[6] = lumbar3. mass: 1.67
+              moments of inertia:  ~[0.01066,0.01608,0.00551]
+              products of inertia: ~[0,0,0]
+body[7] = lumbar2. mass: 1.689
+              moments of inertia:  ~[0.01091,0.01682,0.00591]
+              products of inertia: ~[0,0,0]
+body[8] = lumbar1. mass: 1.677
+              moments of inertia:  ~[0.01113,0.01753,0.0064]
+              products of inertia: ~[0,0,0]
+body[9] = torso. mass: 18.619
+              moments of inertia:  ~[0.165,0.15,0.125]
+              products of inertia: ~[0,0,0]
+
+JOINTS (total: 10)
+joint[0] = gndpelvis. parent: ground_offset, child: pelvis_offset
+joint[1] = gndsacrum. parent: ground_offset, child: sacrum_offset
+joint[2] = LB_wrapjnt. parent: sacrum_offset, child: LB_wrap_offset
+joint[3] = Abdjnt. parent: sacrum_offset, child: Abdomen_offset
+joint[4] = L5_S1_IVDjnt. parent: sacrum_offset, child: lumbar5_offset
+joint[5] = L4_L5_IVDjnt. parent: lumbar5_offset, child: lumbar4_offset
+joint[6] = L3_L4_IVDjnt. parent: lumbar4_offset, child: lumbar3_offset
+joint[7] = L2_L3_IVDjnt. parent: lumbar3_offset, child: lumbar2_offset
+joint[8] = L1_L2_IVDjnt. parent: lumbar2_offset, child: lumbar1_offset
+joint[9] = torsojnt. parent: lumbar1_offset, child: torso_offset
+
+ACTUATORS (total: 210)
+actuator[0] = Ps_L1_VB_r
+actuator[1] = Ps_L1_TP_r
+actuator[2] = Ps_L1_L2_IVD_r
+actuator[3] = Ps_L2_TP_r
+actuator[4] = Ps_L2_L3_IVD_r
+actuator[5] = Ps_L3_TP_r
+actuator[6] = Ps_L3_L4_IVD_r
+actuator[7] = Ps_L4_TP_r
+actuator[8] = Ps_L4_L5_IVD_r
+actuator[9] = Ps_L5_TP_r
+actuator[10] = Ps_L5_VB_r
+actuator[11] = Ps_L1_VB_l
+actuator[12] = Ps_L1_TP_l
+actuator[13] = Ps_L1_L2_IVD_l
+actuator[14] = Ps_L2_TP_l
+actuator[15] = Ps_L2_L3_IVD_l
+actuator[16] = Ps_L3_TP_l
+actuator[17] = Ps_L3_L4_IVD_l
+actuator[18] = Ps_L4_TP_l
+actuator[19] = Ps_L4_L5_IVD_l
+actuator[20] = Ps_L5_TP_l
+actuator[21] = Ps_L5_VB_l
+actuator[22] = rect_abd_r
+actuator[23] = rect_abd_l
+actuator[24] = IL_L1_r
+actuator[25] = IL_L2_r
+actuator[26] = IL_L3_r
+actuator[27] = IL_L4_r
+actuator[28] = IL_L1_l
+actuator[29] = IL_L2_l
+actuator[30] = IL_L3_l
+actuator[31] = IL_L4_l
+actuator[32] = IL_R5_r
+actuator[33] = IL_R6_r
+actuator[34] = IL_R7_r
+actuator[35] = IL_R8_r
+actuator[36] = IL_R9_r
+actuator[37] = IL_R10_r
+actuator[38] = IL_R11_r
+actuator[39] = IL_R12_r
+actuator[40] = IL_R5_l
+actuator[41] = IL_R6_l
+actuator[42] = IL_R7_l
+actuator[43] = IL_R8_l
+actuator[44] = IL_R9_l
+actuator[45] = IL_R10_l
+actuator[46] = IL_R11_l
+actuator[47] = IL_R12_l
+actuator[48] = LTpT_T1_r
+actuator[49] = LTpT_T2_r
+actuator[50] = LTpT_T3_r
+actuator[51] = LTpT_T4_r
+actuator[52] = LTpT_T5_r
+actuator[53] = LTpT_T6_r
+actuator[54] = LTpT_T7_r
+actuator[55] = LTpT_T8_r
+actuator[56] = LTpT_T9_r
+actuator[57] = LTpT_T10_r
+actuator[58] = LTpT_T11_r
+actuator[59] = LTpT_T12_r
+actuator[60] = LTpT_R4_r
+actuator[61] = LTpT_R5_r
+actuator[62] = LTpT_R6_r
+actuator[63] = LTpT_R7_r
+actuator[64] = LTpT_R8_r
+actuator[65] = LTpT_R9_r
+actuator[66] = LTpT_R10_r
+actuator[67] = LTpT_R11_r
+actuator[68] = LTpT_R12_r
+actuator[69] = LTpT_T1_l
+actuator[70] = LTpT_T2_l
+actuator[71] = LTpT_T3_l
+actuator[72] = LTpT_T4_l
+actuator[73] = LTpT_T5_l
+actuator[74] = LTpT_T6_l
+actuator[75] = LTpT_T7_l
+actuator[76] = LTpT_T8_l
+actuator[77] = LTpT_T9_l
+actuator[78] = LTpT_T10_l
+actuator[79] = LTpT_T11_l
+actuator[80] = LTpT_T12_l
+actuator[81] = LTpT_R4_l
+actuator[82] = LTpT_R5_l
+actuator[83] = LTpT_R6_l
+actuator[84] = LTpT_R7_l
+actuator[85] = LTpT_R8_l
+actuator[86] = LTpT_R9_l
+actuator[87] = LTpT_R10_l
+actuator[88] = LTpT_R11_l
+actuator[89] = LTpT_R12_l
+actuator[90] = LTpL_L5_r
+actuator[91] = LTpL_L4_r
+actuator[92] = LTpL_L3_r
+actuator[93] = LTpL_L2_r
+actuator[94] = LTpL_L1_r
+actuator[95] = LTpL_L5_l
+actuator[96] = LTpL_L4_l
+actuator[97] = LTpL_L3_l
+actuator[98] = LTpL_L2_l
+actuator[99] = LTpL_L1_l
+actuator[100] = QL_post_I.1-L3_r
+actuator[101] = QL_post_I.2-L4_r
+actuator[102] = QL_post_I.2-L3_r
+actuator[103] = QL_post_I.2-L2_r
+actuator[104] = QL_post_I.3-L1_r
+actuator[105] = QL_post_I.3-L2_r
+actuator[106] = QL_post_I.3-L3_r
+actuator[107] = QL_post_I.1-L3_l
+actuator[108] = QL_post_I.2-L4_l
+actuator[109] = QL_post_I.2-L3_l
+actuator[110] = QL_post_I.2-L2_l
+actuator[111] = QL_post_I.3-L1_l
+actuator[112] = QL_post_I.3-L2_l
+actuator[113] = QL_post_I.3-L3_l
+actuator[114] = QL_mid_L3-12.3_r
+actuator[115] = QL_mid_L3-12.2_r
+actuator[116] = QL_mid_L3-12.1_r
+actuator[117] = QL_mid_L2-12.1_r
+actuator[118] = QL_mid_L4-12.3_r
+actuator[119] = QL_mid_L3-12.3_l
+actuator[120] = QL_mid_L3-12.2_l
+actuator[121] = QL_mid_L3-12.1_l
+actuator[122] = QL_mid_L2-12.1_l
+actuator[123] = QL_mid_L4-12.3_l
+actuator[124] = QL_ant_I.2-T12_r
+actuator[125] = QL_ant_I.3-T12_r
+actuator[126] = QL_ant_I.2-12.1_r
+actuator[127] = QL_ant_I.3-12.1_r
+actuator[128] = QL_ant_I.3-12.2_r
+actuator[129] = QL_ant_I.3-12.3_r
+actuator[130] = QL_ant_I.2-T12_l
+actuator[131] = QL_ant_I.3-T12_l
+actuator[132] = QL_ant_I.2-12.1_l
+actuator[133] = QL_ant_I.3-12.1_l
+actuator[134] = QL_ant_I.3-12.2_l
+actuator[135] = QL_ant_I.3-12.3_l
+actuator[136] = MF_m1s_r
+actuator[137] = MF_m1t.1_r
+actuator[138] = MF_m1t.2_r
+actuator[139] = MF_m1t.3_r
+actuator[140] = MF_m2s_r
+actuator[141] = MF_m2t.1_r
+actuator[142] = MF_m2t.2_r
+actuator[143] = MF_m2t.3_r
+actuator[144] = MF_m3s_r
+actuator[145] = MF_m3t.1_r
+actuator[146] = MF_m3t.2_r
+actuator[147] = MF_m3t.3_r
+actuator[148] = MF_m4s_r
+actuator[149] = MF_m4t.1_r
+actuator[150] = MF_m4t.2_r
+actuator[151] = MF_m4t.3_r
+actuator[152] = MF_m5s_r
+actuator[153] = MF_m5t.1_r
+actuator[154] = MF_m5t.2_r
+actuator[155] = MF_m5t.3_r
+actuator[156] = MF_m1.laminar_r
+actuator[157] = MF_m2.laminar_r
+actuator[158] = MF_m3.laminar_r
+actuator[159] = MF_m4.laminar_r
+actuator[160] = MF_m5.laminar_r
+actuator[161] = MF_m1s_l
+actuator[162] = MF_m1t.1_l
+actuator[163] = MF_m1t.2_l
+actuator[164] = MF_m1t.3_l
+actuator[165] = MF_m2s_l
+actuator[166] = MF_m2t.1_l
+actuator[167] = MF_m2t.2_l
+actuator[168] = MF_m2t.3_l
+actuator[169] = MF_m3s_l
+actuator[170] = MF_m3t.1_l
+actuator[171] = MF_m3t.2_l
+actuator[172] = MF_m3t.3_l
+actuator[173] = MF_m4s_l
+actuator[174] = MF_m4t.1_l
+actuator[175] = MF_m4t.2_l
+actuator[176] = MF_m4t.3_l
+actuator[177] = MF_m5s_l
+actuator[178] = MF_m5t.1_l
+actuator[179] = MF_m5t.2_l
+actuator[180] = MF_m5t.3_l
+actuator[181] = MF_m1.laminar_l
+actuator[182] = MF_m2.laminar_l
+actuator[183] = MF_m3.laminar_l
+actuator[184] = MF_m4.laminar_l
+actuator[185] = MF_m5.laminar_l
+actuator[186] = EO1_r
+actuator[187] = EO2_r
+actuator[188] = EO3_r
+actuator[189] = EO4_r
+actuator[190] = EO5_r
+actuator[191] = EO6_r
+actuator[192] = IO1_r
+actuator[193] = IO2_r
+actuator[194] = IO3_r
+actuator[195] = IO4_r
+actuator[196] = IO5_r
+actuator[197] = IO6_r
+actuator[198] = EO1_l
+actuator[199] = EO2_l
+actuator[200] = EO3_l
+actuator[201] = EO4_l
+actuator[202] = EO5_l
+actuator[203] = EO6_l
+actuator[204] = IO1_l
+actuator[205] = IO2_l
+actuator[206] = IO3_l
+actuator[207] = IO4_l
+actuator[208] = IO5_l
+actuator[209] = IO6_l
+
+STATES (total: 462)
+y[0] = /jointset/LB_wrapjnt/LB_wrapjnt_r3/value
+y[1] = /jointset/LB_wrapjnt/LB_wrapjnt_r3/speed
+y[2] = /jointset/LB_wrapjnt/LB_wrapjnt_t1/value
+y[3] = /jointset/LB_wrapjnt/LB_wrapjnt_t1/speed
+y[4] = /jointset/LB_wrapjnt/LB_wrapjnt_t2/value
+y[5] = /jointset/LB_wrapjnt/LB_wrapjnt_t2/speed
+y[6] = /jointset/Abdjnt/Abs_r3/value
+y[7] = /jointset/Abdjnt/Abs_r3/speed
+y[8] = /jointset/Abdjnt/Abs_t1/value
+y[9] = /jointset/Abdjnt/Abs_t1/speed
+y[10] = /jointset/Abdjnt/Abs_t2/value
+y[11] = /jointset/Abdjnt/Abs_t2/speed
+y[12] = /jointset/L5_S1_IVDjnt/flex_extension/value
+y[13] = /jointset/L5_S1_IVDjnt/flex_extension/speed
+y[14] = /jointset/L5_S1_IVDjnt/lat_bending/value
+y[15] = /jointset/L5_S1_IVDjnt/lat_bending/speed
+y[16] = /jointset/L5_S1_IVDjnt/axial_rotation/value
+y[17] = /jointset/L5_S1_IVDjnt/axial_rotation/speed
+y[18] = /jointset/L4_L5_IVDjnt/L4_L5_FE/value
+y[19] = /jointset/L4_L5_IVDjnt/L4_L5_FE/speed
+y[20] = /jointset/L4_L5_IVDjnt/L4_L5_LB/value
+y[21] = /jointset/L4_L5_IVDjnt/L4_L5_LB/speed
+y[22] = /jointset/L4_L5_IVDjnt/L4_L5_AR/value
+y[23] = /jointset/L4_L5_IVDjnt/L4_L5_AR/speed
+y[24] = /jointset/L3_L4_IVDjnt/L3_L4_FE/value
+y[25] = /jointset/L3_L4_IVDjnt/L3_L4_FE/speed
+y[26] = /jointset/L3_L4_IVDjnt/L3_L4_LB/value
+y[27] = /jointset/L3_L4_IVDjnt/L3_L4_LB/speed
+y[28] = /jointset/L3_L4_IVDjnt/L3_L4_AR/value
+y[29] = /jointset/L3_L4_IVDjnt/L3_L4_AR/speed
+y[30] = /jointset/L2_L3_IVDjnt/L2_L3_FE/value
+y[31] = /jointset/L2_L3_IVDjnt/L2_L3_FE/speed
+y[32] = /jointset/L2_L3_IVDjnt/L2_L3_LB/value
+y[33] = /jointset/L2_L3_IVDjnt/L2_L3_LB/speed
+y[34] = /jointset/L2_L3_IVDjnt/L2_L3_AR/value
+y[35] = /jointset/L2_L3_IVDjnt/L2_L3_AR/speed
+y[36] = /jointset/L1_L2_IVDjnt/L1_L2_FE/value
+y[37] = /jointset/L1_L2_IVDjnt/L1_L2_FE/speed
+y[38] = /jointset/L1_L2_IVDjnt/L1_L2_LB/value
+y[39] = /jointset/L1_L2_IVDjnt/L1_L2_LB/speed
+y[40] = /jointset/L1_L2_IVDjnt/L1_L2_AR/value
+y[41] = /jointset/L1_L2_IVDjnt/L1_L2_AR/speed
+y[42] = /forceset/Ps_L1_VB_r/activation
+y[43] = /forceset/Ps_L1_VB_r/fiber_length
+y[44] = /forceset/Ps_L1_TP_r/activation
+y[45] = /forceset/Ps_L1_TP_r/fiber_length
+y[46] = /forceset/Ps_L1_L2_IVD_r/activation
+y[47] = /forceset/Ps_L1_L2_IVD_r/fiber_length
+y[48] = /forceset/Ps_L2_TP_r/activation
+y[49] = /forceset/Ps_L2_TP_r/fiber_length
+y[50] = /forceset/Ps_L2_L3_IVD_r/activation
+y[51] = /forceset/Ps_L2_L3_IVD_r/fiber_length
+y[52] = /forceset/Ps_L3_TP_r/activation
+y[53] = /forceset/Ps_L3_TP_r/fiber_length
+y[54] = /forceset/Ps_L3_L4_IVD_r/activation
+y[55] = /forceset/Ps_L3_L4_IVD_r/fiber_length
+y[56] = /forceset/Ps_L4_TP_r/activation
+y[57] = /forceset/Ps_L4_TP_r/fiber_length
+y[58] = /forceset/Ps_L4_L5_IVD_r/activation
+y[59] = /forceset/Ps_L4_L5_IVD_r/fiber_length
+y[60] = /forceset/Ps_L5_TP_r/activation
+y[61] = /forceset/Ps_L5_TP_r/fiber_length
+y[62] = /forceset/Ps_L5_VB_r/activation
+y[63] = /forceset/Ps_L5_VB_r/fiber_length
+y[64] = /forceset/Ps_L1_VB_l/activation
+y[65] = /forceset/Ps_L1_VB_l/fiber_length
+y[66] = /forceset/Ps_L1_TP_l/activation
+y[67] = /forceset/Ps_L1_TP_l/fiber_length
+y[68] = /forceset/Ps_L1_L2_IVD_l/activation
+y[69] = /forceset/Ps_L1_L2_IVD_l/fiber_length
+y[70] = /forceset/Ps_L2_TP_l/activation
+y[71] = /forceset/Ps_L2_TP_l/fiber_length
+y[72] = /forceset/Ps_L2_L3_IVD_l/activation
+y[73] = /forceset/Ps_L2_L3_IVD_l/fiber_length
+y[74] = /forceset/Ps_L3_TP_l/activation
+y[75] = /forceset/Ps_L3_TP_l/fiber_length
+y[76] = /forceset/Ps_L3_L4_IVD_l/activation
+y[77] = /forceset/Ps_L3_L4_IVD_l/fiber_length
+y[78] = /forceset/Ps_L4_TP_l/activation
+y[79] = /forceset/Ps_L4_TP_l/fiber_length
+y[80] = /forceset/Ps_L4_L5_IVD_l/activation
+y[81] = /forceset/Ps_L4_L5_IVD_l/fiber_length
+y[82] = /forceset/Ps_L5_TP_l/activation
+y[83] = /forceset/Ps_L5_TP_l/fiber_length
+y[84] = /forceset/Ps_L5_VB_l/activation
+y[85] = /forceset/Ps_L5_VB_l/fiber_length
+y[86] = /forceset/rect_abd_r/activation
+y[87] = /forceset/rect_abd_r/fiber_length
+y[88] = /forceset/rect_abd_l/activation
+y[89] = /forceset/rect_abd_l/fiber_length
+y[90] = /forceset/IL_L1_r/activation
+y[91] = /forceset/IL_L1_r/fiber_length
+y[92] = /forceset/IL_L2_r/activation
+y[93] = /forceset/IL_L2_r/fiber_length
+y[94] = /forceset/IL_L3_r/activation
+y[95] = /forceset/IL_L3_r/fiber_length
+y[96] = /forceset/IL_L4_r/activation
+y[97] = /forceset/IL_L4_r/fiber_length
+y[98] = /forceset/IL_L1_l/activation
+y[99] = /forceset/IL_L1_l/fiber_length
+y[100] = /forceset/IL_L2_l/activation
+y[101] = /forceset/IL_L2_l/fiber_length
+y[102] = /forceset/IL_L3_l/activation
+y[103] = /forceset/IL_L3_l/fiber_length
+y[104] = /forceset/IL_L4_l/activation
+y[105] = /forceset/IL_L4_l/fiber_length
+y[106] = /forceset/IL_R5_r/activation
+y[107] = /forceset/IL_R5_r/fiber_length
+y[108] = /forceset/IL_R6_r/activation
+y[109] = /forceset/IL_R6_r/fiber_length
+y[110] = /forceset/IL_R7_r/activation
+y[111] = /forceset/IL_R7_r/fiber_length
+y[112] = /forceset/IL_R8_r/activation
+y[113] = /forceset/IL_R8_r/fiber_length
+y[114] = /forceset/IL_R9_r/activation
+y[115] = /forceset/IL_R9_r/fiber_length
+y[116] = /forceset/IL_R10_r/activation
+y[117] = /forceset/IL_R10_r/fiber_length
+y[118] = /forceset/IL_R11_r/activation
+y[119] = /forceset/IL_R11_r/fiber_length
+y[120] = /forceset/IL_R12_r/activation
+y[121] = /forceset/IL_R12_r/fiber_length
+y[122] = /forceset/IL_R5_l/activation
+y[123] = /forceset/IL_R5_l/fiber_length
+y[124] = /forceset/IL_R6_l/activation
+y[125] = /forceset/IL_R6_l/fiber_length
+y[126] = /forceset/IL_R7_l/activation
+y[127] = /forceset/IL_R7_l/fiber_length
+y[128] = /forceset/IL_R8_l/activation
+y[129] = /forceset/IL_R8_l/fiber_length
+y[130] = /forceset/IL_R9_l/activation
+y[131] = /forceset/IL_R9_l/fiber_length
+y[132] = /forceset/IL_R10_l/activation
+y[133] = /forceset/IL_R10_l/fiber_length
+y[134] = /forceset/IL_R11_l/activation
+y[135] = /forceset/IL_R11_l/fiber_length
+y[136] = /forceset/IL_R12_l/activation
+y[137] = /forceset/IL_R12_l/fiber_length
+y[138] = /forceset/LTpT_T1_r/activation
+y[139] = /forceset/LTpT_T1_r/fiber_length
+y[140] = /forceset/LTpT_T2_r/activation
+y[141] = /forceset/LTpT_T2_r/fiber_length
+y[142] = /forceset/LTpT_T3_r/activation
+y[143] = /forceset/LTpT_T3_r/fiber_length
+y[144] = /forceset/LTpT_T4_r/activation
+y[145] = /forceset/LTpT_T4_r/fiber_length
+y[146] = /forceset/LTpT_T5_r/activation
+y[147] = /forceset/LTpT_T5_r/fiber_length
+y[148] = /forceset/LTpT_T6_r/activation
+y[149] = /forceset/LTpT_T6_r/fiber_length
+y[150] = /forceset/LTpT_T7_r/activation
+y[151] = /forceset/LTpT_T7_r/fiber_length
+y[152] = /forceset/LTpT_T8_r/activation
+y[153] = /forceset/LTpT_T8_r/fiber_length
+y[154] = /forceset/LTpT_T9_r/activation
+y[155] = /forceset/LTpT_T9_r/fiber_length
+y[156] = /forceset/LTpT_T10_r/activation
+y[157] = /forceset/LTpT_T10_r/fiber_length
+y[158] = /forceset/LTpT_T11_r/activation
+y[159] = /forceset/LTpT_T11_r/fiber_length
+y[160] = /forceset/LTpT_T12_r/activation
+y[161] = /forceset/LTpT_T12_r/fiber_length
+y[162] = /forceset/LTpT_R4_r/activation
+y[163] = /forceset/LTpT_R4_r/fiber_length
+y[164] = /forceset/LTpT_R5_r/activation
+y[165] = /forceset/LTpT_R5_r/fiber_length
+y[166] = /forceset/LTpT_R6_r/activation
+y[167] = /forceset/LTpT_R6_r/fiber_length
+y[168] = /forceset/LTpT_R7_r/activation
+y[169] = /forceset/LTpT_R7_r/fiber_length
+y[170] = /forceset/LTpT_R8_r/activation
+y[171] = /forceset/LTpT_R8_r/fiber_length
+y[172] = /forceset/LTpT_R9_r/activation
+y[173] = /forceset/LTpT_R9_r/fiber_length
+y[174] = /forceset/LTpT_R10_r/activation
+y[175] = /forceset/LTpT_R10_r/fiber_length
+y[176] = /forceset/LTpT_R11_r/activation
+y[177] = /forceset/LTpT_R11_r/fiber_length
+y[178] = /forceset/LTpT_R12_r/activation
+y[179] = /forceset/LTpT_R12_r/fiber_length
+y[180] = /forceset/LTpT_T1_l/activation
+y[181] = /forceset/LTpT_T1_l/fiber_length
+y[182] = /forceset/LTpT_T2_l/activation
+y[183] = /forceset/LTpT_T2_l/fiber_length
+y[184] = /forceset/LTpT_T3_l/activation
+y[185] = /forceset/LTpT_T3_l/fiber_length
+y[186] = /forceset/LTpT_T4_l/activation
+y[187] = /forceset/LTpT_T4_l/fiber_length
+y[188] = /forceset/LTpT_T5_l/activation
+y[189] = /forceset/LTpT_T5_l/fiber_length
+y[190] = /forceset/LTpT_T6_l/activation
+y[191] = /forceset/LTpT_T6_l/fiber_length
+y[192] = /forceset/LTpT_T7_l/activation
+y[193] = /forceset/LTpT_T7_l/fiber_length
+y[194] = /forceset/LTpT_T8_l/activation
+y[195] = /forceset/LTpT_T8_l/fiber_length
+y[196] = /forceset/LTpT_T9_l/activation
+y[197] = /forceset/LTpT_T9_l/fiber_length
+y[198] = /forceset/LTpT_T10_l/activation
+y[199] = /forceset/LTpT_T10_l/fiber_length
+y[200] = /forceset/LTpT_T11_l/activation
+y[201] = /forceset/LTpT_T11_l/fiber_length
+y[202] = /forceset/LTpT_T12_l/activation
+y[203] = /forceset/LTpT_T12_l/fiber_length
+y[204] = /forceset/LTpT_R4_l/activation
+y[205] = /forceset/LTpT_R4_l/fiber_length
+y[206] = /forceset/LTpT_R5_l/activation
+y[207] = /forceset/LTpT_R5_l/fiber_length
+y[208] = /forceset/LTpT_R6_l/activation
+y[209] = /forceset/LTpT_R6_l/fiber_length
+y[210] = /forceset/LTpT_R7_l/activation
+y[211] = /forceset/LTpT_R7_l/fiber_length
+y[212] = /forceset/LTpT_R8_l/activation
+y[213] = /forceset/LTpT_R8_l/fiber_length
+y[214] = /forceset/LTpT_R9_l/activation
+y[215] = /forceset/LTpT_R9_l/fiber_length
+y[216] = /forceset/LTpT_R10_l/activation
+y[217] = /forceset/LTpT_R10_l/fiber_length
+y[218] = /forceset/LTpT_R11_l/activation
+y[219] = /forceset/LTpT_R11_l/fiber_length
+y[220] = /forceset/LTpT_R12_l/activation
+y[221] = /forceset/LTpT_R12_l/fiber_length
+y[222] = /forceset/LTpL_L5_r/activation
+y[223] = /forceset/LTpL_L5_r/fiber_length
+y[224] = /forceset/LTpL_L4_r/activation
+y[225] = /forceset/LTpL_L4_r/fiber_length
+y[226] = /forceset/LTpL_L3_r/activation
+y[227] = /forceset/LTpL_L3_r/fiber_length
+y[228] = /forceset/LTpL_L2_r/activation
+y[229] = /forceset/LTpL_L2_r/fiber_length
+y[230] = /forceset/LTpL_L1_r/activation
+y[231] = /forceset/LTpL_L1_r/fiber_length
+y[232] = /forceset/LTpL_L5_l/activation
+y[233] = /forceset/LTpL_L5_l/fiber_length
+y[234] = /forceset/LTpL_L4_l/activation
+y[235] = /forceset/LTpL_L4_l/fiber_length
+y[236] = /forceset/LTpL_L3_l/activation
+y[237] = /forceset/LTpL_L3_l/fiber_length
+y[238] = /forceset/LTpL_L2_l/activation
+y[239] = /forceset/LTpL_L2_l/fiber_length
+y[240] = /forceset/LTpL_L1_l/activation
+y[241] = /forceset/LTpL_L1_l/fiber_length
+y[242] = /forceset/QL_post_I.1-L3_r/activation
+y[243] = /forceset/QL_post_I.1-L3_r/fiber_length
+y[244] = /forceset/QL_post_I.2-L4_r/activation
+y[245] = /forceset/QL_post_I.2-L4_r/fiber_length
+y[246] = /forceset/QL_post_I.2-L3_r/activation
+y[247] = /forceset/QL_post_I.2-L3_r/fiber_length
+y[248] = /forceset/QL_post_I.2-L2_r/activation
+y[249] = /forceset/QL_post_I.2-L2_r/fiber_length
+y[250] = /forceset/QL_post_I.3-L1_r/activation
+y[251] = /forceset/QL_post_I.3-L1_r/fiber_length
+y[252] = /forceset/QL_post_I.3-L2_r/activation
+y[253] = /forceset/QL_post_I.3-L2_r/fiber_length
+y[254] = /forceset/QL_post_I.3-L3_r/activation
+y[255] = /forceset/QL_post_I.3-L3_r/fiber_length
+y[256] = /forceset/QL_post_I.1-L3_l/activation
+y[257] = /forceset/QL_post_I.1-L3_l/fiber_length
+y[258] = /forceset/QL_post_I.2-L4_l/activation
+y[259] = /forceset/QL_post_I.2-L4_l/fiber_length
+y[260] = /forceset/QL_post_I.2-L3_l/activation
+y[261] = /forceset/QL_post_I.2-L3_l/fiber_length
+y[262] = /forceset/QL_post_I.2-L2_l/activation
+y[263] = /forceset/QL_post_I.2-L2_l/fiber_length
+y[264] = /forceset/QL_post_I.3-L1_l/activation
+y[265] = /forceset/QL_post_I.3-L1_l/fiber_length
+y[266] = /forceset/QL_post_I.3-L2_l/activation
+y[267] = /forceset/QL_post_I.3-L2_l/fiber_length
+y[268] = /forceset/QL_post_I.3-L3_l/activation
+y[269] = /forceset/QL_post_I.3-L3_l/fiber_length
+y[270] = /forceset/QL_mid_L3-12.3_r/activation
+y[271] = /forceset/QL_mid_L3-12.3_r/fiber_length
+y[272] = /forceset/QL_mid_L3-12.2_r/activation
+y[273] = /forceset/QL_mid_L3-12.2_r/fiber_length
+y[274] = /forceset/QL_mid_L3-12.1_r/activation
+y[275] = /forceset/QL_mid_L3-12.1_r/fiber_length
+y[276] = /forceset/QL_mid_L2-12.1_r/activation
+y[277] = /forceset/QL_mid_L2-12.1_r/fiber_length
+y[278] = /forceset/QL_mid_L4-12.3_r/activation
+y[279] = /forceset/QL_mid_L4-12.3_r/fiber_length
+y[280] = /forceset/QL_mid_L3-12.3_l/activation
+y[281] = /forceset/QL_mid_L3-12.3_l/fiber_length
+y[282] = /forceset/QL_mid_L3-12.2_l/activation
+y[283] = /forceset/QL_mid_L3-12.2_l/fiber_length
+y[284] = /forceset/QL_mid_L3-12.1_l/activation
+y[285] = /forceset/QL_mid_L3-12.1_l/fiber_length
+y[286] = /forceset/QL_mid_L2-12.1_l/activation
+y[287] = /forceset/QL_mid_L2-12.1_l/fiber_length
+y[288] = /forceset/QL_mid_L4-12.3_l/activation
+y[289] = /forceset/QL_mid_L4-12.3_l/fiber_length
+y[290] = /forceset/QL_ant_I.2-T12_r/activation
+y[291] = /forceset/QL_ant_I.2-T12_r/fiber_length
+y[292] = /forceset/QL_ant_I.3-T12_r/activation
+y[293] = /forceset/QL_ant_I.3-T12_r/fiber_length
+y[294] = /forceset/QL_ant_I.2-12.1_r/activation
+y[295] = /forceset/QL_ant_I.2-12.1_r/fiber_length
+y[296] = /forceset/QL_ant_I.3-12.1_r/activation
+y[297] = /forceset/QL_ant_I.3-12.1_r/fiber_length
+y[298] = /forceset/QL_ant_I.3-12.2_r/activation
+y[299] = /forceset/QL_ant_I.3-12.2_r/fiber_length
+y[300] = /forceset/QL_ant_I.3-12.3_r/activation
+y[301] = /forceset/QL_ant_I.3-12.3_r/fiber_length
+y[302] = /forceset/QL_ant_I.2-T12_l/activation
+y[303] = /forceset/QL_ant_I.2-T12_l/fiber_length
+y[304] = /forceset/QL_ant_I.3-T12_l/activation
+y[305] = /forceset/QL_ant_I.3-T12_l/fiber_length
+y[306] = /forceset/QL_ant_I.2-12.1_l/activation
+y[307] = /forceset/QL_ant_I.2-12.1_l/fiber_length
+y[308] = /forceset/QL_ant_I.3-12.1_l/activation
+y[309] = /forceset/QL_ant_I.3-12.1_l/fiber_length
+y[310] = /forceset/QL_ant_I.3-12.2_l/activation
+y[311] = /forceset/QL_ant_I.3-12.2_l/fiber_length
+y[312] = /forceset/QL_ant_I.3-12.3_l/activation
+y[313] = /forceset/QL_ant_I.3-12.3_l/fiber_length
+y[314] = /forceset/MF_m1s_r/activation
+y[315] = /forceset/MF_m1s_r/fiber_length
+y[316] = /forceset/MF_m1t.1_r/activation
+y[317] = /forceset/MF_m1t.1_r/fiber_length
+y[318] = /forceset/MF_m1t.2_r/activation
+y[319] = /forceset/MF_m1t.2_r/fiber_length
+y[320] = /forceset/MF_m1t.3_r/activation
+y[321] = /forceset/MF_m1t.3_r/fiber_length
+y[322] = /forceset/MF_m2s_r/activation
+y[323] = /forceset/MF_m2s_r/fiber_length
+y[324] = /forceset/MF_m2t.1_r/activation
+y[325] = /forceset/MF_m2t.1_r/fiber_length
+y[326] = /forceset/MF_m2t.2_r/activation
+y[327] = /forceset/MF_m2t.2_r/fiber_length
+y[328] = /forceset/MF_m2t.3_r/activation
+y[329] = /forceset/MF_m2t.3_r/fiber_length
+y[330] = /forceset/MF_m3s_r/activation
+y[331] = /forceset/MF_m3s_r/fiber_length
+y[332] = /forceset/MF_m3t.1_r/activation
+y[333] = /forceset/MF_m3t.1_r/fiber_length
+y[334] = /forceset/MF_m3t.2_r/activation
+y[335] = /forceset/MF_m3t.2_r/fiber_length
+y[336] = /forceset/MF_m3t.3_r/activation
+y[337] = /forceset/MF_m3t.3_r/fiber_length
+y[338] = /forceset/MF_m4s_r/activation
+y[339] = /forceset/MF_m4s_r/fiber_length
+y[340] = /forceset/MF_m4t.1_r/activation
+y[341] = /forceset/MF_m4t.1_r/fiber_length
+y[342] = /forceset/MF_m4t.2_r/activation
+y[343] = /forceset/MF_m4t.2_r/fiber_length
+y[344] = /forceset/MF_m4t.3_r/activation
+y[345] = /forceset/MF_m4t.3_r/fiber_length
+y[346] = /forceset/MF_m5s_r/activation
+y[347] = /forceset/MF_m5s_r/fiber_length
+y[348] = /forceset/MF_m5t.1_r/activation
+y[349] = /forceset/MF_m5t.1_r/fiber_length
+y[350] = /forceset/MF_m5t.2_r/activation
+y[351] = /forceset/MF_m5t.2_r/fiber_length
+y[352] = /forceset/MF_m5t.3_r/activation
+y[353] = /forceset/MF_m5t.3_r/fiber_length
+y[354] = /forceset/MF_m1.laminar_r/activation
+y[355] = /forceset/MF_m1.laminar_r/fiber_length
+y[356] = /forceset/MF_m2.laminar_r/activation
+y[357] = /forceset/MF_m2.laminar_r/fiber_length
+y[358] = /forceset/MF_m3.laminar_r/activation
+y[359] = /forceset/MF_m3.laminar_r/fiber_length
+y[360] = /forceset/MF_m4.laminar_r/activation
+y[361] = /forceset/MF_m4.laminar_r/fiber_length
+y[362] = /forceset/MF_m5.laminar_r/activation
+y[363] = /forceset/MF_m5.laminar_r/fiber_length
+y[364] = /forceset/MF_m1s_l/activation
+y[365] = /forceset/MF_m1s_l/fiber_length
+y[366] = /forceset/MF_m1t.1_l/activation
+y[367] = /forceset/MF_m1t.1_l/fiber_length
+y[368] = /forceset/MF_m1t.2_l/activation
+y[369] = /forceset/MF_m1t.2_l/fiber_length
+y[370] = /forceset/MF_m1t.3_l/activation
+y[371] = /forceset/MF_m1t.3_l/fiber_length
+y[372] = /forceset/MF_m2s_l/activation
+y[373] = /forceset/MF_m2s_l/fiber_length
+y[374] = /forceset/MF_m2t.1_l/activation
+y[375] = /forceset/MF_m2t.1_l/fiber_length
+y[376] = /forceset/MF_m2t.2_l/activation
+y[377] = /forceset/MF_m2t.2_l/fiber_length
+y[378] = /forceset/MF_m2t.3_l/activation
+y[379] = /forceset/MF_m2t.3_l/fiber_length
+y[380] = /forceset/MF_m3s_l/activation
+y[381] = /forceset/MF_m3s_l/fiber_length
+y[382] = /forceset/MF_m3t.1_l/activation
+y[383] = /forceset/MF_m3t.1_l/fiber_length
+y[384] = /forceset/MF_m3t.2_l/activation
+y[385] = /forceset/MF_m3t.2_l/fiber_length
+y[386] = /forceset/MF_m3t.3_l/activation
+y[387] = /forceset/MF_m3t.3_l/fiber_length
+y[388] = /forceset/MF_m4s_l/activation
+y[389] = /forceset/MF_m4s_l/fiber_length
+y[390] = /forceset/MF_m4t.1_l/activation
+y[391] = /forceset/MF_m4t.1_l/fiber_length
+y[392] = /forceset/MF_m4t.2_l/activation
+y[393] = /forceset/MF_m4t.2_l/fiber_length
+y[394] = /forceset/MF_m4t.3_l/activation
+y[395] = /forceset/MF_m4t.3_l/fiber_length
+y[396] = /forceset/MF_m5s_l/activation
+y[397] = /forceset/MF_m5s_l/fiber_length
+y[398] = /forceset/MF_m5t.1_l/activation
+y[399] = /forceset/MF_m5t.1_l/fiber_length
+y[400] = /forceset/MF_m5t.2_l/activation
+y[401] = /forceset/MF_m5t.2_l/fiber_length
+y[402] = /forceset/MF_m5t.3_l/activation
+y[403] = /forceset/MF_m5t.3_l/fiber_length
+y[404] = /forceset/MF_m1.laminar_l/activation
+y[405] = /forceset/MF_m1.laminar_l/fiber_length
+y[406] = /forceset/MF_m2.laminar_l/activation
+y[407] = /forceset/MF_m2.laminar_l/fiber_length
+y[408] = /forceset/MF_m3.laminar_l/activation
+y[409] = /forceset/MF_m3.laminar_l/fiber_length
+y[410] = /forceset/MF_m4.laminar_l/activation
+y[411] = /forceset/MF_m4.laminar_l/fiber_length
+y[412] = /forceset/MF_m5.laminar_l/activation
+y[413] = /forceset/MF_m5.laminar_l/fiber_length
+y[414] = /forceset/EO1_r/activation
+y[415] = /forceset/EO1_r/fiber_length
+y[416] = /forceset/EO2_r/activation
+y[417] = /forceset/EO2_r/fiber_length
+y[418] = /forceset/EO3_r/activation
+y[419] = /forceset/EO3_r/fiber_length
+y[420] = /forceset/EO4_r/activation
+y[421] = /forceset/EO4_r/fiber_length
+y[422] = /forceset/EO5_r/activation
+y[423] = /forceset/EO5_r/fiber_length
+y[424] = /forceset/EO6_r/activation
+y[425] = /forceset/EO6_r/fiber_length
+y[426] = /forceset/IO1_r/activation
+y[427] = /forceset/IO1_r/fiber_length
+y[428] = /forceset/IO2_r/activation
+y[429] = /forceset/IO2_r/fiber_length
+y[430] = /forceset/IO3_r/activation
+y[431] = /forceset/IO3_r/fiber_length
+y[432] = /forceset/IO4_r/activation
+y[433] = /forceset/IO4_r/fiber_length
+y[434] = /forceset/IO5_r/activation
+y[435] = /forceset/IO5_r/fiber_length
+y[436] = /forceset/IO6_r/activation
+y[437] = /forceset/IO6_r/fiber_length
+y[438] = /forceset/EO1_l/activation
+y[439] = /forceset/EO1_l/fiber_length
+y[440] = /forceset/EO2_l/activation
+y[441] = /forceset/EO2_l/fiber_length
+y[442] = /forceset/EO3_l/activation
+y[443] = /forceset/EO3_l/fiber_length
+y[444] = /forceset/EO4_l/activation
+y[445] = /forceset/EO4_l/fiber_length
+y[446] = /forceset/EO5_l/activation
+y[447] = /forceset/EO5_l/fiber_length
+y[448] = /forceset/EO6_l/activation
+y[449] = /forceset/EO6_l/fiber_length
+y[450] = /forceset/IO1_l/activation
+y[451] = /forceset/IO1_l/fiber_length
+y[452] = /forceset/IO2_l/activation
+y[453] = /forceset/IO2_l/fiber_length
+y[454] = /forceset/IO3_l/activation
+y[455] = /forceset/IO3_l/fiber_length
+y[456] = /forceset/IO4_l/activation
+y[457] = /forceset/IO4_l/fiber_length
+y[458] = /forceset/IO5_l/activation
+y[459] = /forceset/IO5_l/fiber_length
+y[460] = /forceset/IO6_l/activation
+y[461] = /forceset/IO6_l/fiber_length
+
+[2023-11-30 13:11:40.841] [info] Integrating from 0.0 to 5.0.
+[2023-11-30 13:11:40.962] [warning] Coordinate.setValue:  coordinate Abs_t1 is locked. Unable to change its value.
+[2023-11-30 13:11:40.962] [warning] Coordinate.setValue:  coordinate Abs_t2 is locked. Unable to change its value.
+[2023-11-30 13:11:57.421] [error] ForwardTool::run() caught an exception: 
+ Operation Aborted
+[2023-11-30 13:13:02.044] [warning] Running tool Lumbar_C_210...
+[2023-11-30 13:13:02.045] [info] No external loads will be applied (external loads file not specified).
+[2023-11-30 13:13:02.081] [cout] [info] MODEL: Lumbar_C_210
+
+numStates = 462
+numCoordinates = 21
+numSpeeds = 21
+numActuators = 210
+numBodies = 10
+numConstraints = 16
+numProbes = 0
+
+ANALYSES (total: 2)
+analysis[0] = Un-named analysis.
+analysis[1] = Un-named analysis.
+
+BODIES (total: 10)
+body[0] = pelvis. mass: 0
+              moments of inertia:  ~[0,0,0]
+              products of inertia: ~[0,0,0]
+body[1] = sacrum. mass: 7.486
+              moments of inertia:  ~[0.075,0.08,0.03]
+              products of inertia: ~[0,0,0]
+body[2] = LB_wrap. mass: 0.01
+              moments of inertia:  ~[0.0001,0.0001,0.0001]
+              products of inertia: ~[0,0,0]
+body[3] = Abdomen. mass: 0.01
+              moments of inertia:  ~[0.0001,0.0001,0.0001]
+              products of inertia: ~[0,0,0]
+body[4] = lumbar5. mass: 1.824
+              moments of inertia:  ~[0.01219,0.01765,0.00546]
+              products of inertia: ~[0,0,0]
+body[5] = lumbar4. mass: 1.799
+              moments of inertia:  ~[0.01123,0.01643,0.0052]
+              products of inertia: ~[0,0,0]
+body[6] = lumbar3. mass: 1.67
+              moments of inertia:  ~[0.01066,0.01608,0.00551]
+              products of inertia: ~[0,0,0]
+body[7] = lumbar2. mass: 1.689
+              moments of inertia:  ~[0.01091,0.01682,0.00591]
+              products of inertia: ~[0,0,0]
+body[8] = lumbar1. mass: 1.677
+              moments of inertia:  ~[0.01113,0.01753,0.0064]
+              products of inertia: ~[0,0,0]
+body[9] = torso. mass: 18.619
+              moments of inertia:  ~[0.165,0.15,0.125]
+              products of inertia: ~[0,0,0]
+
+JOINTS (total: 10)
+joint[0] = gndpelvis. parent: ground_offset, child: pelvis_offset
+joint[1] = gndsacrum. parent: ground_offset, child: sacrum_offset
+joint[2] = LB_wrapjnt. parent: sacrum_offset, child: LB_wrap_offset
+joint[3] = Abdjnt. parent: sacrum_offset, child: Abdomen_offset
+joint[4] = L5_S1_IVDjnt. parent: sacrum_offset, child: lumbar5_offset
+joint[5] = L4_L5_IVDjnt. parent: lumbar5_offset, child: lumbar4_offset
+joint[6] = L3_L4_IVDjnt. parent: lumbar4_offset, child: lumbar3_offset
+joint[7] = L2_L3_IVDjnt. parent: lumbar3_offset, child: lumbar2_offset
+joint[8] = L1_L2_IVDjnt. parent: lumbar2_offset, child: lumbar1_offset
+joint[9] = torsojnt. parent: lumbar1_offset, child: torso_offset
+
+ACTUATORS (total: 210)
+actuator[0] = Ps_L1_VB_r
+actuator[1] = Ps_L1_TP_r
+actuator[2] = Ps_L1_L2_IVD_r
+actuator[3] = Ps_L2_TP_r
+actuator[4] = Ps_L2_L3_IVD_r
+actuator[5] = Ps_L3_TP_r
+actuator[6] = Ps_L3_L4_IVD_r
+actuator[7] = Ps_L4_TP_r
+actuator[8] = Ps_L4_L5_IVD_r
+actuator[9] = Ps_L5_TP_r
+actuator[10] = Ps_L5_VB_r
+actuator[11] = Ps_L1_VB_l
+actuator[12] = Ps_L1_TP_l
+actuator[13] = Ps_L1_L2_IVD_l
+actuator[14] = Ps_L2_TP_l
+actuator[15] = Ps_L2_L3_IVD_l
+actuator[16] = Ps_L3_TP_l
+actuator[17] = Ps_L3_L4_IVD_l
+actuator[18] = Ps_L4_TP_l
+actuator[19] = Ps_L4_L5_IVD_l
+actuator[20] = Ps_L5_TP_l
+actuator[21] = Ps_L5_VB_l
+actuator[22] = rect_abd_r
+actuator[23] = rect_abd_l
+actuator[24] = IL_L1_r
+actuator[25] = IL_L2_r
+actuator[26] = IL_L3_r
+actuator[27] = IL_L4_r
+actuator[28] = IL_L1_l
+actuator[29] = IL_L2_l
+actuator[30] = IL_L3_l
+actuator[31] = IL_L4_l
+actuator[32] = IL_R5_r
+actuator[33] = IL_R6_r
+actuator[34] = IL_R7_r
+actuator[35] = IL_R8_r
+actuator[36] = IL_R9_r
+actuator[37] = IL_R10_r
+actuator[38] = IL_R11_r
+actuator[39] = IL_R12_r
+actuator[40] = IL_R5_l
+actuator[41] = IL_R6_l
+actuator[42] = IL_R7_l
+actuator[43] = IL_R8_l
+actuator[44] = IL_R9_l
+actuator[45] = IL_R10_l
+actuator[46] = IL_R11_l
+actuator[47] = IL_R12_l
+actuator[48] = LTpT_T1_r
+actuator[49] = LTpT_T2_r
+actuator[50] = LTpT_T3_r
+actuator[51] = LTpT_T4_r
+actuator[52] = LTpT_T5_r
+actuator[53] = LTpT_T6_r
+actuator[54] = LTpT_T7_r
+actuator[55] = LTpT_T8_r
+actuator[56] = LTpT_T9_r
+actuator[57] = LTpT_T10_r
+actuator[58] = LTpT_T11_r
+actuator[59] = LTpT_T12_r
+actuator[60] = LTpT_R4_r
+actuator[61] = LTpT_R5_r
+actuator[62] = LTpT_R6_r
+actuator[63] = LTpT_R7_r
+actuator[64] = LTpT_R8_r
+actuator[65] = LTpT_R9_r
+actuator[66] = LTpT_R10_r
+actuator[67] = LTpT_R11_r
+actuator[68] = LTpT_R12_r
+actuator[69] = LTpT_T1_l
+actuator[70] = LTpT_T2_l
+actuator[71] = LTpT_T3_l
+actuator[72] = LTpT_T4_l
+actuator[73] = LTpT_T5_l
+actuator[74] = LTpT_T6_l
+actuator[75] = LTpT_T7_l
+actuator[76] = LTpT_T8_l
+actuator[77] = LTpT_T9_l
+actuator[78] = LTpT_T10_l
+actuator[79] = LTpT_T11_l
+actuator[80] = LTpT_T12_l
+actuator[81] = LTpT_R4_l
+actuator[82] = LTpT_R5_l
+actuator[83] = LTpT_R6_l
+actuator[84] = LTpT_R7_l
+actuator[85] = LTpT_R8_l
+actuator[86] = LTpT_R9_l
+actuator[87] = LTpT_R10_l
+actuator[88] = LTpT_R11_l
+actuator[89] = LTpT_R12_l
+actuator[90] = LTpL_L5_r
+actuator[91] = LTpL_L4_r
+actuator[92] = LTpL_L3_r
+actuator[93] = LTpL_L2_r
+actuator[94] = LTpL_L1_r
+actuator[95] = LTpL_L5_l
+actuator[96] = LTpL_L4_l
+actuator[97] = LTpL_L3_l
+actuator[98] = LTpL_L2_l
+actuator[99] = LTpL_L1_l
+actuator[100] = QL_post_I.1-L3_r
+actuator[101] = QL_post_I.2-L4_r
+actuator[102] = QL_post_I.2-L3_r
+actuator[103] = QL_post_I.2-L2_r
+actuator[104] = QL_post_I.3-L1_r
+actuator[105] = QL_post_I.3-L2_r
+actuator[106] = QL_post_I.3-L3_r
+actuator[107] = QL_post_I.1-L3_l
+actuator[108] = QL_post_I.2-L4_l
+actuator[109] = QL_post_I.2-L3_l
+actuator[110] = QL_post_I.2-L2_l
+actuator[111] = QL_post_I.3-L1_l
+actuator[112] = QL_post_I.3-L2_l
+actuator[113] = QL_post_I.3-L3_l
+actuator[114] = QL_mid_L3-12.3_r
+actuator[115] = QL_mid_L3-12.2_r
+actuator[116] = QL_mid_L3-12.1_r
+actuator[117] = QL_mid_L2-12.1_r
+actuator[118] = QL_mid_L4-12.3_r
+actuator[119] = QL_mid_L3-12.3_l
+actuator[120] = QL_mid_L3-12.2_l
+actuator[121] = QL_mid_L3-12.1_l
+actuator[122] = QL_mid_L2-12.1_l
+actuator[123] = QL_mid_L4-12.3_l
+actuator[124] = QL_ant_I.2-T12_r
+actuator[125] = QL_ant_I.3-T12_r
+actuator[126] = QL_ant_I.2-12.1_r
+actuator[127] = QL_ant_I.3-12.1_r
+actuator[128] = QL_ant_I.3-12.2_r
+actuator[129] = QL_ant_I.3-12.3_r
+actuator[130] = QL_ant_I.2-T12_l
+actuator[131] = QL_ant_I.3-T12_l
+actuator[132] = QL_ant_I.2-12.1_l
+actuator[133] = QL_ant_I.3-12.1_l
+actuator[134] = QL_ant_I.3-12.2_l
+actuator[135] = QL_ant_I.3-12.3_l
+actuator[136] = MF_m1s_r
+actuator[137] = MF_m1t.1_r
+actuator[138] = MF_m1t.2_r
+actuator[139] = MF_m1t.3_r
+actuator[140] = MF_m2s_r
+actuator[141] = MF_m2t.1_r
+actuator[142] = MF_m2t.2_r
+actuator[143] = MF_m2t.3_r
+actuator[144] = MF_m3s_r
+actuator[145] = MF_m3t.1_r
+actuator[146] = MF_m3t.2_r
+actuator[147] = MF_m3t.3_r
+actuator[148] = MF_m4s_r
+actuator[149] = MF_m4t.1_r
+actuator[150] = MF_m4t.2_r
+actuator[151] = MF_m4t.3_r
+actuator[152] = MF_m5s_r
+actuator[153] = MF_m5t.1_r
+actuator[154] = MF_m5t.2_r
+actuator[155] = MF_m5t.3_r
+actuator[156] = MF_m1.laminar_r
+actuator[157] = MF_m2.laminar_r
+actuator[158] = MF_m3.laminar_r
+actuator[159] = MF_m4.laminar_r
+actuator[160] = MF_m5.laminar_r
+actuator[161] = MF_m1s_l
+actuator[162] = MF_m1t.1_l
+actuator[163] = MF_m1t.2_l
+actuator[164] = MF_m1t.3_l
+actuator[165] = MF_m2s_l
+actuator[166] = MF_m2t.1_l
+actuator[167] = MF_m2t.2_l
+actuator[168] = MF_m2t.3_l
+actuator[169] = MF_m3s_l
+actuator[170] = MF_m3t.1_l
+actuator[171] = MF_m3t.2_l
+actuator[172] = MF_m3t.3_l
+actuator[173] = MF_m4s_l
+actuator[174] = MF_m4t.1_l
+actuator[175] = MF_m4t.2_l
+actuator[176] = MF_m4t.3_l
+actuator[177] = MF_m5s_l
+actuator[178] = MF_m5t.1_l
+actuator[179] = MF_m5t.2_l
+actuator[180] = MF_m5t.3_l
+actuator[181] = MF_m1.laminar_l
+actuator[182] = MF_m2.laminar_l
+actuator[183] = MF_m3.laminar_l
+actuator[184] = MF_m4.laminar_l
+actuator[185] = MF_m5.laminar_l
+actuator[186] = EO1_r
+actuator[187] = EO2_r
+actuator[188] = EO3_r
+actuator[189] = EO4_r
+actuator[190] = EO5_r
+actuator[191] = EO6_r
+actuator[192] = IO1_r
+actuator[193] = IO2_r
+actuator[194] = IO3_r
+actuator[195] = IO4_r
+actuator[196] = IO5_r
+actuator[197] = IO6_r
+actuator[198] = EO1_l
+actuator[199] = EO2_l
+actuator[200] = EO3_l
+actuator[201] = EO4_l
+actuator[202] = EO5_l
+actuator[203] = EO6_l
+actuator[204] = IO1_l
+actuator[205] = IO2_l
+actuator[206] = IO3_l
+actuator[207] = IO4_l
+actuator[208] = IO5_l
+actuator[209] = IO6_l
+
+STATES (total: 462)
+y[0] = /jointset/LB_wrapjnt/LB_wrapjnt_r3/value
+y[1] = /jointset/LB_wrapjnt/LB_wrapjnt_r3/speed
+y[2] = /jointset/LB_wrapjnt/LB_wrapjnt_t1/value
+y[3] = /jointset/LB_wrapjnt/LB_wrapjnt_t1/speed
+y[4] = /jointset/LB_wrapjnt/LB_wrapjnt_t2/value
+y[5] = /jointset/LB_wrapjnt/LB_wrapjnt_t2/speed
+y[6] = /jointset/Abdjnt/Abs_r3/value
+y[7] = /jointset/Abdjnt/Abs_r3/speed
+y[8] = /jointset/Abdjnt/Abs_t1/value
+y[9] = /jointset/Abdjnt/Abs_t1/speed
+y[10] = /jointset/Abdjnt/Abs_t2/value
+y[11] = /jointset/Abdjnt/Abs_t2/speed
+y[12] = /jointset/L5_S1_IVDjnt/flex_extension/value
+y[13] = /jointset/L5_S1_IVDjnt/flex_extension/speed
+y[14] = /jointset/L5_S1_IVDjnt/lat_bending/value
+y[15] = /jointset/L5_S1_IVDjnt/lat_bending/speed
+y[16] = /jointset/L5_S1_IVDjnt/axial_rotation/value
+y[17] = /jointset/L5_S1_IVDjnt/axial_rotation/speed
+y[18] = /jointset/L4_L5_IVDjnt/L4_L5_FE/value
+y[19] = /jointset/L4_L5_IVDjnt/L4_L5_FE/speed
+y[20] = /jointset/L4_L5_IVDjnt/L4_L5_LB/value
+y[21] = /jointset/L4_L5_IVDjnt/L4_L5_LB/speed
+y[22] = /jointset/L4_L5_IVDjnt/L4_L5_AR/value
+y[23] = /jointset/L4_L5_IVDjnt/L4_L5_AR/speed
+y[24] = /jointset/L3_L4_IVDjnt/L3_L4_FE/value
+y[25] = /jointset/L3_L4_IVDjnt/L3_L4_FE/speed
+y[26] = /jointset/L3_L4_IVDjnt/L3_L4_LB/value
+y[27] = /jointset/L3_L4_IVDjnt/L3_L4_LB/speed
+y[28] = /jointset/L3_L4_IVDjnt/L3_L4_AR/value
+y[29] = /jointset/L3_L4_IVDjnt/L3_L4_AR/speed
+y[30] = /jointset/L2_L3_IVDjnt/L2_L3_FE/value
+y[31] = /jointset/L2_L3_IVDjnt/L2_L3_FE/speed
+y[32] = /jointset/L2_L3_IVDjnt/L2_L3_LB/value
+y[33] = /jointset/L2_L3_IVDjnt/L2_L3_LB/speed
+y[34] = /jointset/L2_L3_IVDjnt/L2_L3_AR/value
+y[35] = /jointset/L2_L3_IVDjnt/L2_L3_AR/speed
+y[36] = /jointset/L1_L2_IVDjnt/L1_L2_FE/value
+y[37] = /jointset/L1_L2_IVDjnt/L1_L2_FE/speed
+y[38] = /jointset/L1_L2_IVDjnt/L1_L2_LB/value
+y[39] = /jointset/L1_L2_IVDjnt/L1_L2_LB/speed
+y[40] = /jointset/L1_L2_IVDjnt/L1_L2_AR/value
+y[41] = /jointset/L1_L2_IVDjnt/L1_L2_AR/speed
+y[42] = /forceset/Ps_L1_VB_r/activation
+y[43] = /forceset/Ps_L1_VB_r/fiber_length
+y[44] = /forceset/Ps_L1_TP_r/activation
+y[45] = /forceset/Ps_L1_TP_r/fiber_length
+y[46] = /forceset/Ps_L1_L2_IVD_r/activation
+y[47] = /forceset/Ps_L1_L2_IVD_r/fiber_length
+y[48] = /forceset/Ps_L2_TP_r/activation
+y[49] = /forceset/Ps_L2_TP_r/fiber_length
+y[50] = /forceset/Ps_L2_L3_IVD_r/activation
+y[51] = /forceset/Ps_L2_L3_IVD_r/fiber_length
+y[52] = /forceset/Ps_L3_TP_r/activation
+y[53] = /forceset/Ps_L3_TP_r/fiber_length
+y[54] = /forceset/Ps_L3_L4_IVD_r/activation
+y[55] = /forceset/Ps_L3_L4_IVD_r/fiber_length
+y[56] = /forceset/Ps_L4_TP_r/activation
+y[57] = /forceset/Ps_L4_TP_r/fiber_length
+y[58] = /forceset/Ps_L4_L5_IVD_r/activation
+y[59] = /forceset/Ps_L4_L5_IVD_r/fiber_length
+y[60] = /forceset/Ps_L5_TP_r/activation
+y[61] = /forceset/Ps_L5_TP_r/fiber_length
+y[62] = /forceset/Ps_L5_VB_r/activation
+y[63] = /forceset/Ps_L5_VB_r/fiber_length
+y[64] = /forceset/Ps_L1_VB_l/activation
+y[65] = /forceset/Ps_L1_VB_l/fiber_length
+y[66] = /forceset/Ps_L1_TP_l/activation
+y[67] = /forceset/Ps_L1_TP_l/fiber_length
+y[68] = /forceset/Ps_L1_L2_IVD_l/activation
+y[69] = /forceset/Ps_L1_L2_IVD_l/fiber_length
+y[70] = /forceset/Ps_L2_TP_l/activation
+y[71] = /forceset/Ps_L2_TP_l/fiber_length
+y[72] = /forceset/Ps_L2_L3_IVD_l/activation
+y[73] = /forceset/Ps_L2_L3_IVD_l/fiber_length
+y[74] = /forceset/Ps_L3_TP_l/activation
+y[75] = /forceset/Ps_L3_TP_l/fiber_length
+y[76] = /forceset/Ps_L3_L4_IVD_l/activation
+y[77] = /forceset/Ps_L3_L4_IVD_l/fiber_length
+y[78] = /forceset/Ps_L4_TP_l/activation
+y[79] = /forceset/Ps_L4_TP_l/fiber_length
+y[80] = /forceset/Ps_L4_L5_IVD_l/activation
+y[81] = /forceset/Ps_L4_L5_IVD_l/fiber_length
+y[82] = /forceset/Ps_L5_TP_l/activation
+y[83] = /forceset/Ps_L5_TP_l/fiber_length
+y[84] = /forceset/Ps_L5_VB_l/activation
+y[85] = /forceset/Ps_L5_VB_l/fiber_length
+y[86] = /forceset/rect_abd_r/activation
+y[87] = /forceset/rect_abd_r/fiber_length
+y[88] = /forceset/rect_abd_l/activation
+y[89] = /forceset/rect_abd_l/fiber_length
+y[90] = /forceset/IL_L1_r/activation
+y[91] = /forceset/IL_L1_r/fiber_length
+y[92] = /forceset/IL_L2_r/activation
+y[93] = /forceset/IL_L2_r/fiber_length
+y[94] = /forceset/IL_L3_r/activation
+y[95] = /forceset/IL_L3_r/fiber_length
+y[96] = /forceset/IL_L4_r/activation
+y[97] = /forceset/IL_L4_r/fiber_length
+y[98] = /forceset/IL_L1_l/activation
+y[99] = /forceset/IL_L1_l/fiber_length
+y[100] = /forceset/IL_L2_l/activation
+y[101] = /forceset/IL_L2_l/fiber_length
+y[102] = /forceset/IL_L3_l/activation
+y[103] = /forceset/IL_L3_l/fiber_length
+y[104] = /forceset/IL_L4_l/activation
+y[105] = /forceset/IL_L4_l/fiber_length
+y[106] = /forceset/IL_R5_r/activation
+y[107] = /forceset/IL_R5_r/fiber_length
+y[108] = /forceset/IL_R6_r/activation
+y[109] = /forceset/IL_R6_r/fiber_length
+y[110] = /forceset/IL_R7_r/activation
+y[111] = /forceset/IL_R7_r/fiber_length
+y[112] = /forceset/IL_R8_r/activation
+y[113] = /forceset/IL_R8_r/fiber_length
+y[114] = /forceset/IL_R9_r/activation
+y[115] = /forceset/IL_R9_r/fiber_length
+y[116] = /forceset/IL_R10_r/activation
+y[117] = /forceset/IL_R10_r/fiber_length
+y[118] = /forceset/IL_R11_r/activation
+y[119] = /forceset/IL_R11_r/fiber_length
+y[120] = /forceset/IL_R12_r/activation
+y[121] = /forceset/IL_R12_r/fiber_length
+y[122] = /forceset/IL_R5_l/activation
+y[123] = /forceset/IL_R5_l/fiber_length
+y[124] = /forceset/IL_R6_l/activation
+y[125] = /forceset/IL_R6_l/fiber_length
+y[126] = /forceset/IL_R7_l/activation
+y[127] = /forceset/IL_R7_l/fiber_length
+y[128] = /forceset/IL_R8_l/activation
+y[129] = /forceset/IL_R8_l/fiber_length
+y[130] = /forceset/IL_R9_l/activation
+y[131] = /forceset/IL_R9_l/fiber_length
+y[132] = /forceset/IL_R10_l/activation
+y[133] = /forceset/IL_R10_l/fiber_length
+y[134] = /forceset/IL_R11_l/activation
+y[135] = /forceset/IL_R11_l/fiber_length
+y[136] = /forceset/IL_R12_l/activation
+y[137] = /forceset/IL_R12_l/fiber_length
+y[138] = /forceset/LTpT_T1_r/activation
+y[139] = /forceset/LTpT_T1_r/fiber_length
+y[140] = /forceset/LTpT_T2_r/activation
+y[141] = /forceset/LTpT_T2_r/fiber_length
+y[142] = /forceset/LTpT_T3_r/activation
+y[143] = /forceset/LTpT_T3_r/fiber_length
+y[144] = /forceset/LTpT_T4_r/activation
+y[145] = /forceset/LTpT_T4_r/fiber_length
+y[146] = /forceset/LTpT_T5_r/activation
+y[147] = /forceset/LTpT_T5_r/fiber_length
+y[148] = /forceset/LTpT_T6_r/activation
+y[149] = /forceset/LTpT_T6_r/fiber_length
+y[150] = /forceset/LTpT_T7_r/activation
+y[151] = /forceset/LTpT_T7_r/fiber_length
+y[152] = /forceset/LTpT_T8_r/activation
+y[153] = /forceset/LTpT_T8_r/fiber_length
+y[154] = /forceset/LTpT_T9_r/activation
+y[155] = /forceset/LTpT_T9_r/fiber_length
+y[156] = /forceset/LTpT_T10_r/activation
+y[157] = /forceset/LTpT_T10_r/fiber_length
+y[158] = /forceset/LTpT_T11_r/activation
+y[159] = /forceset/LTpT_T11_r/fiber_length
+y[160] = /forceset/LTpT_T12_r/activation
+y[161] = /forceset/LTpT_T12_r/fiber_length
+y[162] = /forceset/LTpT_R4_r/activation
+y[163] = /forceset/LTpT_R4_r/fiber_length
+y[164] = /forceset/LTpT_R5_r/activation
+y[165] = /forceset/LTpT_R5_r/fiber_length
+y[166] = /forceset/LTpT_R6_r/activation
+y[167] = /forceset/LTpT_R6_r/fiber_length
+y[168] = /forceset/LTpT_R7_r/activation
+y[169] = /forceset/LTpT_R7_r/fiber_length
+y[170] = /forceset/LTpT_R8_r/activation
+y[171] = /forceset/LTpT_R8_r/fiber_length
+y[172] = /forceset/LTpT_R9_r/activation
+y[173] = /forceset/LTpT_R9_r/fiber_length
+y[174] = /forceset/LTpT_R10_r/activation
+y[175] = /forceset/LTpT_R10_r/fiber_length
+y[176] = /forceset/LTpT_R11_r/activation
+y[177] = /forceset/LTpT_R11_r/fiber_length
+y[178] = /forceset/LTpT_R12_r/activation
+y[179] = /forceset/LTpT_R12_r/fiber_length
+y[180] = /forceset/LTpT_T1_l/activation
+y[181] = /forceset/LTpT_T1_l/fiber_length
+y[182] = /forceset/LTpT_T2_l/activation
+y[183] = /forceset/LTpT_T2_l/fiber_length
+y[184] = /forceset/LTpT_T3_l/activation
+y[185] = /forceset/LTpT_T3_l/fiber_length
+y[186] = /forceset/LTpT_T4_l/activation
+y[187] = /forceset/LTpT_T4_l/fiber_length
+y[188] = /forceset/LTpT_T5_l/activation
+y[189] = /forceset/LTpT_T5_l/fiber_length
+y[190] = /forceset/LTpT_T6_l/activation
+y[191] = /forceset/LTpT_T6_l/fiber_length
+y[192] = /forceset/LTpT_T7_l/activation
+y[193] = /forceset/LTpT_T7_l/fiber_length
+y[194] = /forceset/LTpT_T8_l/activation
+y[195] = /forceset/LTpT_T8_l/fiber_length
+y[196] = /forceset/LTpT_T9_l/activation
+y[197] = /forceset/LTpT_T9_l/fiber_length
+y[198] = /forceset/LTpT_T10_l/activation
+y[199] = /forceset/LTpT_T10_l/fiber_length
+y[200] = /forceset/LTpT_T11_l/activation
+y[201] = /forceset/LTpT_T11_l/fiber_length
+y[202] = /forceset/LTpT_T12_l/activation
+y[203] = /forceset/LTpT_T12_l/fiber_length
+y[204] = /forceset/LTpT_R4_l/activation
+y[205] = /forceset/LTpT_R4_l/fiber_length
+y[206] = /forceset/LTpT_R5_l/activation
+y[207] = /forceset/LTpT_R5_l/fiber_length
+y[208] = /forceset/LTpT_R6_l/activation
+y[209] = /forceset/LTpT_R6_l/fiber_length
+y[210] = /forceset/LTpT_R7_l/activation
+y[211] = /forceset/LTpT_R7_l/fiber_length
+y[212] = /forceset/LTpT_R8_l/activation
+y[213] = /forceset/LTpT_R8_l/fiber_length
+y[214] = /forceset/LTpT_R9_l/activation
+y[215] = /forceset/LTpT_R9_l/fiber_length
+y[216] = /forceset/LTpT_R10_l/activation
+y[217] = /forceset/LTpT_R10_l/fiber_length
+y[218] = /forceset/LTpT_R11_l/activation
+y[219] = /forceset/LTpT_R11_l/fiber_length
+y[220] = /forceset/LTpT_R12_l/activation
+y[221] = /forceset/LTpT_R12_l/fiber_length
+y[222] = /forceset/LTpL_L5_r/activation
+y[223] = /forceset/LTpL_L5_r/fiber_length
+y[224] = /forceset/LTpL_L4_r/activation
+y[225] = /forceset/LTpL_L4_r/fiber_length
+y[226] = /forceset/LTpL_L3_r/activation
+y[227] = /forceset/LTpL_L3_r/fiber_length
+y[228] = /forceset/LTpL_L2_r/activation
+y[229] = /forceset/LTpL_L2_r/fiber_length
+y[230] = /forceset/LTpL_L1_r/activation
+y[231] = /forceset/LTpL_L1_r/fiber_length
+y[232] = /forceset/LTpL_L5_l/activation
+y[233] = /forceset/LTpL_L5_l/fiber_length
+y[234] = /forceset/LTpL_L4_l/activation
+y[235] = /forceset/LTpL_L4_l/fiber_length
+y[236] = /forceset/LTpL_L3_l/activation
+y[237] = /forceset/LTpL_L3_l/fiber_length
+y[238] = /forceset/LTpL_L2_l/activation
+y[239] = /forceset/LTpL_L2_l/fiber_length
+y[240] = /forceset/LTpL_L1_l/activation
+y[241] = /forceset/LTpL_L1_l/fiber_length
+y[242] = /forceset/QL_post_I.1-L3_r/activation
+y[243] = /forceset/QL_post_I.1-L3_r/fiber_length
+y[244] = /forceset/QL_post_I.2-L4_r/activation
+y[245] = /forceset/QL_post_I.2-L4_r/fiber_length
+y[246] = /forceset/QL_post_I.2-L3_r/activation
+y[247] = /forceset/QL_post_I.2-L3_r/fiber_length
+y[248] = /forceset/QL_post_I.2-L2_r/activation
+y[249] = /forceset/QL_post_I.2-L2_r/fiber_length
+y[250] = /forceset/QL_post_I.3-L1_r/activation
+y[251] = /forceset/QL_post_I.3-L1_r/fiber_length
+y[252] = /forceset/QL_post_I.3-L2_r/activation
+y[253] = /forceset/QL_post_I.3-L2_r/fiber_length
+y[254] = /forceset/QL_post_I.3-L3_r/activation
+y[255] = /forceset/QL_post_I.3-L3_r/fiber_length
+y[256] = /forceset/QL_post_I.1-L3_l/activation
+y[257] = /forceset/QL_post_I.1-L3_l/fiber_length
+y[258] = /forceset/QL_post_I.2-L4_l/activation
+y[259] = /forceset/QL_post_I.2-L4_l/fiber_length
+y[260] = /forceset/QL_post_I.2-L3_l/activation
+y[261] = /forceset/QL_post_I.2-L3_l/fiber_length
+y[262] = /forceset/QL_post_I.2-L2_l/activation
+y[263] = /forceset/QL_post_I.2-L2_l/fiber_length
+y[264] = /forceset/QL_post_I.3-L1_l/activation
+y[265] = /forceset/QL_post_I.3-L1_l/fiber_length
+y[266] = /forceset/QL_post_I.3-L2_l/activation
+y[267] = /forceset/QL_post_I.3-L2_l/fiber_length
+y[268] = /forceset/QL_post_I.3-L3_l/activation
+y[269] = /forceset/QL_post_I.3-L3_l/fiber_length
+y[270] = /forceset/QL_mid_L3-12.3_r/activation
+y[271] = /forceset/QL_mid_L3-12.3_r/fiber_length
+y[272] = /forceset/QL_mid_L3-12.2_r/activation
+y[273] = /forceset/QL_mid_L3-12.2_r/fiber_length
+y[274] = /forceset/QL_mid_L3-12.1_r/activation
+y[275] = /forceset/QL_mid_L3-12.1_r/fiber_length
+y[276] = /forceset/QL_mid_L2-12.1_r/activation
+y[277] = /forceset/QL_mid_L2-12.1_r/fiber_length
+y[278] = /forceset/QL_mid_L4-12.3_r/activation
+y[279] = /forceset/QL_mid_L4-12.3_r/fiber_length
+y[280] = /forceset/QL_mid_L3-12.3_l/activation
+y[281] = /forceset/QL_mid_L3-12.3_l/fiber_length
+y[282] = /forceset/QL_mid_L3-12.2_l/activation
+y[283] = /forceset/QL_mid_L3-12.2_l/fiber_length
+y[284] = /forceset/QL_mid_L3-12.1_l/activation
+y[285] = /forceset/QL_mid_L3-12.1_l/fiber_length
+y[286] = /forceset/QL_mid_L2-12.1_l/activation
+y[287] = /forceset/QL_mid_L2-12.1_l/fiber_length
+y[288] = /forceset/QL_mid_L4-12.3_l/activation
+y[289] = /forceset/QL_mid_L4-12.3_l/fiber_length
+y[290] = /forceset/QL_ant_I.2-T12_r/activation
+y[291] = /forceset/QL_ant_I.2-T12_r/fiber_length
+y[292] = /forceset/QL_ant_I.3-T12_r/activation
+y[293] = /forceset/QL_ant_I.3-T12_r/fiber_length
+y[294] = /forceset/QL_ant_I.2-12.1_r/activation
+y[295] = /forceset/QL_ant_I.2-12.1_r/fiber_length
+y[296] = /forceset/QL_ant_I.3-12.1_r/activation
+y[297] = /forceset/QL_ant_I.3-12.1_r/fiber_length
+y[298] = /forceset/QL_ant_I.3-12.2_r/activation
+y[299] = /forceset/QL_ant_I.3-12.2_r/fiber_length
+y[300] = /forceset/QL_ant_I.3-12.3_r/activation
+y[301] = /forceset/QL_ant_I.3-12.3_r/fiber_length
+y[302] = /forceset/QL_ant_I.2-T12_l/activation
+y[303] = /forceset/QL_ant_I.2-T12_l/fiber_length
+y[304] = /forceset/QL_ant_I.3-T12_l/activation
+y[305] = /forceset/QL_ant_I.3-T12_l/fiber_length
+y[306] = /forceset/QL_ant_I.2-12.1_l/activation
+y[307] = /forceset/QL_ant_I.2-12.1_l/fiber_length
+y[308] = /forceset/QL_ant_I.3-12.1_l/activation
+y[309] = /forceset/QL_ant_I.3-12.1_l/fiber_length
+y[310] = /forceset/QL_ant_I.3-12.2_l/activation
+y[311] = /forceset/QL_ant_I.3-12.2_l/fiber_length
+y[312] = /forceset/QL_ant_I.3-12.3_l/activation
+y[313] = /forceset/QL_ant_I.3-12.3_l/fiber_length
+y[314] = /forceset/MF_m1s_r/activation
+y[315] = /forceset/MF_m1s_r/fiber_length
+y[316] = /forceset/MF_m1t.1_r/activation
+y[317] = /forceset/MF_m1t.1_r/fiber_length
+y[318] = /forceset/MF_m1t.2_r/activation
+y[319] = /forceset/MF_m1t.2_r/fiber_length
+y[320] = /forceset/MF_m1t.3_r/activation
+y[321] = /forceset/MF_m1t.3_r/fiber_length
+y[322] = /forceset/MF_m2s_r/activation
+y[323] = /forceset/MF_m2s_r/fiber_length
+y[324] = /forceset/MF_m2t.1_r/activation
+y[325] = /forceset/MF_m2t.1_r/fiber_length
+y[326] = /forceset/MF_m2t.2_r/activation
+y[327] = /forceset/MF_m2t.2_r/fiber_length
+y[328] = /forceset/MF_m2t.3_r/activation
+y[329] = /forceset/MF_m2t.3_r/fiber_length
+y[330] = /forceset/MF_m3s_r/activation
+y[331] = /forceset/MF_m3s_r/fiber_length
+y[332] = /forceset/MF_m3t.1_r/activation
+y[333] = /forceset/MF_m3t.1_r/fiber_length
+y[334] = /forceset/MF_m3t.2_r/activation
+y[335] = /forceset/MF_m3t.2_r/fiber_length
+y[336] = /forceset/MF_m3t.3_r/activation
+y[337] = /forceset/MF_m3t.3_r/fiber_length
+y[338] = /forceset/MF_m4s_r/activation
+y[339] = /forceset/MF_m4s_r/fiber_length
+y[340] = /forceset/MF_m4t.1_r/activation
+y[341] = /forceset/MF_m4t.1_r/fiber_length
+y[342] = /forceset/MF_m4t.2_r/activation
+y[343] = /forceset/MF_m4t.2_r/fiber_length
+y[344] = /forceset/MF_m4t.3_r/activation
+y[345] = /forceset/MF_m4t.3_r/fiber_length
+y[346] = /forceset/MF_m5s_r/activation
+y[347] = /forceset/MF_m5s_r/fiber_length
+y[348] = /forceset/MF_m5t.1_r/activation
+y[349] = /forceset/MF_m5t.1_r/fiber_length
+y[350] = /forceset/MF_m5t.2_r/activation
+y[351] = /forceset/MF_m5t.2_r/fiber_length
+y[352] = /forceset/MF_m5t.3_r/activation
+y[353] = /forceset/MF_m5t.3_r/fiber_length
+y[354] = /forceset/MF_m1.laminar_r/activation
+y[355] = /forceset/MF_m1.laminar_r/fiber_length
+y[356] = /forceset/MF_m2.laminar_r/activation
+y[357] = /forceset/MF_m2.laminar_r/fiber_length
+y[358] = /forceset/MF_m3.laminar_r/activation
+y[359] = /forceset/MF_m3.laminar_r/fiber_length
+y[360] = /forceset/MF_m4.laminar_r/activation
+y[361] = /forceset/MF_m4.laminar_r/fiber_length
+y[362] = /forceset/MF_m5.laminar_r/activation
+y[363] = /forceset/MF_m5.laminar_r/fiber_length
+y[364] = /forceset/MF_m1s_l/activation
+y[365] = /forceset/MF_m1s_l/fiber_length
+y[366] = /forceset/MF_m1t.1_l/activation
+y[367] = /forceset/MF_m1t.1_l/fiber_length
+y[368] = /forceset/MF_m1t.2_l/activation
+y[369] = /forceset/MF_m1t.2_l/fiber_length
+y[370] = /forceset/MF_m1t.3_l/activation
+y[371] = /forceset/MF_m1t.3_l/fiber_length
+y[372] = /forceset/MF_m2s_l/activation
+y[373] = /forceset/MF_m2s_l/fiber_length
+y[374] = /forceset/MF_m2t.1_l/activation
+y[375] = /forceset/MF_m2t.1_l/fiber_length
+y[376] = /forceset/MF_m2t.2_l/activation
+y[377] = /forceset/MF_m2t.2_l/fiber_length
+y[378] = /forceset/MF_m2t.3_l/activation
+y[379] = /forceset/MF_m2t.3_l/fiber_length
+y[380] = /forceset/MF_m3s_l/activation
+y[381] = /forceset/MF_m3s_l/fiber_length
+y[382] = /forceset/MF_m3t.1_l/activation
+y[383] = /forceset/MF_m3t.1_l/fiber_length
+y[384] = /forceset/MF_m3t.2_l/activation
+y[385] = /forceset/MF_m3t.2_l/fiber_length
+y[386] = /forceset/MF_m3t.3_l/activation
+y[387] = /forceset/MF_m3t.3_l/fiber_length
+y[388] = /forceset/MF_m4s_l/activation
+y[389] = /forceset/MF_m4s_l/fiber_length
+y[390] = /forceset/MF_m4t.1_l/activation
+y[391] = /forceset/MF_m4t.1_l/fiber_length
+y[392] = /forceset/MF_m4t.2_l/activation
+y[393] = /forceset/MF_m4t.2_l/fiber_length
+y[394] = /forceset/MF_m4t.3_l/activation
+y[395] = /forceset/MF_m4t.3_l/fiber_length
+y[396] = /forceset/MF_m5s_l/activation
+y[397] = /forceset/MF_m5s_l/fiber_length
+y[398] = /forceset/MF_m5t.1_l/activation
+y[399] = /forceset/MF_m5t.1_l/fiber_length
+y[400] = /forceset/MF_m5t.2_l/activation
+y[401] = /forceset/MF_m5t.2_l/fiber_length
+y[402] = /forceset/MF_m5t.3_l/activation
+y[403] = /forceset/MF_m5t.3_l/fiber_length
+y[404] = /forceset/MF_m1.laminar_l/activation
+y[405] = /forceset/MF_m1.laminar_l/fiber_length
+y[406] = /forceset/MF_m2.laminar_l/activation
+y[407] = /forceset/MF_m2.laminar_l/fiber_length
+y[408] = /forceset/MF_m3.laminar_l/activation
+y[409] = /forceset/MF_m3.laminar_l/fiber_length
+y[410] = /forceset/MF_m4.laminar_l/activation
+y[411] = /forceset/MF_m4.laminar_l/fiber_length
+y[412] = /forceset/MF_m5.laminar_l/activation
+y[413] = /forceset/MF_m5.laminar_l/fiber_length
+y[414] = /forceset/EO1_r/activation
+y[415] = /forceset/EO1_r/fiber_length
+y[416] = /forceset/EO2_r/activation
+y[417] = /forceset/EO2_r/fiber_length
+y[418] = /forceset/EO3_r/activation
+y[419] = /forceset/EO3_r/fiber_length
+y[420] = /forceset/EO4_r/activation
+y[421] = /forceset/EO4_r/fiber_length
+y[422] = /forceset/EO5_r/activation
+y[423] = /forceset/EO5_r/fiber_length
+y[424] = /forceset/EO6_r/activation
+y[425] = /forceset/EO6_r/fiber_length
+y[426] = /forceset/IO1_r/activation
+y[427] = /forceset/IO1_r/fiber_length
+y[428] = /forceset/IO2_r/activation
+y[429] = /forceset/IO2_r/fiber_length
+y[430] = /forceset/IO3_r/activation
+y[431] = /forceset/IO3_r/fiber_length
+y[432] = /forceset/IO4_r/activation
+y[433] = /forceset/IO4_r/fiber_length
+y[434] = /forceset/IO5_r/activation
+y[435] = /forceset/IO5_r/fiber_length
+y[436] = /forceset/IO6_r/activation
+y[437] = /forceset/IO6_r/fiber_length
+y[438] = /forceset/EO1_l/activation
+y[439] = /forceset/EO1_l/fiber_length
+y[440] = /forceset/EO2_l/activation
+y[441] = /forceset/EO2_l/fiber_length
+y[442] = /forceset/EO3_l/activation
+y[443] = /forceset/EO3_l/fiber_length
+y[444] = /forceset/EO4_l/activation
+y[445] = /forceset/EO4_l/fiber_length
+y[446] = /forceset/EO5_l/activation
+y[447] = /forceset/EO5_l/fiber_length
+y[448] = /forceset/EO6_l/activation
+y[449] = /forceset/EO6_l/fiber_length
+y[450] = /forceset/IO1_l/activation
+y[451] = /forceset/IO1_l/fiber_length
+y[452] = /forceset/IO2_l/activation
+y[453] = /forceset/IO2_l/fiber_length
+y[454] = /forceset/IO3_l/activation
+y[455] = /forceset/IO3_l/fiber_length
+y[456] = /forceset/IO4_l/activation
+y[457] = /forceset/IO4_l/fiber_length
+y[458] = /forceset/IO5_l/activation
+y[459] = /forceset/IO5_l/fiber_length
+y[460] = /forceset/IO6_l/activation
+y[461] = /forceset/IO6_l/fiber_length
+
+[2023-11-30 13:13:02.082] [info] Integrating from 0.0 to 5.0.
+[2023-11-30 13:13:15.524] [error] ForwardTool::run() caught an exception: 
+ Operation Aborted
+[2023-11-30 13:37:19.257] [info] Updating Model file from 10500 to latest format...
+[2023-11-30 13:38:07.969] [info] Updating Model file from 10500 to latest format...
+[2023-11-30 13:39:41.956] [info] Old version storage/motion file encountered
+[2023-11-30 13:39:41.956] [info] Storage: read data file = C:\Users\siril\OneDrive\Desktop\TIM-Control\OpenSim\MotionFiles\MotionFiles\MotionFile_C_5DegrFlexExt.mot (nr=100 nc=7)
+[2023-11-30 13:39:41.956] [info] .. assuming rotations in Degrees..
