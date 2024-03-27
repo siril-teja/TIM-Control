@@ -1,0 +1,18 @@
+
+! Delete old files
+/DELETE, mat_K.matrix
+/DELETE, mat_M.matrix
+/DELETE, mat_K.CSV
+/DELETE, mat_M.CSV
+
+! Create Matrices K (stiffness) and M (mass) from file specified as 'ARG1'
+*DMAT, mat_K, , IMPORT, SUB, ARG1, STIFF
+*DMAT, mat_M, , IMPORT, SUB, ARG1, MASS
+
+! Print matrices to a matrix file (3 digits precision - maybe limited)
+*PRINT, mat_K, mat_K.matrix
+*PRINT, mat_M, mat_M.matrix
+
+! Print matrices to a csv file with specified precision (exponential format)
+*EXPORT, mat_K, CSV , mat_K.CSV , 16
+*EXPORT, mat_M, CSV , mat_M.CSV , 16
