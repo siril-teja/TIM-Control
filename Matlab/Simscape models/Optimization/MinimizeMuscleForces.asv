@@ -1,0 +1,10 @@
+function y = MinimizeMuscleForces(data)
+
+    %cost = data.Nominal.SumofSquareofForces.Data;
+    
+    t = data.Nominal.SumofSquareofForces.Time;
+    y = data.Nominal.SumofSquareofForces.Data;
+
+    %Compute a first order approximation to the |PlantActuator| signal energy
+    objective = sum( (y.^2).*t );
+end
