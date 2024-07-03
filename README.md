@@ -1,3 +1,3 @@
 # TIM-Control
- LabView Control code for TIM
- Digital Twin models in Matlab
+ 1. LabView Control code for TIM
+ 2. Digital Twin models in Matlab
