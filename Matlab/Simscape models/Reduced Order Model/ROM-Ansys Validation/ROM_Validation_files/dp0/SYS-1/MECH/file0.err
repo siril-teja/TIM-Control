@@ -1,0 +1,76 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       21:06:46
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Node 0 of *GET command is undefined.                                    
+  Line= *GET,L5_y,NODE,L5,LOC,Y                                          
+  The *GET command is ignored.                                           
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Node 0 of *GET command is undefined.                                    
+  Line= *GET,L5_z,NODE,L5,LOC,Z                                          
+  The *GET command is ignored.                                           
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Specified range of 0 to 0 is not permitted.  The D command is ignored.  
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Specified range of 0 to 0 is not permitted.  The D command is ignored.  
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Specified range of 0 to 0 is not permitted.  The D command is ignored.  
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Unknown parameter name= L5_Y.  A value of 7.888609052E-31 will be used. 
+
+ *** WARNING ***                         CP =       1.109   TIME= 21:06:47
+ Unknown parameter name= L5_Z.  A value of 7.888609052E-31 will be used. 
+
+ *** WARNING ***                         CP =       1.422   TIME= 21:06:47
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       1.469   TIME= 21:06:47
+ MPC184 elements are being used in the current analysis and the          
+ NLGEOM,ON command has not been used.  Thus, only linearized behavior    
+ will be considered.  If finite rotation and large deflection effects    
+ are to be considered, please use the NLGEOM,ON command.                 
+
+ *** WARNING ***                         CP =       1.500   TIME= 21:06:47
+ Meshes made up of 10 percent or more of SOLID185 tetrahedra are not     
+ recommended.                                                            
+
+ *** WARNING ***                         CP =       1.766   TIME= 21:06:48
+ Real constant set 108 has 12 real constants defined which is more than  
+ the 6 real constants used by element 141366 (LINK180).  This set may    
+ have been defined for another element type.  Testing for this           
+ discontinues for this model.                                            
+
+ *** WARNING ***                         CP =       2.953   TIME= 21:06:49
+ Overconstraint may occur for Lagrange multiplier or MPC based contact   
+ algorithm.                                                              
+
+ *** WARNING ***                         CP =       2.953   TIME= 21:06:49
+ Certain contact elements (for example 141359 & 133676) overlap with     
+ other.                                                                  
+
+ *** WARNING ***                         CP =       2.953   TIME= 21:06:49
+ Certain contact pairs (for example 31 & 29) overlap with other.         
+
+ *** WARNING ***                         CP =       4.453   TIME= 21:06:50
+ The sparse solver must be used if any current technology elements with  
+ u-P formulation or MPC184 elements using Lagrangian multiplier          
+ entangle with other contraint equtions.  The equation solver option     
+ has been switched to the sparse solver.                                 
+
+ *** WARNING ***                         CP =       7.500   TIME= 21:06:53
+ Pivoting has been activated for the Distributed Sparse Matrix Solver .  
+ The memory required may greatly exceed the predicted amount.  In that   
+ event, use the DSPOPTION command to change the memory mode and/or       
+ memory size used by the Distributed Sparse Matrix Solver.               
+
+ *** WARNING ***                         CP =      11.203   TIME= 21:06:57
+ A reference moment value times the tolerance is used by the             
+ Newton-Raphson method for checking convergence.  The calculated         
+ reference MOMENT CONVERGENCE VALUE = 0 is less than a threshold.  This  
+ threshold is internally calculated.  You can overwrite it by            
+ specifying MINREF on the CNVTOL command.  Check results carefully.      

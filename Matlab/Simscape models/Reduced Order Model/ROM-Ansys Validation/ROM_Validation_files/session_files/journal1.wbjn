@@ -1,0 +1,164 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="VB")
+matlProp1 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matl1.DisplayName = "IVD1"
+matlProp1.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp1.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["7.8886090522101181E-31 [MPa]"]])
+matlProp1.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2.1 [MPa]"]])
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="C:/Users/siril/OneDrive/Desktop/ROM-Ansys Validation/__MODEL WITHOUT NUCLEUS v12.stl")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+matl2 = engineeringData1.CreateMaterial(Name="IVD2")
+matlProp2 = matl2.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp2.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2.2 [Pa]"]])
+matl3 = engineeringData1.CreateMaterial(Name="IVD3")
+matlProp3 = matl3.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp3.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["1.1 [Pa]"]])
+matlProp3.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp3.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["1.1E-06 [MPa]"]])
+matlProp3.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["1.1 [MPa]"]])
+matlProp2.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp2.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2.2E-06 [MPa]"]])
+matlProp2.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2.2 [MPa]"]])
+matl4 = engineeringData1.CreateMaterial(Name="IVD4")
+matlProp4 = matl4.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp4.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp4.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["1.7 [MPa]"]])
+matl5 = engineeringData1.CreateMaterial(Name="IVD5")
+matlProp5 = matl5.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp5.SetVariableProperty(
+    VariableName="Young's Modulus",
+    Property="Unit",
+    Value="MPa")
+matlProp5.SetData(
+    Index=-1,
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp5.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["3.2 [MPa]"]])
+modelComponent1.Update(AllDependencies=True)
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Reset()
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+modelComponent1.Refresh()
+model1.Edit()
+model1.Exit()
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)
+template2 = GetTemplate(TemplateName="EngData")
+system2 = template2.CreateSystem(
+    Position="Above",
+    RelativeTo=system1)
+engineeringDataComponent1 = system2.GetComponent(Name="Engineering Data")
+engineeringDataComponent2 = system1.GetComponent(Name="Engineering Data")
+engineeringDataComponent1.ReplaceWithShare(
+    TargetSystem=system2,
+    ComponentToShare=engineeringDataComponent2,
+    SourceSystem=system1)
+system1.Delete()
+library1 = EngData.OpenLibrary(
+    Name="EngineeringData",
+    Source=ANSYS::Disk::C:\Users\siril\OneDrive\Desktop\ROM-Ansys Validation\ROM_Validation_files\dp0\SYS\ENGD\EngineeringData.xml)
+template3 = GetTemplate(TemplateName="Geometry")
+system3 = template3.CreateSystem(
+    Position="Below",
+    RelativeTo=system2)
+geometry2 = system3.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="C:/Users/siril/OneDrive/Desktop/ROM-Ansys Validation/ROM_LumbarSpine.scdoc")
+system4 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+engineeringDataComponent3 = system4.GetComponent(Name="Engineering Data")
+engineeringDataComponent3.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=engineeringDataComponent1,
+    SourceSystem=system2)
+geometryComponent2 = system4.GetComponent(Name="Geometry")
+geometryComponent3 = system3.GetComponent(Name="Geometry")
+geometryComponent2.ReplaceWithShare(
+    TargetSystem=system4,
+    ComponentToShare=geometryComponent3,
+    SourceSystem=system3)
+modelComponent2 = system4.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system4.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+model2.Exit()
+Save(Overwrite=True)

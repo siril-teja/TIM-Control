@@ -1,0 +1,109 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="IVD5")
+matlProp1 = material1.GetProperty(Name="Elasticity")
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.45"]])
+material2 = engineeringData1.GetMaterial(Name="IVD4")
+matlProp2 = material2.GetProperty(Name="Elasticity")
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.45"]])
+material3 = engineeringData1.GetMaterial(Name="IVD3")
+matlProp3 = material3.GetProperty(Name="Elasticity")
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.45"]])
+material4 = engineeringData1.GetMaterial(Name="IVD2")
+matlProp4 = material4.GetProperty(Name="Elasticity")
+matlProp4.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.45"]])
+material5 = engineeringData1.GetMaterial(Name="IVD1")
+matlProp5 = material5.GetProperty(Name="Elasticity")
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.45"]])
+Update()
+results1 = system1.GetContainer(ComponentName="Results")
+results1.Edit()
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.5"]])
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp4.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.49"]])
+Update()
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp4.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+Update()
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.495"]])
+matlProp4.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.495"]])
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.495"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.495"]])
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.495"]])
+Update()
+matlProp5.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp4.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+matlProp1.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.499"]])
+Update()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Update()
+Save(Overwrite=True)

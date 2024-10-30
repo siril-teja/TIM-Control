@@ -1,0 +1,121 @@
+/prep7 ! enter prep7 processor to modify the FE model
+
+CMSEL,ALL 				! select all components
+
+*get,typemax,ETYP,,NUM,MAX    ! max defined element type ! retrieve values (*get), assignt to typemax, e.g. typemax = maximum element type
+*get,realmax,RCON,,NUM,MAX    ! max defined real constant
+*get,mat_max,MAT,,NUM,MAX     ! max defined material
+*get,nodemax,NODE,,NUM,MAX    ! highest numbered node in model
+
+! want local element type number for HSFLD242 to be greater than max constant and max material type number, but why?
+! ans: so that type, mat and real are all the same local value for consistency
+newnumber=typemax+1
+*if,realmax,ge,newnumber,then
+   newnumber=realmax+1
+*endif
+*if,mat_max,ge,newnumber,then
+   newnumber=mat_max+1
+*endif
+
+!L1 at y = 0.25mm
+
+CSYS,CSL2
+L2slider = nodemax+1
+n,L2slider,0,0,0
+
+CSYS,CSL3
+L3slider = L2slider+1
+n,L3slider,0,0.25,0
+
+CSYS,CSL4
+L4slider = L3slider+1
+n,L4slider,0,0,0
+
+CSYS,CSL5
+L5slider = L4slider+1
+n,L5slider,0,-0.5,0
+
+et,newnumber,MPC184,3
+type,newnumber
+
+e,L2slider,L2sliderK,L2sliderJ
+e,L3slider,L3sliderK,L3sliderJ
+e,L4slider,L4sliderK,L4sliderJ
+e,L5slider,L5sliderK,L5sliderJ
+
+newnumber = newnumber + 1
+
+!----- Tension-only Link180 elements as cable) ----
+
+CSYS,0 !activate global CS
+
+linkArea = 1 !mm^2
+
+*GET,L5_y,NODE,L5,LOC,Y
+*GET,L5_z,NODE,L5,LOC,Z
+S1_y = -65.65
+S1_z = 901.31
+
+n,S1,0,S1_y,S1_z !in global CS
+d,S1,UX,0
+d,S1,UY,0
+d,S1,UZ,0 !rotation allowed
+
+!*GET, nodemax, NODE, 0, NUM, MAXD
+!S1 = nodemax+1
+!n,S1,0,S1_y,S1_z
+
+et,newnumber,link180,,1
+mat,newnumber
+type,newnumber
+sectype,newnumber,link
+secdata,linkArea !Link cross-sectional area
+seccontrol,,1 ! Tension only
+secnum,newnumber
+mp,EX,newnumber,200e03
+mp,PRXY,newnumber,0.33
+
+e,L2slider,L1
+e,L3slider,L2slider
+e,L4slider,L3slider
+e,L5slider,L4slider
+
+L5S1_y = S1_y-L5_y
+L5S1_z = S1_z-L5_z
+
+!L5S1u_y = L5S1_y/sqrt(L5S1_y**2+L5S1_z**2)
+!L5S1u_z = L5S1_z/sqrt(L5S1_y**2+L5S1_z**2)
+
+PI=acos(-1)
+theta=66*PI/180 !actual = 63.9deg
+L5S1u_y = cos(theta)
+L5S1u_z = -sin(theta)
+
+ALLSEL ! re-select all the model
+
+!------------
+
+! --------- Load table ----------
+
+time1 = ARG2
+time2 = ARG3
+
+force_y = ARG1*L5S1u_y
+force_z = ARG1*L5S1u_z
+
+*DIM,T_FLY,TABLE,3,,,TIME
+*TAXIS,T_FLY(1),1,0,time1,time2
+T_FLY(1)=0,force_y,force_y
+
+*DIM,T_FLZ,TABLE,3,,,TIME
+*TAXIS,T_FLZ(1),1,0,time1,time2
+T_FLZ(1)=0,force_z,force_z
+
+!--------------------------------
+
+/solu ! enter solution processor to define loads
+
+F,L5slider,FY,%T_FLY%
+F,L5slider,FZ,%T_FLZ%
+
+ALLSEL
