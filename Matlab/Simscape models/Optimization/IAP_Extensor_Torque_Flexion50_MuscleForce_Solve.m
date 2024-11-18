@@ -24,7 +24,7 @@ open_system('draft7')
 %
 % Specify model parameters as design variables to optimize.
 if nargin < 1 || isempty(DesignVars)
-    DesignVars = sdo.getParameterFromModel('draft7',{'LeftAbdominalMuscleForce','LeftBackMuscleForce','LeftTransverse1MuscleForce','LeftTransverse2MuscleForce'});
+    DesignVars = sdo.getParameterFromModel('draft7',{'LeftAbdominalMuscleForce','LeftBackMuscleForce','LeftTransverse1MuscleForce','LeftTransverse2MuscleForce','RightAbdominalMuscleForce','RightBackMuscleForce','RightTransverse1MuscleForce','RightTransverse2MuscleForce'});
     DesignVars(1).Minimum = 1;
     DesignVars(1).Maximum = 500;
     DesignVars(1).Scale = 1;
@@ -37,10 +37,32 @@ if nargin < 1 || isempty(DesignVars)
     DesignVars(4).Minimum = 1;
     DesignVars(4).Maximum = 500;
     DesignVars(4).Scale = 1;
-    DesignVars(1).Value = DesignVars(1).Maximum * rand();
-    %DesignVars(2).Value = DesignVars(2).Maximum * rand();
-    DesignVars(3).Value = DesignVars(3).Maximum * rand();
-    DesignVars(4).Value = DesignVars(4).Maximum * rand();
+    
+    DesignVars(5).Minimum = 1;
+    DesignVars(5).Maximum = 500;
+    DesignVars(5).Scale = 1;
+
+    DesignVars(6).Minimum = 1;
+    DesignVars(6).Maximum = 500;
+    DesignVars(6).Scale = 1;
+
+    DesignVars(7).Minimum = 1;
+    DesignVars(7).Maximum = 500;
+    DesignVars(7).Scale = 1;
+
+    DesignVars(8).Minimum = 1;
+    DesignVars(8).Maximum = 500;
+    DesignVars(8).Scale = 1;
+
+    DesignVars(1).Value = DesignVars(1).Maximum * rand()
+    DesignVars(2).Value = DesignVars(2).Maximum * rand()
+    DesignVars(3).Value = DesignVars(3).Maximum * rand()
+    DesignVars(4).Value = DesignVars(4).Maximum * rand()
+
+    DesignVars(5).Value = DesignVars(5).Maximum * rand()
+    DesignVars(6).Value = DesignVars(6).Maximum * rand()
+    DesignVars(7).Value = DesignVars(7).Maximum * rand()
+    DesignVars(8).Value = DesignVars(8).Maximum * rand()
 end
 
 %% Specify Design Requirements
