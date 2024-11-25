@@ -1,0 +1,21 @@
+component CustomMuscle
+    nodes
+        p1 = foundation.mechanical.translational.translational; % Lower frame
+        p2 = foundation.mechanical.translational.translational; % Upper frame
+    end
+    parameters
+        colorBase = [0, 1, 0]; % Base color (e.g., green)
+        maxForce = 1000; % Maximum tensile force for color scaling
+    end
+    variables
+        tension = {0, 'N'}; % Tension-only force
+    end
+    equations
+        % Calculate force as tension only
+        tension = max(0, p2.v - p1.v); % Ensure tension-only
+        % Assign visualization properties
+        length = norm(p2.x - p1.x);
+        visualProperties.length = length;
+        visualProperties.color = colorBase * min(1, tension / maxForce);
+    end
+end
