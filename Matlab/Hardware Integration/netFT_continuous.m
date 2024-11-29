@@ -1,46 +1,79 @@
-% Test script for NetFT sensor connectivity
+% Test script for continuous NetFT sensor connectivity
 
-%% UDP port
+%% UDP Port
 u = netFT_openConnection;
+
 %% Parameters
 numOffsetSamples = 20;
+
+%% Start Streaming
+netFT_startStreaming(u);
+
+%% Offset Calculation
 offset = netFT_getOffset(u, numOffsetSamples);
 
-% Prepare figure for real-time plotting
+%% Initialize variables
+result = zeros(0, 6); % Dynamic array to store sensor data
+timeData = zeros(0, 1); % Store timestamps
+startTime = tic; % Start timer for timestamps
+
+% Create a figure for live plotting
 figure;
 hold on;
-xlabel('Time (iterations)');
-ylabel('Force/Torque (N and Nm)');
-legend('Fx', 'Fy', 'Fz', 'Tx', 'Ty', 'Tz');
+grid on;
+xlabel('Time (s)');
+ylabel('Force/Torque Values');
+legendLabels = {'Fx', 'Fy', 'Fz', 'Tx', 'Ty', 'Tz'};
 
-% Initialize the data arrays
-result = zeros(1, 6);  % Store latest data point for plotting
-
-% Loop to continuously fetch data
-while true
-    % Fetch fresh data from the sensor
-    ftdata = netFT_getFreshData(u, offset);
-    
-    % Display data (optional)
-    disp(ftdata);
-    
-    % Update the result (you can store or process more if needed)
-    result = [result; ftdata];  % Append the new data point
-    
-    % Plot the data in real-time
-    plot(result(:,1), 'r'); % Fx - red
-    plot(result(:,2), 'g'); % Fy - green
-    plot(result(:,3), 'b'); % Fz - blue
-    plot(result(:,4), 'c'); % Tx - cyan
-    plot(result(:,5), 'm'); % Ty - magenta
-    plot(result(:,6), 'k'); % Tz - black
-    drawnow;  % Force MATLAB to update the figure
-    
-    % Add a pause to avoid overwhelming the CPU
-    pause(0.1);  % Adjust the pause time if needed
+% Initialize plot handles for six data channels
+plotHandles = gobjects(1, 6);
+colors = lines(6); % Different colors for each channel
+for i = 1:6
+    plotHandles(i) = plot(nan, nan, 'LineWidth', 1.5, 'Color', colors(i, :));
 end
 
-% This part will only execute when you manually stop the loop
+legend(plotHandles, legendLabels, 'Location', 'best');
+
+%% Continuous Loop for Data Collection
+disp('Press Ctrl+C to stop data collection...');
+try
+    while true
+        % Fetch sensor data
+        ftdata = netFT_getFreshData(u, offset);
+        
+        % Validate the data
+        if isempty(ftdata) || length(ftdata) ~= 6
+            warning('Unexpected data format or empty data received.');
+            continue;
+        end
+
+        % Append the new data
+        elapsedTime = toc(startTime);
+        timeData = [timeData; elapsedTime];
+        result = [result; ftdata];
+        
+        % Limit the number of displayed points for performance
+        maxPoints = 1000; % Adjust as needed
+        if size(result, 1) > maxPoints
+            result = result(end-maxPoints+1:end, :);
+            timeData = timeData(end-maxPoints+1:end);
+        end
+
+        % Update plots
+        for j = 1:6
+            set(plotHandles(j), 'XData', timeData, 'YData', result(:, j));
+        end
+
+        % Redraw the figure
+        drawnow;
+    end
+catch ME
+    disp('Data collection stopped.');
+    disp(ME.message);
+end
+
+%% Stop Streaming
 netFT_stopStreaming(u);
-%% Tidy up
-clear u;
+
+%% Tidy Up
+clear u; % Clear the UDP object

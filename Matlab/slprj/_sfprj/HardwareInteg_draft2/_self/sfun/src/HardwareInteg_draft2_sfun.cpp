@@ -126,7 +126,7 @@ unsigned int sf_HardwareInteg_draft2_get_eml_resolved_functions_info( int nlhs,
     switch (chartFileNumber) {
      case 1:
       {
-        if (strcmp(instanceChksum, "sEHx6oiCfc8pRE5kfT43ZmC") == 0) {
+        if (strcmp(instanceChksum, "snGA5aGasMJk4kjO1CbRkjG") == 0) {
           extern const mxArray
             *sf_c1_HardwareInteg_draft2_get_eml_resolved_functions_info(void);
           mxArray *persistentMxArray = (mxArray *)
@@ -174,7 +174,7 @@ unsigned int sf_HardwareInteg_draft2_third_party_uses_info( int nlhs, mxArray *
     switch (chartFileNumber) {
      case 1:
       {
-        if (strcmp(tpChksum, "sEHx6oiCfc8pRE5kfT43ZmC") == 0) {
+        if (strcmp(tpChksum, "snGA5aGasMJk4kjO1CbRkjG") == 0) {
           extern mxArray *sf_c1_HardwareInteg_draft2_third_party_uses_info(void);
           plhs[0] = sf_c1_HardwareInteg_draft2_third_party_uses_info();
           break;
@@ -211,7 +211,7 @@ unsigned int sf_HardwareInteg_draft2_jit_fallback_info( int nlhs, mxArray *
     switch (chartFileNumber) {
      case 1:
       {
-        if (strcmp(tpChksum, "sEHx6oiCfc8pRE5kfT43ZmC") == 0) {
+        if (strcmp(tpChksum, "snGA5aGasMJk4kjO1CbRkjG") == 0) {
           extern mxArray *sf_c1_HardwareInteg_draft2_jit_fallback_info(void);
           plhs[0] = sf_c1_HardwareInteg_draft2_jit_fallback_info();
           break;
@@ -248,7 +248,7 @@ unsigned int sf_HardwareInteg_draft2_get_post_codegen_info( int nlhs, mxArray *
     switch (chartFileNumber) {
      case 1:
       {
-        if (strcmp(tpChksum, "sEHx6oiCfc8pRE5kfT43ZmC") == 0) {
+        if (strcmp(tpChksum, "snGA5aGasMJk4kjO1CbRkjG") == 0) {
           const char *sf_c1_HardwareInteg_draft2_get_post_codegen_info(void);
           const char* encoded_post_codegen_info =
             sf_c1_HardwareInteg_draft2_get_post_codegen_info();
@@ -287,7 +287,7 @@ unsigned int sf_HardwareInteg_draft2_updateBuildInfo_args_info( int nlhs,
     switch (chartFileNumber) {
      case 1:
       {
-        if (strcmp(tpChksum, "sEHx6oiCfc8pRE5kfT43ZmC") == 0) {
+        if (strcmp(tpChksum, "snGA5aGasMJk4kjO1CbRkjG") == 0) {
           extern mxArray *sf_c1_HardwareInteg_draft2_updateBuildInfo_args_info
             (void);
           plhs[0] = sf_c1_HardwareInteg_draft2_updateBuildInfo_args_info();
