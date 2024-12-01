@@ -104,7 +104,7 @@ ADDITIONAL_LDFLAGS      =
 DEFINES_CUSTOM          = -DEXT_MODE -DIS_RAPID_ACCEL 
 DEFINES_OTHER           = -DHAVESTDIO
 COMPILE_FLAGS_OTHER     = -mcmodel=medium
-SYSTEM_LIBS             = -L"D:\Matlab R2023a\extern\lib\win64\microsoft" libmwphysmod_common_logging2_core_rtw.lib libmwipp.lib libut.lib libmx.lib libmex.lib libmat.lib libmwmathutil.lib libmwslsa_sim.lib libmwslexec_simbridge.lib libmwsl_fileio.lib libmwsigstream.lib libmwsl_AsyncioQueue.lib libmwsl_services.lib libmwsdi_raccel.lib libmwi18n.lib libmwcoder_target_services.lib libmwcoder_ParamTuningTgtAppSvc.lib libmwslpointerutil.lib libmwsl_simtarget_instrumentation.lib libfixedpoint.lib libmwslexec_simlog.lib libmwstringutil.lib
+SYSTEM_LIBS             = -L"D:\Matlab R2023a\extern\lib\win64\microsoft" libmwipp.lib libut.lib libmx.lib libmex.lib libmat.lib libmwmathutil.lib libmwslsa_sim.lib libmwslexec_simbridge.lib libmwsl_fileio.lib libmwsigstream.lib libmwsl_AsyncioQueue.lib libmwsl_services.lib libmwsdi_raccel.lib libmwi18n.lib libmwcoder_target_services.lib libmwcoder_ParamTuningTgtAppSvc.lib libmwslpointerutil.lib libmwsl_simtarget_instrumentation.lib libfixedpoint.lib libmwslexec_simlog.lib libmwstringutil.lib
 MODEL_HAS_DYNAMICALLY_LOADED_SFCNS = 0
 
 #--------------------------- Model and reference models -----------------------
