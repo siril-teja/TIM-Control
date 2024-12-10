@@ -3,8 +3,7 @@ c1_HardwareInteg_draft2.obj
 HardwareInteg_draft2_sfun_registry.obj
 half_type.obj
 -LD:\Application\extern\lib\win64\mingw64
-D:\Application\extern\lib\win64\microsoft\libmwblas.lib
-D:\Application\extern\lib\win64\mingw64\libmwblas.lib
+-llibmwblas
 
 
 "D:\Application\extern\lib\win64\mingw64\sf_runtime.lib" 

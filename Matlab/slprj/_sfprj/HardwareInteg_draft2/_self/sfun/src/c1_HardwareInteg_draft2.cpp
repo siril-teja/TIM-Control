@@ -328,7 +328,7 @@ static void mdl_setup_runtime_resources_c1_HardwareInteg_draft2
     &chartInstance->c1_IsSequenceViewerPresent, 0, 0,
     &chartInstance->c1_mlFcnLineNumber, &chartInstance->c1_IsHeatMapPresent, 0);
   covrtCreateStateflowInstanceData(chartInstance->c1_covrtInstance, 1U, 0U, 1U,
-    36U);
+    30U);
   covrtChartInitFcn(chartInstance->c1_covrtInstance, 0U, false, false, false);
   covrtStateInitFcn(chartInstance->c1_covrtInstance, 0U, 0U, false, false, false,
                     0U, &c1_decisionTxtStartIdx, &c1_decisionTxtEndIdx);

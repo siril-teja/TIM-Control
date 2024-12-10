@@ -1,0 +1,96 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "doneDoubleBufferReInit"\
+      Description  "DoubleBufferInitCheck"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c1_HardwareInteg_draft2"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c1_HardwareInteg_draft2"\
+      Path         "is_active_c1_HardwareInteg_draft2"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "error_prev"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:93-103"\
+    }\
+    ChartData {\
+      Name         "error_prev_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:93-103"\
+    }\
+    ChartData {\
+      Name         "relay_state"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:104-115"\
+    }\
+    ChartData {\
+      Name         "relay_state_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:104-115"\
+    }\
+    ChartData {\
+      Name         "oscillation_data"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:116-132"\
+    }\
+    ChartData {\
+      Name         "oscillation_data_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:116-132"\
+    }\
+    ChartData {\
+      Name         "time"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:133-137"\
+    }\
+    ChartData {\
+      Name         "time_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "HardwareInteg_draft2:47:133-137"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
