@@ -37,11 +37,7 @@ state ) { double xx [ 1 ] ; ( void ) mech ; xx [ 0 ] = 0.0 ; state [ 0 ] = xx
 ; state [ 79 ] = xx [ 0 ] ; state [ 80 ] = xx [ 0 ] ; state [ 81 ] = xx [ 0 ]
 ; state [ 82 ] = xx [ 0 ] ; state [ 83 ] = xx [ 0 ] ; state [ 84 ] = xx [ 0 ]
 ; state [ 85 ] = xx [ 0 ] ; state [ 86 ] = xx [ 0 ] ; state [ 87 ] = xx [ 0 ]
-; state [ 88 ] = xx [ 0 ] ; state [ 89 ] = xx [ 0 ] ; state [ 90 ] = xx [ 0 ]
-; state [ 91 ] = xx [ 0 ] ; state [ 92 ] = xx [ 0 ] ; state [ 93 ] = xx [ 0 ]
-; state [ 94 ] = xx [ 0 ] ; state [ 95 ] = xx [ 0 ] ; state [ 96 ] = xx [ 0 ]
-; state [ 97 ] = xx [ 0 ] ; state [ 98 ] = xx [ 0 ] ; state [ 99 ] = xx [ 0 ]
-; state [ 100 ] = xx [ 0 ] ; state [ 101 ] = xx [ 0 ] ; } static void
+; state [ 88 ] = xx [ 0 ] ; state [ 89 ] = xx [ 0 ] ; } static void
 perturbSimJointPrimitiveState_0_0 ( double mag , double * state ) { state [ 0
 ] = state [ 0 ] + mag ; } static void perturbSimJointPrimitiveState_0_0v (
 double mag , double * state ) { state [ 0 ] = state [ 0 ] + mag ; state [ 3 ]
@@ -197,30 +193,6 @@ static void perturbSimJointPrimitiveState_12_2 ( double mag , double * state
 ) { state [ 74 ] = state [ 74 ] + mag ; } static void
 perturbSimJointPrimitiveState_12_2v ( double mag , double * state ) { state [
 74 ] = state [ 74 ] + mag ; state [ 77 ] = state [ 77 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_13_0 ( double mag , double * state
-) { state [ 78 ] = state [ 78 ] + mag ; } static void
-perturbSimJointPrimitiveState_13_0v ( double mag , double * state ) { state [
-78 ] = state [ 78 ] + mag ; state [ 81 ] = state [ 81 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_13_1 ( double mag , double * state
-) { state [ 79 ] = state [ 79 ] + mag ; } static void
-perturbSimJointPrimitiveState_13_1v ( double mag , double * state ) { state [
-79 ] = state [ 79 ] + mag ; state [ 82 ] = state [ 82 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_13_2 ( double mag , double * state
-) { state [ 80 ] = state [ 80 ] + mag ; } static void
-perturbSimJointPrimitiveState_13_2v ( double mag , double * state ) { state [
-80 ] = state [ 80 ] + mag ; state [ 83 ] = state [ 83 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_14_0 ( double mag , double * state
-) { state [ 84 ] = state [ 84 ] + mag ; } static void
-perturbSimJointPrimitiveState_14_0v ( double mag , double * state ) { state [
-84 ] = state [ 84 ] + mag ; state [ 87 ] = state [ 87 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_14_1 ( double mag , double * state
-) { state [ 85 ] = state [ 85 ] + mag ; } static void
-perturbSimJointPrimitiveState_14_1v ( double mag , double * state ) { state [
-85 ] = state [ 85 ] + mag ; state [ 88 ] = state [ 88 ] - 0.875 * mag ; }
-static void perturbSimJointPrimitiveState_14_2 ( double mag , double * state
-) { state [ 86 ] = state [ 86 ] + mag ; } static void
-perturbSimJointPrimitiveState_14_2v ( double mag , double * state ) { state [
-86 ] = state [ 86 ] + mag ; state [ 89 ] = state [ 89 ] - 0.875 * mag ; }
 void draft7_a151ee3d_1_perturbSimJointPrimitiveState ( const void * mech ,
 size_t stageIdx , size_t primIdx , double mag , boolean_T doPerturbVelocity ,
 double * state ) { ( void ) mech ; ( void ) stageIdx ; ( void ) primIdx ; (
@@ -303,19 +275,7 @@ perturbSimJointPrimitiveState_12_0v ( mag , state ) ; break ; case 146 :
 perturbSimJointPrimitiveState_12_1 ( mag , state ) ; break ; case 147 :
 perturbSimJointPrimitiveState_12_1v ( mag , state ) ; break ; case 148 :
 perturbSimJointPrimitiveState_12_2 ( mag , state ) ; break ; case 149 :
-perturbSimJointPrimitiveState_12_2v ( mag , state ) ; break ; case 156 :
-perturbSimJointPrimitiveState_13_0 ( mag , state ) ; break ; case 157 :
-perturbSimJointPrimitiveState_13_0v ( mag , state ) ; break ; case 158 :
-perturbSimJointPrimitiveState_13_1 ( mag , state ) ; break ; case 159 :
-perturbSimJointPrimitiveState_13_1v ( mag , state ) ; break ; case 160 :
-perturbSimJointPrimitiveState_13_2 ( mag , state ) ; break ; case 161 :
-perturbSimJointPrimitiveState_13_2v ( mag , state ) ; break ; case 168 :
-perturbSimJointPrimitiveState_14_0 ( mag , state ) ; break ; case 169 :
-perturbSimJointPrimitiveState_14_0v ( mag , state ) ; break ; case 170 :
-perturbSimJointPrimitiveState_14_1 ( mag , state ) ; break ; case 171 :
-perturbSimJointPrimitiveState_14_1v ( mag , state ) ; break ; case 172 :
-perturbSimJointPrimitiveState_14_2 ( mag , state ) ; break ; case 173 :
-perturbSimJointPrimitiveState_14_2v ( mag , state ) ; break ; } } void
+perturbSimJointPrimitiveState_12_2v ( mag , state ) ; break ; } } void
 draft7_a151ee3d_1_perturbFlexibleBodyState ( const void * mech , size_t
 stageIdx , double mag , boolean_T doPerturbVelocity , double * state ) { (
 void ) mech ; ( void ) stageIdx ; ( void ) mag ; ( void ) doPerturbVelocity ;
@@ -338,38 +298,33 @@ solverState [ 19 ] ; fullState [ 20 ] = solverState [ 20 ] ; fullState [ 21 ]
 ] = solverState [ 23 ] ; fullState [ 24 ] = solverState [ 24 ] ; fullState [
 25 ] = solverState [ 25 ] ; fullState [ 26 ] = solverState [ 26 ] ; fullState
 [ 27 ] = solverState [ 27 ] ; fullState [ 28 ] = solverState [ 28 ] ;
-fullState [ 29 ] = solverState [ 29 ] ; fullState [ 30 ] = u [ 52 ] ;
-fullState [ 31 ] = u [ 53 ] ; fullState [ 32 ] = u [ 54 ] ; fullState [ 33 ]
-= uDot [ 52 ] ; fullState [ 34 ] = uDot [ 53 ] ; fullState [ 35 ] = uDot [ 54
-] ; fullState [ 36 ] = u [ 25 ] ; fullState [ 37 ] = u [ 26 ] ; fullState [
-38 ] = u [ 27 ] ; fullState [ 39 ] = uDot [ 25 ] ; fullState [ 40 ] = uDot [
-26 ] ; fullState [ 41 ] = uDot [ 27 ] ; fullState [ 42 ] = u [ 28 ] ;
-fullState [ 43 ] = u [ 29 ] ; fullState [ 44 ] = u [ 30 ] ; fullState [ 45 ]
-= uDot [ 28 ] ; fullState [ 46 ] = uDot [ 29 ] ; fullState [ 47 ] = uDot [ 30
-] ; fullState [ 48 ] = u [ 31 ] ; fullState [ 49 ] = u [ 32 ] ; fullState [
-50 ] = u [ 33 ] ; fullState [ 51 ] = uDot [ 31 ] ; fullState [ 52 ] = uDot [
-32 ] ; fullState [ 53 ] = uDot [ 33 ] ; fullState [ 54 ] = u [ 34 ] ;
-fullState [ 55 ] = u [ 35 ] ; fullState [ 56 ] = u [ 36 ] ; fullState [ 57 ]
-= uDot [ 34 ] ; fullState [ 58 ] = uDot [ 35 ] ; fullState [ 59 ] = uDot [ 36
-] ; fullState [ 60 ] = u [ 37 ] ; fullState [ 61 ] = u [ 38 ] ; fullState [
-62 ] = u [ 39 ] ; fullState [ 63 ] = uDot [ 37 ] ; fullState [ 64 ] = uDot [
-38 ] ; fullState [ 65 ] = uDot [ 39 ] ; fullState [ 66 ] = u [ 40 ] ;
-fullState [ 67 ] = u [ 41 ] ; fullState [ 68 ] = u [ 42 ] ; fullState [ 69 ]
-= uDot [ 40 ] ; fullState [ 70 ] = uDot [ 41 ] ; fullState [ 71 ] = uDot [ 42
-] ; fullState [ 72 ] = u [ 43 ] ; fullState [ 73 ] = u [ 44 ] ; fullState [
-74 ] = u [ 45 ] ; fullState [ 75 ] = uDot [ 43 ] ; fullState [ 76 ] = uDot [
-44 ] ; fullState [ 77 ] = uDot [ 45 ] ; fullState [ 78 ] = u [ 46 ] ;
-fullState [ 79 ] = u [ 47 ] ; fullState [ 80 ] = u [ 48 ] ; fullState [ 81 ]
-= uDot [ 46 ] ; fullState [ 82 ] = uDot [ 47 ] ; fullState [ 83 ] = uDot [ 48
-] ; fullState [ 84 ] = u [ 49 ] ; fullState [ 85 ] = u [ 50 ] ; fullState [
-86 ] = u [ 51 ] ; fullState [ 87 ] = uDot [ 49 ] ; fullState [ 88 ] = uDot [
-50 ] ; fullState [ 89 ] = uDot [ 51 ] ; fullState [ 90 ] = solverState [ 30 ]
-; fullState [ 91 ] = solverState [ 31 ] ; fullState [ 92 ] = solverState [ 32
-] ; fullState [ 93 ] = solverState [ 33 ] ; fullState [ 94 ] = solverState [
-34 ] ; fullState [ 95 ] = solverState [ 35 ] ; fullState [ 96 ] = solverState
-[ 36 ] ; fullState [ 97 ] = solverState [ 37 ] ; fullState [ 98 ] =
-solverState [ 38 ] ; fullState [ 99 ] = solverState [ 39 ] ; fullState [ 100
-] = solverState [ 40 ] ; fullState [ 101 ] = solverState [ 41 ] ; } void
+fullState [ 29 ] = solverState [ 29 ] ; fullState [ 30 ] = u [ 23 ] ;
+fullState [ 31 ] = u [ 24 ] ; fullState [ 32 ] = u [ 25 ] ; fullState [ 33 ]
+= uDot [ 23 ] ; fullState [ 34 ] = uDot [ 24 ] ; fullState [ 35 ] = uDot [ 25
+] ; fullState [ 36 ] = u [ 26 ] ; fullState [ 37 ] = u [ 27 ] ; fullState [
+38 ] = u [ 28 ] ; fullState [ 39 ] = uDot [ 26 ] ; fullState [ 40 ] = uDot [
+27 ] ; fullState [ 41 ] = uDot [ 28 ] ; fullState [ 42 ] = u [ 29 ] ;
+fullState [ 43 ] = u [ 30 ] ; fullState [ 44 ] = u [ 31 ] ; fullState [ 45 ]
+= uDot [ 29 ] ; fullState [ 46 ] = uDot [ 30 ] ; fullState [ 47 ] = uDot [ 31
+] ; fullState [ 48 ] = u [ 32 ] ; fullState [ 49 ] = u [ 33 ] ; fullState [
+50 ] = u [ 34 ] ; fullState [ 51 ] = uDot [ 32 ] ; fullState [ 52 ] = uDot [
+33 ] ; fullState [ 53 ] = uDot [ 34 ] ; fullState [ 54 ] = u [ 35 ] ;
+fullState [ 55 ] = u [ 36 ] ; fullState [ 56 ] = u [ 37 ] ; fullState [ 57 ]
+= uDot [ 35 ] ; fullState [ 58 ] = uDot [ 36 ] ; fullState [ 59 ] = uDot [ 37
+] ; fullState [ 60 ] = u [ 38 ] ; fullState [ 61 ] = u [ 39 ] ; fullState [
+62 ] = u [ 40 ] ; fullState [ 63 ] = uDot [ 38 ] ; fullState [ 64 ] = uDot [
+39 ] ; fullState [ 65 ] = uDot [ 40 ] ; fullState [ 66 ] = u [ 41 ] ;
+fullState [ 67 ] = u [ 42 ] ; fullState [ 68 ] = u [ 43 ] ; fullState [ 69 ]
+= uDot [ 41 ] ; fullState [ 70 ] = uDot [ 42 ] ; fullState [ 71 ] = uDot [ 43
+] ; fullState [ 72 ] = u [ 44 ] ; fullState [ 73 ] = u [ 45 ] ; fullState [
+74 ] = u [ 46 ] ; fullState [ 75 ] = uDot [ 44 ] ; fullState [ 76 ] = uDot [
+45 ] ; fullState [ 77 ] = uDot [ 46 ] ; fullState [ 78 ] = solverState [ 30 ]
+; fullState [ 79 ] = solverState [ 31 ] ; fullState [ 80 ] = solverState [ 32
+] ; fullState [ 81 ] = solverState [ 33 ] ; fullState [ 82 ] = solverState [
+34 ] ; fullState [ 83 ] = solverState [ 35 ] ; fullState [ 84 ] = solverState
+[ 36 ] ; fullState [ 85 ] = solverState [ 37 ] ; fullState [ 86 ] =
+solverState [ 38 ] ; fullState [ 87 ] = solverState [ 39 ] ; fullState [ 88 ]
+= solverState [ 40 ] ; fullState [ 89 ] = solverState [ 41 ] ; } void
 draft7_a151ee3d_1_extractSolverStateVector ( const void * mech , const double
 * fullState , double * solverState ) { ( void ) mech ; solverState [ 0 ] =
 fullState [ 0 ] ; solverState [ 1 ] = fullState [ 1 ] ; solverState [ 2 ] =
@@ -387,13 +342,13 @@ solverState [ 20 ] = fullState [ 20 ] ; solverState [ 21 ] = fullState [ 21 ]
 ] ; solverState [ 24 ] = fullState [ 24 ] ; solverState [ 25 ] = fullState [
 25 ] ; solverState [ 26 ] = fullState [ 26 ] ; solverState [ 27 ] = fullState
 [ 27 ] ; solverState [ 28 ] = fullState [ 28 ] ; solverState [ 29 ] =
-fullState [ 29 ] ; solverState [ 30 ] = fullState [ 90 ] ; solverState [ 31 ]
-= fullState [ 91 ] ; solverState [ 32 ] = fullState [ 92 ] ; solverState [ 33
-] = fullState [ 93 ] ; solverState [ 34 ] = fullState [ 94 ] ; solverState [
-35 ] = fullState [ 95 ] ; solverState [ 36 ] = fullState [ 96 ] ; solverState
-[ 37 ] = fullState [ 97 ] ; solverState [ 38 ] = fullState [ 98 ] ;
-solverState [ 39 ] = fullState [ 99 ] ; solverState [ 40 ] = fullState [ 100
-] ; solverState [ 41 ] = fullState [ 101 ] ; } boolean_T
+fullState [ 29 ] ; solverState [ 30 ] = fullState [ 78 ] ; solverState [ 31 ]
+= fullState [ 79 ] ; solverState [ 32 ] = fullState [ 80 ] ; solverState [ 33
+] = fullState [ 81 ] ; solverState [ 34 ] = fullState [ 82 ] ; solverState [
+35 ] = fullState [ 83 ] ; solverState [ 36 ] = fullState [ 84 ] ; solverState
+[ 37 ] = fullState [ 85 ] ; solverState [ 38 ] = fullState [ 86 ] ;
+solverState [ 39 ] = fullState [ 87 ] ; solverState [ 40 ] = fullState [ 88 ]
+; solverState [ 41 ] = fullState [ 89 ] ; } boolean_T
 draft7_a151ee3d_1_isPositionViolation ( const void * mech , const
 RuntimeDerivedValuesBundle * rtdv , const int * eqnEnableFlags , const double
 * state , const int * modeVector ) { const double * rtdvd = rtdv -> mDoubles
@@ -411,7 +366,7 @@ RuntimeDerivedValuesBundle * rtdv , const int * eqnEnableFlags , const int *
 modeVector , double * state , void * neDiagMgr0 ) { const double * rtdvd =
 rtdv -> mDoubles . mValues ; const int * rtdvi = rtdv -> mInts . mValues ;
 NeuDiagnosticManager * neDiagMgr = ( NeuDiagnosticManager * ) neDiagMgr0 ;
-boolean_T bb [ 1 ] ; double xx [ 92 ] ; ( void ) mech ; ( void ) rtdvd ; (
+boolean_T bb [ 1 ] ; double xx [ 90 ] ; ( void ) mech ; ( void ) rtdvd ; (
 void ) rtdvi ; ( void ) eqnEnableFlags ; ( void ) modeVector ; ( void )
 neDiagMgr ; xx [ 0 ] = 0.5 ; xx [ 1 ] = xx [ 0 ] * state [ 2 ] ; xx [ 2 ] =
 cos ( xx [ 1 ] ) ; xx [ 3 ] = xx [ 0 ] * state [ 1 ] ; xx [ 4 ] = cos ( xx [
@@ -492,164 +447,162 @@ pm_math_Quaternion_compose_ra ( xx + 43 , xx + 54 , xx + 58 ) ; xx [ 28 ] =
 xx [ 0 ] * state [ 24 ] ; xx [ 43 ] = sin ( xx [ 28 ] ) ; xx [ 44 ] =
 1.82992095932877e-11 ; xx [ 45 ] = 5.235917730680519e-12 ; xx [ 62 ] = cos (
 xx [ 28 ] ) ; xx [ 63 ] = xx [ 43 ] ; xx [ 64 ] = - ( xx [ 44 ] * xx [ 43 ] )
-; xx [ 65 ] = - ( xx [ 45 ] * xx [ 43 ] ) ; xx [ 66 ] = 0.9991449255755711 ;
-xx [ 67 ] = - 0.04069340420070983 ; xx [ 68 ] = - 5.269348941183292e-3 ; xx [
-69 ] = - 5.069370067487187e-3 ; pm_math_Quaternion_compose_ra ( xx + 62 , xx
-+ 66 , xx + 70 ) ; xx [ 28 ] = xx [ 0 ] * state [ 25 ] ; xx [ 43 ] =
-0.01017403174547095 ; xx [ 46 ] = sin ( xx [ 28 ] ) ; xx [ 49 ] =
-0.9992497622599684 ; xx [ 62 ] = 0.03736845864413881 ; xx [ 63 ] = cos ( xx [
-28 ] ) ; xx [ 64 ] = - ( xx [ 43 ] * xx [ 46 ] ) ; xx [ 65 ] = xx [ 49 ] * xx
-[ 46 ] ; xx [ 66 ] = xx [ 62 ] * xx [ 46 ] ; pm_math_Quaternion_compose_ra (
-xx + 70 , xx + 63 , xx + 74 ) ; xx [ 28 ] = xx [ 0 ] * state [ 26 ] ; xx [ 46
-] = 0.01050408723065136 ; xx [ 63 ] = sin ( xx [ 28 ] ) ; xx [ 64 ] =
-0.03726153110399754 ; xx [ 65 ] = 0.9992503402307336 ; xx [ 66 ] = cos ( xx [
-28 ] ) ; xx [ 67 ] = xx [ 46 ] * xx [ 63 ] ; xx [ 68 ] = - ( xx [ 64 ] * xx [
-63 ] ) ; xx [ 69 ] = xx [ 65 ] * xx [ 63 ] ; pm_math_Quaternion_compose_ra (
-xx + 74 , xx + 66 , xx + 70 ) ; pm_math_Quaternion_compose_ra ( xx + 58 , xx
-+ 70 , xx + 74 ) ; xx [ 58 ] = - xx [ 74 ] ; xx [ 59 ] = - xx [ 75 ] ; xx [
-60 ] = - xx [ 76 ] ; xx [ 61 ] = - xx [ 77 ] ; xx [ 78 ] = 0.9993181225840584
-; xx [ 79 ] = 0.03619150900402053 ; xx [ 80 ] = 5.246456256884902e-3 ; xx [
-81 ] = 5.093058789132701e-3 ; pm_math_Quaternion_compose_ra ( xx + 58 , xx +
-78 , xx + 82 ) ; xx [ 28 ] = 2.0 ; xx [ 63 ] = ( xx [ 83 ] * xx [ 85 ] + xx [
-82 ] * xx [ 84 ] ) * xx [ 28 ] ; xx [ 78 ] = 0.99999999999999 ; bb [ 0 ] =
-fabs ( xx [ 63 ] ) > xx [ 78 ] ; xx [ 79 ] = xx [ 84 ] * xx [ 85 ] ; xx [ 80
-] = xx [ 82 ] * xx [ 83 ] ; xx [ 81 ] = xx [ 82 ] * xx [ 82 ] ; xx [ 86 ] =
-1.0 ; xx [ 87 ] = ( xx [ 81 ] + xx [ 84 ] * xx [ 84 ] ) * xx [ 28 ] - xx [ 86
-] ; xx [ 88 ] = ( xx [ 79 ] + xx [ 80 ] ) * xx [ 28 ] ; xx [ 87 ] = ( xx [ 88
-] == 0.0 && xx [ 87 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 88 ] , xx [ 87 ] ) ; xx [
-88 ] = ( xx [ 81 ] + xx [ 85 ] * xx [ 85 ] ) * xx [ 28 ] - xx [ 86 ] ; xx [
-89 ] = - ( xx [ 28 ] * ( xx [ 79 ] - xx [ 80 ] ) ) ; xx [ 88 ] = ( xx [ 89 ]
-== 0.0 && xx [ 88 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 89 ] , xx [ 88 ] ) ; xx [
-79 ] = bb [ 0 ] ? xx [ 0 ] * xx [ 87 ] : xx [ 88 ] ; xx [ 80 ] =
-1.570796326794897 ; xx [ 87 ] = ( ( cos ( pm_math_canonicalAngle ( state [ 91
-] ) ) ) < 0.0 ? - 1.0 : + 1.0 ) ; xx [ 88 ] = xx [ 80 ] * ( xx [ 86 ] - xx [
-87 ] ) ; if ( xx [ 63 ] < 0.0 ) xx [ 89 ] = - 1.0 ; else if ( xx [ 63 ] > 0.0
-) xx [ 89 ] = + 1.0 ; else xx [ 89 ] = 0.0 ; xx [ 90 ] = fabs ( xx [ 63 ] ) >
-1.0 ? atan2 ( xx [ 63 ] , 0.0 ) : asin ( xx [ 63 ] ) ; xx [ 63 ] = bb [ 0 ] ?
-xx [ 80 ] * xx [ 89 ] : xx [ 90 ] ; xx [ 90 ] = ( xx [ 81 ] + xx [ 83 ] * xx
-[ 83 ] ) * xx [ 28 ] - xx [ 86 ] ; xx [ 91 ] = - ( xx [ 28 ] * ( xx [ 83 ] *
-xx [ 84 ] - xx [ 82 ] * xx [ 85 ] ) ) ; xx [ 90 ] = ( xx [ 91 ] == 0.0 && xx
-[ 90 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 91 ] , xx [ 90 ] ) ; xx [ 81 ] = bb [ 0
-] ? xx [ 89 ] * xx [ 79 ] : xx [ 90 ] ; xx [ 82 ] = xx [ 81 ] - ( xx [ 81 ] <
-0.0 ? - 1.0 : + 1.0 ) * xx [ 88 ] ; xx [ 81 ] = xx [ 11 ] * xx [ 1 ] + xx [ 7
-] * xx [ 3 ] ; xx [ 83 ] = ( xx [ 86 ] - ( xx [ 12 ] * xx [ 12 ] + xx [ 5 ] *
-xx [ 5 ] ) * xx [ 28 ] ) * state [ 3 ] + xx [ 28 ] * xx [ 2 ] * xx [ 81 ] *
-state [ 4 ] ; xx [ 84 ] = xx [ 28 ] * ( xx [ 4 ] * xx [ 12 ] + xx [ 5 ] * xx
-[ 6 ] ) * state [ 3 ] + ( xx [ 7 ] - xx [ 28 ] * xx [ 3 ] * xx [ 81 ] ) *
-state [ 4 ] + xx [ 11 ] * state [ 5 ] ; xx [ 85 ] = xx [ 28 ] * ( xx [ 5 ] *
-xx [ 4 ] - xx [ 12 ] * xx [ 6 ] ) * state [ 3 ] + ( xx [ 28 ] * xx [ 1 ] * xx
-[ 81 ] - xx [ 11 ] ) * state [ 4 ] + xx [ 7 ] * state [ 5 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 24 , xx + 83 , xx + 1 ) ; xx [ 4 ]
-= xx [ 17 ] * xx [ 8 ] ; xx [ 5 ] = xx [ 17 ] * xx [ 18 ] ; xx [ 6 ] = xx [
-20 ] * xx [ 8 ] + xx [ 19 ] * xx [ 18 ] ; xx [ 24 ] = xx [ 1 ] + ( xx [ 86 ]
-- ( xx [ 22 ] * xx [ 22 ] + xx [ 23 ] * xx [ 23 ] ) * xx [ 28 ] ) * state [ 9
-] + ( xx [ 17 ] - ( xx [ 4 ] * xx [ 8 ] + xx [ 5 ] * xx [ 18 ] - xx [ 9 ] *
-xx [ 6 ] ) * xx [ 28 ] ) * state [ 10 ] ; xx [ 25 ] = xx [ 2 ] + xx [ 28 ] *
-( xx [ 21 ] * xx [ 22 ] - xx [ 23 ] * xx [ 10 ] ) * state [ 9 ] + ( xx [ 19 ]
-- xx [ 28 ] * ( xx [ 18 ] * xx [ 6 ] + xx [ 9 ] * xx [ 5 ] ) ) * state [ 10 ]
-+ xx [ 20 ] * state [ 11 ] ; xx [ 26 ] = xx [ 3 ] + xx [ 28 ] * ( xx [ 22 ] *
-xx [ 10 ] + xx [ 23 ] * xx [ 21 ] ) * state [ 9 ] + ( xx [ 28 ] * ( xx [ 9 ]
-* xx [ 4 ] + xx [ 8 ] * xx [ 6 ] ) - xx [ 20 ] ) * state [ 10 ] + xx [ 19 ] *
-state [ 11 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 39 , xx + 24 , xx +
-1 ) ; xx [ 4 ] = xx [ 38 ] * xx [ 35 ] ; xx [ 5 ] = xx [ 35 ] * xx [ 36 ] +
-xx [ 37 ] ; xx [ 6 ] = xx [ 4 ] ; xx [ 7 ] = xx [ 38 ] ; xx [ 8 ] = - xx [ 5
-] ; pm_math_Vector3_cross_ra ( xx + 36 , xx + 6 , xx + 9 ) ; xx [ 6 ] = xx [
-34 ] * xx [ 13 ] + xx [ 33 ] * xx [ 32 ] ; xx [ 7 ] = xx [ 16 ] * xx [ 13 ] ;
-xx [ 8 ] = xx [ 16 ] * xx [ 32 ] ; xx [ 17 ] = xx [ 1 ] + ( xx [ 86 ] + ( xx
-[ 9 ] - xx [ 4 ] * xx [ 15 ] ) * xx [ 28 ] ) * state [ 15 ] + ( ( xx [ 14 ] *
-xx [ 6 ] + xx [ 7 ] * xx [ 13 ] + xx [ 8 ] * xx [ 32 ] ) * xx [ 28 ] - xx [
-16 ] ) * state [ 16 ] ; xx [ 18 ] = xx [ 2 ] + ( xx [ 28 ] * ( xx [ 10 ] - xx
-[ 38 ] * xx [ 15 ] ) - xx [ 35 ] ) * state [ 15 ] + ( xx [ 33 ] + xx [ 28 ] *
-( xx [ 14 ] * xx [ 8 ] - xx [ 32 ] * xx [ 6 ] ) ) * state [ 16 ] + xx [ 34 ]
-* state [ 17 ] ; xx [ 19 ] = xx [ 3 ] + xx [ 28 ] * ( xx [ 11 ] + xx [ 15 ] *
-xx [ 5 ] ) * state [ 15 ] + ( xx [ 28 ] * ( xx [ 13 ] * xx [ 6 ] - xx [ 14 ]
-* xx [ 7 ] ) - xx [ 34 ] ) * state [ 16 ] + xx [ 33 ] * state [ 17 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 54 , xx + 17 , xx + 1 ) ; xx [ 4 ]
-= xx [ 47 ] * xx [ 57 ] ; xx [ 5 ] = xx [ 47 ] * xx [ 55 ] - xx [ 56 ] ; xx [
-6 ] = - xx [ 4 ] ; xx [ 7 ] = xx [ 57 ] ; xx [ 8 ] = xx [ 5 ] ;
+; xx [ 65 ] = - ( xx [ 45 ] * xx [ 43 ] ) ; xx [ 66 ] = 0.9992594490823861 ;
+xx [ 67 ] = - 0.03847796017939601 ; xx [ 68 ] = 3.657873200514057e-11 ; xx [
+69 ] = 1.959485864323585e-10 ; pm_math_Quaternion_compose_ra ( xx + 62 , xx +
+66 , xx + 70 ) ; xx [ 28 ] = xx [ 0 ] * state [ 25 ] ; xx [ 43 ] =
+4.103512650758317e-10 ; xx [ 46 ] = sin ( xx [ 28 ] ) ; xx [ 49 ] =
+0.9994592018341244 ; xx [ 62 ] = 0.03288318520300273 ; xx [ 63 ] = cos ( xx [
+28 ] ) ; xx [ 64 ] = xx [ 43 ] * xx [ 46 ] ; xx [ 65 ] = xx [ 49 ] * xx [ 46
+] ; xx [ 66 ] = xx [ 62 ] * xx [ 46 ] ; pm_math_Quaternion_compose_ra ( xx +
+70 , xx + 63 , xx + 74 ) ; xx [ 28 ] = xx [ 0 ] * state [ 26 ] ; xx [ 46 ] =
+6.492504809889092e-11 ; xx [ 63 ] = sin ( xx [ 28 ] ) ; xx [ 64 ] = cos ( xx
+[ 28 ] ) ; xx [ 65 ] = - ( xx [ 46 ] * xx [ 63 ] ) ; xx [ 66 ] = - ( xx [ 62
+] * xx [ 63 ] ) ; xx [ 67 ] = xx [ 49 ] * xx [ 63 ] ;
+pm_math_Quaternion_compose_ra ( xx + 74 , xx + 64 , xx + 68 ) ;
+pm_math_Quaternion_compose_ra ( xx + 58 , xx + 68 , xx + 72 ) ; xx [ 58 ] = -
+xx [ 72 ] ; xx [ 59 ] = - xx [ 73 ] ; xx [ 60 ] = - xx [ 74 ] ; xx [ 61 ] = -
+xx [ 75 ] ; xx [ 76 ] = 0.9994226636119462 ; xx [ 77 ] = 0.03397557150075099
+; xx [ 78 ] = - 3.268676406922499e-11 ; xx [ 79 ] = - 2.051400253076505e-10 ;
+pm_math_Quaternion_compose_ra ( xx + 58 , xx + 76 , xx + 80 ) ; xx [ 28 ] =
+2.0 ; xx [ 63 ] = ( xx [ 81 ] * xx [ 83 ] + xx [ 80 ] * xx [ 82 ] ) * xx [ 28
+] ; xx [ 76 ] = 0.99999999999999 ; bb [ 0 ] = fabs ( xx [ 63 ] ) > xx [ 76 ]
+; xx [ 77 ] = xx [ 82 ] * xx [ 83 ] ; xx [ 78 ] = xx [ 80 ] * xx [ 81 ] ; xx
+[ 79 ] = xx [ 80 ] * xx [ 80 ] ; xx [ 84 ] = 1.0 ; xx [ 85 ] = ( xx [ 79 ] +
+xx [ 82 ] * xx [ 82 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [ 86 ] = ( xx [ 77 ] +
+xx [ 78 ] ) * xx [ 28 ] ; xx [ 85 ] = ( xx [ 86 ] == 0.0 && xx [ 85 ] == 0.0
+) ? 0.0 : atan2 ( xx [ 86 ] , xx [ 85 ] ) ; xx [ 86 ] = ( xx [ 79 ] + xx [ 83
+] * xx [ 83 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [ 87 ] = - ( xx [ 28 ] * ( xx [
+77 ] - xx [ 78 ] ) ) ; xx [ 86 ] = ( xx [ 87 ] == 0.0 && xx [ 86 ] == 0.0 ) ?
+0.0 : atan2 ( xx [ 87 ] , xx [ 86 ] ) ; xx [ 77 ] = bb [ 0 ] ? xx [ 0 ] * xx
+[ 85 ] : xx [ 86 ] ; xx [ 78 ] = 1.570796326794897 ; xx [ 85 ] = ( ( cos (
+pm_math_canonicalAngle ( state [ 79 ] ) ) ) < 0.0 ? - 1.0 : + 1.0 ) ; xx [ 86
+] = xx [ 78 ] * ( xx [ 84 ] - xx [ 85 ] ) ; if ( xx [ 63 ] < 0.0 ) xx [ 87 ]
+= - 1.0 ; else if ( xx [ 63 ] > 0.0 ) xx [ 87 ] = + 1.0 ; else xx [ 87 ] =
+0.0 ; xx [ 88 ] = fabs ( xx [ 63 ] ) > 1.0 ? atan2 ( xx [ 63 ] , 0.0 ) : asin
+( xx [ 63 ] ) ; xx [ 63 ] = bb [ 0 ] ? xx [ 78 ] * xx [ 87 ] : xx [ 88 ] ; xx
+[ 88 ] = ( xx [ 79 ] + xx [ 81 ] * xx [ 81 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [
+89 ] = - ( xx [ 28 ] * ( xx [ 81 ] * xx [ 82 ] - xx [ 80 ] * xx [ 83 ] ) ) ;
+xx [ 88 ] = ( xx [ 89 ] == 0.0 && xx [ 88 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 89
+] , xx [ 88 ] ) ; xx [ 79 ] = bb [ 0 ] ? xx [ 87 ] * xx [ 77 ] : xx [ 88 ] ;
+xx [ 80 ] = xx [ 79 ] - ( xx [ 79 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 86 ] ; xx
+[ 79 ] = xx [ 11 ] * xx [ 1 ] + xx [ 7 ] * xx [ 3 ] ; xx [ 81 ] = ( xx [ 84 ]
+- ( xx [ 12 ] * xx [ 12 ] + xx [ 5 ] * xx [ 5 ] ) * xx [ 28 ] ) * state [ 3 ]
++ xx [ 28 ] * xx [ 2 ] * xx [ 79 ] * state [ 4 ] ; xx [ 82 ] = xx [ 28 ] * (
+xx [ 4 ] * xx [ 12 ] + xx [ 5 ] * xx [ 6 ] ) * state [ 3 ] + ( xx [ 7 ] - xx
+[ 28 ] * xx [ 3 ] * xx [ 79 ] ) * state [ 4 ] + xx [ 11 ] * state [ 5 ] ; xx
+[ 83 ] = xx [ 28 ] * ( xx [ 5 ] * xx [ 4 ] - xx [ 12 ] * xx [ 6 ] ) * state [
+3 ] + ( xx [ 28 ] * xx [ 1 ] * xx [ 79 ] - xx [ 11 ] ) * state [ 4 ] + xx [ 7
+] * state [ 5 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 24 , xx + 81 , xx
++ 1 ) ; xx [ 4 ] = xx [ 17 ] * xx [ 8 ] ; xx [ 5 ] = xx [ 17 ] * xx [ 18 ] ;
+xx [ 6 ] = xx [ 20 ] * xx [ 8 ] + xx [ 19 ] * xx [ 18 ] ; xx [ 24 ] = xx [ 1
+] + ( xx [ 84 ] - ( xx [ 22 ] * xx [ 22 ] + xx [ 23 ] * xx [ 23 ] ) * xx [ 28
+] ) * state [ 9 ] + ( xx [ 17 ] - ( xx [ 4 ] * xx [ 8 ] + xx [ 5 ] * xx [ 18
+] - xx [ 9 ] * xx [ 6 ] ) * xx [ 28 ] ) * state [ 10 ] ; xx [ 25 ] = xx [ 2 ]
++ xx [ 28 ] * ( xx [ 21 ] * xx [ 22 ] - xx [ 23 ] * xx [ 10 ] ) * state [ 9 ]
++ ( xx [ 19 ] - xx [ 28 ] * ( xx [ 18 ] * xx [ 6 ] + xx [ 9 ] * xx [ 5 ] ) )
+* state [ 10 ] + xx [ 20 ] * state [ 11 ] ; xx [ 26 ] = xx [ 3 ] + xx [ 28 ]
+* ( xx [ 22 ] * xx [ 10 ] + xx [ 23 ] * xx [ 21 ] ) * state [ 9 ] + ( xx [ 28
+] * ( xx [ 9 ] * xx [ 4 ] + xx [ 8 ] * xx [ 6 ] ) - xx [ 20 ] ) * state [ 10
+] + xx [ 19 ] * state [ 11 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 39 ,
+xx + 24 , xx + 1 ) ; xx [ 4 ] = xx [ 38 ] * xx [ 35 ] ; xx [ 5 ] = xx [ 35 ]
+* xx [ 36 ] + xx [ 37 ] ; xx [ 6 ] = xx [ 4 ] ; xx [ 7 ] = xx [ 38 ] ; xx [ 8
+] = - xx [ 5 ] ; pm_math_Vector3_cross_ra ( xx + 36 , xx + 6 , xx + 9 ) ; xx
+[ 6 ] = xx [ 34 ] * xx [ 13 ] + xx [ 33 ] * xx [ 32 ] ; xx [ 7 ] = xx [ 16 ]
+* xx [ 13 ] ; xx [ 8 ] = xx [ 16 ] * xx [ 32 ] ; xx [ 17 ] = xx [ 1 ] + ( xx
+[ 84 ] + ( xx [ 9 ] - xx [ 4 ] * xx [ 15 ] ) * xx [ 28 ] ) * state [ 15 ] + (
+( xx [ 14 ] * xx [ 6 ] + xx [ 7 ] * xx [ 13 ] + xx [ 8 ] * xx [ 32 ] ) * xx [
+28 ] - xx [ 16 ] ) * state [ 16 ] ; xx [ 18 ] = xx [ 2 ] + ( xx [ 28 ] * ( xx
+[ 10 ] - xx [ 38 ] * xx [ 15 ] ) - xx [ 35 ] ) * state [ 15 ] + ( xx [ 33 ] +
+xx [ 28 ] * ( xx [ 14 ] * xx [ 8 ] - xx [ 32 ] * xx [ 6 ] ) ) * state [ 16 ]
++ xx [ 34 ] * state [ 17 ] ; xx [ 19 ] = xx [ 3 ] + xx [ 28 ] * ( xx [ 11 ] +
+xx [ 15 ] * xx [ 5 ] ) * state [ 15 ] + ( xx [ 28 ] * ( xx [ 13 ] * xx [ 6 ]
+- xx [ 14 ] * xx [ 7 ] ) - xx [ 34 ] ) * state [ 16 ] + xx [ 33 ] * state [
+17 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 54 , xx + 17 , xx + 1 ) ; xx
+[ 4 ] = xx [ 47 ] * xx [ 57 ] ; xx [ 5 ] = xx [ 47 ] * xx [ 55 ] - xx [ 56 ]
+; xx [ 6 ] = - xx [ 4 ] ; xx [ 7 ] = xx [ 57 ] ; xx [ 8 ] = xx [ 5 ] ;
 pm_math_Vector3_cross_ra ( xx + 55 , xx + 6 , xx + 9 ) ; xx [ 6 ] = xx [ 29 ]
 ; xx [ 7 ] = xx [ 31 ] ; xx [ 8 ] = - xx [ 48 ] ;
 pm_math_Quaternion_inverseXform_ra ( xx + 50 , xx + 6 , xx + 12 ) ; xx [ 6 ]
-= xx [ 1 ] + ( xx [ 86 ] + ( xx [ 54 ] * xx [ 4 ] + xx [ 9 ] ) * xx [ 28 ] )
+= xx [ 1 ] + ( xx [ 84 ] + ( xx [ 54 ] * xx [ 4 ] + xx [ 9 ] ) * xx [ 28 ] )
 * state [ 21 ] + xx [ 12 ] * state [ 22 ] + xx [ 30 ] * state [ 23 ] ; xx [ 7
 ] = xx [ 2 ] + ( xx [ 47 ] + xx [ 28 ] * ( xx [ 10 ] - xx [ 54 ] * xx [ 57 ]
 ) ) * state [ 21 ] + xx [ 13 ] * state [ 22 ] + xx [ 48 ] * state [ 23 ] ; xx
 [ 8 ] = xx [ 3 ] + xx [ 28 ] * ( xx [ 11 ] - xx [ 54 ] * xx [ 5 ] ) * state [
 21 ] + xx [ 14 ] * state [ 22 ] + xx [ 31 ] * state [ 23 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 70 , xx + 6 , xx + 1 ) ; xx [ 4 ] =
-xx [ 44 ] * xx [ 73 ] - xx [ 45 ] * xx [ 72 ] ; xx [ 5 ] = xx [ 73 ] + xx [
-45 ] * xx [ 71 ] ; xx [ 6 ] = xx [ 44 ] * xx [ 71 ] + xx [ 72 ] ; xx [ 7 ] =
+pm_math_Quaternion_inverseXform_ra ( xx + 68 , xx + 6 , xx + 1 ) ; xx [ 4 ] =
+xx [ 44 ] * xx [ 71 ] - xx [ 45 ] * xx [ 70 ] ; xx [ 5 ] = xx [ 71 ] + xx [
+45 ] * xx [ 69 ] ; xx [ 6 ] = xx [ 44 ] * xx [ 69 ] + xx [ 70 ] ; xx [ 7 ] =
 xx [ 4 ] ; xx [ 8 ] = xx [ 5 ] ; xx [ 9 ] = - xx [ 6 ] ;
-pm_math_Vector3_cross_ra ( xx + 71 , xx + 7 , xx + 10 ) ; xx [ 7 ] = - xx [
-43 ] ; xx [ 8 ] = xx [ 49 ] ; xx [ 9 ] = xx [ 62 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 66 , xx + 7 , xx + 13 ) ; xx [ 7 ]
-= xx [ 1 ] + ( xx [ 86 ] + xx [ 28 ] * ( xx [ 10 ] - xx [ 70 ] * xx [ 4 ] ) )
-* state [ 27 ] + xx [ 13 ] * state [ 28 ] + xx [ 46 ] * state [ 29 ] ; xx [ 8
-] = xx [ 2 ] + ( xx [ 28 ] * ( xx [ 11 ] - xx [ 70 ] * xx [ 5 ] ) - xx [ 44 ]
-) * state [ 27 ] + xx [ 14 ] * state [ 28 ] - xx [ 64 ] * state [ 29 ] ; xx [
-9 ] = xx [ 3 ] + ( xx [ 28 ] * ( xx [ 12 ] + xx [ 70 ] * xx [ 6 ] ) - xx [ 45
-] ) * state [ 27 ] + xx [ 15 ] * state [ 28 ] + xx [ 65 ] * state [ 29 ] ; xx
-[ 1 ] = xx [ 86 ] - ( xx [ 76 ] * xx [ 76 ] + xx [ 77 ] * xx [ 77 ] ) * xx [
-28 ] ; xx [ 2 ] = xx [ 28 ] * ( xx [ 75 ] * xx [ 76 ] - xx [ 74 ] * xx [ 77 ]
-) ; xx [ 3 ] = ( xx [ 74 ] * xx [ 76 ] + xx [ 75 ] * xx [ 77 ] ) * xx [ 28 ]
+pm_math_Vector3_cross_ra ( xx + 69 , xx + 7 , xx + 10 ) ; xx [ 7 ] = xx [ 43
+] ; xx [ 8 ] = xx [ 49 ] ; xx [ 9 ] = xx [ 62 ] ;
+pm_math_Quaternion_inverseXform_ra ( xx + 64 , xx + 7 , xx + 13 ) ; xx [ 7 ]
+= xx [ 1 ] + ( xx [ 84 ] + xx [ 28 ] * ( xx [ 10 ] - xx [ 68 ] * xx [ 4 ] ) )
+* state [ 27 ] + xx [ 13 ] * state [ 28 ] - xx [ 46 ] * state [ 29 ] ; xx [ 8
+] = xx [ 2 ] + ( xx [ 28 ] * ( xx [ 11 ] - xx [ 68 ] * xx [ 5 ] ) - xx [ 44 ]
+) * state [ 27 ] + xx [ 14 ] * state [ 28 ] - xx [ 62 ] * state [ 29 ] ; xx [
+9 ] = xx [ 3 ] + ( xx [ 28 ] * ( xx [ 12 ] + xx [ 68 ] * xx [ 6 ] ) - xx [ 45
+] ) * state [ 27 ] + xx [ 15 ] * state [ 28 ] + xx [ 49 ] * state [ 29 ] ; xx
+[ 1 ] = xx [ 84 ] - ( xx [ 74 ] * xx [ 74 ] + xx [ 75 ] * xx [ 75 ] ) * xx [
+28 ] ; xx [ 2 ] = xx [ 28 ] * ( xx [ 73 ] * xx [ 74 ] - xx [ 72 ] * xx [ 75 ]
+) ; xx [ 3 ] = ( xx [ 72 ] * xx [ 74 ] + xx [ 73 ] * xx [ 75 ] ) * xx [ 28 ]
 ; xx [ 4 ] = pm_math_Vector3_dot_ra ( xx + 7 , xx + 1 ) ; xx [ 5 ] =
-0.01085440859974902 ; xx [ 6 ] = 0.07228022064246183 ; xx [ 10 ] =
-0.997325298745513 ; xx [ 11 ] = xx [ 5 ] ; xx [ 12 ] = - xx [ 6 ] ; xx [ 13 ]
-= xx [ 10 ] ; xx [ 14 ] = pm_math_Vector3_dot_ra ( xx + 1 , xx + 11 ) ; xx [
-15 ] = xx [ 86 ] - xx [ 14 ] * xx [ 14 ] ; xx [ 15 ] = xx [ 15 ] == 0.0 ? 0.0
-: ( pm_math_Vector3_dot_ra ( xx + 7 , xx + 11 ) - xx [ 4 ] * xx [ 14 ] ) / xx
-[ 15 ] ; xx [ 11 ] = xx [ 0 ] * xx [ 82 ] ; xx [ 12 ] = sin ( xx [ 11 ] ) ;
-xx [ 16 ] = cos ( xx [ 11 ] ) ; xx [ 17 ] = xx [ 5 ] * xx [ 12 ] ; xx [ 18 ]
-= - ( xx [ 6 ] * xx [ 12 ] ) ; xx [ 19 ] = xx [ 10 ] * xx [ 12 ] ; xx [ 10 ]
-= - 9.799417557012156e-3 ; xx [ 11 ] = 0.9973284708563647 ; xx [ 12 ] =
-0.07238710268306554 ; pm_math_Quaternion_inverseXform_ra ( xx + 16 , xx + 10
-, xx + 20 ) ; xx [ 10 ] = 0.9958524573065585 ; xx [ 11 ] = -
-0.09068858100887965 ; xx [ 12 ] = 4.55902949587172e-3 ; xx [ 13 ] =
-5.716624978144062e-3 ; pm_math_Quaternion_compose_ra ( xx + 58 , xx + 10 , xx
-+ 16 ) ; xx [ 5 ] = ( xx [ 17 ] * xx [ 19 ] + xx [ 16 ] * xx [ 18 ] ) * xx [
-28 ] ; bb [ 0 ] = fabs ( xx [ 5 ] ) > xx [ 78 ] ; xx [ 6 ] = xx [ 18 ] * xx [
-19 ] ; xx [ 10 ] = xx [ 16 ] * xx [ 17 ] ; xx [ 11 ] = xx [ 16 ] * xx [ 16 ]
-; xx [ 12 ] = ( xx [ 11 ] + xx [ 18 ] * xx [ 18 ] ) * xx [ 28 ] - xx [ 86 ] ;
-xx [ 13 ] = ( xx [ 6 ] + xx [ 10 ] ) * xx [ 28 ] ; xx [ 12 ] = ( xx [ 13 ] ==
-0.0 && xx [ 12 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 13 ] , xx [ 12 ] ) ; xx [ 13 ]
-= ( xx [ 11 ] + xx [ 19 ] * xx [ 19 ] ) * xx [ 28 ] - xx [ 86 ] ; xx [ 23 ] =
-- ( xx [ 28 ] * ( xx [ 6 ] - xx [ 10 ] ) ) ; xx [ 13 ] = ( xx [ 23 ] == 0.0
-&& xx [ 13 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 23 ] , xx [ 13 ] ) ; xx [ 6 ] = bb
-[ 0 ] ? xx [ 0 ] * xx [ 12 ] : xx [ 13 ] ; xx [ 10 ] = ( ( cos (
-pm_math_canonicalAngle ( state [ 97 ] ) ) ) < 0.0 ? - 1.0 : + 1.0 ) ; xx [ 12
-] = xx [ 80 ] * ( xx [ 86 ] - xx [ 10 ] ) ; if ( xx [ 5 ] < 0.0 ) xx [ 13 ] =
-- 1.0 ; else if ( xx [ 5 ] > 0.0 ) xx [ 13 ] = + 1.0 ; else xx [ 13 ] = 0.0 ;
-xx [ 23 ] = fabs ( xx [ 5 ] ) > 1.0 ? atan2 ( xx [ 5 ] , 0.0 ) : asin ( xx [
-5 ] ) ; xx [ 5 ] = bb [ 0 ] ? xx [ 80 ] * xx [ 13 ] : xx [ 23 ] ; xx [ 23 ] =
-( xx [ 11 ] + xx [ 17 ] * xx [ 17 ] ) * xx [ 28 ] - xx [ 86 ] ; xx [ 24 ] = -
-( xx [ 28 ] * ( xx [ 17 ] * xx [ 18 ] - xx [ 16 ] * xx [ 19 ] ) ) ; xx [ 23 ]
-= ( xx [ 24 ] == 0.0 && xx [ 23 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 24 ] , xx [
-23 ] ) ; xx [ 11 ] = bb [ 0 ] ? xx [ 13 ] * xx [ 6 ] : xx [ 23 ] ; xx [ 13 ]
-= xx [ 11 ] - ( xx [ 11 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 12 ] ; xx [ 11 ] =
-8.043376237938261e-3 ; xx [ 16 ] = 0.1806770170184598 ; xx [ 17 ] =
-0.9835095930493033 ; xx [ 23 ] = xx [ 11 ] ; xx [ 24 ] = xx [ 16 ] ; xx [ 25
-] = xx [ 17 ] ; xx [ 18 ] = pm_math_Vector3_dot_ra ( xx + 1 , xx + 23 ) ; xx
-[ 1 ] = xx [ 86 ] - xx [ 18 ] * xx [ 18 ] ; xx [ 1 ] = xx [ 1 ] == 0.0 ? 0.0
-: ( pm_math_Vector3_dot_ra ( xx + 7 , xx + 23 ) - xx [ 4 ] * xx [ 18 ] ) / xx
-[ 1 ] ; xx [ 2 ] = xx [ 0 ] * xx [ 13 ] ; xx [ 0 ] = sin ( xx [ 2 ] ) ; xx [
-23 ] = cos ( xx [ 2 ] ) ; xx [ 24 ] = xx [ 11 ] * xx [ 0 ] ; xx [ 25 ] = xx [
-16 ] * xx [ 0 ] ; xx [ 26 ] = xx [ 17 ] * xx [ 0 ] ; xx [ 27 ] = -
-0.0122127338954861 ; xx [ 28 ] = 0.9834858029469102 ; xx [ 29 ] = -
-0.180572767970891 ; pm_math_Quaternion_inverseXform_ra ( xx + 23 , xx + 27 ,
-xx + 30 ) ; state [ 90 ] = state [ 90 ] + pm_math_canonicalAngle ( xx [ 79 ]
-- ( xx [ 79 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 88 ] - state [ 90 ] ) ; state [
-91 ] = state [ 91 ] + pm_math_canonicalAngle ( xx [ 87 ] * xx [ 63 ] + ( xx [
-63 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 88 ] - state [ 91 ] ) ; state [ 92 ] =
-state [ 92 ] + pm_math_canonicalAngle ( xx [ 82 ] - state [ 92 ] ) ; state [
-93 ] = xx [ 4 ] - xx [ 14 ] * xx [ 15 ] ; state [ 94 ] =
-pm_math_Vector3_dot_ra ( xx + 7 , xx + 20 ) ; state [ 95 ] = xx [ 15 ] ;
-state [ 96 ] = state [ 96 ] + pm_math_canonicalAngle ( xx [ 6 ] - ( xx [ 6 ]
-< 0.0 ? - 1.0 : + 1.0 ) * xx [ 12 ] - state [ 96 ] ) ; state [ 97 ] = state [
-97 ] + pm_math_canonicalAngle ( xx [ 10 ] * xx [ 5 ] + ( xx [ 5 ] < 0.0 ? -
-1.0 : + 1.0 ) * xx [ 12 ] - state [ 97 ] ) ; state [ 98 ] = state [ 98 ] +
-pm_math_canonicalAngle ( xx [ 13 ] - state [ 98 ] ) ; state [ 99 ] = xx [ 4 ]
-- xx [ 18 ] * xx [ 1 ] ; state [ 100 ] = pm_math_Vector3_dot_ra ( xx + 7 , xx
-+ 30 ) ; state [ 101 ] = xx [ 1 ] ; return NULL ; } void
+7.927528481685209e-11 ; xx [ 6 ] = 0.06791191233403736 ; xx [ 10 ] =
+0.9976913210823947 ; xx [ 11 ] = - xx [ 5 ] ; xx [ 12 ] = - xx [ 6 ] ; xx [
+13 ] = xx [ 10 ] ; xx [ 14 ] = pm_math_Vector3_dot_ra ( xx + 1 , xx + 11 ) ;
+xx [ 15 ] = xx [ 84 ] - xx [ 14 ] * xx [ 14 ] ; xx [ 15 ] = xx [ 15 ] == 0.0
+? 0.0 : ( pm_math_Vector3_dot_ra ( xx + 7 , xx + 11 ) - xx [ 4 ] * xx [ 14 ]
+) / xx [ 15 ] ; xx [ 11 ] = xx [ 0 ] * xx [ 80 ] ; xx [ 12 ] = sin ( xx [ 11
+] ) ; xx [ 16 ] = cos ( xx [ 11 ] ) ; xx [ 17 ] = - ( xx [ 5 ] * xx [ 12 ] )
+; xx [ 18 ] = - ( xx [ 6 ] * xx [ 12 ] ) ; xx [ 19 ] = xx [ 10 ] * xx [ 12 ]
+; xx [ 11 ] = 4.07822078033264e-10 ; xx [ 12 ] = xx [ 10 ] ; xx [ 13 ] = xx [
+6 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 16 , xx + 11 , xx + 20 ) ; xx
+[ 10 ] = - 0.9956754524795487 ; xx [ 11 ] = 0.09289991027792205 ; xx [ 12 ] =
+6.437320495472446e-12 ; xx [ 13 ] = 2.076280636928651e-10 ;
+pm_math_Quaternion_compose_ra ( xx + 58 , xx + 10 , xx + 16 ) ; xx [ 5 ] = (
+xx [ 17 ] * xx [ 19 ] + xx [ 16 ] * xx [ 18 ] ) * xx [ 28 ] ; bb [ 0 ] = fabs
+( xx [ 5 ] ) > xx [ 76 ] ; xx [ 6 ] = xx [ 18 ] * xx [ 19 ] ; xx [ 10 ] = xx
+[ 16 ] * xx [ 17 ] ; xx [ 11 ] = xx [ 16 ] * xx [ 16 ] ; xx [ 12 ] = ( xx [
+11 ] + xx [ 18 ] * xx [ 18 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [ 13 ] = ( xx [ 6
+] + xx [ 10 ] ) * xx [ 28 ] ; xx [ 12 ] = ( xx [ 13 ] == 0.0 && xx [ 12 ] ==
+0.0 ) ? 0.0 : atan2 ( xx [ 13 ] , xx [ 12 ] ) ; xx [ 13 ] = ( xx [ 11 ] + xx
+[ 19 ] * xx [ 19 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [ 23 ] = - ( xx [ 28 ] * (
+xx [ 6 ] - xx [ 10 ] ) ) ; xx [ 13 ] = ( xx [ 23 ] == 0.0 && xx [ 13 ] == 0.0
+) ? 0.0 : atan2 ( xx [ 23 ] , xx [ 13 ] ) ; xx [ 6 ] = bb [ 0 ] ? xx [ 0 ] *
+xx [ 12 ] : xx [ 13 ] ; xx [ 10 ] = ( ( cos ( pm_math_canonicalAngle ( state
+[ 85 ] ) ) ) < 0.0 ? - 1.0 : + 1.0 ) ; xx [ 12 ] = xx [ 78 ] * ( xx [ 84 ] -
+xx [ 10 ] ) ; if ( xx [ 5 ] < 0.0 ) xx [ 13 ] = - 1.0 ; else if ( xx [ 5 ] >
+0.0 ) xx [ 13 ] = + 1.0 ; else xx [ 13 ] = 0.0 ; xx [ 23 ] = fabs ( xx [ 5 ]
+) > 1.0 ? atan2 ( xx [ 5 ] , 0.0 ) : asin ( xx [ 5 ] ) ; xx [ 5 ] = bb [ 0 ]
+? xx [ 78 ] * xx [ 13 ] : xx [ 23 ] ; xx [ 23 ] = ( xx [ 11 ] + xx [ 17 ] *
+xx [ 17 ] ) * xx [ 28 ] - xx [ 84 ] ; xx [ 24 ] = - ( xx [ 28 ] * ( xx [ 17 ]
+* xx [ 18 ] - xx [ 16 ] * xx [ 19 ] ) ) ; xx [ 23 ] = ( xx [ 24 ] == 0.0 &&
+xx [ 23 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 24 ] , xx [ 23 ] ) ; xx [ 11 ] = bb [
+0 ] ? xx [ 13 ] * xx [ 6 ] : xx [ 23 ] ; xx [ 13 ] = xx [ 11 ] - ( xx [ 11 ]
+< 0.0 ? - 1.0 : + 1.0 ) * xx [ 12 ] ; xx [ 11 ] = 2.57582929823209e-11 ; xx [
+16 ] = 0.184996320402559 ; xx [ 17 ] = 0.982739213340708 ; xx [ 23 ] = xx [
+11 ] ; xx [ 24 ] = xx [ 16 ] ; xx [ 25 ] = xx [ 17 ] ; xx [ 18 ] =
+pm_math_Vector3_dot_ra ( xx + 1 , xx + 23 ) ; xx [ 1 ] = xx [ 84 ] - xx [ 18
+] * xx [ 18 ] ; xx [ 1 ] = xx [ 1 ] == 0.0 ? 0.0 : ( pm_math_Vector3_dot_ra (
+xx + 7 , xx + 23 ) - xx [ 4 ] * xx [ 18 ] ) / xx [ 1 ] ; xx [ 2 ] = xx [ 0 ]
+* xx [ 13 ] ; xx [ 0 ] = sin ( xx [ 2 ] ) ; xx [ 23 ] = cos ( xx [ 2 ] ) ; xx
+[ 24 ] = xx [ 11 ] * xx [ 0 ] ; xx [ 25 ] = xx [ 16 ] * xx [ 0 ] ; xx [ 26 ]
+= xx [ 17 ] * xx [ 0 ] ; xx [ 27 ] = 4.146563855226113e-10 ; xx [ 28 ] = xx [
+17 ] ; xx [ 29 ] = - xx [ 16 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 23
+, xx + 27 , xx + 30 ) ; state [ 78 ] = state [ 78 ] + pm_math_canonicalAngle
+( xx [ 77 ] - ( xx [ 77 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 86 ] - state [ 78 ]
+) ; state [ 79 ] = state [ 79 ] + pm_math_canonicalAngle ( xx [ 85 ] * xx [
+63 ] + ( xx [ 63 ] < 0.0 ? - 1.0 : + 1.0 ) * xx [ 86 ] - state [ 79 ] ) ;
+state [ 80 ] = state [ 80 ] + pm_math_canonicalAngle ( xx [ 80 ] - state [ 80
+] ) ; state [ 81 ] = xx [ 4 ] - xx [ 14 ] * xx [ 15 ] ; state [ 82 ] =
+pm_math_Vector3_dot_ra ( xx + 7 , xx + 20 ) ; state [ 83 ] = xx [ 15 ] ;
+state [ 84 ] = state [ 84 ] + pm_math_canonicalAngle ( xx [ 6 ] - ( xx [ 6 ]
+< 0.0 ? - 1.0 : + 1.0 ) * xx [ 12 ] - state [ 84 ] ) ; state [ 85 ] = state [
+85 ] + pm_math_canonicalAngle ( xx [ 10 ] * xx [ 5 ] + ( xx [ 5 ] < 0.0 ? -
+1.0 : + 1.0 ) * xx [ 12 ] - state [ 85 ] ) ; state [ 86 ] = state [ 86 ] +
+pm_math_canonicalAngle ( xx [ 13 ] - state [ 86 ] ) ; state [ 87 ] = xx [ 4 ]
+- xx [ 18 ] * xx [ 1 ] ; state [ 88 ] = pm_math_Vector3_dot_ra ( xx + 7 , xx
++ 30 ) ; state [ 89 ] = xx [ 1 ] ; return NULL ; } void
 draft7_a151ee3d_1_computeConstraintError ( const void * mech , const
 RuntimeDerivedValuesBundle * rtdv , const double * state , const int *
 modeVector , double * error ) { const double * rtdvd = rtdv -> mDoubles .

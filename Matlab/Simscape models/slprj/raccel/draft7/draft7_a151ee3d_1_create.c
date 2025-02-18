@@ -181,7 +181,7 @@ mCachedDerivativesAvailable ) memcpy ( daeMethodOutput -> mXP0 . mX , smData
 draft7_a151ee3d_1_compDerivs ( & smData -> mSimRuntimeDerivedValuesBundle ,
 smData -> mSimulationDelegate . mRunTimeEnabledEquations . mValues ,
 systemInput -> mX . mX , systemInput -> mM . mX , systemInput -> mU . mX ,
-systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 , systemInput ->
+systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 , systemInput ->
 mD . mX , daeMethodOutput -> mXP0 . mX , & errorResult , neDiagMgr ) ; return
 errorId ; } static PmfMessageId dae_cg_numJacPerturbLoBounds_method ( const
 NeDae * dae , const NeSystemInput * systemInput , NeDaeMethodOutput *
@@ -190,8 +190,8 @@ daeMethodOutput , NeuDiagnosticManager * neDiagMgr ) { const NeDaePrivateData
 errorResult = 0.0 ; errorId = draft7_a151ee3d_1_numJacPerturbLoBounds ( &
 smData -> mSimRuntimeDerivedValuesBundle , smData -> mSimulationDelegate .
 mRunTimeEnabledEquations . mValues , systemInput -> mX . mX , systemInput ->
-mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput
--> mV . mX + 180 , systemInput -> mD . mX , daeMethodOutput -> mNUMJAC_DX_LO
+mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput
+-> mV . mX + 172 , systemInput -> mD . mX , daeMethodOutput -> mNUMJAC_DX_LO
 . mX , & errorResult , neDiagMgr ) ; return errorId ; } static PmfMessageId
 dae_cg_numJacPerturbHiBounds_method ( const NeDae * dae , const NeSystemInput
 * systemInput , NeDaeMethodOutput * daeMethodOutput , NeuDiagnosticManager *
@@ -200,8 +200,8 @@ PmfMessageId errorId = NULL ; double errorResult = 0.0 ; errorId =
 draft7_a151ee3d_1_numJacPerturbHiBounds ( & smData ->
 mSimRuntimeDerivedValuesBundle , smData -> mSimulationDelegate .
 mRunTimeEnabledEquations . mValues , systemInput -> mX . mX , systemInput ->
-mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput
--> mV . mX + 180 , systemInput -> mD . mX , daeMethodOutput -> mNUMJAC_DX_HI
+mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput
+-> mV . mX + 172 , systemInput -> mD . mX , daeMethodOutput -> mNUMJAC_DX_HI
 . mX , & errorResult , neDiagMgr ) ; return errorId ; } static PmfMessageId
 dae_cg_compOutputs_method ( const NeDae * dae , const NeSystemInput *
 systemInput , NeDaeMethodOutput * daeMethodOutput , NeuDiagnosticManager *
@@ -210,20 +210,20 @@ neDiagMgr ) { PmfMessageId errorId = NULL ; NeDaePrivateData * smData = dae
 0 ; double errorResult = 0.0 ; errorId = draft7_a151ee3d_1_compOutputsDyn ( &
 smData -> mSimRuntimeDerivedValuesBundle , smData -> mSimulationDelegate .
 mRunTimeEnabledEquations . mValues , systemInput -> mX . mX , systemInput ->
-mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput
--> mV . mX + 180 , systemInput -> mD . mX , smData -> mCachedDerivatives . mX
+mM . mX , systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput
+-> mV . mX + 172 , systemInput -> mD . mX , smData -> mCachedDerivatives . mX
 , daeMethodOutput -> mY . mX , & derivErr , & errorResult , neDiagMgr ) ;
 smData -> mCachedDerivativesAvailable = ( derivErr == 0 ) ; } else errorId =
 draft7_a151ee3d_1_compOutputsKin ( & smData -> mSimRuntimeDerivedValuesBundle
 , systemInput -> mX . mX , systemInput -> mM . mX , systemInput -> mU . mX ,
-systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 , systemInput ->
+systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 , systemInput ->
 mD . mX , daeMethodOutput -> mY . mX , neDiagMgr ) ; return errorId ; }
 static PmfMessageId dae_cg_mode_method ( const NeDae * dae , const
 NeSystemInput * systemInput , NeDaeMethodOutput * daeMethodOutput ,
 NeuDiagnosticManager * neDiagMgr ) { const NeDaePrivateData * smData = dae ->
 mPrivateData ; PmfMessageId errorId = NULL ; double errorResult = 0.0 ;
 errorId = draft7_a151ee3d_1_computeSimModeVector ( systemInput -> mU . mX ,
-systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 , daeMethodOutput
+systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 , daeMethodOutput
 -> mMODE . mX , & errorResult , neDiagMgr ) ; memcpy ( smData ->
 mCachedModeVector . mX , daeMethodOutput -> mMODE . mX , 0 * sizeof ( int32_T
 ) ) ; return errorId ; } static PmfMessageId dae_cg_zeroCrossing_method (
@@ -232,7 +232,7 @@ daeMethodOutput , NeuDiagnosticManager * neDiagMgr ) { const NeDaePrivateData
 * smData = dae -> mPrivateData ; double errorResult = 0.0 ; return
 draft7_a151ee3d_1_computeZeroCrossings ( & smData ->
 mSimRuntimeDerivedValuesBundle , systemInput -> mX . mX , systemInput -> mU .
-mX , systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 ,
+mX , systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 ,
 systemInput -> mD . mX , daeMethodOutput -> mZC . mX , & errorResult ,
 neDiagMgr ) ; } static void dae_cg_setupLoggerFcn ( const NeDae * dae ,
 NeLoggerBuilder * neLoggerBuilder ) { ( void ) dae ; ( void ) neLoggerBuilder
@@ -242,29 +242,29 @@ neDiagMgr ) { const NeDaePrivateData * smData = dae -> mPrivateData ;
 PmfMessageId errorId = NULL ; double errorResult = 0.0 ; double *
 fullStateVector = smData -> mSimulationFullStateVector . mX ;
 draft7_a151ee3d_1_constructStateVector ( NULL , systemInput -> mX . mX ,
-systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput -> mD .
+systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput -> mD .
 mX , fullStateVector ) ; errorId = draft7_a151ee3d_1_recordLog ( & smData ->
 mSimRuntimeDerivedValuesBundle , smData -> mSimulationDelegate .
 mRunTimeEnabledEquations . mValues , fullStateVector , systemInput -> mM . mX
-, systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput -> mV .
-mX + 180 , output -> mX , & errorResult , neDiagMgr ) ; return errorId ; }
+, systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput -> mV .
+mX + 172 , output -> mX , & errorResult , neDiagMgr ) ; return errorId ; }
 static PmfMessageId dae_cg_project_solve ( const NeDae * dae , const
 NeSystemInput * systemInput , NeuDiagnosticManager * neDiagMgr ) {
 NeDaePrivateData * smData = dae -> mPrivateData ; return sm_core_projectState
 ( false , & smData -> mSimulationDelegate , & smData ->
 mSimRuntimeDerivedValuesBundle , systemInput -> mM . mX , systemInput -> mU .
-mX , systemInput -> mU . mX + 180 , systemInput -> mD . mX , systemInput ->
+mX , systemInput -> mU . mX + 172 , systemInput -> mD . mX , systemInput ->
 mX . mX , neDiagMgr ) ; } static PmfMessageId dae_cg_check_solve ( const
 NeDae * dae , const NeSystemInput * systemInput , NeuDiagnosticManager *
 neDiagMgr ) { NeDaePrivateData * smData = dae -> mPrivateData ; PmfMessageId
 errorId = NULL ; if ( smData -> mNumConstraintEqns > 0 ) errorId =
 sm_core_projectState ( false , & smData -> mSimulationDelegate , & smData ->
 mSimRuntimeDerivedValuesBundle , systemInput -> mM . mX , systemInput -> mU .
-mX , systemInput -> mU . mX + 180 , systemInput -> mD . mX , systemInput ->
+mX , systemInput -> mU . mX + 172 , systemInput -> mD . mX , systemInput ->
 mX . mX , neDiagMgr ) ; if ( errorId == NULL ) { double result = 0.0 ;
 errorId = draft7_a151ee3d_1_checkDynamics ( & smData ->
 mSimRuntimeDerivedValuesBundle , systemInput -> mX . mX , systemInput -> mU .
-mX , systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 ,
+mX , systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 ,
 systemInput -> mD . mX , systemInput -> mM . mX , & result , neDiagMgr ) ; }
 return errorId ; } static PmfMessageId dae_cg_CIC_MODE_solve ( const NeDae *
 dae , const NeSystemInput * systemInput , NeuDiagnosticManager * neDiagMgr )
@@ -272,27 +272,27 @@ dae , const NeSystemInput * systemInput , NeuDiagnosticManager * neDiagMgr )
 NULL ; double errorResult = 0.0 ; const size_t mvSize = smData ->
 mModeVectorSize ; boolean_T modeChanged = false ; if ( mvSize > 0 ) { errorId
 = draft7_a151ee3d_1_computeSimModeVector ( systemInput -> mU . mX ,
-systemInput -> mU . mX + 180 , systemInput -> mV . mX + 180 , systemInput ->
+systemInput -> mU . mX + 172 , systemInput -> mV . mX + 172 , systemInput ->
 mM . mX , & errorResult , neDiagMgr ) ; if ( errorId != NULL ) return errorId
 ; { size_t i ; for ( i = 0 ; i < mvSize ; ++ i ) if ( systemInput -> mM . mX
 [ i ] != smData -> mCachedModeVector . mX [ i ] ) { modeChanged = true ;
 break ; } } } if ( modeChanged ) { errorId = sm_core_onModeChanged ( & smData
 -> mSimulationDelegate , & smData -> mSimRuntimeDerivedValuesBundle ,
-systemInput -> mU . mX , systemInput -> mU . mX + 180 , systemInput -> mD .
+systemInput -> mU . mX , systemInput -> mU . mX + 172 , systemInput -> mD .
 mX , smData -> mCachedModeVector . mX , systemInput -> mM . mX , systemInput
 -> mX . mX , neDiagMgr ) ; if ( errorId != NULL ) return errorId ; memcpy (
 smData -> mCachedModeVector . mX , systemInput -> mM . mX , 0 * sizeof (
 int32_T ) ) ; } errorId = sm_core_projectState ( true , & smData ->
 mSimulationDelegate , & smData -> mSimRuntimeDerivedValuesBundle ,
 systemInput -> mM . mX , systemInput -> mU . mX , systemInput -> mU . mX +
-180 , systemInput -> mD . mX , systemInput -> mX . mX , neDiagMgr ) ; return
+172 , systemInput -> mD . mX , systemInput -> mX . mX , neDiagMgr ) ; return
 errorId ; } static PmfMessageId dae_cg_assemble_solve ( const NeDae * dae ,
 const NeSystemInput * systemInput , NeuDiagnosticManager * neDiagMgr ) {
 NeDaePrivateData * smData = dae -> mPrivateData ; const SmMechanismDelegate *
 delegate = & smData -> mAssemblyDelegate ; const RuntimeDerivedValuesBundle *
 runtimeDerivedValuesBundle = & smData -> mAsmRuntimeDerivedValuesBundle ;
 PmfMessageId errorId = NULL ; size_t i ; double errorResult = 0.0 ; const
-size_t numTargets = 174 ; unsigned int asmStatus = 0 ; double *
+size_t numTargets = 150 ; unsigned int asmStatus = 0 ; double *
 assemblyFullStateVector = smData -> mAssemblyFullStateVector . mX ; double *
 simulationFullStateVector = smData -> mSimulationFullStateVector . mX ; ( *
 delegate -> mSetTargets ) ( runtimeDerivedValuesBundle , smData -> mTargets )
@@ -304,7 +304,7 @@ mMotionInputOffsets . mX [ i ] ; ( target ++ ) -> mValue [ 0 ] = u [
 inputOffset ] ; ( target ++ ) -> mValue [ 0 ] = uDot [ inputOffset ] ; } } if
 ( smData -> mAssemblyModeVector . mN > 0 ) { errorId =
 draft7_a151ee3d_1_computeAsmModeVector ( systemInput -> mU . mX , systemInput
--> mU . mX + 180 , systemInput -> mV . mX + 180 , smData ->
+-> mU . mX + 172 , systemInput -> mV . mX + 172 , smData ->
 mAssemblyModeVector . mX , & errorResult , neDiagMgr ) ; if ( errorId != NULL
 ) return errorId ; } sm_core_computeStateVector ( delegate ,
 runtimeDerivedValuesBundle , smData -> mAssemblyModeVector . mX , numTargets
@@ -325,7 +325,7 @@ assemblyFullStateVector ) ;
 #endif
 if ( smData -> mModeVectorSize > 0 ) { errorId =
 draft7_a151ee3d_1_computeSimModeVector ( systemInput -> mU . mX , systemInput
--> mU . mX + 180 , systemInput -> mV . mX + 180 , systemInput -> mM . mX , &
+-> mU . mX + 172 , systemInput -> mV . mX + 172 , systemInput -> mM . mX , &
 errorResult , neDiagMgr ) ; if ( errorId != NULL ) return errorId ; memcpy (
 smData -> mCachedModeVector . mX , systemInput -> mM . mX , 0 * sizeof (
 int32_T ) ) ; } ( * delegate -> mConvertStateVector ) ( NULL ,
@@ -343,17 +343,17 @@ PmCharVector charVect ; const int_T status = pm_create_char_vector_fields ( &
 charVect , n + 1 , pm_default_allocator ( ) ) ; checkMemAllocStatus ( status
 ) ; strcpy ( charVect . mX , src ) ; return charVect ; } static void
 initBasicAttributes ( NeDaePrivateData * smData ) { size_t i ; smData ->
-mStateVectorSize = 42 ; smData -> mFullStateVectorSize = 102 ; smData ->
+mStateVectorSize = 42 ; smData -> mFullStateVectorSize = 90 ; smData ->
 mDiscreteStateSize = 0 ; smData -> mModeVectorSize = 0 ; smData ->
-mNumZeroCrossings = 0 ; smData -> mInputVectorSize = 180 ; smData ->
-mOutputVectorSize = 140 ; smData -> mNumConstraintEqns = 0 ; for ( i = 0 ; i
+mNumZeroCrossings = 0 ; smData -> mInputVectorSize = 172 ; smData ->
+mOutputVectorSize = 128 ; smData -> mNumConstraintEqns = 0 ; for ( i = 0 ; i
 < 4 ; ++ i ) smData -> mChecksum [ i ] = 0 ; } static void initStateVector (
 NeDaePrivateData * smData ) { PmAllocator * alloc = pm_default_allocator ( )
 ; const int32_T stateVectorMap [ 42 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 ,
 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 , 20 , 21 , 22 , 23 , 24
-, 25 , 26 , 27 , 28 , 29 , 90 , 91 , 92 , 93 , 94 , 95 , 96 , 97 , 98 , 99 ,
-100 , 101 } ; const CTarget targets [ 174 ] = { { 0 , 322 , 0 , false , 0 , 0
-, "1" , false , true , + 1.000000000000000000e+00 , false , 1 , { +
+, 25 , 26 , 27 , 28 , 29 , 78 , 79 , 80 , 81 , 82 , 83 , 84 , 85 , 86 , 87 ,
+88 , 89 } ; const CTarget targets [ 150 ] = { { 0 , 322 , 0 , false , 0 , 0 ,
+"1" , false , true , + 1.000000000000000000e+00 , false , 1 , { +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
 0.000000000000000000e+00 } } , { 0 , 322 , 0 , false , 0 , 0 , "1" , true ,
@@ -667,110 +667,47 @@ true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 0.000000000000000000e+00 } } , { 0 , 626 , 2 , false , 0 , 0 , "1" , true ,
 true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 0
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 0 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 1
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 1 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 2
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 2 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 0
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 0 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 1
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 1 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 2
-, false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 2 , false , 0 , 0 , "1" , true ,
-true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 0
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 0
 , false , 0 , 0 , "1" , false , false , + 1.000000000000000000e+00 , false ,
 1 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 0 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 0 , false , 0 , 0 , "1" , true ,
 false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 1
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 1
 , false , 0 , 0 , "1" , false , false , + 1.000000000000000000e+00 , false ,
 1 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 1 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 1 , false , 0 , 0 , "1" , true ,
 false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 2
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 2
 , false , 0 , 0 , "1" , false , false , + 1.000000000000000000e+00 , false ,
 1 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 2 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 2 , false , 0 , 0 , "1" , true ,
 false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 3
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 3
 , false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 3 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 3 , false , 0 , 0 , "1" , true ,
 true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 4
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 4
 , false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 4 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 4 , false , 0 , 0 , "1" , true ,
 true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 717 , 5
+0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 697 , 5
 , false , 0 , 0 , "1" , false , true , + 1.000000000000000000e+00 , false , 1
 , { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 717 , 5 , false , 0 , 0 , "1" , true ,
+0.000000000000000000e+00 } } , { 0 , 697 , 5 , false , 0 , 0 , "1" , true ,
 true , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 0
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 0 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 1
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 1 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 642 , 2
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 642 , 2 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 542 , 0
 , false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
@@ -940,42 +877,21 @@ false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 0.000000000000000000e+00 } } , { 0 , 626 , 2 , false , 0 , 3 , "" , true ,
 false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
 , + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 0
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 0 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 1
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 1 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } , { 0 , 641 , 2
-, false , 0 , 3 , "" , false , false , + 1.000000000000000000e+00 , false , 1
-, { + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
-0.000000000000000000e+00 , + 0.000000000000000000e+00 } , { +
-0.000000000000000000e+00 } } , { 0 , 641 , 2 , false , 0 , 3 , "" , true ,
-false , + 1.000000000000000000e+00 , false , 1 , { + 0.000000000000000000e+00
-, + 0.000000000000000000e+00 , + 0.000000000000000000e+00 , +
 0.000000000000000000e+00 } , { + 0.000000000000000000e+00 } } } ; const
-size_t numTargets = 174 ; int_T status ; size_t i ; status =
-pm_create_real_vector_fields ( & smData -> mAssemblyFullStateVector , 102 ,
+size_t numTargets = 150 ; int_T status ; size_t i ; status =
+pm_create_real_vector_fields ( & smData -> mAssemblyFullStateVector , 90 ,
 alloc ) ; checkMemAllocStatus ( status ) ; status =
-pm_create_real_vector_fields ( & smData -> mSimulationFullStateVector , 102 ,
+pm_create_real_vector_fields ( & smData -> mSimulationFullStateVector , 90 ,
 alloc ) ; checkMemAllocStatus ( status ) ; status =
 pm_create_int_vector_fields ( & smData -> mStateVectorMap , smData ->
 mStateVectorSize , alloc ) ; checkMemAllocStatus ( status ) ; memcpy ( smData
 -> mStateVectorMap . mX , stateVectorMap , smData -> mStateVectorSize *
-sizeof ( int32_T ) ) ; smData -> mNumInternalTargets = 114 ; smData ->
-mNumInputMotionPrimitives = 30 ; PM_ALLOCATE_ARRAY ( smData -> mTargets ,
+sizeof ( int32_T ) ) ; smData -> mNumInternalTargets = 102 ; smData ->
+mNumInputMotionPrimitives = 24 ; PM_ALLOCATE_ARRAY ( smData -> mTargets ,
 CTarget , numTargets , alloc ) ; for ( i = 0 ; i < numTargets ; ++ i )
 sm_compiler_CTarget_copy ( targets + i , smData -> mTargets + i ) ; } static
 void initAsserts ( NeDaePrivateData * smData ) { PmAllocator * alloc =
-pm_default_allocator ( ) ; int_T status = 0 ; smData -> mNumParamAsserts = 3
+pm_default_allocator ( ) ; int_T status = 0 ; smData -> mNumParamAsserts = 24
 ; smData -> mParamAssertObjects = NULL ; smData -> mParamAssertPaths = NULL ;
 smData -> mParamAssertDescriptors = NULL ; smData -> mParamAssertMessages =
 NULL ; smData -> mParamAssertMessageIds = NULL ; status =
@@ -983,14 +899,14 @@ pm_create_bool_vector_fields ( & smData -> mParamAssertIsWarnings , smData ->
 mNumParamAsserts , alloc ) ; checkMemAllocStatus ( status ) ; if ( smData ->
 mNumParamAsserts > 0 ) { const NeAssertData * ad =
 draft7_a151ee3d_1_assertData ; size_t i ; PM_ALLOCATE_ARRAY ( smData ->
-mParamAssertObjects , PmCharVector , 3 , alloc ) ; PM_ALLOCATE_ARRAY ( smData
--> mParamAssertPaths , PmCharVector , 3 , alloc ) ; PM_ALLOCATE_ARRAY (
-smData -> mParamAssertDescriptors , PmCharVector , 3 , alloc ) ;
-PM_ALLOCATE_ARRAY ( smData -> mParamAssertMessages , PmCharVector , 3 , alloc
-) ; PM_ALLOCATE_ARRAY ( smData -> mParamAssertMessageIds , PmCharVector , 3 ,
-alloc ) ; for ( i = 0 ; i < smData -> mNumParamAsserts ; ++ i , ++ ad ) {
-smData -> mParamAssertObjects [ i ] = cStringToCharVector ( ad -> mObject ) ;
-smData -> mParamAssertPaths [ i ] = cStringToCharVector ( ad -> mPath ) ;
+mParamAssertObjects , PmCharVector , 24 , alloc ) ; PM_ALLOCATE_ARRAY (
+smData -> mParamAssertPaths , PmCharVector , 24 , alloc ) ; PM_ALLOCATE_ARRAY
+( smData -> mParamAssertDescriptors , PmCharVector , 24 , alloc ) ;
+PM_ALLOCATE_ARRAY ( smData -> mParamAssertMessages , PmCharVector , 24 ,
+alloc ) ; PM_ALLOCATE_ARRAY ( smData -> mParamAssertMessageIds , PmCharVector
+, 24 , alloc ) ; for ( i = 0 ; i < smData -> mNumParamAsserts ; ++ i , ++ ad
+) { smData -> mParamAssertObjects [ i ] = cStringToCharVector ( ad -> mObject
+) ; smData -> mParamAssertPaths [ i ] = cStringToCharVector ( ad -> mPath ) ;
 smData -> mParamAssertDescriptors [ i ] = cStringToCharVector ( ad ->
 mDescriptor ) ; smData -> mParamAssertMessages [ i ] = cStringToCharVector (
 ad -> mMessage ) ; smData -> mParamAssertMessageIds [ i ] =
@@ -1067,9 +983,13 @@ s ) { smData -> mVarFullPaths [ s ] = cStringToCharVector ( varFullPaths [ s
 ] ) ; smData -> mVarObjects [ s ] = cStringToCharVector ( varObjects [ s ] )
 ; } } } static void initRuntimeParameters ( NeDaePrivateData * smData ) {
 PmAllocator * alloc = pm_default_allocator ( ) ; int_T status = 0 ; size_t i
-= 0 ; const int32_T rtpRootVarRows [ 1 ] = { 1 } ; const int32_T
-rtpRootVarCols [ 1 ] = { 3 } ; const char * rtpFullPaths [ 1 ] = {
-"RTP_FBAAAFE3_GraphicDiffuseColor" } ; smData -> mNumRtpRootVars = 1 ; status
+= 0 ; const int32_T rtpRootVarRows [ 8 ] = { 1 , 1 , 1 , 1 , 1 , 1 , 1 , 1 }
+; const int32_T rtpRootVarCols [ 8 ] = { 3 , 3 , 3 , 3 , 3 , 3 , 3 , 3 } ;
+const char * rtpFullPaths [ 8 ] = { "RTP_3519DDD2_GraphicDiffuseColor" ,
+"RTP_3A003FD7_GraphicDiffuseColor" , "RTP_421EED44_GraphicDiffuseColor" ,
+"RTP_4D070F41_GraphicDiffuseColor" , "RTP_AABF2246_GraphicDiffuseColor" ,
+"RTP_AC108C68_GraphicDiffuseColor" , "RTP_DB17BCFE_GraphicDiffuseColor" ,
+"RTP_FBAAAFE3_GraphicDiffuseColor" } ; smData -> mNumRtpRootVars = 8 ; status
 = pm_create_int_vector_fields ( & smData -> mRtpRootVarRows , smData ->
 mNumRtpRootVars , alloc ) ; checkMemAllocStatus ( status ) ; memcpy ( smData
 -> mRtpRootVarRows . mX , rtpRootVarRows , smData -> mNumRtpRootVars * sizeof
@@ -1078,11 +998,11 @@ mRtpRootVarCols , smData -> mNumRtpRootVars , alloc ) ; checkMemAllocStatus (
 status ) ; memcpy ( smData -> mRtpRootVarCols . mX , rtpRootVarCols , smData
 -> mNumRtpRootVars * sizeof ( int32_T ) ) ; smData -> mRtpFullPaths = NULL ;
 if ( smData -> mNumRtpRootVars > 0 ) { size_t v ; PM_ALLOCATE_ARRAY ( smData
--> mRtpFullPaths , PmCharVector , 1 , alloc ) ; for ( v = 0 ; v < smData ->
+-> mRtpFullPaths , PmCharVector , 8 , alloc ) ; for ( v = 0 ; v < smData ->
 mNumRtpRootVars ; ++ v ) { smData -> mRtpFullPaths [ v ] =
 cStringToCharVector ( rtpFullPaths [ v ] ) ; } } smData ->
-mNumRuntimeRootVarScalars = 3 ; status = pm_create_real_vector_fields ( &
-smData -> mRuntimeParameterScalars , 3 , alloc ) ; checkMemAllocStatus (
+mNumRuntimeRootVarScalars = 24 ; status = pm_create_real_vector_fields ( &
+smData -> mRuntimeParameterScalars , 24 , alloc ) ; checkMemAllocStatus (
 status ) ; for ( i = 0 ; i < smData -> mRuntimeParameterScalars . mN ; ++ i )
 smData -> mRuntimeParameterScalars . mX [ i ] = 0.0 ;
 sm_core_RuntimeDerivedValuesBundle_create ( & smData ->
@@ -1107,17 +1027,15 @@ mInputPortPaths = portPaths ; smData -> mInputUnits = units ; smData ->
 mInputInfos = infos ; } else { smData -> mNumOutputs = n ; smData ->
 mOutputPortPaths = portPaths ; smData -> mOutputUnits = units ; smData ->
 mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
-) { const char * inputPortPaths [ 180 ] = {
+) { const char * inputPortPaths [ 172 ] = {
 "Muscle_Forces.Muscle1.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle2.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle3.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle4.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle5.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle6.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle7.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.Muscle8.Variable_Cylindrical_Solid.leni" ,
-"Muscle_Forces.WrapedMuscle.Variable_Cylindrical_Solid1.leni" ,
-"Muscle_Forces.WrapedMuscle.Variable_Cylindrical_Solid.leni" ,
+"Muscle_Forces.Muscle2.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle3.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle4.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle5.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle6.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle7.Variable_Cylindrical_Solid1.leni" ,
+"Muscle_Forces.Muscle8.Variable_Cylindrical_Solid1.leni" ,
 "L1.Gimbal_Joint1.txi" , "L1.Gimbal_Joint1.tyi" , "L1.Gimbal_Joint1.tzi" ,
 "L2.Gimbal_Joint1.txi" , "L2.Gimbal_Joint1.tyi" , "L2.Gimbal_Joint1.tzi" ,
 "L3.Gimbal_Joint1.txi" , "L3.Gimbal_Joint1.tyi" , "L3.Gimbal_Joint1.tzi" ,
@@ -1146,13 +1064,7 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 "Muscle_Forces.Muscle7.Gimbal_Joint.qzi" ,
 "Muscle_Forces.Muscle8.Gimbal_Joint.qxi" ,
 "Muscle_Forces.Muscle8.Gimbal_Joint.qyi" ,
-"Muscle_Forces.Muscle8.Gimbal_Joint.qzi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint.qxi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint.qyi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint.qzi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint1.qxi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint1.qyi" ,
-"Muscle_Forces.WrapedMuscle.Gimbal_Joint1.qzi" , "Flexion_force_at_T1.fy" ,
+"Muscle_Forces.Muscle8.Gimbal_Joint.qzi" , "Flexion_force_at_T1.fy" ,
 "IAP_Individual_Forces_Model.External_Force_and_Torque.fz" ,
 "IAP_Individual_Forces_Model.External_Force_and_Torque1.fz" ,
 "IAP_Individual_Forces_Model.External_Force_and_Torque10.fz" ,
@@ -1267,14 +1179,14 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 "Pure_LB_Moment_at_L1_COM.ty" , "Supraspinous_Ligaments.L1_L2_SSL.fm" ,
 "Supraspinous_Ligaments.L2_L3_SSL.fm" , "Supraspinous_Ligaments.L3_L4_SSL.fm"
 , "Supraspinous_Ligaments.L4_L5_SSL.fm" ,
-"Supraspinous_Ligaments.L5_S1_SSL.fm" } ; const char * inputUnits [ 180 ] = {
-"m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "kg*m^2/s^2" ,
+"Supraspinous_Ligaments.L5_S1_SSL.fm" } ; const char * inputUnits [ 172 ] = {
+"m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "kg*m^2/s^2" , "kg*m^2/s^2" ,
 "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" ,
 "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" ,
-"kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "rad" , "rad" ,
+"kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" , "rad" , "rad" , "rad" , "rad" ,
 "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad"
 , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" ,
-"rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" , "rad" ,
+"rad" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
@@ -1293,10 +1205,9 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
 "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
-"kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
-"kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m^2/s^2" , "kg*m^2/s^2" ,
-"kg*m^2/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2"
-} ; const SizePair inputDimensions [ 180 ] = { { 1 , 1 } , { 1 , 1 } , { 1 ,
+"kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m^2/s^2" ,
+"kg*m^2/s^2" , "kg*m^2/s^2" , "kg*m/s^2" , "kg*m/s^2" , "kg*m/s^2" ,
+"kg*m/s^2" , "kg*m/s^2" } ; const SizePair inputDimensions [ 172 ] = { { 1 ,
 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } ,
 { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 ,
 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } ,
@@ -1323,8 +1234,7 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 ,
 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } ,
 { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 ,
-1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } ,
-{ 1 , 1 } , { 1 , 1 } } ; const char * outputPortPaths [ 136 ] = {
+1 } , { 1 , 1 } , { 1 , 1 } } ; const char * outputPortPaths [ 124 ] = {
 "L1.Gimbal_Joint1.qx" , "L1.Gimbal_Joint1.tx" , "L1.Gimbal_Joint1.qy" ,
 "L1.Gimbal_Joint1.ty" , "L1.Gimbal_Joint1.qz" , "L1.Gimbal_Joint1.tz" ,
 "L1_S1_Bushing_Joint.qx" , "L1_S1_Bushing_Joint.qy" ,
@@ -1401,42 +1311,30 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 "Muscle_Forces.Muscle8.Transform_Sensor1.x" ,
 "Muscle_Forces.Muscle8.Transform_Sensor1.y" ,
 "Muscle_Forces.Muscle8.Transform_Sensor1.z" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor.x" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor.y" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor.z" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor1.x" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor1.y" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor1.z" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor2.x" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor2.y" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor2.z" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor3.x" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor3.y" ,
-"Muscle_Forces.WrapedMuscle.Transform_Sensor3.z" ,
-"Sagittaal_Kinematics_Readings.L1_Spinous_Process_Position.y" ,
-"Sagittaal_Kinematics_Readings.L1_Spinous_Process_Position.z" ,
-"Sagittaal_Kinematics_Readings.L2_Spinous_process_Position.y" ,
-"Sagittaal_Kinematics_Readings.L2_Spinous_process_Position.z" ,
-"Sagittaal_Kinematics_Readings.L3_Spinous_process_Position.y" ,
-"Sagittaal_Kinematics_Readings.L3_Spinous_process_Position.z" ,
-"Sagittaal_Kinematics_Readings.L4_Spinous_Process_Position.y" ,
-"Sagittaal_Kinematics_Readings.L4_Spinous_Process_Position.z" ,
-"Sagittaal_Kinematics_Readings.L5_Spinous_Process_Position.y" ,
-"Sagittaal_Kinematics_Readings.L5_Spinous_Process_Position.z" ,
-"Sagittaal_Kinematics_Readings.T10_Position.y" ,
-"Sagittaal_Kinematics_Readings.T10_Position.z" ,
-"Sagittaal_Kinematics_Readings.T12_Position.y" ,
-"Sagittaal_Kinematics_Readings.T12_Position.z" ,
-"Sagittaal_Kinematics_Readings.T1_Position.y" ,
-"Sagittaal_Kinematics_Readings.T1_Position.z" ,
-"Sagittaal_Kinematics_Readings.T5_Position.y" ,
-"Sagittaal_Kinematics_Readings.T5_Position.z" ,
+"Sagittal_Kinematics_Readings.L1_Spinous_Process_Position.y" ,
+"Sagittal_Kinematics_Readings.L1_Spinous_Process_Position.z" ,
+"Sagittal_Kinematics_Readings.L2_Spinous_process_Position.y" ,
+"Sagittal_Kinematics_Readings.L2_Spinous_process_Position.z" ,
+"Sagittal_Kinematics_Readings.L3_Spinous_process_Position.y" ,
+"Sagittal_Kinematics_Readings.L3_Spinous_process_Position.z" ,
+"Sagittal_Kinematics_Readings.L4_Spinous_Process_Position.y" ,
+"Sagittal_Kinematics_Readings.L4_Spinous_Process_Position.z" ,
+"Sagittal_Kinematics_Readings.L5_Spinous_Process_Position.y" ,
+"Sagittal_Kinematics_Readings.L5_Spinous_Process_Position.z" ,
+"Sagittal_Kinematics_Readings.T10_Position.y" ,
+"Sagittal_Kinematics_Readings.T10_Position.z" ,
+"Sagittal_Kinematics_Readings.T12_Position.y" ,
+"Sagittal_Kinematics_Readings.T12_Position.z" ,
+"Sagittal_Kinematics_Readings.T1_Position.y" ,
+"Sagittal_Kinematics_Readings.T1_Position.z" ,
+"Sagittal_Kinematics_Readings.T5_Position.y" ,
+"Sagittal_Kinematics_Readings.T5_Position.z" ,
 "Supraspinous_Ligaments.Transform_Sensor.dst" ,
 "Supraspinous_Ligaments.Transform_Sensor1.dst" ,
 "Supraspinous_Ligaments.Transform_Sensor2.dst" ,
 "Supraspinous_Ligaments.Transform_Sensor3.dst" ,
 "Supraspinous_Ligaments.Transform_Sensor4.dst" } ; const char * outputUnits [
-136 ] = { "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2"
+124 ] = { "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2"
 , "rad" , "rad" , "rad" , "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad"
 , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" ,
 "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" , "kg*m^2/s^2" , "rad" ,
@@ -1448,17 +1346,13 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" ,
 "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" ,
 "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" ,
-"m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" , "m" ,
-"m" , "m" , "m" , "m" } ; const SizePair outputDimensions [ 136 ] = { { 1 , 1
-} , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
+"m" , "m" , "m" , "m" , "m" } ; const SizePair outputDimensions [ 124 ] = { {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
-3 , 1 } , { 3 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
-} , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
-} , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
+} , { 3 , 1 } , { 3 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
@@ -1470,92 +1364,31 @@ mOutputInfos = infos ; } } static void initIoInfo ( NeDaePrivateData * smData
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
-} , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } } ;
-initIoInfoHelper ( 180 , inputPortPaths , inputUnits , inputDimensions , true
-, smData ) ; initIoInfoHelper ( 136 , outputPortPaths , outputUnits ,
+} , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , {
+1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1 } , { 1 , 1
+} } ; initIoInfoHelper ( 172 , inputPortPaths , inputUnits , inputDimensions
+, true , smData ) ; initIoInfoHelper ( 124 , outputPortPaths , outputUnits ,
 outputDimensions , false , smData ) ; } static void initInputDerivs (
-NeDaePrivateData * smData ) { const int32_T numInputDerivs [ 180 ] = { 0 , 0
+NeDaePrivateData * smData ) { const int32_T numInputDerivs [ 172 ] = { 0 , 0
 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
-0 , 0 , 0 , 0 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2
-, 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 0 , 0 , 0 , 0 , 0 ,
+0 , 0 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2 , 2
+, 2 , 2 , 2 , 2 , 2 , 2 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
-, 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
-0 , 0 , 0 } ; PmAllocator * alloc = pm_default_allocator ( ) ; const int_T
-status = pm_create_int_vector_fields ( & smData -> mNumInputDerivs , smData
--> mInputVectorSize , alloc ) ; checkMemAllocStatus ( status ) ; memcpy (
-smData -> mNumInputDerivs . mX , numInputDerivs , 180 * sizeof ( int32_T ) )
-; smData -> mInputOrder = 2 ; } static void initDirectFeedthrough (
-NeDaePrivateData * smData ) { const boolean_T directFeedthroughVector [ 180 ]
+, 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 } ; PmAllocator *
+alloc = pm_default_allocator ( ) ; const int_T status =
+pm_create_int_vector_fields ( & smData -> mNumInputDerivs , smData ->
+mInputVectorSize , alloc ) ; checkMemAllocStatus ( status ) ; memcpy ( smData
+-> mNumInputDerivs . mX , numInputDerivs , 172 * sizeof ( int32_T ) ) ;
+smData -> mInputOrder = 2 ; } static void initDirectFeedthrough (
+NeDaePrivateData * smData ) { const boolean_T directFeedthroughVector [ 172 ]
 = { false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , true , true , true , true ,
+, false , false , false , false , true , true , true , true , true , true ,
 true , true , true , true , true , true , true , true , true , true , true ,
-true , true , true , true , true , true , true , true , true , true , true ,
-true , true , true , true , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false } ; const boolean_T
-directFeedthroughMatrix [ 50400 ] = { false , true , false , true , false ,
-true , false , false , false , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , true , true ,
-true , true , true , true , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , true , false , true , false , true , false , false , false , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , true , true , true , true , true , true , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , true , false , true , false , true
-, false , false , false , false , true , false , true , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , true , true , true , true
-, true , true , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , true
-, false , true , false , true , false , false , false , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
 true , true , true , true , true , true , true , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -1567,693 +1400,10 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , false , true , false , true ,
+false , false , false , false , false , false , false , false } ; const
+boolean_T directFeedthroughMatrix [ 44032 ] = { false , true , false , true ,
 false , true , false , false , false , false , true , false , true , false ,
 true , false , true , false , true , false , true , false , true , false ,
 true , false , true , false , true , false , true , false , true , true ,
@@ -2266,14 +1416,51 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , true
+, false , true , false , true , false , false , false , false , true , false
+, true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , false , true , false ,
+true , true , true , true , true , true , true , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , true , false , true , false , true , false , false , false ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , true , true , true , true , true , true , false
+false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , true , false , true , false , true , false , false , false , false
+, true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , false , true , false ,
+true , false , true , true , true , true , true , true , true , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , true , false , true , false , true , false , false ,
+false , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , true , true , true , true , true , true
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , true , false , true , false , true ,
+false , false , false , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , true , true , true , true
+, true , true , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -2295,2071 +1482,11 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , true , false , true , false , true , false , false , false , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , true , true , true , true , true , true , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , true , false , true , false , true
-, false , false , false , false , true , false , true , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , true , true , true , true
-, true , true , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , true
-, false , true , false , true , false , false , false , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+true , true , true , true , true , true , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
@@ -4369,43 +1496,10 @@ false , false , false , false , false , false , false , false , false , false
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
+, true , false , true , false , true , false , false , false , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
+false , true , true , true , true , true , true , true , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
@@ -4413,409 +1507,490 @@ false , false , false , false , false , false , false , false , false , false
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , true , true , true , true , true , true , true , true , true , true
-, true , false , true , false , true , false , true , false , false , false ,
-false , true , false , true , false , true , false , true , false , true ,
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
 false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , false , true , false , true , false , true ,
+false , false , false , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , false , true , true , true , true , true
+, true , true , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4837,25 +2012,2229 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , true , false , true , false , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , true , false , true , false , true , false ,
+false , false , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , true , true , true , true , true
+, true , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , true , true , true , true , true , true , true , true , true
+, true , true , false , true , false , true , false , true , false , false ,
+false , false , true , false , true , false , true , false , true , false ,
 true , false , true , false , true , false , true , false , true , false ,
+true , false , true , false , true , true , true , true , true , true , true
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , true , false , true , false , true ,
+false , false , false , false , true , false , true , false , true , false ,
 true , false , true , false , true , false , true , false , true , false ,
-true , false , true , true , true , true , true , true , true , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , true , false , true , false , true
-, false , false , false , false , true , false , true , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
 true , false , true , false , true , false , true , true , true , true , true
 , true , true , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4866,13 +4245,50 @@ false , false , false , false , false , false , false , false , false , false
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , true
-, false , true , false , true , false , false , false , false , true , false
-, true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , true , false , true , false
+, true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4895,13 +4311,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4924,13 +4377,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4953,13 +4443,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -4982,13 +4509,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5011,13 +4575,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5040,13 +4641,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5069,13 +4707,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5098,13 +4773,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5127,13 +4839,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5156,13 +4905,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5185,13 +4971,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5214,13 +5037,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5243,13 +5103,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5272,13 +5169,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5301,13 +5235,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5330,13 +5301,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5359,13 +5367,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5388,13 +5433,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5417,13 +5499,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5446,13 +5565,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5475,13 +5631,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5504,13 +5697,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5533,13 +5763,50 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
+, false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+true , true , true , true , true , true , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, true , false , true , false , true , false , false , false , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , true , true , true , true , true , true , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , false , false , false , false , false , false , false ,
+false , false , false , false , false , false , false , false , false , false
+, false , false , true , false , true , false , true , false , false , false
+, false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , false , true , false , true , false , true ,
+false , true , false , true , true , true , true , true , true , true , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
@@ -5562,27 +5829,11 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
+false , false , false , false , false , false , true , false , true , false ,
+true , false , false , false , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
+false , true , false , true , false , true , false , true , true , true ,
+true , true , true , true , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
@@ -5591,56 +5842,11 @@ false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
+false , false , false , false , false , false , false , false , true , false
+, true , false , true , false , false , false , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
+true , true , true , true , true , true , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
@@ -5650,55 +5856,10 @@ false , false , false , false , false , false , false , false , false , false
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
+, true , false , true , false , true , false , false , false , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
 false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
+false , true , true , true , true , true , true , true , false , false ,
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
@@ -5708,940 +5869,25 @@ false , false , false , false , false , false , false , false , false , false
 false , false , false , false , false , false , false , false , false , false
 , false , false , false , false , false , false , false , false , false ,
 false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , true , false , true , false , true , false ,
-false , false , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , false , true , false , true ,
-false , true , false , true , false , true , true , true , true , true , true
-, true , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , true ,
-false , true , false , true , false , false , false , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , false , true , false , true , false , true , false , true , false ,
-true , true , true , true , true , true , true , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false , false , false , false , false , false , false , false
-, false , false , false , false , false , false , false , false , false ,
-false , false , false } ; PmAllocator * alloc = pm_default_allocator ( ) ; {
-const int_T status = pm_create_bool_vector_fields ( & smData ->
-mDirectFeedthroughVector , 180 , alloc ) ; checkMemAllocStatus ( status ) ;
-memcpy ( smData -> mDirectFeedthroughVector . mX , directFeedthroughVector ,
-180 * sizeof ( boolean_T ) ) ; } { const int_T status =
-pm_create_bool_vector_fields ( & smData -> mDirectFeedthroughMatrix , 50400 ,
-alloc ) ; checkMemAllocStatus ( status ) ; memcpy ( smData ->
-mDirectFeedthroughMatrix . mX , directFeedthroughMatrix , 50400 * sizeof (
-boolean_T ) ) ; } } static void initOutputDerivProc ( NeDaePrivateData *
-smData ) { PmAllocator * alloc = pm_default_allocator ( ) ; const int32_T
-outputFunctionMap [ 140 ] = { 0 , 1 , 0 , 1 , 0 , 1 , 0 , 0 , 0 , 0 , 1 , 0 ,
-1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0
-, 1 , 1 , 1 , 1 , 1 , 1 , 1 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
-0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
+, false } ; PmAllocator * alloc = pm_default_allocator ( ) ; { const int_T
+status = pm_create_bool_vector_fields ( & smData -> mDirectFeedthroughVector
+, 172 , alloc ) ; checkMemAllocStatus ( status ) ; memcpy ( smData ->
+mDirectFeedthroughVector . mX , directFeedthroughVector , 172 * sizeof (
+boolean_T ) ) ; } { const int_T status = pm_create_bool_vector_fields ( &
+smData -> mDirectFeedthroughMatrix , 44032 , alloc ) ; checkMemAllocStatus (
+status ) ; memcpy ( smData -> mDirectFeedthroughMatrix . mX ,
+directFeedthroughMatrix , 44032 * sizeof ( boolean_T ) ) ; } } static void
+initOutputDerivProc ( NeDaePrivateData * smData ) { PmAllocator * alloc =
+pm_default_allocator ( ) ; const int32_T outputFunctionMap [ 128 ] = { 0 , 1
+, 0 , 1 , 0 , 1 , 0 , 0 , 0 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 ,
+0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 1 , 1 , 1 , 1 , 1 , 1 , 0 , 0
 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 ,
-0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 } ; smData -> mOutputFunctionMap =
-pm_create_int_vector ( 140 , alloc ) ; memcpy ( smData -> mOutputFunctionMap
--> mX , outputFunctionMap , 140 * sizeof ( int32_T ) ) ; smData ->
+0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0
+, 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 } ; smData -> mOutputFunctionMap =
+pm_create_int_vector ( 128 , alloc ) ; memcpy ( smData -> mOutputFunctionMap
+-> mX , outputFunctionMap , 128 * sizeof ( int32_T ) ) ; smData ->
 mNumOutputClasses = 2 ; smData -> mHasKinematicOutputs = true ; smData ->
 mHasDynamicOutputs = true ; smData -> mIsOutputClass0Dynamic = false ; smData
 -> mDoComputeDynamicOutputs = false ; smData -> mCachedDerivativesAvailable =
@@ -6658,70 +5904,66 @@ sm_core_SmSizePairVector_setValue ( vector , i , data ++ ) ; }
 #endif
 static void initAssemblyDelegate ( SmMechanismDelegate * delegate ) {
 SmMechanismDelegateScratchpad * scratchpad = NULL ; const SmSizePair
-jointToStageIdx [ 15 ] = { { 322 , 4 } , { 349 , 3 } , { 375 , 2 } , { 401 ,
-1 } , { 427 , 0 } , { 542 , 6 } , { 554 , 7 } , { 566 , 8 } , { 578 , 9 } , {
-590 , 10 } , { 602 , 11 } , { 614 , 12 } , { 626 , 13 } , { 641 , 14 } , {
-642 , 5 } } ; const size_t primitiveIndices [ 15 + 1 ] = { 0 , 3 , 6 , 9 , 12
-, 15 , 18 , 21 , 24 , 27 , 30 , 33 , 36 , 39 , 42 , 45 } ; const SmSizePair
-stateOffsets [ 45 ] = { { 0 , 3 } , { 1 , 4 } , { 2 , 5 } , { 6 , 9 } , { 7 ,
-10 } , { 8 , 11 } , { 12 , 15 } , { 13 , 16 } , { 14 , 17 } , { 18 , 21 } , {
-19 , 22 } , { 20 , 23 } , { 24 , 27 } , { 25 , 28 } , { 26 , 29 } , { 30 , 33
-} , { 31 , 34 } , { 32 , 35 } , { 36 , 39 } , { 37 , 40 } , { 38 , 41 } , {
-42 , 45 } , { 43 , 46 } , { 44 , 47 } , { 48 , 51 } , { 49 , 52 } , { 50 , 53
-} , { 54 , 57 } , { 55 , 58 } , { 56 , 59 } , { 60 , 63 } , { 61 , 64 } , {
-62 , 65 } , { 66 , 69 } , { 67 , 70 } , { 68 , 71 } , { 72 , 75 } , { 73 , 76
-} , { 74 , 77 } , { 78 , 81 } , { 79 , 82 } , { 80 , 83 } , { 84 , 87 } , {
-85 , 88 } , { 86 , 89 } } ; const SmSizePair dofOffsets [ 45 ] = { { 0 , 1 }
-, { 1 , 2 } , { 2 , 3 } , { 3 , 4 } , { 4 , 5 } , { 5 , 6 } , { 6 , 7 } , { 7
-, 8 } , { 8 , 9 } , { 9 , 10 } , { 10 , 11 } , { 11 , 12 } , { 12 , 13 } , {
-13 , 14 } , { 14 , 15 } , { 15 , 16 } , { 16 , 17 } , { 17 , 18 } , { 18 , 19
-} , { 19 , 20 } , { 20 , 21 } , { 21 , 22 } , { 22 , 23 } , { 23 , 24 } , {
-24 , 25 } , { 25 , 26 } , { 26 , 27 } , { 27 , 28 } , { 28 , 29 } , { 29 , 30
-} , { 30 , 31 } , { 31 , 32 } , { 32 , 33 } , { 33 , 34 } , { 34 , 35 } , {
-35 , 36 } , { 36 , 37 } , { 37 , 38 } , { 38 , 39 } , { 39 , 40 } , { 40 , 41
-} , { 41 , 42 } , { 42 , 43 } , { 43 , 44 } , { 44 , 45 } } ; const size_t *
-flexibleStages = NULL ; const size_t remodIndices [ 45 ] = { 0 , 1 , 2 , 6 ,
-7 , 8 , 12 , 13 , 14 , 18 , 19 , 20 , 24 , 25 , 26 , 30 , 31 , 32 , 36 , 37 ,
-38 , 42 , 43 , 44 , 48 , 49 , 50 , 54 , 55 , 56 , 60 , 61 , 62 , 66 , 67 , 68
-, 72 , 73 , 74 , 78 , 79 , 80 , 84 , 85 , 86 } ; const size_t
+jointToStageIdx [ 13 ] = { { 322 , 4 } , { 349 , 3 } , { 375 , 2 } , { 401 ,
+1 } , { 427 , 0 } , { 542 , 5 } , { 554 , 6 } , { 566 , 7 } , { 578 , 8 } , {
+590 , 9 } , { 602 , 10 } , { 614 , 11 } , { 626 , 12 } } ; const size_t
+primitiveIndices [ 13 + 1 ] = { 0 , 3 , 6 , 9 , 12 , 15 , 18 , 21 , 24 , 27 ,
+30 , 33 , 36 , 39 } ; const SmSizePair stateOffsets [ 39 ] = { { 0 , 3 } , {
+1 , 4 } , { 2 , 5 } , { 6 , 9 } , { 7 , 10 } , { 8 , 11 } , { 12 , 15 } , {
+13 , 16 } , { 14 , 17 } , { 18 , 21 } , { 19 , 22 } , { 20 , 23 } , { 24 , 27
+} , { 25 , 28 } , { 26 , 29 } , { 30 , 33 } , { 31 , 34 } , { 32 , 35 } , {
+36 , 39 } , { 37 , 40 } , { 38 , 41 } , { 42 , 45 } , { 43 , 46 } , { 44 , 47
+} , { 48 , 51 } , { 49 , 52 } , { 50 , 53 } , { 54 , 57 } , { 55 , 58 } , {
+56 , 59 } , { 60 , 63 } , { 61 , 64 } , { 62 , 65 } , { 66 , 69 } , { 67 , 70
+} , { 68 , 71 } , { 72 , 75 } , { 73 , 76 } , { 74 , 77 } } ; const
+SmSizePair dofOffsets [ 39 ] = { { 0 , 1 } , { 1 , 2 } , { 2 , 3 } , { 3 , 4
+} , { 4 , 5 } , { 5 , 6 } , { 6 , 7 } , { 7 , 8 } , { 8 , 9 } , { 9 , 10 } ,
+{ 10 , 11 } , { 11 , 12 } , { 12 , 13 } , { 13 , 14 } , { 14 , 15 } , { 15 ,
+16 } , { 16 , 17 } , { 17 , 18 } , { 18 , 19 } , { 19 , 20 } , { 20 , 21 } ,
+{ 21 , 22 } , { 22 , 23 } , { 23 , 24 } , { 24 , 25 } , { 25 , 26 } , { 26 ,
+27 } , { 27 , 28 } , { 28 , 29 } , { 29 , 30 } , { 30 , 31 } , { 31 , 32 } ,
+{ 32 , 33 } , { 33 , 34 } , { 34 , 35 } , { 35 , 36 } , { 36 , 37 } , { 37 ,
+38 } , { 38 , 39 } } ; const size_t * flexibleStages = NULL ; const size_t
+remodIndices [ 39 ] = { 0 , 1 , 2 , 6 , 7 , 8 , 12 , 13 , 14 , 18 , 19 , 20 ,
+24 , 25 , 26 , 30 , 31 , 32 , 36 , 37 , 38 , 42 , 43 , 44 , 48 , 49 , 50 , 54
+, 55 , 56 , 60 , 61 , 62 , 66 , 67 , 68 , 72 , 73 , 74 } ; const size_t
 equationsPerConstraint [ 2 ] = { 0 , 0 } ; const int32_T
 hasAllVelocityDisabledEquations [ 2 ] = { 0 , 0 } ; const int32_T *
-runtimeEnabledEquations = NULL ; const size_t dofToVelSlot [ 45 ] = { 3 , 4 ,
+runtimeEnabledEquations = NULL ; const size_t dofToVelSlot [ 39 ] = { 3 , 4 ,
 5 , 9 , 10 , 11 , 15 , 16 , 17 , 21 , 22 , 23 , 27 , 28 , 29 , 33 , 34 , 35 ,
 39 , 40 , 41 , 45 , 46 , 47 , 51 , 52 , 53 , 57 , 58 , 59 , 63 , 64 , 65 , 69
-, 70 , 71 , 75 , 76 , 77 , 81 , 82 , 83 , 87 , 88 , 89 } ; const size_t
-constraintDofs [ 30 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 ,
-12 , 13 , 14 , 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14
-} ; const size_t constraintDofOffsets [ 2 + 1 ] = { 0 , 15 , 30 } ; const
-size_t Jm = 0 ; const size_t Jn = 45 ; SmSizePair zeroSizePair ; zeroSizePair
-. mFirst = zeroSizePair . mSecond = 0 ;
-sm_core_MechanismDelegate_allocScratchpad ( delegate ) ; scratchpad =
-delegate -> mScratchpad ; delegate -> mTargetStrengthFree = 0 ; delegate ->
-mTargetStrengthSuggested = 1 ; delegate -> mTargetStrengthDesired = 2 ;
-delegate -> mTargetStrengthRequired = 3 ; delegate -> mConsistencyTol = +
-1.000000000000000062e-09 ; delegate -> mTreeJointDof = 45 ; delegate -> mDof
-= 45 ; delegate -> mStateSize = 102 ; delegate -> mContinuousStateSize = 102
-; delegate -> mModeVectorSize = 0 ; delegate -> mNumStages = 15 ; delegate ->
-mNumConstraints = 2 ; delegate -> mNumAllConstraintEquations = 0 ;
-sm_core_SmSizePairVector_create ( & delegate -> mJointToStageIdx , 15 , &
+, 70 , 71 , 75 , 76 , 77 } ; const size_t constraintDofs [ 30 ] = { 0 , 1 , 2
+, 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 0 , 1 , 2 , 3 , 4 , 5
+, 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 } ; const size_t
+constraintDofOffsets [ 2 + 1 ] = { 0 , 15 , 30 } ; const size_t Jm = 0 ;
+const size_t Jn = 39 ; SmSizePair zeroSizePair ; zeroSizePair . mFirst =
+zeroSizePair . mSecond = 0 ; sm_core_MechanismDelegate_allocScratchpad (
+delegate ) ; scratchpad = delegate -> mScratchpad ; delegate ->
+mTargetStrengthFree = 0 ; delegate -> mTargetStrengthSuggested = 1 ; delegate
+-> mTargetStrengthDesired = 2 ; delegate -> mTargetStrengthRequired = 3 ;
+delegate -> mConsistencyTol = + 1.000000000000000062e-09 ; delegate ->
+mTreeJointDof = 39 ; delegate -> mDof = 39 ; delegate -> mStateSize = 90 ;
+delegate -> mContinuousStateSize = 90 ; delegate -> mModeVectorSize = 0 ;
+delegate -> mNumStages = 13 ; delegate -> mNumConstraints = 2 ; delegate ->
+mNumAllConstraintEquations = 0 ; sm_core_SmSizePairVector_create ( & delegate
+-> mJointToStageIdx , 13 , & zeroSizePair ) ; memcpy (
+sm_core_SmSizePairVector_nonConstValues ( & delegate -> mJointToStageIdx ) ,
+jointToStageIdx , 13 * sizeof ( SmSizePair ) ) ; sm_core_SmSizeTVector_create
+( & delegate -> mPrimitiveIndices , delegate -> mNumStages + 1 , 0 ) ; memcpy
+( sm_core_SmSizeTVector_nonConstValues ( & delegate -> mPrimitiveIndices ) ,
+primitiveIndices , ( delegate -> mNumStages + 1 ) * sizeof ( size_t ) ) ;
+sm_core_SmSizePairVector_create ( & delegate -> mStateOffsets , 39 , &
 zeroSizePair ) ; memcpy ( sm_core_SmSizePairVector_nonConstValues ( &
-delegate -> mJointToStageIdx ) , jointToStageIdx , 15 * sizeof ( SmSizePair )
-) ; sm_core_SmSizeTVector_create ( & delegate -> mPrimitiveIndices , delegate
--> mNumStages + 1 , 0 ) ; memcpy ( sm_core_SmSizeTVector_nonConstValues ( &
-delegate -> mPrimitiveIndices ) , primitiveIndices , ( delegate -> mNumStages
-+ 1 ) * sizeof ( size_t ) ) ; sm_core_SmSizePairVector_create ( & delegate ->
-mStateOffsets , 45 , & zeroSizePair ) ; memcpy (
-sm_core_SmSizePairVector_nonConstValues ( & delegate -> mStateOffsets ) ,
-stateOffsets , 45 * sizeof ( SmSizePair ) ) ; sm_core_SmSizePairVector_create
-( & delegate -> mDofOffsets , 45 , & zeroSizePair ) ; memcpy (
-sm_core_SmSizePairVector_nonConstValues ( & delegate -> mDofOffsets ) ,
-dofOffsets , 45 * sizeof ( SmSizePair ) ) ; sm_core_SmSizeTVector_create ( &
-delegate -> mFlexibleStages , 0 , 0 ) ; memcpy (
-sm_core_SmSizeTVector_nonConstValues ( & delegate -> mFlexibleStages ) ,
-flexibleStages , 0 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
-delegate -> mRemodIndices , 45 , 0 ) ; memcpy (
+delegate -> mStateOffsets ) , stateOffsets , 39 * sizeof ( SmSizePair ) ) ;
+sm_core_SmSizePairVector_create ( & delegate -> mDofOffsets , 39 , &
+zeroSizePair ) ; memcpy ( sm_core_SmSizePairVector_nonConstValues ( &
+delegate -> mDofOffsets ) , dofOffsets , 39 * sizeof ( SmSizePair ) ) ;
+sm_core_SmSizeTVector_create ( & delegate -> mFlexibleStages , 0 , 0 ) ;
+memcpy ( sm_core_SmSizeTVector_nonConstValues ( & delegate -> mFlexibleStages
+) , flexibleStages , 0 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create (
+& delegate -> mRemodIndices , 39 , 0 ) ; memcpy (
 sm_core_SmSizeTVector_nonConstValues ( & delegate -> mRemodIndices ) ,
-remodIndices , 45 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
+remodIndices , 39 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
 delegate -> mEquationsPerConstraint , delegate -> mNumConstraints , 0 ) ;
 memcpy ( sm_core_SmSizeTVector_nonConstValues ( & delegate ->
 mEquationsPerConstraint ) , equationsPerConstraint , delegate ->
@@ -6744,42 +5986,42 @@ sm_core_SmSizeTVector_create ( & delegate -> mConstraintDofOffsets , delegate
 -> mNumConstraints + 1 , 0 ) ; memcpy ( sm_core_SmSizeTVector_nonConstValues
 ( & delegate -> mConstraintDofOffsets ) , constraintDofOffsets , ( delegate
 -> mNumConstraints + 1 ) * sizeof ( size_t ) ) ; sm_core_SmBoundedSet_create
-( & scratchpad -> mPosRequired , 45 ) ; sm_core_SmBoundedSet_create ( &
-scratchpad -> mPosDesired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad
--> mPosSuggested , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosFree , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosNonRequired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosSuggAndFree , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelRequired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelDesired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelSuggested , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelFree
-, 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelNonRequired , 45 )
-; sm_core_SmBoundedSet_create ( & scratchpad -> mVelSuggAndFree , 45 ) ;
+( & scratchpad -> mPosRequired , 39 ) ; sm_core_SmBoundedSet_create ( &
+scratchpad -> mPosDesired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad
+-> mPosSuggested , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosFree , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosNonRequired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosSuggAndFree , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelRequired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelDesired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelSuggested , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelFree
+, 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelNonRequired , 39 )
+; sm_core_SmBoundedSet_create ( & scratchpad -> mVelSuggAndFree , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mConstraintFilter , 2 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mActiveConstraints , 2 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs , 45 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs0 , 45 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs , 39 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs0 , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mNewConstraints , 2 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mNewDofs , 45 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mNewDofs , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mUnsatisfiedConstraints , 2 ) ;
 sm_core_SmSizeTVector_create ( & scratchpad -> mActiveConstraintsVect , 2 , 0
-) ; sm_core_SmSizeTVector_create ( & scratchpad -> mActiveDofsVect , 45 , 0 )
-; sm_core_SmSizeTVector_create ( & scratchpad -> mFullDofToActiveDof , 45 , 0
+) ; sm_core_SmSizeTVector_create ( & scratchpad -> mActiveDofsVect , 39 , 0 )
+; sm_core_SmSizeTVector_create ( & scratchpad -> mFullDofToActiveDof , 39 , 0
 ) ; sm_core_SmSizePairVector_create ( & scratchpad ->
-mPartiallyPosTargetedPrims , 45 , & zeroSizePair ) ;
+mPartiallyPosTargetedPrims , 39 , & zeroSizePair ) ;
 sm_core_SmSizePairVector_create ( & scratchpad -> mPartiallyVelTargetedPrims
-, 45 , & zeroSizePair ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mPosPartialTypes , 45 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mVelPartialTypes , 45 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mPartiallyActivePrims , 45 , 0 ) ; sm_core_SmSizePairVector_create ( &
+, 39 , & zeroSizePair ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mPosPartialTypes , 39 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mVelPartialTypes , 39 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mPartiallyActivePrims , 39 , 0 ) ; sm_core_SmSizePairVector_create ( &
 scratchpad -> mBaseFrameVelOffsets , 0 , & zeroSizePair ) ;
 sm_core_SmSizePairVector_create ( & scratchpad -> mCvQuaternionVelOffsets , 0
 , & zeroSizePair ) ; sm_core_SmRealVector_create ( & scratchpad ->
 mCvQuaternionAzimuthValues , 0 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mInitialState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mStartState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mTestState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mFullStateVector , 102 , 0.0 ) ; sm_core_SmIntVector_create ( &
+scratchpad -> mInitialState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mStartState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mTestState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mFullStateVector , 90 , 0.0 ) ; sm_core_SmIntVector_create ( &
 scratchpad -> mModeVector , 0 , 0 ) ; sm_core_SmRealVector_create ( &
 scratchpad -> mJacobianRowMaj , Jm * Jn , 0.0 ) ; sm_core_SmRealVector_create
 ( & scratchpad -> mJacobian , Jm * Jn , 0.0 ) ; sm_core_SmRealVector_create (
@@ -6789,13 +6031,13 @@ sm_core_SmRealVector_create ( & scratchpad -> mConstraintNonhomoTerms , Jm ,
 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mBestConstraintError ,
 Jm , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mDeltas , Jn * (
 Jm <= Jn ? Jm : Jn ) , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
-mSvdWork , 2116 , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
-mLineSearchScaledDeltaVect , 45 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mLineSearchTestStateVect , 102 , 0.0 ) ;
+mSvdWork , 1600 , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
+mLineSearchScaledDeltaVect , 39 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mLineSearchTestStateVect , 90 , 0.0 ) ;
 sm_core_SmRealVector_create ( & scratchpad -> mLineSearchErrorVect , Jm , 0.0
-) ; sm_core_SmRealVector_create ( & scratchpad -> mActiveDofVelsVect , 45 ,
+) ; sm_core_SmRealVector_create ( & scratchpad -> mActiveDofVelsVect , 39 ,
 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mVelSystemRhs , Jm ,
-0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mMotionData , 244 , 0.0
+0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mMotionData , 218 , 0.0
 ) ; delegate -> mSetTargets = draft7_a151ee3d_1_setTargets ; delegate ->
 mResetStateVector = draft7_a151ee3d_1_resetAsmStateVector ; delegate ->
 mInitializeTrackedAngleState = draft7_a151ee3d_1_initializeTrackedAngleState
@@ -6823,70 +6065,66 @@ mHasJointDisToNormModeChange = NULL ; delegate ->
 mPerformJointDisToNormModeChange = NULL ; delegate -> mOnModeChangedCutJoints
 = NULL ; delegate -> mMech = NULL ; } static void initSimulationDelegate (
 SmMechanismDelegate * delegate ) { SmMechanismDelegateScratchpad * scratchpad
-= NULL ; const SmSizePair jointToStageIdx [ 15 ] = { { 322 , 4 } , { 349 , 3
-} , { 375 , 2 } , { 401 , 1 } , { 427 , 0 } , { 542 , 6 } , { 554 , 7 } , {
-566 , 8 } , { 578 , 9 } , { 590 , 10 } , { 602 , 11 } , { 614 , 12 } , { 626
-, 13 } , { 641 , 14 } , { 642 , 5 } } ; const size_t primitiveIndices [ 15 +
-1 ] = { 0 , 3 , 6 , 9 , 12 , 15 , 18 , 21 , 24 , 27 , 30 , 33 , 36 , 39 , 42
-, 45 } ; const SmSizePair stateOffsets [ 45 ] = { { 0 , 3 } , { 1 , 4 } , { 2
-, 5 } , { 6 , 9 } , { 7 , 10 } , { 8 , 11 } , { 12 , 15 } , { 13 , 16 } , {
-14 , 17 } , { 18 , 21 } , { 19 , 22 } , { 20 , 23 } , { 24 , 27 } , { 25 , 28
-} , { 26 , 29 } , { 30 , 33 } , { 31 , 34 } , { 32 , 35 } , { 36 , 39 } , {
-37 , 40 } , { 38 , 41 } , { 42 , 45 } , { 43 , 46 } , { 44 , 47 } , { 48 , 51
-} , { 49 , 52 } , { 50 , 53 } , { 54 , 57 } , { 55 , 58 } , { 56 , 59 } , {
-60 , 63 } , { 61 , 64 } , { 62 , 65 } , { 66 , 69 } , { 67 , 70 } , { 68 , 71
-} , { 72 , 75 } , { 73 , 76 } , { 74 , 77 } , { 78 , 81 } , { 79 , 82 } , {
-80 , 83 } , { 84 , 87 } , { 85 , 88 } , { 86 , 89 } } ; const SmSizePair
-dofOffsets [ 45 ] = { { 0 , 1 } , { 1 , 2 } , { 2 , 3 } , { 3 , 4 } , { 4 , 5
-} , { 5 , 6 } , { 6 , 7 } , { 7 , 8 } , { 8 , 9 } , { 9 , 10 } , { 10 , 11 }
-, { 11 , 12 } , { 12 , 13 } , { 13 , 14 } , { 14 , 15 } , { 15 , 16 } , { 16
-, 17 } , { 17 , 18 } , { 18 , 19 } , { 19 , 20 } , { 20 , 21 } , { 21 , 22 }
-, { 22 , 23 } , { 23 , 24 } , { 24 , 25 } , { 25 , 26 } , { 26 , 27 } , { 27
-, 28 } , { 28 , 29 } , { 29 , 30 } , { 30 , 31 } , { 31 , 32 } , { 32 , 33 }
-, { 33 , 34 } , { 34 , 35 } , { 35 , 36 } , { 36 , 37 } , { 37 , 38 } , { 38
-, 39 } , { 39 , 40 } , { 40 , 41 } , { 41 , 42 } , { 42 , 43 } , { 43 , 44 }
-, { 44 , 45 } } ; const size_t * flexibleStages = NULL ; const size_t
-remodIndices [ 45 ] = { 0 , 1 , 2 , 6 , 7 , 8 , 12 , 13 , 14 , 18 , 19 , 20 ,
-24 , 25 , 26 , 30 , 31 , 32 , 36 , 37 , 38 , 42 , 43 , 44 , 48 , 49 , 50 , 54
-, 55 , 56 , 60 , 61 , 62 , 66 , 67 , 68 , 72 , 73 , 74 , 78 , 79 , 80 , 84 ,
-85 , 86 } ; const size_t equationsPerConstraint [ 2 ] = { 0 , 0 } ; const
-int32_T hasAllVelocityDisabledEquations [ 2 ] = { 0 , 0 } ; const int32_T *
-runtimeEnabledEquations = NULL ; const size_t dofToVelSlot [ 45 ] = { 3 , 4 ,
+= NULL ; const SmSizePair jointToStageIdx [ 13 ] = { { 322 , 4 } , { 349 , 3
+} , { 375 , 2 } , { 401 , 1 } , { 427 , 0 } , { 542 , 5 } , { 554 , 6 } , {
+566 , 7 } , { 578 , 8 } , { 590 , 9 } , { 602 , 10 } , { 614 , 11 } , { 626 ,
+12 } } ; const size_t primitiveIndices [ 13 + 1 ] = { 0 , 3 , 6 , 9 , 12 , 15
+, 18 , 21 , 24 , 27 , 30 , 33 , 36 , 39 } ; const SmSizePair stateOffsets [
+39 ] = { { 0 , 3 } , { 1 , 4 } , { 2 , 5 } , { 6 , 9 } , { 7 , 10 } , { 8 ,
+11 } , { 12 , 15 } , { 13 , 16 } , { 14 , 17 } , { 18 , 21 } , { 19 , 22 } ,
+{ 20 , 23 } , { 24 , 27 } , { 25 , 28 } , { 26 , 29 } , { 30 , 33 } , { 31 ,
+34 } , { 32 , 35 } , { 36 , 39 } , { 37 , 40 } , { 38 , 41 } , { 42 , 45 } ,
+{ 43 , 46 } , { 44 , 47 } , { 48 , 51 } , { 49 , 52 } , { 50 , 53 } , { 54 ,
+57 } , { 55 , 58 } , { 56 , 59 } , { 60 , 63 } , { 61 , 64 } , { 62 , 65 } ,
+{ 66 , 69 } , { 67 , 70 } , { 68 , 71 } , { 72 , 75 } , { 73 , 76 } , { 74 ,
+77 } } ; const SmSizePair dofOffsets [ 39 ] = { { 0 , 1 } , { 1 , 2 } , { 2 ,
+3 } , { 3 , 4 } , { 4 , 5 } , { 5 , 6 } , { 6 , 7 } , { 7 , 8 } , { 8 , 9 } ,
+{ 9 , 10 } , { 10 , 11 } , { 11 , 12 } , { 12 , 13 } , { 13 , 14 } , { 14 ,
+15 } , { 15 , 16 } , { 16 , 17 } , { 17 , 18 } , { 18 , 19 } , { 19 , 20 } ,
+{ 20 , 21 } , { 21 , 22 } , { 22 , 23 } , { 23 , 24 } , { 24 , 25 } , { 25 ,
+26 } , { 26 , 27 } , { 27 , 28 } , { 28 , 29 } , { 29 , 30 } , { 30 , 31 } ,
+{ 31 , 32 } , { 32 , 33 } , { 33 , 34 } , { 34 , 35 } , { 35 , 36 } , { 36 ,
+37 } , { 37 , 38 } , { 38 , 39 } } ; const size_t * flexibleStages = NULL ;
+const size_t remodIndices [ 39 ] = { 0 , 1 , 2 , 6 , 7 , 8 , 12 , 13 , 14 ,
+18 , 19 , 20 , 24 , 25 , 26 , 30 , 31 , 32 , 36 , 37 , 38 , 42 , 43 , 44 , 48
+, 49 , 50 , 54 , 55 , 56 , 60 , 61 , 62 , 66 , 67 , 68 , 72 , 73 , 74 } ;
+const size_t equationsPerConstraint [ 2 ] = { 0 , 0 } ; const int32_T
+hasAllVelocityDisabledEquations [ 2 ] = { 0 , 0 } ; const int32_T *
+runtimeEnabledEquations = NULL ; const size_t dofToVelSlot [ 39 ] = { 3 , 4 ,
 5 , 9 , 10 , 11 , 15 , 16 , 17 , 21 , 22 , 23 , 27 , 28 , 29 , 33 , 34 , 35 ,
 39 , 40 , 41 , 45 , 46 , 47 , 51 , 52 , 53 , 57 , 58 , 59 , 63 , 64 , 65 , 69
-, 70 , 71 , 75 , 76 , 77 , 81 , 82 , 83 , 87 , 88 , 89 } ; const size_t
-constraintDofs [ 30 ] = { 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 ,
-12 , 13 , 14 , 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14
-} ; const size_t constraintDofOffsets [ 2 + 1 ] = { 0 , 15 , 30 } ; const
-size_t Jm = 0 ; const size_t Jn = 45 ; SmSizePair zeroSizePair ; zeroSizePair
-. mFirst = zeroSizePair . mSecond = 0 ;
-sm_core_MechanismDelegate_allocScratchpad ( delegate ) ; scratchpad =
-delegate -> mScratchpad ; delegate -> mTargetStrengthFree = 0 ; delegate ->
-mTargetStrengthSuggested = 1 ; delegate -> mTargetStrengthDesired = 2 ;
-delegate -> mTargetStrengthRequired = 3 ; delegate -> mConsistencyTol = +
-1.000000000000000062e-09 ; delegate -> mTreeJointDof = 45 ; delegate -> mDof
-= 45 ; delegate -> mStateSize = 102 ; delegate -> mContinuousStateSize = 102
-; delegate -> mModeVectorSize = 0 ; delegate -> mNumStages = 15 ; delegate ->
-mNumConstraints = 2 ; delegate -> mNumAllConstraintEquations = 0 ;
-sm_core_SmSizePairVector_create ( & delegate -> mJointToStageIdx , 15 , &
+, 70 , 71 , 75 , 76 , 77 } ; const size_t constraintDofs [ 30 ] = { 0 , 1 , 2
+, 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 0 , 1 , 2 , 3 , 4 , 5
+, 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 } ; const size_t
+constraintDofOffsets [ 2 + 1 ] = { 0 , 15 , 30 } ; const size_t Jm = 0 ;
+const size_t Jn = 39 ; SmSizePair zeroSizePair ; zeroSizePair . mFirst =
+zeroSizePair . mSecond = 0 ; sm_core_MechanismDelegate_allocScratchpad (
+delegate ) ; scratchpad = delegate -> mScratchpad ; delegate ->
+mTargetStrengthFree = 0 ; delegate -> mTargetStrengthSuggested = 1 ; delegate
+-> mTargetStrengthDesired = 2 ; delegate -> mTargetStrengthRequired = 3 ;
+delegate -> mConsistencyTol = + 1.000000000000000062e-09 ; delegate ->
+mTreeJointDof = 39 ; delegate -> mDof = 39 ; delegate -> mStateSize = 90 ;
+delegate -> mContinuousStateSize = 90 ; delegate -> mModeVectorSize = 0 ;
+delegate -> mNumStages = 13 ; delegate -> mNumConstraints = 2 ; delegate ->
+mNumAllConstraintEquations = 0 ; sm_core_SmSizePairVector_create ( & delegate
+-> mJointToStageIdx , 13 , & zeroSizePair ) ; memcpy (
+sm_core_SmSizePairVector_nonConstValues ( & delegate -> mJointToStageIdx ) ,
+jointToStageIdx , 13 * sizeof ( SmSizePair ) ) ; sm_core_SmSizeTVector_create
+( & delegate -> mPrimitiveIndices , delegate -> mNumStages + 1 , 0 ) ; memcpy
+( sm_core_SmSizeTVector_nonConstValues ( & delegate -> mPrimitiveIndices ) ,
+primitiveIndices , ( delegate -> mNumStages + 1 ) * sizeof ( size_t ) ) ;
+sm_core_SmSizePairVector_create ( & delegate -> mStateOffsets , 39 , &
 zeroSizePair ) ; memcpy ( sm_core_SmSizePairVector_nonConstValues ( &
-delegate -> mJointToStageIdx ) , jointToStageIdx , 15 * sizeof ( SmSizePair )
-) ; sm_core_SmSizeTVector_create ( & delegate -> mPrimitiveIndices , delegate
--> mNumStages + 1 , 0 ) ; memcpy ( sm_core_SmSizeTVector_nonConstValues ( &
-delegate -> mPrimitiveIndices ) , primitiveIndices , ( delegate -> mNumStages
-+ 1 ) * sizeof ( size_t ) ) ; sm_core_SmSizePairVector_create ( & delegate ->
-mStateOffsets , 45 , & zeroSizePair ) ; memcpy (
-sm_core_SmSizePairVector_nonConstValues ( & delegate -> mStateOffsets ) ,
-stateOffsets , 45 * sizeof ( SmSizePair ) ) ; sm_core_SmSizePairVector_create
-( & delegate -> mDofOffsets , 45 , & zeroSizePair ) ; memcpy (
-sm_core_SmSizePairVector_nonConstValues ( & delegate -> mDofOffsets ) ,
-dofOffsets , 45 * sizeof ( SmSizePair ) ) ; sm_core_SmSizeTVector_create ( &
-delegate -> mFlexibleStages , 0 , 0 ) ; memcpy (
-sm_core_SmSizeTVector_nonConstValues ( & delegate -> mFlexibleStages ) ,
-flexibleStages , 0 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
-delegate -> mRemodIndices , 45 , 0 ) ; memcpy (
+delegate -> mStateOffsets ) , stateOffsets , 39 * sizeof ( SmSizePair ) ) ;
+sm_core_SmSizePairVector_create ( & delegate -> mDofOffsets , 39 , &
+zeroSizePair ) ; memcpy ( sm_core_SmSizePairVector_nonConstValues ( &
+delegate -> mDofOffsets ) , dofOffsets , 39 * sizeof ( SmSizePair ) ) ;
+sm_core_SmSizeTVector_create ( & delegate -> mFlexibleStages , 0 , 0 ) ;
+memcpy ( sm_core_SmSizeTVector_nonConstValues ( & delegate -> mFlexibleStages
+) , flexibleStages , 0 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create (
+& delegate -> mRemodIndices , 39 , 0 ) ; memcpy (
 sm_core_SmSizeTVector_nonConstValues ( & delegate -> mRemodIndices ) ,
-remodIndices , 45 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
+remodIndices , 39 * sizeof ( size_t ) ) ; sm_core_SmSizeTVector_create ( &
 delegate -> mEquationsPerConstraint , delegate -> mNumConstraints , 0 ) ;
 memcpy ( sm_core_SmSizeTVector_nonConstValues ( & delegate ->
 mEquationsPerConstraint ) , equationsPerConstraint , delegate ->
@@ -6909,42 +6147,42 @@ sm_core_SmSizeTVector_create ( & delegate -> mConstraintDofOffsets , delegate
 -> mNumConstraints + 1 , 0 ) ; memcpy ( sm_core_SmSizeTVector_nonConstValues
 ( & delegate -> mConstraintDofOffsets ) , constraintDofOffsets , ( delegate
 -> mNumConstraints + 1 ) * sizeof ( size_t ) ) ; sm_core_SmBoundedSet_create
-( & scratchpad -> mPosRequired , 45 ) ; sm_core_SmBoundedSet_create ( &
-scratchpad -> mPosDesired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad
--> mPosSuggested , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosFree , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosNonRequired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mPosSuggAndFree , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelRequired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelDesired , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
-mVelSuggested , 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelFree
-, 45 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelNonRequired , 45 )
-; sm_core_SmBoundedSet_create ( & scratchpad -> mVelSuggAndFree , 45 ) ;
+( & scratchpad -> mPosRequired , 39 ) ; sm_core_SmBoundedSet_create ( &
+scratchpad -> mPosDesired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad
+-> mPosSuggested , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosFree , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosNonRequired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mPosSuggAndFree , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelRequired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelDesired , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad ->
+mVelSuggested , 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelFree
+, 39 ) ; sm_core_SmBoundedSet_create ( & scratchpad -> mVelNonRequired , 39 )
+; sm_core_SmBoundedSet_create ( & scratchpad -> mVelSuggAndFree , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mConstraintFilter , 2 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mActiveConstraints , 2 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs , 45 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs0 , 45 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs , 39 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mActiveDofs0 , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mNewConstraints , 2 ) ;
-sm_core_SmBoundedSet_create ( & scratchpad -> mNewDofs , 45 ) ;
+sm_core_SmBoundedSet_create ( & scratchpad -> mNewDofs , 39 ) ;
 sm_core_SmBoundedSet_create ( & scratchpad -> mUnsatisfiedConstraints , 2 ) ;
 sm_core_SmSizeTVector_create ( & scratchpad -> mActiveConstraintsVect , 2 , 0
-) ; sm_core_SmSizeTVector_create ( & scratchpad -> mActiveDofsVect , 45 , 0 )
-; sm_core_SmSizeTVector_create ( & scratchpad -> mFullDofToActiveDof , 45 , 0
+) ; sm_core_SmSizeTVector_create ( & scratchpad -> mActiveDofsVect , 39 , 0 )
+; sm_core_SmSizeTVector_create ( & scratchpad -> mFullDofToActiveDof , 39 , 0
 ) ; sm_core_SmSizePairVector_create ( & scratchpad ->
-mPartiallyPosTargetedPrims , 45 , & zeroSizePair ) ;
+mPartiallyPosTargetedPrims , 39 , & zeroSizePair ) ;
 sm_core_SmSizePairVector_create ( & scratchpad -> mPartiallyVelTargetedPrims
-, 45 , & zeroSizePair ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mPosPartialTypes , 45 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mVelPartialTypes , 45 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
-mPartiallyActivePrims , 45 , 0 ) ; sm_core_SmSizePairVector_create ( &
+, 39 , & zeroSizePair ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mPosPartialTypes , 39 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mVelPartialTypes , 39 , 0 ) ; sm_core_SmSizeTVector_create ( & scratchpad ->
+mPartiallyActivePrims , 39 , 0 ) ; sm_core_SmSizePairVector_create ( &
 scratchpad -> mBaseFrameVelOffsets , 0 , & zeroSizePair ) ;
 sm_core_SmSizePairVector_create ( & scratchpad -> mCvQuaternionVelOffsets , 0
 , & zeroSizePair ) ; sm_core_SmRealVector_create ( & scratchpad ->
 mCvQuaternionAzimuthValues , 0 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mInitialState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mStartState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mTestState , 102 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mFullStateVector , 102 , 0.0 ) ; sm_core_SmIntVector_create ( &
+scratchpad -> mInitialState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mStartState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mTestState , 90 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mFullStateVector , 90 , 0.0 ) ; sm_core_SmIntVector_create ( &
 scratchpad -> mModeVector , 0 , 0 ) ; sm_core_SmRealVector_create ( &
 scratchpad -> mJacobianRowMaj , Jm * Jn , 0.0 ) ; sm_core_SmRealVector_create
 ( & scratchpad -> mJacobian , Jm * Jn , 0.0 ) ; sm_core_SmRealVector_create (
@@ -6954,13 +6192,13 @@ sm_core_SmRealVector_create ( & scratchpad -> mConstraintNonhomoTerms , Jm ,
 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mBestConstraintError ,
 Jm , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mDeltas , Jn * (
 Jm <= Jn ? Jm : Jn ) , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
-mSvdWork , 2116 , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
-mLineSearchScaledDeltaVect , 45 , 0.0 ) ; sm_core_SmRealVector_create ( &
-scratchpad -> mLineSearchTestStateVect , 102 , 0.0 ) ;
+mSvdWork , 1600 , 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad ->
+mLineSearchScaledDeltaVect , 39 , 0.0 ) ; sm_core_SmRealVector_create ( &
+scratchpad -> mLineSearchTestStateVect , 90 , 0.0 ) ;
 sm_core_SmRealVector_create ( & scratchpad -> mLineSearchErrorVect , Jm , 0.0
-) ; sm_core_SmRealVector_create ( & scratchpad -> mActiveDofVelsVect , 45 ,
+) ; sm_core_SmRealVector_create ( & scratchpad -> mActiveDofVelsVect , 39 ,
 0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mVelSystemRhs , Jm ,
-0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mMotionData , 244 , 0.0
+0.0 ) ; sm_core_SmRealVector_create ( & scratchpad -> mMotionData , 218 , 0.0
 ) ; delegate -> mSetTargets = NULL ; delegate -> mResetStateVector =
 draft7_a151ee3d_1_resetSimStateVector ; delegate ->
 mInitializeTrackedAngleState = NULL ; delegate -> mComputeDiscreteState =
@@ -6988,33 +6226,33 @@ draft7_a151ee3d_1_performJointDisToNormModeChange ; delegate ->
 mOnModeChangedCutJoints = draft7_a151ee3d_1_onModeChangedCutJoints ; delegate
 -> mMech = NULL ; } static void initMechanismDelegates ( NeDaePrivateData *
 smData ) { PmAllocator * alloc = pm_default_allocator ( ) ; const int32_T
-motionInputOffsets [ 30 ] = { 52 , 53 , 54 , 25 , 26 , 27 , 28 , 29 , 30 , 31
-, 32 , 33 , 34 , 35 , 36 , 37 , 38 , 39 , 40 , 41 , 42 , 43 , 44 , 45 , 46 ,
-47 , 48 , 49 , 50 , 51 } ; int_T status = 0 ; initAssemblyDelegate ( & smData
--> mAssemblyDelegate ) ; initSimulationDelegate ( & smData ->
-mSimulationDelegate ) ; status = pm_create_int_vector_fields ( & smData ->
-mMotionInputOffsets , smData -> mNumInputMotionPrimitives , alloc ) ;
-checkMemAllocStatus ( status ) ; memcpy ( smData -> mMotionInputOffsets . mX
-, motionInputOffsets , 30 * sizeof ( int32_T ) ) ; } static void
-initComputationFcnPtrs ( NeDaePrivateData * smData ) { smData ->
-mSetParametersFcn = dae_cg_setParameters_function ; smData -> mPAssertFcn =
-dae_cg_pAssert_method ; smData -> mDerivativeFcn = dae_cg_deriv_method ;
-smData -> mNumJacPerturbLoBoundsFcn = dae_cg_numJacPerturbLoBounds_method ;
-smData -> mNumJacPerturbHiBoundsFcn = dae_cg_numJacPerturbHiBounds_method ;
-smData -> mOutputFcn = dae_cg_compOutputs_method ; smData -> mModeFcn =
-dae_cg_mode_method ; smData -> mZeroCrossingFcn = dae_cg_zeroCrossing_method
-; smData -> mProjectionFcn = dae_cg_project_solve ; smData -> mCIC_MODE_Fcn =
-dae_cg_CIC_MODE_solve ; smData -> mCheckFcn = ( smData -> mStateVectorSize ==
-0 ) ? dae_cg_check_solve : NULL ; smData -> mAssemblyFcn =
-dae_cg_assemble_solve ; smData -> mSetupLoggerFcn = dae_cg_setupLoggerFcn ;
-smData -> mLogFcn = dae_cg_recordLog_method ; smData -> mResidualsFcn = NULL
-; smData -> mLinearizeFcn = NULL ; smData -> mGenerateFcn = NULL ; } static
-void initLiveLinkToSm ( NeDaePrivateData * smData ) { smData -> mLiveSmLink =
-NULL ; smData -> mLiveSmLink_destroy = NULL ; smData -> mLiveSmLink_copy =
-NULL ; } void draft7_a151ee3d_1_NeDaePrivateData_create ( NeDaePrivateData *
-smData ) { initBasicAttributes ( smData ) ; initStateVector ( smData ) ;
-initAsserts ( smData ) ; initModeVector ( smData ) ; initZeroCrossings (
-smData ) ; initVariables ( smData ) ; initRuntimeParameters ( smData ) ;
-initIoInfo ( smData ) ; initInputDerivs ( smData ) ; initDirectFeedthrough (
-smData ) ; initOutputDerivProc ( smData ) ; initMechanismDelegates ( smData )
-; initComputationFcnPtrs ( smData ) ; initLiveLinkToSm ( smData ) ; }
+motionInputOffsets [ 24 ] = { 23 , 24 , 25 , 26 , 27 , 28 , 29 , 30 , 31 , 32
+, 33 , 34 , 35 , 36 , 37 , 38 , 39 , 40 , 41 , 42 , 43 , 44 , 45 , 46 } ;
+int_T status = 0 ; initAssemblyDelegate ( & smData -> mAssemblyDelegate ) ;
+initSimulationDelegate ( & smData -> mSimulationDelegate ) ; status =
+pm_create_int_vector_fields ( & smData -> mMotionInputOffsets , smData ->
+mNumInputMotionPrimitives , alloc ) ; checkMemAllocStatus ( status ) ; memcpy
+( smData -> mMotionInputOffsets . mX , motionInputOffsets , 24 * sizeof (
+int32_T ) ) ; } static void initComputationFcnPtrs ( NeDaePrivateData *
+smData ) { smData -> mSetParametersFcn = dae_cg_setParameters_function ;
+smData -> mPAssertFcn = dae_cg_pAssert_method ; smData -> mDerivativeFcn =
+dae_cg_deriv_method ; smData -> mNumJacPerturbLoBoundsFcn =
+dae_cg_numJacPerturbLoBounds_method ; smData -> mNumJacPerturbHiBoundsFcn =
+dae_cg_numJacPerturbHiBounds_method ; smData -> mOutputFcn =
+dae_cg_compOutputs_method ; smData -> mModeFcn = dae_cg_mode_method ; smData
+-> mZeroCrossingFcn = dae_cg_zeroCrossing_method ; smData -> mProjectionFcn =
+dae_cg_project_solve ; smData -> mCIC_MODE_Fcn = dae_cg_CIC_MODE_solve ;
+smData -> mCheckFcn = ( smData -> mStateVectorSize == 0 ) ?
+dae_cg_check_solve : NULL ; smData -> mAssemblyFcn = dae_cg_assemble_solve ;
+smData -> mSetupLoggerFcn = dae_cg_setupLoggerFcn ; smData -> mLogFcn =
+dae_cg_recordLog_method ; smData -> mResidualsFcn = NULL ; smData ->
+mLinearizeFcn = NULL ; smData -> mGenerateFcn = NULL ; } static void
+initLiveLinkToSm ( NeDaePrivateData * smData ) { smData -> mLiveSmLink = NULL
+; smData -> mLiveSmLink_destroy = NULL ; smData -> mLiveSmLink_copy = NULL ;
+} void draft7_a151ee3d_1_NeDaePrivateData_create ( NeDaePrivateData * smData
+) { initBasicAttributes ( smData ) ; initStateVector ( smData ) ; initAsserts
+( smData ) ; initModeVector ( smData ) ; initZeroCrossings ( smData ) ;
+initVariables ( smData ) ; initRuntimeParameters ( smData ) ; initIoInfo (
+smData ) ; initInputDerivs ( smData ) ; initDirectFeedthrough ( smData ) ;
+initOutputDerivProc ( smData ) ; initMechanismDelegates ( smData ) ;
+initComputationFcnPtrs ( smData ) ; initLiveLinkToSm ( smData ) ; }

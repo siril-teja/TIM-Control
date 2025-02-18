@@ -40,20 +40,16 @@ state [ 76 ] = xx [ 0 ] ; state [ 77 ] = xx [ 0 ] ; state [ 78 ] = xx [ 0 ] ;
 state [ 79 ] = xx [ 0 ] ; state [ 80 ] = xx [ 0 ] ; state [ 81 ] = xx [ 0 ] ;
 state [ 82 ] = xx [ 0 ] ; state [ 83 ] = xx [ 0 ] ; state [ 84 ] = xx [ 0 ] ;
 state [ 85 ] = xx [ 0 ] ; state [ 86 ] = xx [ 0 ] ; state [ 87 ] = xx [ 0 ] ;
-state [ 88 ] = xx [ 0 ] ; state [ 89 ] = xx [ 0 ] ; state [ 90 ] = xx [ 0 ] ;
-state [ 91 ] = xx [ 0 ] ; state [ 92 ] = xx [ 0 ] ; state [ 93 ] = xx [ 0 ] ;
-state [ 94 ] = xx [ 0 ] ; state [ 95 ] = xx [ 0 ] ; state [ 96 ] = xx [ 0 ] ;
-state [ 97 ] = xx [ 0 ] ; state [ 98 ] = xx [ 0 ] ; state [ 99 ] = xx [ 0 ] ;
-state [ 100 ] = xx [ 0 ] ; state [ 101 ] = xx [ 0 ] ; } void
+state [ 88 ] = xx [ 0 ] ; state [ 89 ] = xx [ 0 ] ; } void
 draft7_a151ee3d_1_initializeTrackedAngleState ( const void * mech , const
 RuntimeDerivedValuesBundle * rtdv , const int * modeVector , const double *
 motionData , double * state ) { const double * rtdvd = rtdv -> mDoubles .
 mValues ; const int * rtdvi = rtdv -> mInts . mValues ; boolean_T bb [ 2 ] ;
 double xx [ 38 ] ; ( void ) mech ; ( void ) rtdvd ; ( void ) rtdvi ; ( void )
-modeVector ; xx [ 0 ] = - motionData [ 126 ] ; xx [ 1 ] = - motionData [ 127
-] ; xx [ 2 ] = - motionData [ 128 ] ; xx [ 3 ] = - motionData [ 129 ] ; xx [
-4 ] = 0.9993181225840584 ; xx [ 5 ] = 0.03619150900402053 ; xx [ 6 ] =
-5.246456256884902e-3 ; xx [ 7 ] = 5.093058789132701e-3 ;
+modeVector ; xx [ 0 ] = - motionData [ 112 ] ; xx [ 1 ] = - motionData [ 113
+] ; xx [ 2 ] = - motionData [ 114 ] ; xx [ 3 ] = - motionData [ 115 ] ; xx [
+4 ] = 0.9994226636119462 ; xx [ 5 ] = 0.03397557150075099 ; xx [ 6 ] = -
+3.268676406922499e-11 ; xx [ 7 ] = - 2.051400253076505e-10 ;
 pm_math_Quaternion_compose_ra ( xx + 0 , xx + 4 , xx + 8 ) ; xx [ 4 ] = 2.0 ;
 xx [ 5 ] = ( xx [ 9 ] * xx [ 11 ] + xx [ 8 ] * xx [ 10 ] ) * xx [ 4 ] ; xx [
 6 ] = 0.99999999999999 ; bb [ 0 ] = fabs ( xx [ 5 ] ) > xx [ 6 ] ; xx [ 7 ] =
@@ -72,61 +68,61 @@ atan2 ( xx [ 18 ] , xx [ 17 ] ) ; xx [ 12 ] = bb [ 0 ] ? xx [ 7 ] * xx [ 16 ]
 ] ; xx [ 18 ] = - ( xx [ 4 ] * ( xx [ 9 ] * xx [ 10 ] - xx [ 8 ] * xx [ 11 ]
 ) ) ; xx [ 5 ] = ( xx [ 18 ] == 0.0 && xx [ 5 ] == 0.0 ) ? 0.0 : atan2 ( xx [
 18 ] , xx [ 5 ] ) ; xx [ 8 ] = bb [ 0 ] ? xx [ 16 ] * xx [ 12 ] : xx [ 5 ] ;
-xx [ 9 ] = motionData [ 178 ] ; xx [ 10 ] = motionData [ 179 ] ; xx [ 11 ] =
-motionData [ 180 ] ; xx [ 18 ] = xx [ 15 ] - ( motionData [ 128 ] *
-motionData [ 128 ] + motionData [ 129 ] * motionData [ 129 ] ) * xx [ 4 ] ;
-xx [ 19 ] = xx [ 4 ] * ( motionData [ 127 ] * motionData [ 128 ] - motionData
-[ 126 ] * motionData [ 129 ] ) ; xx [ 20 ] = ( motionData [ 126 ] *
-motionData [ 128 ] + motionData [ 127 ] * motionData [ 129 ] ) * xx [ 4 ] ;
+xx [ 9 ] = motionData [ 164 ] ; xx [ 10 ] = motionData [ 165 ] ; xx [ 11 ] =
+motionData [ 166 ] ; xx [ 18 ] = xx [ 15 ] - ( motionData [ 114 ] *
+motionData [ 114 ] + motionData [ 115 ] * motionData [ 115 ] ) * xx [ 4 ] ;
+xx [ 19 ] = xx [ 4 ] * ( motionData [ 113 ] * motionData [ 114 ] - motionData
+[ 112 ] * motionData [ 115 ] ) ; xx [ 20 ] = ( motionData [ 112 ] *
+motionData [ 114 ] + motionData [ 113 ] * motionData [ 115 ] ) * xx [ 4 ] ;
 xx [ 5 ] = pm_math_Vector3_dot_ra ( xx + 9 , xx + 18 ) ; xx [ 14 ] =
-0.01085440859974902 ; xx [ 21 ] = 0.07228022064246183 ; xx [ 22 ] =
-0.997325298745513 ; xx [ 23 ] = xx [ 14 ] ; xx [ 24 ] = - xx [ 21 ] ; xx [ 25
-] = xx [ 22 ] ; xx [ 26 ] = pm_math_Vector3_dot_ra ( xx + 18 , xx + 23 ) ; xx
-[ 27 ] = xx [ 15 ] - xx [ 26 ] * xx [ 26 ] ; xx [ 27 ] = xx [ 27 ] == 0.0 ?
-0.0 : ( pm_math_Vector3_dot_ra ( xx + 9 , xx + 23 ) - xx [ 26 ] * xx [ 5 ] )
-/ xx [ 27 ] ; xx [ 23 ] = xx [ 7 ] * xx [ 8 ] ; xx [ 24 ] = sin ( xx [ 23 ] )
-; xx [ 28 ] = cos ( xx [ 23 ] ) ; xx [ 29 ] = xx [ 14 ] * xx [ 24 ] ; xx [ 30
-] = - ( xx [ 21 ] * xx [ 24 ] ) ; xx [ 31 ] = xx [ 22 ] * xx [ 24 ] ; xx [ 21
-] = - 9.799417557012156e-3 ; xx [ 22 ] = 0.9973284708563647 ; xx [ 23 ] =
-0.07238710268306554 ; pm_math_Quaternion_inverseXform_ra ( xx + 28 , xx + 21
-, xx + 32 ) ; xx [ 21 ] = 0.9958524573065585 ; xx [ 22 ] = -
-0.09068858100887965 ; xx [ 23 ] = 4.55902949587172e-3 ; xx [ 24 ] =
-5.716624978144062e-3 ; pm_math_Quaternion_compose_ra ( xx + 0 , xx + 21 , xx
-+ 28 ) ; xx [ 0 ] = ( xx [ 29 ] * xx [ 31 ] + xx [ 28 ] * xx [ 30 ] ) * xx [
-4 ] ; bb [ 1 ] = fabs ( xx [ 0 ] ) > xx [ 6 ] ; xx [ 1 ] = xx [ 30 ] * xx [
-31 ] ; xx [ 2 ] = xx [ 28 ] * xx [ 29 ] ; xx [ 3 ] = xx [ 28 ] * xx [ 28 ] ;
-xx [ 6 ] = ( xx [ 3 ] + xx [ 30 ] * xx [ 30 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [
-14 ] = ( xx [ 1 ] + xx [ 2 ] ) * xx [ 4 ] ; xx [ 6 ] = ( xx [ 14 ] == 0.0 &&
-xx [ 6 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 14 ] , xx [ 6 ] ) ; xx [ 14 ] = ( xx [
-3 ] + xx [ 31 ] * xx [ 31 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [ 21 ] = - ( xx [ 4
-] * ( xx [ 1 ] - xx [ 2 ] ) ) ; xx [ 14 ] = ( xx [ 21 ] == 0.0 && xx [ 14 ]
-== 0.0 ) ? 0.0 : atan2 ( xx [ 21 ] , xx [ 14 ] ) ; xx [ 1 ] = bb [ 1 ] ? xx [
-7 ] * xx [ 6 ] : xx [ 14 ] ; if ( xx [ 0 ] < 0.0 ) xx [ 2 ] = - 1.0 ; else if
-( xx [ 0 ] > 0.0 ) xx [ 2 ] = + 1.0 ; else xx [ 2 ] = 0.0 ; xx [ 6 ] = fabs (
-xx [ 0 ] ) > 1.0 ? atan2 ( xx [ 0 ] , 0.0 ) : asin ( xx [ 0 ] ) ; xx [ 0 ] =
-( xx [ 3 ] + xx [ 29 ] * xx [ 29 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [ 14 ] = - (
-xx [ 4 ] * ( xx [ 29 ] * xx [ 30 ] - xx [ 28 ] * xx [ 31 ] ) ) ; xx [ 0 ] = (
-xx [ 14 ] == 0.0 && xx [ 0 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 14 ] , xx [ 0 ] )
-; xx [ 3 ] = bb [ 1 ] ? xx [ 2 ] * xx [ 1 ] : xx [ 0 ] ; xx [ 0 ] =
-8.043376237938261e-3 ; xx [ 4 ] = 0.1806770170184598 ; xx [ 14 ] =
-0.9835095930493033 ; xx [ 21 ] = xx [ 0 ] ; xx [ 22 ] = xx [ 4 ] ; xx [ 23 ]
-= xx [ 14 ] ; xx [ 24 ] = pm_math_Vector3_dot_ra ( xx + 18 , xx + 21 ) ; xx [
-18 ] = xx [ 15 ] - xx [ 24 ] * xx [ 24 ] ; xx [ 18 ] = xx [ 18 ] == 0.0 ? 0.0
-: ( pm_math_Vector3_dot_ra ( xx + 9 , xx + 21 ) - xx [ 24 ] * xx [ 5 ] ) / xx
-[ 18 ] ; xx [ 15 ] = xx [ 7 ] * xx [ 3 ] ; xx [ 7 ] = sin ( xx [ 15 ] ) ; xx
-[ 19 ] = cos ( xx [ 15 ] ) ; xx [ 20 ] = xx [ 0 ] * xx [ 7 ] ; xx [ 21 ] = xx
-[ 4 ] * xx [ 7 ] ; xx [ 22 ] = xx [ 14 ] * xx [ 7 ] ; xx [ 28 ] = -
-0.0122127338954861 ; xx [ 29 ] = 0.9834858029469102 ; xx [ 30 ] = -
-0.180572767970891 ; pm_math_Quaternion_inverseXform_ra ( xx + 19 , xx + 28 ,
-xx + 35 ) ; state [ 90 ] = pm_math_canonicalAngle ( xx [ 12 ] ) ; state [ 91
-] = pm_math_canonicalAngle ( bb [ 0 ] ? xx [ 13 ] * xx [ 16 ] : xx [ 17 ] ) ;
-state [ 92 ] = pm_math_canonicalAngle ( xx [ 8 ] ) ; state [ 93 ] = xx [ 5 ]
-- xx [ 26 ] * xx [ 27 ] ; state [ 94 ] = pm_math_Vector3_dot_ra ( xx + 9 , xx
-+ 32 ) ; state [ 95 ] = xx [ 27 ] ; state [ 96 ] = pm_math_canonicalAngle (
-xx [ 1 ] ) ; state [ 97 ] = pm_math_canonicalAngle ( bb [ 1 ] ? xx [ 13 ] *
-xx [ 2 ] : xx [ 6 ] ) ; state [ 98 ] = pm_math_canonicalAngle ( xx [ 3 ] ) ;
-state [ 99 ] = xx [ 5 ] - xx [ 24 ] * xx [ 18 ] ; state [ 100 ] =
-pm_math_Vector3_dot_ra ( xx + 9 , xx + 35 ) ; state [ 101 ] = xx [ 18 ] ; }
+7.927528481685209e-11 ; xx [ 21 ] = 0.06791191233403736 ; xx [ 22 ] =
+0.9976913210823947 ; xx [ 23 ] = - xx [ 14 ] ; xx [ 24 ] = - xx [ 21 ] ; xx [
+25 ] = xx [ 22 ] ; xx [ 26 ] = pm_math_Vector3_dot_ra ( xx + 18 , xx + 23 ) ;
+xx [ 27 ] = xx [ 15 ] - xx [ 26 ] * xx [ 26 ] ; xx [ 27 ] = xx [ 27 ] == 0.0
+? 0.0 : ( pm_math_Vector3_dot_ra ( xx + 9 , xx + 23 ) - xx [ 26 ] * xx [ 5 ]
+) / xx [ 27 ] ; xx [ 23 ] = xx [ 7 ] * xx [ 8 ] ; xx [ 24 ] = sin ( xx [ 23 ]
+) ; xx [ 28 ] = cos ( xx [ 23 ] ) ; xx [ 29 ] = - ( xx [ 14 ] * xx [ 24 ] ) ;
+xx [ 30 ] = - ( xx [ 21 ] * xx [ 24 ] ) ; xx [ 31 ] = xx [ 22 ] * xx [ 24 ] ;
+xx [ 23 ] = 4.07822078033264e-10 ; xx [ 24 ] = xx [ 22 ] ; xx [ 25 ] = xx [
+21 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 28 , xx + 23 , xx + 32 ) ;
+xx [ 21 ] = - 0.9956754524795487 ; xx [ 22 ] = 0.09289991027792205 ; xx [ 23
+] = 6.437320495472446e-12 ; xx [ 24 ] = 2.076280636928651e-10 ;
+pm_math_Quaternion_compose_ra ( xx + 0 , xx + 21 , xx + 28 ) ; xx [ 0 ] = (
+xx [ 29 ] * xx [ 31 ] + xx [ 28 ] * xx [ 30 ] ) * xx [ 4 ] ; bb [ 1 ] = fabs
+( xx [ 0 ] ) > xx [ 6 ] ; xx [ 1 ] = xx [ 30 ] * xx [ 31 ] ; xx [ 2 ] = xx [
+28 ] * xx [ 29 ] ; xx [ 3 ] = xx [ 28 ] * xx [ 28 ] ; xx [ 6 ] = ( xx [ 3 ] +
+xx [ 30 ] * xx [ 30 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [ 14 ] = ( xx [ 1 ] + xx
+[ 2 ] ) * xx [ 4 ] ; xx [ 6 ] = ( xx [ 14 ] == 0.0 && xx [ 6 ] == 0.0 ) ? 0.0
+: atan2 ( xx [ 14 ] , xx [ 6 ] ) ; xx [ 14 ] = ( xx [ 3 ] + xx [ 31 ] * xx [
+31 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [ 21 ] = - ( xx [ 4 ] * ( xx [ 1 ] - xx [
+2 ] ) ) ; xx [ 14 ] = ( xx [ 21 ] == 0.0 && xx [ 14 ] == 0.0 ) ? 0.0 : atan2
+( xx [ 21 ] , xx [ 14 ] ) ; xx [ 1 ] = bb [ 1 ] ? xx [ 7 ] * xx [ 6 ] : xx [
+14 ] ; if ( xx [ 0 ] < 0.0 ) xx [ 2 ] = - 1.0 ; else if ( xx [ 0 ] > 0.0 ) xx
+[ 2 ] = + 1.0 ; else xx [ 2 ] = 0.0 ; xx [ 6 ] = fabs ( xx [ 0 ] ) > 1.0 ?
+atan2 ( xx [ 0 ] , 0.0 ) : asin ( xx [ 0 ] ) ; xx [ 0 ] = ( xx [ 3 ] + xx [
+29 ] * xx [ 29 ] ) * xx [ 4 ] - xx [ 15 ] ; xx [ 14 ] = - ( xx [ 4 ] * ( xx [
+29 ] * xx [ 30 ] - xx [ 28 ] * xx [ 31 ] ) ) ; xx [ 0 ] = ( xx [ 14 ] == 0.0
+&& xx [ 0 ] == 0.0 ) ? 0.0 : atan2 ( xx [ 14 ] , xx [ 0 ] ) ; xx [ 3 ] = bb [
+1 ] ? xx [ 2 ] * xx [ 1 ] : xx [ 0 ] ; xx [ 0 ] = 2.57582929823209e-11 ; xx [
+4 ] = 0.184996320402559 ; xx [ 14 ] = 0.982739213340708 ; xx [ 21 ] = xx [ 0
+] ; xx [ 22 ] = xx [ 4 ] ; xx [ 23 ] = xx [ 14 ] ; xx [ 24 ] =
+pm_math_Vector3_dot_ra ( xx + 18 , xx + 21 ) ; xx [ 18 ] = xx [ 15 ] - xx [
+24 ] * xx [ 24 ] ; xx [ 18 ] = xx [ 18 ] == 0.0 ? 0.0 : (
+pm_math_Vector3_dot_ra ( xx + 9 , xx + 21 ) - xx [ 24 ] * xx [ 5 ] ) / xx [
+18 ] ; xx [ 15 ] = xx [ 7 ] * xx [ 3 ] ; xx [ 7 ] = sin ( xx [ 15 ] ) ; xx [
+19 ] = cos ( xx [ 15 ] ) ; xx [ 20 ] = xx [ 0 ] * xx [ 7 ] ; xx [ 21 ] = xx [
+4 ] * xx [ 7 ] ; xx [ 22 ] = xx [ 14 ] * xx [ 7 ] ; xx [ 28 ] =
+4.146563855226113e-10 ; xx [ 29 ] = xx [ 14 ] ; xx [ 30 ] = - xx [ 4 ] ;
+pm_math_Quaternion_inverseXform_ra ( xx + 19 , xx + 28 , xx + 35 ) ; state [
+78 ] = pm_math_canonicalAngle ( xx [ 12 ] ) ; state [ 79 ] =
+pm_math_canonicalAngle ( bb [ 0 ] ? xx [ 13 ] * xx [ 16 ] : xx [ 17 ] ) ;
+state [ 80 ] = pm_math_canonicalAngle ( xx [ 8 ] ) ; state [ 81 ] = xx [ 5 ]
+- xx [ 26 ] * xx [ 27 ] ; state [ 82 ] = pm_math_Vector3_dot_ra ( xx + 9 , xx
++ 32 ) ; state [ 83 ] = xx [ 27 ] ; state [ 84 ] = pm_math_canonicalAngle (
+xx [ 1 ] ) ; state [ 85 ] = pm_math_canonicalAngle ( bb [ 1 ] ? xx [ 13 ] *
+xx [ 2 ] : xx [ 6 ] ) ; state [ 86 ] = pm_math_canonicalAngle ( xx [ 3 ] ) ;
+state [ 87 ] = xx [ 5 ] - xx [ 24 ] * xx [ 18 ] ; state [ 88 ] =
+pm_math_Vector3_dot_ra ( xx + 9 , xx + 35 ) ; state [ 89 ] = xx [ 18 ] ; }
 void draft7_a151ee3d_1_computeDiscreteState ( const void * mech , const
 RuntimeDerivedValuesBundle * rtdv , double * state ) { const double * rtdvd =
 rtdv -> mDoubles . mValues ; const int * rtdvi = rtdv -> mInts . mValues ; (
@@ -157,11 +153,7 @@ dofDeltas [ 31 ] ; state [ 62 ] = state [ 62 ] + dofDeltas [ 32 ] ; state [
 66 ] = state [ 66 ] + dofDeltas [ 33 ] ; state [ 67 ] = state [ 67 ] +
 dofDeltas [ 34 ] ; state [ 68 ] = state [ 68 ] + dofDeltas [ 35 ] ; state [
 72 ] = state [ 72 ] + dofDeltas [ 36 ] ; state [ 73 ] = state [ 73 ] +
-dofDeltas [ 37 ] ; state [ 74 ] = state [ 74 ] + dofDeltas [ 38 ] ; state [
-78 ] = state [ 78 ] + dofDeltas [ 39 ] ; state [ 79 ] = state [ 79 ] +
-dofDeltas [ 40 ] ; state [ 80 ] = state [ 80 ] + dofDeltas [ 41 ] ; state [
-84 ] = state [ 84 ] + dofDeltas [ 42 ] ; state [ 85 ] = state [ 85 ] +
-dofDeltas [ 43 ] ; state [ 86 ] = state [ 86 ] + dofDeltas [ 44 ] ; } static
+dofDeltas [ 37 ] ; state [ 74 ] = state [ 74 ] + dofDeltas [ 38 ] ; } static
 void perturbAsmJointPrimitiveState_0_0 ( double mag , double * state ) {
 state [ 0 ] = state [ 0 ] + mag ; } static void
 perturbAsmJointPrimitiveState_0_0v ( double mag , double * state ) { state [
@@ -318,30 +310,6 @@ static void perturbAsmJointPrimitiveState_12_2 ( double mag , double * state
 ) { state [ 74 ] = state [ 74 ] + mag ; } static void
 perturbAsmJointPrimitiveState_12_2v ( double mag , double * state ) { state [
 74 ] = state [ 74 ] + mag ; state [ 77 ] = state [ 77 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_13_0 ( double mag , double * state
-) { state [ 78 ] = state [ 78 ] + mag ; } static void
-perturbAsmJointPrimitiveState_13_0v ( double mag , double * state ) { state [
-78 ] = state [ 78 ] + mag ; state [ 81 ] = state [ 81 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_13_1 ( double mag , double * state
-) { state [ 79 ] = state [ 79 ] + mag ; } static void
-perturbAsmJointPrimitiveState_13_1v ( double mag , double * state ) { state [
-79 ] = state [ 79 ] + mag ; state [ 82 ] = state [ 82 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_13_2 ( double mag , double * state
-) { state [ 80 ] = state [ 80 ] + mag ; } static void
-perturbAsmJointPrimitiveState_13_2v ( double mag , double * state ) { state [
-80 ] = state [ 80 ] + mag ; state [ 83 ] = state [ 83 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_14_0 ( double mag , double * state
-) { state [ 84 ] = state [ 84 ] + mag ; } static void
-perturbAsmJointPrimitiveState_14_0v ( double mag , double * state ) { state [
-84 ] = state [ 84 ] + mag ; state [ 87 ] = state [ 87 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_14_1 ( double mag , double * state
-) { state [ 85 ] = state [ 85 ] + mag ; } static void
-perturbAsmJointPrimitiveState_14_1v ( double mag , double * state ) { state [
-85 ] = state [ 85 ] + mag ; state [ 88 ] = state [ 88 ] - 0.875 * mag ; }
-static void perturbAsmJointPrimitiveState_14_2 ( double mag , double * state
-) { state [ 86 ] = state [ 86 ] + mag ; } static void
-perturbAsmJointPrimitiveState_14_2v ( double mag , double * state ) { state [
-86 ] = state [ 86 ] + mag ; state [ 89 ] = state [ 89 ] - 0.875 * mag ; }
 void draft7_a151ee3d_1_perturbAsmJointPrimitiveState ( const void * mech ,
 size_t stageIdx , size_t primIdx , double mag , boolean_T doPerturbVelocity ,
 double * state ) { ( void ) mech ; ( void ) stageIdx ; ( void ) primIdx ; (
@@ -424,19 +392,7 @@ perturbAsmJointPrimitiveState_12_0v ( mag , state ) ; break ; case 146 :
 perturbAsmJointPrimitiveState_12_1 ( mag , state ) ; break ; case 147 :
 perturbAsmJointPrimitiveState_12_1v ( mag , state ) ; break ; case 148 :
 perturbAsmJointPrimitiveState_12_2 ( mag , state ) ; break ; case 149 :
-perturbAsmJointPrimitiveState_12_2v ( mag , state ) ; break ; case 156 :
-perturbAsmJointPrimitiveState_13_0 ( mag , state ) ; break ; case 157 :
-perturbAsmJointPrimitiveState_13_0v ( mag , state ) ; break ; case 158 :
-perturbAsmJointPrimitiveState_13_1 ( mag , state ) ; break ; case 159 :
-perturbAsmJointPrimitiveState_13_1v ( mag , state ) ; break ; case 160 :
-perturbAsmJointPrimitiveState_13_2 ( mag , state ) ; break ; case 161 :
-perturbAsmJointPrimitiveState_13_2v ( mag , state ) ; break ; case 168 :
-perturbAsmJointPrimitiveState_14_0 ( mag , state ) ; break ; case 169 :
-perturbAsmJointPrimitiveState_14_0v ( mag , state ) ; break ; case 170 :
-perturbAsmJointPrimitiveState_14_1 ( mag , state ) ; break ; case 171 :
-perturbAsmJointPrimitiveState_14_1v ( mag , state ) ; break ; case 172 :
-perturbAsmJointPrimitiveState_14_2 ( mag , state ) ; break ; case 173 :
-perturbAsmJointPrimitiveState_14_2v ( mag , state ) ; break ; } } void
+perturbAsmJointPrimitiveState_12_2v ( mag , state ) ; break ; } } void
 draft7_a151ee3d_1_computePosDofBlendMatrix ( const void * mech , size_t
 stageIdx , size_t primIdx , const double * state , int partialType , double *
 matrix ) { ( void ) mech ; ( void ) stageIdx ; ( void ) primIdx ; ( void )
@@ -453,7 +409,7 @@ void ) origState ; ( void ) partialType ; ( void ) state ; switch ( (
 stageIdx * 6 + primIdx ) ) { } } void draft7_a151ee3d_1_propagateMotion (
 const void * mech , const RuntimeDerivedValuesBundle * rtdv , const double *
 state , double * motionData ) { const double * rtdvd = rtdv -> mDoubles .
-mValues ; const int * rtdvi = rtdv -> mInts . mValues ; double xx [ 252 ] ; (
+mValues ; const int * rtdvi = rtdv -> mInts . mValues ; double xx [ 232 ] ; (
 void ) mech ; ( void ) rtdvd ; ( void ) rtdvi ; xx [ 0 ] = 0.5 ; xx [ 1 ] =
 xx [ 0 ] * state [ 2 ] ; xx [ 2 ] = cos ( xx [ 1 ] ) ; xx [ 3 ] = xx [ 0 ] *
 state [ 1 ] ; xx [ 4 ] = cos ( xx [ 3 ] ) ; xx [ 5 ] = 0.9881368157912284 ;
@@ -553,209 +509,180 @@ xx + 81 ) ; xx [ 61 ] = 7.111565911668068e-14 + xx [ 81 ] ; xx [ 69 ] = - xx
 83 ] = sin ( xx [ 82 ] ) ; xx [ 85 ] = 1.82992095932877e-11 ; xx [ 86 ] =
 5.235917730680519e-12 ; xx [ 87 ] = cos ( xx [ 82 ] ) ; xx [ 88 ] = xx [ 83 ]
 ; xx [ 89 ] = - ( xx [ 85 ] * xx [ 83 ] ) ; xx [ 90 ] = - ( xx [ 86 ] * xx [
-83 ] ) ; xx [ 91 ] = 0.9991449255755711 ; xx [ 92 ] = - 0.04069340420070983 ;
-xx [ 93 ] = - 5.269348941183292e-3 ; xx [ 94 ] = - 5.069370067487187e-3 ;
+83 ] ) ; xx [ 91 ] = 0.9992594490823861 ; xx [ 92 ] = - 0.03847796017939601 ;
+xx [ 93 ] = 3.657873200514057e-11 ; xx [ 94 ] = 1.959485864323585e-10 ;
 pm_math_Quaternion_compose_ra ( xx + 87 , xx + 91 , xx + 95 ) ; xx [ 82 ] =
-xx [ 0 ] * state [ 25 ] ; xx [ 83 ] = 0.01017403174547095 ; xx [ 87 ] = sin (
-xx [ 82 ] ) ; xx [ 88 ] = 0.9992497622599684 ; xx [ 89 ] =
-0.03736845864413881 ; xx [ 90 ] = cos ( xx [ 82 ] ) ; xx [ 91 ] = - ( xx [ 83
-] * xx [ 87 ] ) ; xx [ 92 ] = xx [ 88 ] * xx [ 87 ] ; xx [ 93 ] = xx [ 89 ] *
-xx [ 87 ] ; pm_math_Quaternion_compose_ra ( xx + 95 , xx + 90 , xx + 99 ) ;
-xx [ 82 ] = xx [ 0 ] * state [ 26 ] ; xx [ 87 ] = 0.01050408723065136 ; xx [
-90 ] = sin ( xx [ 82 ] ) ; xx [ 91 ] = 0.03726153110399754 ; xx [ 92 ] =
-0.9992503402307336 ; xx [ 93 ] = cos ( xx [ 82 ] ) ; xx [ 94 ] = xx [ 87 ] *
-xx [ 90 ] ; xx [ 95 ] = - ( xx [ 91 ] * xx [ 90 ] ) ; xx [ 96 ] = xx [ 92 ] *
-xx [ 90 ] ; pm_math_Quaternion_compose_ra ( xx + 99 , xx + 93 , xx + 103 ) ;
-xx [ 97 ] = - 1.160451719412536e-3 ; xx [ 98 ] = - 0.02864342077244468 ; xx [
-99 ] = - 0.1242034406115433 ; pm_math_Quaternion_xform_ra ( xx + 103 , xx +
-97 , xx + 100 ) ; xx [ 82 ] = 4.855313199912053e-13 - xx [ 100 ] ; xx [ 90 ]
-= 0.01419776350117569 - xx [ 101 ] ; xx [ 100 ] = 0.0153662351784256 - xx [
-102 ] ; xx [ 101 ] = xx [ 0 ] * state [ 32 ] ; xx [ 102 ] = cos ( xx [ 101 ]
-) ; xx [ 107 ] = xx [ 0 ] * state [ 31 ] ; xx [ 108 ] = cos ( xx [ 107 ] ) ;
-xx [ 109 ] = xx [ 0 ] * state [ 30 ] ; xx [ 110 ] = 0.9998930708978301 ; xx [
-111 ] = sin ( xx [ 109 ] ) ; xx [ 112 ] = 0.01055892623245314 ; xx [ 113 ] =
-0.01011710666764959 ; xx [ 114 ] = cos ( xx [ 109 ] ) ; xx [ 115 ] = xx [ 110
-] * xx [ 111 ] ; xx [ 116 ] = xx [ 112 ] * xx [ 111 ] ; xx [ 117 ] = - ( xx [
-113 ] * xx [ 111 ] ) ; xx [ 118 ] = - 0.9958524573065585 ; xx [ 119 ] =
-0.09068858100887965 ; xx [ 120 ] = - 4.559029495871781e-3 ; xx [ 121 ] = -
-5.716624978144057e-3 ; pm_math_Quaternion_compose_ra ( xx + 114 , xx + 118 ,
-xx + 122 ) ; xx [ 109 ] = sin ( xx [ 107 ] ) ; xx [ 107 ] = xx [ 108 ] * xx [
-122 ] - xx [ 124 ] * xx [ 109 ] ; xx [ 111 ] = xx [ 108 ] * xx [ 125 ] + xx [
-123 ] * xx [ 109 ] ; xx [ 114 ] = sin ( xx [ 101 ] ) ; xx [ 101 ] = xx [ 102
-] * xx [ 107 ] - xx [ 111 ] * xx [ 114 ] ; xx [ 115 ] = xx [ 108 ] * xx [ 123
-] - xx [ 125 ] * xx [ 109 ] ; xx [ 116 ] = xx [ 122 ] * xx [ 109 ] + xx [ 108
-] * xx [ 124 ] ; xx [ 108 ] = xx [ 102 ] * xx [ 115 ] + xx [ 116 ] * xx [ 114
-] ; xx [ 109 ] = xx [ 116 ] * xx [ 102 ] - xx [ 114 ] * xx [ 115 ] ; xx [ 115
-] = xx [ 114 ] * xx [ 107 ] + xx [ 111 ] * xx [ 102 ] ; xx [ 107 ] =
-0.09519527419625862 ; xx [ 111 ] = - 0.07787409280153862 ; xx [ 116 ] = -
-0.0859897565171039 ; xx [ 117 ] = xx [ 0 ] * state [ 36 ] ; xx [ 118 ] = sin
-( xx [ 117 ] ) ; xx [ 119 ] = xx [ 0 ] * state [ 37 ] ; xx [ 120 ] = sin ( xx
-[ 119 ] ) ; xx [ 121 ] = xx [ 118 ] * xx [ 120 ] ; xx [ 122 ] = xx [ 0 ] *
-state [ 38 ] ; xx [ 123 ] = sin ( xx [ 122 ] ) ; xx [ 124 ] = cos ( xx [ 122
-] ) ; xx [ 122 ] = cos ( xx [ 117 ] ) ; xx [ 117 ] = cos ( xx [ 119 ] ) ; xx
-[ 119 ] = xx [ 122 ] * xx [ 117 ] ; xx [ 125 ] = xx [ 121 ] * xx [ 123 ] - xx
-[ 124 ] * xx [ 119 ] ; xx [ 126 ] = xx [ 117 ] * xx [ 118 ] ; xx [ 117 ] = xx
-[ 122 ] * xx [ 120 ] ; xx [ 118 ] = xx [ 124 ] * xx [ 126 ] + xx [ 117 ] * xx
-[ 123 ] ; xx [ 120 ] = xx [ 126 ] * xx [ 123 ] - xx [ 124 ] * xx [ 117 ] ; xx
-[ 117 ] = xx [ 119 ] * xx [ 123 ] + xx [ 124 ] * xx [ 121 ] ; xx [ 119 ] =
-0.01688944435119629 ; xx [ 121 ] = 0.1319682159423828 ; xx [ 122 ] =
-0.8089576416015625 ; xx [ 126 ] = xx [ 0 ] * state [ 42 ] ; xx [ 127 ] = sin
-( xx [ 126 ] ) ; xx [ 128 ] = xx [ 0 ] * state [ 43 ] ; xx [ 129 ] = sin ( xx
-[ 128 ] ) ; xx [ 130 ] = xx [ 127 ] * xx [ 129 ] ; xx [ 131 ] = xx [ 0 ] *
-state [ 44 ] ; xx [ 132 ] = sin ( xx [ 131 ] ) ; xx [ 133 ] = cos ( xx [ 131
-] ) ; xx [ 131 ] = cos ( xx [ 126 ] ) ; xx [ 126 ] = cos ( xx [ 128 ] ) ; xx
-[ 128 ] = xx [ 131 ] * xx [ 126 ] ; xx [ 134 ] = xx [ 130 ] * xx [ 132 ] - xx
-[ 133 ] * xx [ 128 ] ; xx [ 135 ] = xx [ 126 ] * xx [ 127 ] ; xx [ 126 ] = xx
-[ 131 ] * xx [ 129 ] ; xx [ 127 ] = xx [ 133 ] * xx [ 135 ] + xx [ 126 ] * xx
-[ 132 ] ; xx [ 129 ] = xx [ 135 ] * xx [ 132 ] - xx [ 133 ] * xx [ 126 ] ; xx
-[ 126 ] = xx [ 128 ] * xx [ 132 ] + xx [ 133 ] * xx [ 130 ] ; xx [ 128 ] = xx
-[ 0 ] * state [ 48 ] ; xx [ 130 ] = sin ( xx [ 128 ] ) ; xx [ 131 ] = xx [ 0
-] * state [ 49 ] ; xx [ 135 ] = sin ( xx [ 131 ] ) ; xx [ 136 ] = xx [ 130 ]
-* xx [ 135 ] ; xx [ 137 ] = xx [ 0 ] * state [ 50 ] ; xx [ 138 ] = sin ( xx [
-137 ] ) ; xx [ 139 ] = cos ( xx [ 137 ] ) ; xx [ 137 ] = cos ( xx [ 128 ] ) ;
-xx [ 128 ] = cos ( xx [ 131 ] ) ; xx [ 131 ] = xx [ 137 ] * xx [ 128 ] ; xx [
-140 ] = xx [ 136 ] * xx [ 138 ] - xx [ 139 ] * xx [ 131 ] ; xx [ 141 ] = xx [
-128 ] * xx [ 130 ] ; xx [ 128 ] = xx [ 137 ] * xx [ 135 ] ; xx [ 130 ] = xx [
-139 ] * xx [ 141 ] + xx [ 128 ] * xx [ 138 ] ; xx [ 135 ] = xx [ 141 ] * xx [
-138 ] - xx [ 139 ] * xx [ 128 ] ; xx [ 128 ] = xx [ 131 ] * xx [ 138 ] + xx [
-139 ] * xx [ 136 ] ; xx [ 131 ] = 9.709312438964843e-3 ; xx [ 136 ] = -
-2.232642650604248e-3 ; xx [ 137 ] = 0.8689576416015625 ; xx [ 141 ] = xx [ 0
-] * state [ 54 ] ; xx [ 142 ] = sin ( xx [ 141 ] ) ; xx [ 143 ] = xx [ 0 ] *
-state [ 55 ] ; xx [ 144 ] = sin ( xx [ 143 ] ) ; xx [ 145 ] = xx [ 142 ] * xx
-[ 144 ] ; xx [ 146 ] = xx [ 0 ] * state [ 56 ] ; xx [ 147 ] = sin ( xx [ 146
-] ) ; xx [ 148 ] = cos ( xx [ 146 ] ) ; xx [ 146 ] = cos ( xx [ 141 ] ) ; xx
-[ 141 ] = cos ( xx [ 143 ] ) ; xx [ 143 ] = xx [ 146 ] * xx [ 141 ] ; xx [
-149 ] = xx [ 145 ] * xx [ 147 ] - xx [ 148 ] * xx [ 143 ] ; xx [ 150 ] = xx [
-141 ] * xx [ 142 ] ; xx [ 141 ] = xx [ 146 ] * xx [ 144 ] ; xx [ 142 ] = xx [
-148 ] * xx [ 150 ] + xx [ 141 ] * xx [ 147 ] ; xx [ 144 ] = xx [ 150 ] * xx [
-147 ] - xx [ 148 ] * xx [ 141 ] ; xx [ 141 ] = xx [ 143 ] * xx [ 147 ] + xx [
-148 ] * xx [ 145 ] ; xx [ 143 ] = xx [ 0 ] * state [ 60 ] ; xx [ 145 ] = sin
-( xx [ 143 ] ) ; xx [ 146 ] = xx [ 0 ] * state [ 61 ] ; xx [ 150 ] = sin ( xx
-[ 146 ] ) ; xx [ 151 ] = xx [ 145 ] * xx [ 150 ] ; xx [ 152 ] = xx [ 0 ] *
-state [ 62 ] ; xx [ 153 ] = sin ( xx [ 152 ] ) ; xx [ 154 ] = cos ( xx [ 152
-] ) ; xx [ 152 ] = cos ( xx [ 143 ] ) ; xx [ 143 ] = cos ( xx [ 146 ] ) ; xx
-[ 146 ] = xx [ 152 ] * xx [ 143 ] ; xx [ 155 ] = xx [ 151 ] * xx [ 153 ] - xx
-[ 154 ] * xx [ 146 ] ; xx [ 156 ] = xx [ 143 ] * xx [ 145 ] ; xx [ 143 ] = xx
-[ 152 ] * xx [ 150 ] ; xx [ 145 ] = xx [ 154 ] * xx [ 156 ] + xx [ 143 ] * xx
-[ 153 ] ; xx [ 150 ] = xx [ 156 ] * xx [ 153 ] - xx [ 154 ] * xx [ 143 ] ; xx
-[ 143 ] = xx [ 146 ] * xx [ 153 ] + xx [ 154 ] * xx [ 151 ] ; xx [ 146 ] =
-0.06488653564453126 ; xx [ 151 ] = 0.03644176864624023 ; xx [ 152 ] =
-0.9499576416015625 ; xx [ 156 ] = xx [ 0 ] * state [ 66 ] ; xx [ 157 ] = sin
-( xx [ 156 ] ) ; xx [ 158 ] = xx [ 0 ] * state [ 67 ] ; xx [ 159 ] = sin ( xx
-[ 158 ] ) ; xx [ 160 ] = xx [ 157 ] * xx [ 159 ] ; xx [ 161 ] = xx [ 0 ] *
-state [ 68 ] ; xx [ 162 ] = sin ( xx [ 161 ] ) ; xx [ 163 ] = cos ( xx [ 161
-] ) ; xx [ 161 ] = cos ( xx [ 156 ] ) ; xx [ 156 ] = cos ( xx [ 158 ] ) ; xx
-[ 158 ] = xx [ 161 ] * xx [ 156 ] ; xx [ 164 ] = xx [ 160 ] * xx [ 162 ] - xx
-[ 163 ] * xx [ 158 ] ; xx [ 165 ] = xx [ 156 ] * xx [ 157 ] ; xx [ 156 ] = xx
-[ 161 ] * xx [ 159 ] ; xx [ 157 ] = xx [ 163 ] * xx [ 165 ] + xx [ 156 ] * xx
-[ 162 ] ; xx [ 159 ] = xx [ 165 ] * xx [ 162 ] - xx [ 163 ] * xx [ 156 ] ; xx
-[ 156 ] = xx [ 158 ] * xx [ 162 ] + xx [ 163 ] * xx [ 160 ] ; xx [ 158 ] =
-0.1324676666259766 ; xx [ 160 ] = 0.1263068237304688 ; xx [ 161 ] =
-0.9199576416015626 ; xx [ 165 ] = xx [ 0 ] * state [ 72 ] ; xx [ 166 ] = sin
-( xx [ 165 ] ) ; xx [ 167 ] = xx [ 0 ] * state [ 73 ] ; xx [ 168 ] = sin ( xx
-[ 167 ] ) ; xx [ 169 ] = xx [ 166 ] * xx [ 168 ] ; xx [ 170 ] = xx [ 0 ] *
-state [ 74 ] ; xx [ 171 ] = sin ( xx [ 170 ] ) ; xx [ 172 ] = cos ( xx [ 170
-] ) ; xx [ 170 ] = cos ( xx [ 165 ] ) ; xx [ 165 ] = cos ( xx [ 167 ] ) ; xx
-[ 167 ] = xx [ 170 ] * xx [ 165 ] ; xx [ 173 ] = xx [ 169 ] * xx [ 171 ] - xx
-[ 172 ] * xx [ 167 ] ; xx [ 174 ] = xx [ 165 ] * xx [ 166 ] ; xx [ 165 ] = xx
-[ 170 ] * xx [ 168 ] ; xx [ 166 ] = xx [ 172 ] * xx [ 174 ] + xx [ 165 ] * xx
-[ 171 ] ; xx [ 168 ] = xx [ 174 ] * xx [ 171 ] - xx [ 172 ] * xx [ 165 ] ; xx
-[ 165 ] = xx [ 167 ] * xx [ 171 ] + xx [ 172 ] * xx [ 169 ] ; xx [ 167 ] = xx
-[ 0 ] * state [ 78 ] ; xx [ 169 ] = sin ( xx [ 167 ] ) ; xx [ 170 ] = xx [ 0
-] * state [ 79 ] ; xx [ 174 ] = sin ( xx [ 170 ] ) ; xx [ 175 ] = xx [ 169 ]
-* xx [ 174 ] ; xx [ 176 ] = xx [ 0 ] * state [ 80 ] ; xx [ 177 ] = sin ( xx [
-176 ] ) ; xx [ 178 ] = cos ( xx [ 176 ] ) ; xx [ 176 ] = cos ( xx [ 167 ] ) ;
-xx [ 167 ] = cos ( xx [ 170 ] ) ; xx [ 170 ] = xx [ 176 ] * xx [ 167 ] ; xx [
-179 ] = xx [ 175 ] * xx [ 177 ] - xx [ 178 ] * xx [ 170 ] ; xx [ 180 ] = xx [
-167 ] * xx [ 169 ] ; xx [ 167 ] = xx [ 176 ] * xx [ 174 ] ; xx [ 169 ] = xx [
-178 ] * xx [ 180 ] + xx [ 167 ] * xx [ 177 ] ; xx [ 174 ] = xx [ 180 ] * xx [
-177 ] - xx [ 178 ] * xx [ 167 ] ; xx [ 167 ] = xx [ 170 ] * xx [ 177 ] + xx [
-178 ] * xx [ 175 ] ; xx [ 170 ] = xx [ 0 ] * state [ 84 ] ; xx [ 175 ] = sin
-( xx [ 170 ] ) ; xx [ 176 ] = xx [ 0 ] * state [ 85 ] ; xx [ 180 ] = sin ( xx
-[ 176 ] ) ; xx [ 181 ] = xx [ 175 ] * xx [ 180 ] ; xx [ 182 ] = xx [ 0 ] *
-state [ 86 ] ; xx [ 0 ] = sin ( xx [ 182 ] ) ; xx [ 183 ] = cos ( xx [ 182 ]
-) ; xx [ 182 ] = cos ( xx [ 170 ] ) ; xx [ 170 ] = cos ( xx [ 176 ] ) ; xx [
-176 ] = xx [ 182 ] * xx [ 170 ] ; xx [ 184 ] = xx [ 181 ] * xx [ 0 ] - xx [
-183 ] * xx [ 176 ] ; xx [ 185 ] = xx [ 170 ] * xx [ 175 ] ; xx [ 170 ] = xx [
-182 ] * xx [ 180 ] ; xx [ 175 ] = xx [ 183 ] * xx [ 185 ] + xx [ 170 ] * xx [
-0 ] ; xx [ 180 ] = xx [ 185 ] * xx [ 0 ] - xx [ 183 ] * xx [ 170 ] ; xx [ 170
-] = xx [ 176 ] * xx [ 0 ] + xx [ 183 ] * xx [ 181 ] ; xx [ 185 ] = xx [ 8 ] ;
-xx [ 186 ] = xx [ 4 ] ; xx [ 187 ] = xx [ 13 ] ; xx [ 188 ] = xx [ 5 ] ;
-pm_math_Quaternion_compose_ra ( xx + 185 , xx + 27 , xx + 189 ) ; xx [ 193 ]
-= xx [ 37 ] ; xx [ 194 ] = xx [ 39 ] ; xx [ 195 ] = xx [ 41 ] ;
-pm_math_Quaternion_xform_ra ( xx + 185 , xx + 193 , xx + 196 ) ; xx [ 176 ] =
-xx [ 196 ] - xx [ 15 ] ; xx [ 181 ] = xx [ 197 ] + xx [ 12 ] ; xx [ 182 ] =
-xx [ 198 ] + xx [ 16 ] ; pm_math_Quaternion_compose_ra ( xx + 189 , xx + 53 ,
-xx + 185 ) ; xx [ 196 ] = xx [ 63 ] ; xx [ 197 ] = xx [ 64 ] ; xx [ 198 ] =
-xx [ 60 ] ; pm_math_Quaternion_xform_ra ( xx + 189 , xx + 196 , xx + 199 ) ;
-xx [ 202 ] = xx [ 199 ] + xx [ 176 ] ; xx [ 203 ] = xx [ 200 ] + xx [ 181 ] ;
-xx [ 199 ] = xx [ 201 ] + xx [ 182 ] ; pm_math_Quaternion_compose_ra ( xx +
-185 , xx + 74 , xx + 204 ) ; xx [ 208 ] = xx [ 69 ] ; xx [ 209 ] = xx [ 84 ]
-; xx [ 210 ] = xx [ 81 ] ; pm_math_Quaternion_xform_ra ( xx + 185 , xx + 208
-, xx + 211 ) ; xx [ 200 ] = xx [ 211 ] + xx [ 202 ] ; xx [ 201 ] = xx [ 212 ]
-+ xx [ 203 ] ; xx [ 211 ] = xx [ 213 ] + xx [ 199 ] ;
-pm_math_Quaternion_compose_ra ( xx + 204 , xx + 103 , xx + 212 ) ; xx [ 216 ]
-= xx [ 82 ] ; xx [ 217 ] = xx [ 90 ] ; xx [ 218 ] = xx [ 100 ] ;
-pm_math_Quaternion_xform_ra ( xx + 204 , xx + 216 , xx + 219 ) ;
-pm_math_Quaternion_compose_ra ( xx + 74 , xx + 103 , xx + 222 ) ;
-pm_math_Quaternion_xform_ra ( xx + 74 , xx + 216 , xx + 226 ) ; xx [ 229 ] =
-xx [ 226 ] - xx [ 61 ] ; xx [ 61 ] = xx [ 227 ] + xx [ 84 ] ; xx [ 226 ] = xx
-[ 228 ] + xx [ 81 ] ; pm_math_Quaternion_compose_ra ( xx + 53 , xx + 222 , xx
-+ 230 ) ; xx [ 234 ] = xx [ 229 ] ; xx [ 235 ] = xx [ 61 ] ; xx [ 236 ] = xx
-[ 226 ] ; pm_math_Quaternion_xform_ra ( xx + 53 , xx + 234 , xx + 237 ) ; xx
-[ 227 ] = xx [ 237 ] + xx [ 63 ] ; xx [ 228 ] = xx [ 238 ] + xx [ 64 ] ; xx [
-234 ] = xx [ 239 ] + xx [ 60 ] ; pm_math_Quaternion_compose_ra ( xx + 27 , xx
-+ 230 , xx + 235 ) ; xx [ 239 ] = xx [ 227 ] ; xx [ 240 ] = xx [ 228 ] ; xx [
-241 ] = xx [ 234 ] ; pm_math_Quaternion_xform_ra ( xx + 27 , xx + 239 , xx +
-242 ) ; xx [ 239 ] = 1.0 ; xx [ 240 ] = xx [ 11 ] * xx [ 1 ] + xx [ 7 ] * xx
-[ 3 ] ; xx [ 241 ] = ( xx [ 239 ] - ( xx [ 13 ] * xx [ 13 ] + xx [ 5 ] * xx [
-5 ] ) * xx [ 14 ] ) * state [ 3 ] + xx [ 14 ] * xx [ 2 ] * xx [ 240 ] * state
+xx [ 0 ] * state [ 25 ] ; xx [ 83 ] = 4.103512650758317e-10 ; xx [ 87 ] = sin
+( xx [ 82 ] ) ; xx [ 88 ] = 0.9994592018341244 ; xx [ 89 ] =
+0.03288318520300273 ; xx [ 90 ] = cos ( xx [ 82 ] ) ; xx [ 91 ] = xx [ 83 ] *
+xx [ 87 ] ; xx [ 92 ] = xx [ 88 ] * xx [ 87 ] ; xx [ 93 ] = xx [ 89 ] * xx [
+87 ] ; pm_math_Quaternion_compose_ra ( xx + 95 , xx + 90 , xx + 99 ) ; xx [
+82 ] = xx [ 0 ] * state [ 26 ] ; xx [ 87 ] = 6.492504809889092e-11 ; xx [ 90
+] = sin ( xx [ 82 ] ) ; xx [ 91 ] = cos ( xx [ 82 ] ) ; xx [ 92 ] = - ( xx [
+87 ] * xx [ 90 ] ) ; xx [ 93 ] = - ( xx [ 89 ] * xx [ 90 ] ) ; xx [ 94 ] = xx
+[ 88 ] * xx [ 90 ] ; pm_math_Quaternion_compose_ra ( xx + 99 , xx + 91 , xx +
+95 ) ; xx [ 99 ] = 3.04214492957313e-11 ; xx [ 100 ] = - 0.02935858602823881
+; xx [ 101 ] = - 0.1242654207645331 ; pm_math_Quaternion_xform_ra ( xx + 95 ,
+xx + 99 , xx + 102 ) ; xx [ 82 ] = 4.855313199912053e-13 - xx [ 102 ] ; xx [
+90 ] = 0.01419776350117569 - xx [ 103 ] ; xx [ 102 ] = 0.0153662351784256 -
+xx [ 104 ] ; xx [ 103 ] = xx [ 0 ] * state [ 30 ] ; xx [ 104 ] = sin ( xx [
+103 ] ) ; xx [ 105 ] = xx [ 0 ] * state [ 31 ] ; xx [ 106 ] = sin ( xx [ 105
+] ) ; xx [ 107 ] = xx [ 104 ] * xx [ 106 ] ; xx [ 108 ] = xx [ 0 ] * state [
+32 ] ; xx [ 109 ] = sin ( xx [ 108 ] ) ; xx [ 110 ] = cos ( xx [ 108 ] ) ; xx
+[ 108 ] = cos ( xx [ 103 ] ) ; xx [ 103 ] = cos ( xx [ 105 ] ) ; xx [ 105 ] =
+xx [ 108 ] * xx [ 103 ] ; xx [ 111 ] = xx [ 107 ] * xx [ 109 ] - xx [ 110 ] *
+xx [ 105 ] ; xx [ 112 ] = xx [ 103 ] * xx [ 104 ] ; xx [ 103 ] = xx [ 108 ] *
+xx [ 106 ] ; xx [ 104 ] = xx [ 110 ] * xx [ 112 ] + xx [ 103 ] * xx [ 109 ] ;
+xx [ 106 ] = xx [ 112 ] * xx [ 109 ] - xx [ 110 ] * xx [ 103 ] ; xx [ 103 ] =
+xx [ 105 ] * xx [ 109 ] + xx [ 110 ] * xx [ 107 ] ; xx [ 105 ] =
+0.01688944435119629 ; xx [ 107 ] = 0.1319682159423828 ; xx [ 108 ] =
+0.8089576416015625 ; xx [ 112 ] = xx [ 0 ] * state [ 36 ] ; xx [ 113 ] = sin
+( xx [ 112 ] ) ; xx [ 114 ] = xx [ 0 ] * state [ 37 ] ; xx [ 115 ] = sin ( xx
+[ 114 ] ) ; xx [ 116 ] = xx [ 113 ] * xx [ 115 ] ; xx [ 117 ] = xx [ 0 ] *
+state [ 38 ] ; xx [ 118 ] = sin ( xx [ 117 ] ) ; xx [ 119 ] = cos ( xx [ 117
+] ) ; xx [ 117 ] = cos ( xx [ 112 ] ) ; xx [ 112 ] = cos ( xx [ 114 ] ) ; xx
+[ 114 ] = xx [ 117 ] * xx [ 112 ] ; xx [ 120 ] = xx [ 116 ] * xx [ 118 ] - xx
+[ 119 ] * xx [ 114 ] ; xx [ 121 ] = xx [ 112 ] * xx [ 113 ] ; xx [ 112 ] = xx
+[ 117 ] * xx [ 115 ] ; xx [ 113 ] = xx [ 119 ] * xx [ 121 ] + xx [ 112 ] * xx
+[ 118 ] ; xx [ 115 ] = xx [ 121 ] * xx [ 118 ] - xx [ 119 ] * xx [ 112 ] ; xx
+[ 112 ] = xx [ 114 ] * xx [ 118 ] + xx [ 119 ] * xx [ 116 ] ; xx [ 114 ] = xx
+[ 0 ] * state [ 42 ] ; xx [ 116 ] = sin ( xx [ 114 ] ) ; xx [ 117 ] = xx [ 0
+] * state [ 43 ] ; xx [ 121 ] = sin ( xx [ 117 ] ) ; xx [ 122 ] = xx [ 116 ]
+* xx [ 121 ] ; xx [ 123 ] = xx [ 0 ] * state [ 44 ] ; xx [ 124 ] = sin ( xx [
+123 ] ) ; xx [ 125 ] = cos ( xx [ 123 ] ) ; xx [ 123 ] = cos ( xx [ 114 ] ) ;
+xx [ 114 ] = cos ( xx [ 117 ] ) ; xx [ 117 ] = xx [ 123 ] * xx [ 114 ] ; xx [
+126 ] = xx [ 122 ] * xx [ 124 ] - xx [ 125 ] * xx [ 117 ] ; xx [ 127 ] = xx [
+114 ] * xx [ 116 ] ; xx [ 114 ] = xx [ 123 ] * xx [ 121 ] ; xx [ 116 ] = xx [
+125 ] * xx [ 127 ] + xx [ 114 ] * xx [ 124 ] ; xx [ 121 ] = xx [ 127 ] * xx [
+124 ] - xx [ 125 ] * xx [ 114 ] ; xx [ 114 ] = xx [ 117 ] * xx [ 124 ] + xx [
+125 ] * xx [ 122 ] ; xx [ 117 ] = 9.709312438964843e-3 ; xx [ 122 ] = -
+2.232642650604248e-3 ; xx [ 123 ] = 0.8689576416015625 ; xx [ 127 ] = xx [ 0
+] * state [ 48 ] ; xx [ 128 ] = sin ( xx [ 127 ] ) ; xx [ 129 ] = xx [ 0 ] *
+state [ 49 ] ; xx [ 130 ] = sin ( xx [ 129 ] ) ; xx [ 131 ] = xx [ 128 ] * xx
+[ 130 ] ; xx [ 132 ] = xx [ 0 ] * state [ 50 ] ; xx [ 133 ] = sin ( xx [ 132
+] ) ; xx [ 134 ] = cos ( xx [ 132 ] ) ; xx [ 132 ] = cos ( xx [ 127 ] ) ; xx
+[ 127 ] = cos ( xx [ 129 ] ) ; xx [ 129 ] = xx [ 132 ] * xx [ 127 ] ; xx [
+135 ] = xx [ 131 ] * xx [ 133 ] - xx [ 134 ] * xx [ 129 ] ; xx [ 136 ] = xx [
+127 ] * xx [ 128 ] ; xx [ 127 ] = xx [ 132 ] * xx [ 130 ] ; xx [ 128 ] = xx [
+134 ] * xx [ 136 ] + xx [ 127 ] * xx [ 133 ] ; xx [ 130 ] = xx [ 136 ] * xx [
+133 ] - xx [ 134 ] * xx [ 127 ] ; xx [ 127 ] = xx [ 129 ] * xx [ 133 ] + xx [
+134 ] * xx [ 131 ] ; xx [ 129 ] = xx [ 0 ] * state [ 54 ] ; xx [ 131 ] = sin
+( xx [ 129 ] ) ; xx [ 132 ] = xx [ 0 ] * state [ 55 ] ; xx [ 136 ] = sin ( xx
+[ 132 ] ) ; xx [ 137 ] = xx [ 131 ] * xx [ 136 ] ; xx [ 138 ] = xx [ 0 ] *
+state [ 56 ] ; xx [ 139 ] = sin ( xx [ 138 ] ) ; xx [ 140 ] = cos ( xx [ 138
+] ) ; xx [ 138 ] = cos ( xx [ 129 ] ) ; xx [ 129 ] = cos ( xx [ 132 ] ) ; xx
+[ 132 ] = xx [ 138 ] * xx [ 129 ] ; xx [ 141 ] = xx [ 137 ] * xx [ 139 ] - xx
+[ 140 ] * xx [ 132 ] ; xx [ 142 ] = xx [ 129 ] * xx [ 131 ] ; xx [ 129 ] = xx
+[ 138 ] * xx [ 136 ] ; xx [ 131 ] = xx [ 140 ] * xx [ 142 ] + xx [ 129 ] * xx
+[ 139 ] ; xx [ 136 ] = xx [ 142 ] * xx [ 139 ] - xx [ 140 ] * xx [ 129 ] ; xx
+[ 129 ] = xx [ 132 ] * xx [ 139 ] + xx [ 140 ] * xx [ 137 ] ; xx [ 132 ] =
+0.06488653564453126 ; xx [ 137 ] = 0.03644176864624023 ; xx [ 138 ] =
+0.9499576416015625 ; xx [ 142 ] = xx [ 0 ] * state [ 60 ] ; xx [ 143 ] = sin
+( xx [ 142 ] ) ; xx [ 144 ] = xx [ 0 ] * state [ 61 ] ; xx [ 145 ] = sin ( xx
+[ 144 ] ) ; xx [ 146 ] = xx [ 143 ] * xx [ 145 ] ; xx [ 147 ] = xx [ 0 ] *
+state [ 62 ] ; xx [ 148 ] = sin ( xx [ 147 ] ) ; xx [ 149 ] = cos ( xx [ 147
+] ) ; xx [ 147 ] = cos ( xx [ 142 ] ) ; xx [ 142 ] = cos ( xx [ 144 ] ) ; xx
+[ 144 ] = xx [ 147 ] * xx [ 142 ] ; xx [ 150 ] = xx [ 146 ] * xx [ 148 ] - xx
+[ 149 ] * xx [ 144 ] ; xx [ 151 ] = xx [ 142 ] * xx [ 143 ] ; xx [ 142 ] = xx
+[ 147 ] * xx [ 145 ] ; xx [ 143 ] = xx [ 149 ] * xx [ 151 ] + xx [ 142 ] * xx
+[ 148 ] ; xx [ 145 ] = xx [ 151 ] * xx [ 148 ] - xx [ 149 ] * xx [ 142 ] ; xx
+[ 142 ] = xx [ 144 ] * xx [ 148 ] + xx [ 149 ] * xx [ 146 ] ; xx [ 144 ] =
+0.1324676666259766 ; xx [ 146 ] = 0.1263068237304688 ; xx [ 147 ] =
+0.9199576416015626 ; xx [ 151 ] = xx [ 0 ] * state [ 66 ] ; xx [ 152 ] = sin
+( xx [ 151 ] ) ; xx [ 153 ] = xx [ 0 ] * state [ 67 ] ; xx [ 154 ] = sin ( xx
+[ 153 ] ) ; xx [ 155 ] = xx [ 152 ] * xx [ 154 ] ; xx [ 156 ] = xx [ 0 ] *
+state [ 68 ] ; xx [ 157 ] = sin ( xx [ 156 ] ) ; xx [ 158 ] = cos ( xx [ 156
+] ) ; xx [ 156 ] = cos ( xx [ 151 ] ) ; xx [ 151 ] = cos ( xx [ 153 ] ) ; xx
+[ 153 ] = xx [ 156 ] * xx [ 151 ] ; xx [ 159 ] = xx [ 155 ] * xx [ 157 ] - xx
+[ 158 ] * xx [ 153 ] ; xx [ 160 ] = xx [ 151 ] * xx [ 152 ] ; xx [ 151 ] = xx
+[ 156 ] * xx [ 154 ] ; xx [ 152 ] = xx [ 158 ] * xx [ 160 ] + xx [ 151 ] * xx
+[ 157 ] ; xx [ 154 ] = xx [ 160 ] * xx [ 157 ] - xx [ 158 ] * xx [ 151 ] ; xx
+[ 151 ] = xx [ 153 ] * xx [ 157 ] + xx [ 158 ] * xx [ 155 ] ; xx [ 153 ] = xx
+[ 0 ] * state [ 72 ] ; xx [ 155 ] = sin ( xx [ 153 ] ) ; xx [ 156 ] = xx [ 0
+] * state [ 73 ] ; xx [ 160 ] = sin ( xx [ 156 ] ) ; xx [ 161 ] = xx [ 155 ]
+* xx [ 160 ] ; xx [ 162 ] = xx [ 0 ] * state [ 74 ] ; xx [ 0 ] = sin ( xx [
+162 ] ) ; xx [ 163 ] = cos ( xx [ 162 ] ) ; xx [ 162 ] = cos ( xx [ 153 ] ) ;
+xx [ 153 ] = cos ( xx [ 156 ] ) ; xx [ 156 ] = xx [ 162 ] * xx [ 153 ] ; xx [
+164 ] = xx [ 161 ] * xx [ 0 ] - xx [ 163 ] * xx [ 156 ] ; xx [ 165 ] = xx [
+153 ] * xx [ 155 ] ; xx [ 153 ] = xx [ 162 ] * xx [ 160 ] ; xx [ 155 ] = xx [
+163 ] * xx [ 165 ] + xx [ 153 ] * xx [ 0 ] ; xx [ 160 ] = xx [ 165 ] * xx [ 0
+] - xx [ 163 ] * xx [ 153 ] ; xx [ 153 ] = xx [ 156 ] * xx [ 0 ] + xx [ 163 ]
+* xx [ 161 ] ; xx [ 165 ] = xx [ 8 ] ; xx [ 166 ] = xx [ 4 ] ; xx [ 167 ] =
+xx [ 13 ] ; xx [ 168 ] = xx [ 5 ] ; pm_math_Quaternion_compose_ra ( xx + 165
+, xx + 27 , xx + 169 ) ; xx [ 173 ] = xx [ 37 ] ; xx [ 174 ] = xx [ 39 ] ; xx
+[ 175 ] = xx [ 41 ] ; pm_math_Quaternion_xform_ra ( xx + 165 , xx + 173 , xx
++ 176 ) ; xx [ 156 ] = xx [ 176 ] - xx [ 15 ] ; xx [ 161 ] = xx [ 177 ] + xx
+[ 12 ] ; xx [ 162 ] = xx [ 178 ] + xx [ 16 ] ; pm_math_Quaternion_compose_ra
+( xx + 169 , xx + 53 , xx + 165 ) ; xx [ 176 ] = xx [ 63 ] ; xx [ 177 ] = xx
+[ 64 ] ; xx [ 178 ] = xx [ 60 ] ; pm_math_Quaternion_xform_ra ( xx + 169 , xx
++ 176 , xx + 179 ) ; xx [ 182 ] = xx [ 179 ] + xx [ 156 ] ; xx [ 183 ] = xx [
+180 ] + xx [ 161 ] ; xx [ 179 ] = xx [ 181 ] + xx [ 162 ] ;
+pm_math_Quaternion_compose_ra ( xx + 165 , xx + 74 , xx + 184 ) ; xx [ 188 ]
+= xx [ 69 ] ; xx [ 189 ] = xx [ 84 ] ; xx [ 190 ] = xx [ 81 ] ;
+pm_math_Quaternion_xform_ra ( xx + 165 , xx + 188 , xx + 191 ) ; xx [ 180 ] =
+xx [ 191 ] + xx [ 182 ] ; xx [ 181 ] = xx [ 192 ] + xx [ 183 ] ; xx [ 191 ] =
+xx [ 193 ] + xx [ 179 ] ; pm_math_Quaternion_compose_ra ( xx + 184 , xx + 95
+, xx + 192 ) ; xx [ 196 ] = xx [ 82 ] ; xx [ 197 ] = xx [ 90 ] ; xx [ 198 ] =
+xx [ 102 ] ; pm_math_Quaternion_xform_ra ( xx + 184 , xx + 196 , xx + 199 ) ;
+pm_math_Quaternion_compose_ra ( xx + 74 , xx + 95 , xx + 202 ) ;
+pm_math_Quaternion_xform_ra ( xx + 74 , xx + 196 , xx + 206 ) ; xx [ 209 ] =
+xx [ 206 ] - xx [ 61 ] ; xx [ 61 ] = xx [ 207 ] + xx [ 84 ] ; xx [ 206 ] = xx
+[ 208 ] + xx [ 81 ] ; pm_math_Quaternion_compose_ra ( xx + 53 , xx + 202 , xx
++ 210 ) ; xx [ 214 ] = xx [ 209 ] ; xx [ 215 ] = xx [ 61 ] ; xx [ 216 ] = xx
+[ 206 ] ; pm_math_Quaternion_xform_ra ( xx + 53 , xx + 214 , xx + 217 ) ; xx
+[ 207 ] = xx [ 217 ] + xx [ 63 ] ; xx [ 208 ] = xx [ 218 ] + xx [ 64 ] ; xx [
+214 ] = xx [ 219 ] + xx [ 60 ] ; pm_math_Quaternion_compose_ra ( xx + 27 , xx
++ 210 , xx + 215 ) ; xx [ 219 ] = xx [ 207 ] ; xx [ 220 ] = xx [ 208 ] ; xx [
+221 ] = xx [ 214 ] ; pm_math_Quaternion_xform_ra ( xx + 27 , xx + 219 , xx +
+222 ) ; xx [ 219 ] = 1.0 ; xx [ 220 ] = xx [ 11 ] * xx [ 1 ] + xx [ 7 ] * xx
+[ 3 ] ; xx [ 221 ] = ( xx [ 219 ] - ( xx [ 13 ] * xx [ 13 ] + xx [ 5 ] * xx [
+5 ] ) * xx [ 14 ] ) * state [ 3 ] + xx [ 14 ] * xx [ 2 ] * xx [ 220 ] * state
 [ 4 ] ; xx [ 2 ] = xx [ 14 ] * ( xx [ 4 ] * xx [ 13 ] + xx [ 5 ] * xx [ 6 ] )
-* state [ 3 ] + ( xx [ 7 ] - xx [ 14 ] * xx [ 3 ] * xx [ 240 ] ) * state [ 4
+* state [ 3 ] + ( xx [ 7 ] - xx [ 14 ] * xx [ 3 ] * xx [ 220 ] ) * state [ 4
 ] + xx [ 11 ] * state [ 5 ] ; xx [ 3 ] = xx [ 14 ] * ( xx [ 5 ] * xx [ 4 ] -
-xx [ 13 ] * xx [ 6 ] ) * state [ 3 ] + ( xx [ 14 ] * xx [ 1 ] * xx [ 240 ] -
+xx [ 13 ] * xx [ 6 ] ) * state [ 3 ] + ( xx [ 14 ] * xx [ 1 ] * xx [ 220 ] -
 xx [ 11 ] ) * state [ 4 ] + xx [ 7 ] * state [ 5 ] ; xx [ 1 ] = xx [ 3 ] * xx
-[ 10 ] + xx [ 2 ] * xx [ 9 ] ; xx [ 6 ] = xx [ 9 ] * xx [ 241 ] ; xx [ 7 ] =
-xx [ 10 ] * xx [ 241 ] ; xx [ 9 ] = xx [ 241 ] ; xx [ 10 ] = xx [ 2 ] ; xx [
+[ 10 ] + xx [ 2 ] * xx [ 9 ] ; xx [ 6 ] = xx [ 9 ] * xx [ 221 ] ; xx [ 7 ] =
+xx [ 10 ] * xx [ 221 ] ; xx [ 9 ] = xx [ 221 ] ; xx [ 10 ] = xx [ 2 ] ; xx [
 11 ] = xx [ 3 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 27 , xx + 9 , xx
-+ 245 ) ; xx [ 240 ] = xx [ 20 ] * xx [ 17 ] ; xx [ 248 ] = xx [ 20 ] * xx [
-21 ] ; xx [ 249 ] = xx [ 23 ] * xx [ 17 ] + xx [ 22 ] * xx [ 21 ] ; xx [ 250
-] = ( xx [ 239 ] - ( xx [ 25 ] * xx [ 25 ] + xx [ 26 ] * xx [ 26 ] ) * xx [
-14 ] ) * state [ 9 ] + ( xx [ 20 ] - ( xx [ 240 ] * xx [ 17 ] + xx [ 248 ] *
-xx [ 21 ] - xx [ 18 ] * xx [ 249 ] ) * xx [ 14 ] ) * state [ 10 ] ; xx [ 20 ]
-= xx [ 245 ] + xx [ 250 ] ; xx [ 251 ] = xx [ 14 ] * ( xx [ 24 ] * xx [ 25 ]
++ 225 ) ; xx [ 220 ] = xx [ 20 ] * xx [ 17 ] ; xx [ 228 ] = xx [ 20 ] * xx [
+21 ] ; xx [ 229 ] = xx [ 23 ] * xx [ 17 ] + xx [ 22 ] * xx [ 21 ] ; xx [ 230
+] = ( xx [ 219 ] - ( xx [ 25 ] * xx [ 25 ] + xx [ 26 ] * xx [ 26 ] ) * xx [
+14 ] ) * state [ 9 ] + ( xx [ 20 ] - ( xx [ 220 ] * xx [ 17 ] + xx [ 228 ] *
+xx [ 21 ] - xx [ 18 ] * xx [ 229 ] ) * xx [ 14 ] ) * state [ 10 ] ; xx [ 20 ]
+= xx [ 225 ] + xx [ 230 ] ; xx [ 231 ] = xx [ 14 ] * ( xx [ 24 ] * xx [ 25 ]
 - xx [ 26 ] * xx [ 19 ] ) * state [ 9 ] + ( xx [ 22 ] - xx [ 14 ] * ( xx [ 21
-] * xx [ 249 ] + xx [ 18 ] * xx [ 248 ] ) ) * state [ 10 ] + xx [ 23 ] *
-state [ 11 ] ; xx [ 21 ] = xx [ 246 ] + xx [ 251 ] ; xx [ 245 ] = xx [ 14 ] *
+] * xx [ 229 ] + xx [ 18 ] * xx [ 228 ] ) ) * state [ 10 ] + xx [ 23 ] *
+state [ 11 ] ; xx [ 21 ] = xx [ 226 ] + xx [ 231 ] ; xx [ 225 ] = xx [ 14 ] *
 ( xx [ 25 ] * xx [ 19 ] + xx [ 26 ] * xx [ 24 ] ) * state [ 9 ] + ( xx [ 14 ]
-* ( xx [ 18 ] * xx [ 240 ] + xx [ 17 ] * xx [ 249 ] ) - xx [ 23 ] ) * state [
-10 ] + xx [ 22 ] * state [ 11 ] ; xx [ 17 ] = xx [ 247 ] + xx [ 245 ] ;
-pm_math_Vector3_cross_ra ( xx + 9 , xx + 193 , xx + 246 ) ; xx [ 9 ] = xx [
-246 ] + xx [ 1 ] ; xx [ 10 ] = xx [ 247 ] - xx [ 6 ] ; xx [ 11 ] = xx [ 248 ]
-- xx [ 7 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 27 , xx + 9 , xx + 193
-) ; xx [ 9 ] = xx [ 250 ] ; xx [ 10 ] = xx [ 251 ] ; xx [ 11 ] = xx [ 245 ] ;
-pm_math_Vector3_cross_ra ( xx + 31 , xx + 9 , xx + 27 ) ; xx [ 9 ] = xx [ 193
-] + xx [ 27 ] ; xx [ 10 ] = xx [ 194 ] + xx [ 28 ] ; xx [ 11 ] = xx [ 195 ] +
+* ( xx [ 18 ] * xx [ 220 ] + xx [ 17 ] * xx [ 229 ] ) - xx [ 23 ] ) * state [
+10 ] + xx [ 22 ] * state [ 11 ] ; xx [ 17 ] = xx [ 227 ] + xx [ 225 ] ;
+pm_math_Vector3_cross_ra ( xx + 9 , xx + 173 , xx + 226 ) ; xx [ 9 ] = xx [
+226 ] + xx [ 1 ] ; xx [ 10 ] = xx [ 227 ] - xx [ 6 ] ; xx [ 11 ] = xx [ 228 ]
+- xx [ 7 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 27 , xx + 9 , xx + 173
+) ; xx [ 9 ] = xx [ 230 ] ; xx [ 10 ] = xx [ 231 ] ; xx [ 11 ] = xx [ 225 ] ;
+pm_math_Vector3_cross_ra ( xx + 31 , xx + 9 , xx + 27 ) ; xx [ 9 ] = xx [ 173
+] + xx [ 27 ] ; xx [ 10 ] = xx [ 174 ] + xx [ 28 ] ; xx [ 11 ] = xx [ 175 ] +
 xx [ 29 ] ; xx [ 27 ] = xx [ 20 ] ; xx [ 28 ] = xx [ 21 ] ; xx [ 29 ] = xx [
 17 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 53 , xx + 27 , xx + 30 ) ;
 xx [ 18 ] = xx [ 52 ] * xx [ 49 ] ; xx [ 22 ] = xx [ 49 ] * xx [ 50 ] + xx [
-51 ] ; xx [ 193 ] = xx [ 18 ] ; xx [ 194 ] = xx [ 52 ] ; xx [ 195 ] = - xx [
-22 ] ; pm_math_Vector3_cross_ra ( xx + 50 , xx + 193 , xx + 245 ) ; xx [ 23 ]
+51 ] ; xx [ 173 ] = xx [ 18 ] ; xx [ 174 ] = xx [ 52 ] ; xx [ 175 ] = - xx [
+22 ] ; pm_math_Vector3_cross_ra ( xx + 50 , xx + 173 , xx + 225 ) ; xx [ 23 ]
 = xx [ 48 ] * xx [ 42 ] + xx [ 47 ] * xx [ 46 ] ; xx [ 33 ] = xx [ 45 ] * xx
-[ 42 ] ; xx [ 193 ] = xx [ 45 ] * xx [ 46 ] ; xx [ 194 ] = ( xx [ 239 ] + (
-xx [ 245 ] - xx [ 18 ] * xx [ 44 ] ) * xx [ 14 ] ) * state [ 15 ] + ( ( xx [
-43 ] * xx [ 23 ] + xx [ 33 ] * xx [ 42 ] + xx [ 193 ] * xx [ 46 ] ) * xx [ 14
-] - xx [ 45 ] ) * state [ 16 ] ; xx [ 18 ] = xx [ 30 ] + xx [ 194 ] ; xx [ 45
-] = ( xx [ 14 ] * ( xx [ 246 ] - xx [ 52 ] * xx [ 44 ] ) - xx [ 49 ] ) *
-state [ 15 ] + ( xx [ 47 ] + xx [ 14 ] * ( xx [ 43 ] * xx [ 193 ] - xx [ 46 ]
+[ 42 ] ; xx [ 173 ] = xx [ 45 ] * xx [ 46 ] ; xx [ 174 ] = ( xx [ 219 ] + (
+xx [ 225 ] - xx [ 18 ] * xx [ 44 ] ) * xx [ 14 ] ) * state [ 15 ] + ( ( xx [
+43 ] * xx [ 23 ] + xx [ 33 ] * xx [ 42 ] + xx [ 173 ] * xx [ 46 ] ) * xx [ 14
+] - xx [ 45 ] ) * state [ 16 ] ; xx [ 18 ] = xx [ 30 ] + xx [ 174 ] ; xx [ 45
+] = ( xx [ 14 ] * ( xx [ 226 ] - xx [ 52 ] * xx [ 44 ] ) - xx [ 49 ] ) *
+state [ 15 ] + ( xx [ 47 ] + xx [ 14 ] * ( xx [ 43 ] * xx [ 173 ] - xx [ 46 ]
 * xx [ 23 ] ) ) * state [ 16 ] + xx [ 48 ] * state [ 17 ] ; xx [ 46 ] = xx [
-31 ] + xx [ 45 ] ; xx [ 30 ] = xx [ 14 ] * ( xx [ 247 ] + xx [ 44 ] * xx [ 22
+31 ] + xx [ 45 ] ; xx [ 30 ] = xx [ 14 ] * ( xx [ 227 ] + xx [ 44 ] * xx [ 22
 ] ) * state [ 15 ] + ( xx [ 14 ] * ( xx [ 42 ] * xx [ 23 ] - xx [ 43 ] * xx [
 33 ] ) - xx [ 48 ] ) * state [ 16 ] + xx [ 47 ] * state [ 17 ] ; xx [ 22 ] =
-xx [ 32 ] + xx [ 30 ] ; pm_math_Vector3_cross_ra ( xx + 27 , xx + 196 , xx +
+xx [ 32 ] + xx [ 30 ] ; pm_math_Vector3_cross_ra ( xx + 27 , xx + 176 , xx +
 31 ) ; xx [ 27 ] = xx [ 31 ] + xx [ 9 ] ; xx [ 28 ] = xx [ 32 ] + xx [ 10 ] ;
 xx [ 29 ] = xx [ 33 ] + xx [ 11 ] ; pm_math_Quaternion_inverseXform_ra ( xx +
-53 , xx + 27 , xx + 31 ) ; xx [ 27 ] = xx [ 194 ] ; xx [ 28 ] = xx [ 45 ] ;
+53 , xx + 27 , xx + 31 ) ; xx [ 27 ] = xx [ 174 ] ; xx [ 28 ] = xx [ 45 ] ;
 xx [ 29 ] = xx [ 30 ] ; pm_math_Vector3_cross_ra ( xx + 57 , xx + 27 , xx +
 47 ) ; xx [ 23 ] = xx [ 31 ] + xx [ 47 ] ; xx [ 27 ] = xx [ 32 ] + xx [ 48 ]
 ; xx [ 28 ] = xx [ 33 ] + xx [ 49 ] ; xx [ 29 ] = xx [ 18 ] ; xx [ 30 ] = xx
@@ -764,244 +691,213 @@ xx [ 29 ] = xx [ 30 ] ; pm_math_Vector3_cross_ra ( xx + 57 , xx + 27 , xx +
 67 ] * xx [ 75 ] - xx [ 76 ] ; xx [ 53 ] = - xx [ 32 ] ; xx [ 54 ] = xx [ 77
 ] ; xx [ 55 ] = xx [ 33 ] ; pm_math_Vector3_cross_ra ( xx + 75 , xx + 53 , xx
 + 56 ) ; xx [ 53 ] = xx [ 62 ] ; xx [ 54 ] = xx [ 66 ] ; xx [ 55 ] = - xx [
-68 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 70 , xx + 53 , xx + 193 ) ;
-xx [ 42 ] = ( xx [ 239 ] + ( xx [ 74 ] * xx [ 32 ] + xx [ 56 ] ) * xx [ 14 ]
-) * state [ 21 ] + xx [ 193 ] * state [ 22 ] + xx [ 65 ] * state [ 23 ] ; xx
+68 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 70 , xx + 53 , xx + 173 ) ;
+xx [ 42 ] = ( xx [ 219 ] + ( xx [ 74 ] * xx [ 32 ] + xx [ 56 ] ) * xx [ 14 ]
+) * state [ 21 ] + xx [ 173 ] * state [ 22 ] + xx [ 65 ] * state [ 23 ] ; xx
 [ 32 ] = xx [ 47 ] + xx [ 42 ] ; xx [ 43 ] = ( xx [ 67 ] + xx [ 14 ] * ( xx [
-57 ] - xx [ 74 ] * xx [ 77 ] ) ) * state [ 21 ] + xx [ 194 ] * state [ 22 ] +
+57 ] - xx [ 74 ] * xx [ 77 ] ) ) * state [ 21 ] + xx [ 174 ] * state [ 22 ] +
 xx [ 68 ] * state [ 23 ] ; xx [ 45 ] = xx [ 48 ] + xx [ 43 ] ; xx [ 47 ] = xx
-[ 14 ] * ( xx [ 58 ] - xx [ 74 ] * xx [ 33 ] ) * state [ 21 ] + xx [ 195 ] *
+[ 14 ] * ( xx [ 58 ] - xx [ 74 ] * xx [ 33 ] ) * state [ 21 ] + xx [ 175 ] *
 state [ 22 ] + xx [ 66 ] * state [ 23 ] ; xx [ 33 ] = xx [ 49 ] + xx [ 47 ] ;
-pm_math_Vector3_cross_ra ( xx + 29 , xx + 208 , xx + 53 ) ; xx [ 29 ] = xx [
+pm_math_Vector3_cross_ra ( xx + 29 , xx + 188 , xx + 53 ) ; xx [ 29 ] = xx [
 53 ] + xx [ 23 ] ; xx [ 30 ] = xx [ 54 ] + xx [ 27 ] ; xx [ 31 ] = xx [ 55 ]
 + xx [ 28 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 74 , xx + 29 , xx +
 53 ) ; xx [ 29 ] = xx [ 42 ] ; xx [ 30 ] = xx [ 43 ] ; xx [ 31 ] = xx [ 47 ]
 ; pm_math_Vector3_cross_ra ( xx + 78 , xx + 29 , xx + 47 ) ; xx [ 29 ] = xx [
 53 ] + xx [ 47 ] ; xx [ 30 ] = xx [ 54 ] + xx [ 48 ] ; xx [ 31 ] = xx [ 55 ]
 + xx [ 49 ] ; xx [ 47 ] = xx [ 32 ] ; xx [ 48 ] = xx [ 45 ] ; xx [ 49 ] = xx
-[ 33 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 103 , xx + 47 , xx + 53 )
-; xx [ 42 ] = xx [ 85 ] * xx [ 106 ] - xx [ 86 ] * xx [ 105 ] ; xx [ 43 ] =
-xx [ 106 ] + xx [ 86 ] * xx [ 104 ] ; xx [ 56 ] = xx [ 85 ] * xx [ 104 ] + xx
-[ 105 ] ; xx [ 57 ] = xx [ 42 ] ; xx [ 58 ] = xx [ 43 ] ; xx [ 59 ] = - xx [
-56 ] ; pm_math_Vector3_cross_ra ( xx + 104 , xx + 57 , xx + 65 ) ; xx [ 57 ]
-= - xx [ 83 ] ; xx [ 58 ] = xx [ 88 ] ; xx [ 59 ] = xx [ 89 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 93 , xx + 57 , xx + 70 ) ; xx [ 57
-] = ( xx [ 239 ] + xx [ 14 ] * ( xx [ 65 ] - xx [ 103 ] * xx [ 42 ] ) ) *
-state [ 27 ] + xx [ 70 ] * state [ 28 ] + xx [ 87 ] * state [ 29 ] ; xx [ 42
-] = xx [ 53 ] + xx [ 57 ] ; xx [ 58 ] = ( xx [ 14 ] * ( xx [ 66 ] - xx [ 103
-] * xx [ 43 ] ) - xx [ 85 ] ) * state [ 27 ] + xx [ 71 ] * state [ 28 ] - xx
-[ 91 ] * state [ 29 ] ; xx [ 43 ] = xx [ 54 ] + xx [ 58 ] ; xx [ 53 ] = ( xx
-[ 14 ] * ( xx [ 67 ] + xx [ 103 ] * xx [ 56 ] ) - xx [ 86 ] ) * state [ 27 ]
-+ xx [ 72 ] * state [ 28 ] + xx [ 92 ] * state [ 29 ] ; xx [ 54 ] = xx [ 55 ]
-+ xx [ 53 ] ; pm_math_Vector3_cross_ra ( xx + 47 , xx + 216 , xx + 65 ) ; xx
-[ 47 ] = xx [ 65 ] + xx [ 29 ] ; xx [ 48 ] = xx [ 66 ] + xx [ 30 ] ; xx [ 49
-] = xx [ 67 ] + xx [ 31 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 103 ,
-xx + 47 , xx + 65 ) ; xx [ 47 ] = xx [ 57 ] ; xx [ 48 ] = xx [ 58 ] ; xx [ 49
-] = xx [ 53 ] ; pm_math_Vector3_cross_ra ( xx + 97 , xx + 47 , xx + 55 ) ; xx
-[ 47 ] = xx [ 65 ] + xx [ 55 ] ; xx [ 48 ] = xx [ 66 ] + xx [ 56 ] ; xx [ 49
-] = xx [ 67 ] + xx [ 57 ] ; xx [ 55 ] = xx [ 101 ] ; xx [ 56 ] = xx [ 108 ] ;
-xx [ 57 ] = xx [ 109 ] ; xx [ 58 ] = xx [ 115 ] ; xx [ 65 ] = xx [ 42 ] ; xx
-[ 66 ] = xx [ 43 ] ; xx [ 67 ] = xx [ 54 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 55 , xx + 65 , xx + 70 ) ; xx [ 78
-] = xx [ 110 ] ; xx [ 79 ] = xx [ 112 ] ; xx [ 80 ] = - xx [ 113 ] ;
-pm_math_Quaternion_inverseXform_ra ( xx + 55 , xx + 78 , xx + 85 ) ; xx [ 78
-] = xx [ 107 ] ; xx [ 79 ] = xx [ 111 ] ; xx [ 80 ] = xx [ 116 ] ;
-pm_math_Vector3_cross_ra ( xx + 65 , xx + 78 , xx + 91 ) ; xx [ 65 ] = xx [
-91 ] + xx [ 47 ] ; xx [ 66 ] = xx [ 92 ] + xx [ 48 ] ; xx [ 67 ] = xx [ 93 ]
-+ xx [ 49 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 55 , xx + 65 , xx +
-78 ) ; xx [ 53 ] = 0.0 ; motionData [ 0 ] = xx [ 8 ] ; motionData [ 1 ] = xx
-[ 4 ] ; motionData [ 2 ] = xx [ 13 ] ; motionData [ 3 ] = xx [ 5 ] ;
-motionData [ 4 ] = - xx [ 15 ] ; motionData [ 5 ] = xx [ 12 ] ; motionData [
-6 ] = xx [ 16 ] ; motionData [ 7 ] = xx [ 19 ] ; motionData [ 8 ] = xx [ 24 ]
-; motionData [ 9 ] = xx [ 25 ] ; motionData [ 10 ] = xx [ 26 ] ; motionData [
-11 ] = xx [ 37 ] ; motionData [ 12 ] = xx [ 39 ] ; motionData [ 13 ] = xx [
-41 ] ; motionData [ 14 ] = xx [ 44 ] ; motionData [ 15 ] = xx [ 50 ] ;
-motionData [ 16 ] = xx [ 51 ] ; motionData [ 17 ] = xx [ 52 ] ; motionData [
-18 ] = xx [ 63 ] ; motionData [ 19 ] = xx [ 64 ] ; motionData [ 20 ] = xx [
-60 ] ; motionData [ 21 ] = xx [ 74 ] ; motionData [ 22 ] = xx [ 75 ] ;
-motionData [ 23 ] = xx [ 76 ] ; motionData [ 24 ] = xx [ 77 ] ; motionData [
-25 ] = xx [ 69 ] ; motionData [ 26 ] = xx [ 84 ] ; motionData [ 27 ] = xx [
-81 ] ; motionData [ 28 ] = xx [ 103 ] ; motionData [ 29 ] = xx [ 104 ] ;
-motionData [ 30 ] = xx [ 105 ] ; motionData [ 31 ] = xx [ 106 ] ; motionData
-[ 32 ] = xx [ 82 ] ; motionData [ 33 ] = xx [ 90 ] ; motionData [ 34 ] = xx [
-100 ] ; motionData [ 35 ] = xx [ 101 ] ; motionData [ 36 ] = xx [ 108 ] ;
-motionData [ 37 ] = xx [ 109 ] ; motionData [ 38 ] = xx [ 115 ] ; motionData
-[ 39 ] = xx [ 107 ] ; motionData [ 40 ] = xx [ 111 ] ; motionData [ 41 ] = xx
-[ 116 ] ; motionData [ 42 ] = xx [ 125 ] ; motionData [ 43 ] = - xx [ 118 ] ;
-motionData [ 44 ] = xx [ 120 ] ; motionData [ 45 ] = - xx [ 117 ] ;
-motionData [ 46 ] = xx [ 119 ] ; motionData [ 47 ] = xx [ 121 ] ; motionData
-[ 48 ] = xx [ 122 ] ; motionData [ 49 ] = xx [ 134 ] ; motionData [ 50 ] = -
-xx [ 127 ] ; motionData [ 51 ] = xx [ 129 ] ; motionData [ 52 ] = - xx [ 126
-] ; motionData [ 53 ] = - xx [ 119 ] ; motionData [ 54 ] = xx [ 121 ] ;
-motionData [ 55 ] = xx [ 122 ] ; motionData [ 56 ] = xx [ 140 ] ; motionData
-[ 57 ] = - xx [ 130 ] ; motionData [ 58 ] = xx [ 135 ] ; motionData [ 59 ] =
-- xx [ 128 ] ; motionData [ 60 ] = xx [ 131 ] ; motionData [ 61 ] = xx [ 136
-] ; motionData [ 62 ] = xx [ 137 ] ; motionData [ 63 ] = xx [ 149 ] ;
-motionData [ 64 ] = - xx [ 142 ] ; motionData [ 65 ] = xx [ 144 ] ;
-motionData [ 66 ] = - xx [ 141 ] ; motionData [ 67 ] = - xx [ 131 ] ;
-motionData [ 68 ] = xx [ 136 ] ; motionData [ 69 ] = xx [ 137 ] ; motionData
-[ 70 ] = xx [ 155 ] ; motionData [ 71 ] = - xx [ 145 ] ; motionData [ 72 ] =
-xx [ 150 ] ; motionData [ 73 ] = - xx [ 143 ] ; motionData [ 74 ] = xx [ 146
-] ; motionData [ 75 ] = xx [ 151 ] ; motionData [ 76 ] = xx [ 152 ] ;
-motionData [ 77 ] = xx [ 164 ] ; motionData [ 78 ] = - xx [ 157 ] ;
-motionData [ 79 ] = xx [ 159 ] ; motionData [ 80 ] = - xx [ 156 ] ;
-motionData [ 81 ] = xx [ 158 ] ; motionData [ 82 ] = xx [ 160 ] ; motionData
-[ 83 ] = xx [ 161 ] ; motionData [ 84 ] = xx [ 173 ] ; motionData [ 85 ] = -
-xx [ 166 ] ; motionData [ 86 ] = xx [ 168 ] ; motionData [ 87 ] = - xx [ 165
-] ; motionData [ 88 ] = - xx [ 146 ] ; motionData [ 89 ] = xx [ 151 ] ;
-motionData [ 90 ] = xx [ 152 ] ; motionData [ 91 ] = xx [ 179 ] ; motionData
-[ 92 ] = - xx [ 169 ] ; motionData [ 93 ] = xx [ 174 ] ; motionData [ 94 ] =
-- xx [ 167 ] ; motionData [ 95 ] = - xx [ 158 ] ; motionData [ 96 ] = xx [
-160 ] ; motionData [ 97 ] = xx [ 161 ] ; motionData [ 98 ] = xx [ 184 ] ;
-motionData [ 99 ] = - xx [ 175 ] ; motionData [ 100 ] = xx [ 180 ] ;
-motionData [ 101 ] = - xx [ 170 ] ; motionData [ 102 ] = xx [ 158 ] ;
-motionData [ 103 ] = xx [ 160 ] ; motionData [ 104 ] = xx [ 161 ] ;
-motionData [ 105 ] = xx [ 189 ] ; motionData [ 106 ] = xx [ 190 ] ;
-motionData [ 107 ] = xx [ 191 ] ; motionData [ 108 ] = xx [ 192 ] ;
-motionData [ 109 ] = xx [ 176 ] ; motionData [ 110 ] = xx [ 181 ] ;
-motionData [ 111 ] = xx [ 182 ] ; motionData [ 112 ] = xx [ 185 ] ;
-motionData [ 113 ] = xx [ 186 ] ; motionData [ 114 ] = xx [ 187 ] ;
-motionData [ 115 ] = xx [ 188 ] ; motionData [ 116 ] = xx [ 202 ] ;
-motionData [ 117 ] = xx [ 203 ] ; motionData [ 118 ] = xx [ 199 ] ;
-motionData [ 119 ] = xx [ 204 ] ; motionData [ 120 ] = xx [ 205 ] ;
-motionData [ 121 ] = xx [ 206 ] ; motionData [ 122 ] = xx [ 207 ] ;
-motionData [ 123 ] = xx [ 200 ] ; motionData [ 124 ] = xx [ 201 ] ;
-motionData [ 125 ] = xx [ 211 ] ; motionData [ 126 ] = xx [ 212 ] ;
-motionData [ 127 ] = xx [ 213 ] ; motionData [ 128 ] = xx [ 214 ] ;
-motionData [ 129 ] = xx [ 215 ] ; motionData [ 130 ] = xx [ 219 ] + xx [ 200
-] ; motionData [ 131 ] = xx [ 220 ] + xx [ 201 ] ; motionData [ 132 ] = xx [
-221 ] + xx [ 211 ] ; motionData [ 133 ] = xx [ 222 ] ; motionData [ 134 ] =
-xx [ 223 ] ; motionData [ 135 ] = xx [ 224 ] ; motionData [ 136 ] = xx [ 225
-] ; motionData [ 137 ] = xx [ 229 ] ; motionData [ 138 ] = xx [ 61 ] ;
-motionData [ 139 ] = xx [ 226 ] ; motionData [ 140 ] = xx [ 230 ] ;
-motionData [ 141 ] = xx [ 231 ] ; motionData [ 142 ] = xx [ 232 ] ;
-motionData [ 143 ] = xx [ 233 ] ; motionData [ 144 ] = xx [ 227 ] ;
-motionData [ 145 ] = xx [ 228 ] ; motionData [ 146 ] = xx [ 234 ] ;
-motionData [ 147 ] = xx [ 235 ] ; motionData [ 148 ] = xx [ 236 ] ;
-motionData [ 149 ] = xx [ 237 ] ; motionData [ 150 ] = xx [ 238 ] ;
-motionData [ 151 ] = xx [ 242 ] - xx [ 34 ] ; motionData [ 152 ] = xx [ 243 ]
-- xx [ 35 ] + xx [ 38 ] ; motionData [ 153 ] = xx [ 244 ] - xx [ 36 ] + xx [
-40 ] ; motionData [ 154 ] = xx [ 241 ] ; motionData [ 155 ] = xx [ 2 ] ;
-motionData [ 156 ] = xx [ 3 ] ; motionData [ 157 ] = xx [ 1 ] ; motionData [
-158 ] = - xx [ 6 ] ; motionData [ 159 ] = - xx [ 7 ] ; motionData [ 160 ] =
-xx [ 20 ] ; motionData [ 161 ] = xx [ 21 ] ; motionData [ 162 ] = xx [ 17 ] ;
-motionData [ 163 ] = xx [ 9 ] ; motionData [ 164 ] = xx [ 10 ] ; motionData [
-165 ] = xx [ 11 ] ; motionData [ 166 ] = xx [ 18 ] ; motionData [ 167 ] = xx
-[ 46 ] ; motionData [ 168 ] = xx [ 22 ] ; motionData [ 169 ] = xx [ 23 ] ;
-motionData [ 170 ] = xx [ 27 ] ; motionData [ 171 ] = xx [ 28 ] ; motionData
-[ 172 ] = xx [ 32 ] ; motionData [ 173 ] = xx [ 45 ] ; motionData [ 174 ] =
-xx [ 33 ] ; motionData [ 175 ] = xx [ 29 ] ; motionData [ 176 ] = xx [ 30 ] ;
-motionData [ 177 ] = xx [ 31 ] ; motionData [ 178 ] = xx [ 42 ] ; motionData
-[ 179 ] = xx [ 43 ] ; motionData [ 180 ] = xx [ 54 ] ; motionData [ 181 ] =
-xx [ 47 ] ; motionData [ 182 ] = xx [ 48 ] ; motionData [ 183 ] = xx [ 49 ] ;
-motionData [ 184 ] = xx [ 70 ] + xx [ 85 ] * state [ 33 ] + xx [ 14 ] * xx [
-102 ] * xx [ 114 ] * state [ 34 ] ; motionData [ 185 ] = xx [ 71 ] + xx [ 86
-] * state [ 33 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 114 ] * xx [ 114 ] ) *
-state [ 34 ] ; motionData [ 186 ] = xx [ 72 ] + xx [ 87 ] * state [ 33 ] +
-state [ 35 ] ; motionData [ 187 ] = xx [ 78 ] ; motionData [ 188 ] = xx [ 79
-] ; motionData [ 189 ] = xx [ 80 ] ; motionData [ 190 ] = ( xx [ 239 ] - ( xx
-[ 120 ] * xx [ 120 ] + xx [ 117 ] * xx [ 117 ] ) * xx [ 14 ] ) * state [ 39 ]
-+ xx [ 14 ] * xx [ 124 ] * xx [ 123 ] * state [ 40 ] ; motionData [ 191 ] =
-xx [ 14 ] * ( xx [ 117 ] * xx [ 125 ] - xx [ 118 ] * xx [ 120 ] ) * state [
-39 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 123 ] * xx [ 123 ] ) * state [ 40 ] ;
-motionData [ 192 ] = xx [ 14 ] * ( xx [ 120 ] * xx [ 125 ] + xx [ 118 ] * xx
-[ 117 ] ) * state [ 39 ] + state [ 41 ] ; motionData [ 193 ] = xx [ 53 ] ;
-motionData [ 194 ] = xx [ 53 ] ; motionData [ 195 ] = xx [ 53 ] ; motionData
-[ 196 ] = ( xx [ 239 ] - ( xx [ 129 ] * xx [ 129 ] + xx [ 126 ] * xx [ 126 ]
-) * xx [ 14 ] ) * state [ 45 ] + xx [ 14 ] * xx [ 133 ] * xx [ 132 ] * state
-[ 46 ] ; motionData [ 197 ] = xx [ 14 ] * ( xx [ 126 ] * xx [ 134 ] - xx [
-127 ] * xx [ 129 ] ) * state [ 45 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 132 ] *
-xx [ 132 ] ) * state [ 46 ] ; motionData [ 198 ] = xx [ 14 ] * ( xx [ 129 ] *
-xx [ 134 ] + xx [ 127 ] * xx [ 126 ] ) * state [ 45 ] + state [ 47 ] ;
-motionData [ 199 ] = xx [ 53 ] ; motionData [ 200 ] = xx [ 53 ] ; motionData
-[ 201 ] = xx [ 53 ] ; motionData [ 202 ] = ( xx [ 239 ] - ( xx [ 135 ] * xx [
-135 ] + xx [ 128 ] * xx [ 128 ] ) * xx [ 14 ] ) * state [ 51 ] + xx [ 14 ] *
-xx [ 139 ] * xx [ 138 ] * state [ 52 ] ; motionData [ 203 ] = xx [ 14 ] * (
-xx [ 128 ] * xx [ 140 ] - xx [ 130 ] * xx [ 135 ] ) * state [ 51 ] + ( xx [
-239 ] - xx [ 14 ] * xx [ 138 ] * xx [ 138 ] ) * state [ 52 ] ; motionData [
-204 ] = xx [ 14 ] * ( xx [ 135 ] * xx [ 140 ] + xx [ 130 ] * xx [ 128 ] ) *
-state [ 51 ] + state [ 53 ] ; motionData [ 205 ] = xx [ 53 ] ; motionData [
-206 ] = xx [ 53 ] ; motionData [ 207 ] = xx [ 53 ] ; motionData [ 208 ] = (
-xx [ 239 ] - ( xx [ 144 ] * xx [ 144 ] + xx [ 141 ] * xx [ 141 ] ) * xx [ 14
-] ) * state [ 57 ] + xx [ 14 ] * xx [ 148 ] * xx [ 147 ] * state [ 58 ] ;
-motionData [ 209 ] = xx [ 14 ] * ( xx [ 141 ] * xx [ 149 ] - xx [ 142 ] * xx
-[ 144 ] ) * state [ 57 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 147 ] * xx [ 147 ]
-) * state [ 58 ] ; motionData [ 210 ] = xx [ 14 ] * ( xx [ 144 ] * xx [ 149 ]
-+ xx [ 142 ] * xx [ 141 ] ) * state [ 57 ] + state [ 59 ] ; motionData [ 211
-] = xx [ 53 ] ; motionData [ 212 ] = xx [ 53 ] ; motionData [ 213 ] = xx [ 53
-] ; motionData [ 214 ] = ( xx [ 239 ] - ( xx [ 150 ] * xx [ 150 ] + xx [ 143
-] * xx [ 143 ] ) * xx [ 14 ] ) * state [ 63 ] + xx [ 14 ] * xx [ 154 ] * xx [
-153 ] * state [ 64 ] ; motionData [ 215 ] = xx [ 14 ] * ( xx [ 143 ] * xx [
-155 ] - xx [ 145 ] * xx [ 150 ] ) * state [ 63 ] + ( xx [ 239 ] - xx [ 14 ] *
-xx [ 153 ] * xx [ 153 ] ) * state [ 64 ] ; motionData [ 216 ] = xx [ 14 ] * (
-xx [ 150 ] * xx [ 155 ] + xx [ 145 ] * xx [ 143 ] ) * state [ 63 ] + state [
-65 ] ; motionData [ 217 ] = xx [ 53 ] ; motionData [ 218 ] = xx [ 53 ] ;
-motionData [ 219 ] = xx [ 53 ] ; motionData [ 220 ] = ( xx [ 239 ] - ( xx [
-159 ] * xx [ 159 ] + xx [ 156 ] * xx [ 156 ] ) * xx [ 14 ] ) * state [ 69 ] +
-xx [ 14 ] * xx [ 163 ] * xx [ 162 ] * state [ 70 ] ; motionData [ 221 ] = xx
-[ 14 ] * ( xx [ 156 ] * xx [ 164 ] - xx [ 157 ] * xx [ 159 ] ) * state [ 69 ]
-+ ( xx [ 239 ] - xx [ 14 ] * xx [ 162 ] * xx [ 162 ] ) * state [ 70 ] ;
-motionData [ 222 ] = xx [ 14 ] * ( xx [ 159 ] * xx [ 164 ] + xx [ 157 ] * xx
-[ 156 ] ) * state [ 69 ] + state [ 71 ] ; motionData [ 223 ] = xx [ 53 ] ;
-motionData [ 224 ] = xx [ 53 ] ; motionData [ 225 ] = xx [ 53 ] ; motionData
-[ 226 ] = ( xx [ 239 ] - ( xx [ 168 ] * xx [ 168 ] + xx [ 165 ] * xx [ 165 ]
-) * xx [ 14 ] ) * state [ 75 ] + xx [ 14 ] * xx [ 172 ] * xx [ 171 ] * state
-[ 76 ] ; motionData [ 227 ] = xx [ 14 ] * ( xx [ 165 ] * xx [ 173 ] - xx [
-166 ] * xx [ 168 ] ) * state [ 75 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 171 ] *
-xx [ 171 ] ) * state [ 76 ] ; motionData [ 228 ] = xx [ 14 ] * ( xx [ 168 ] *
-xx [ 173 ] + xx [ 166 ] * xx [ 165 ] ) * state [ 75 ] + state [ 77 ] ;
-motionData [ 229 ] = xx [ 53 ] ; motionData [ 230 ] = xx [ 53 ] ; motionData
-[ 231 ] = xx [ 53 ] ; motionData [ 232 ] = ( xx [ 239 ] - ( xx [ 174 ] * xx [
-174 ] + xx [ 167 ] * xx [ 167 ] ) * xx [ 14 ] ) * state [ 81 ] + xx [ 14 ] *
-xx [ 178 ] * xx [ 177 ] * state [ 82 ] ; motionData [ 233 ] = xx [ 14 ] * (
-xx [ 167 ] * xx [ 179 ] - xx [ 169 ] * xx [ 174 ] ) * state [ 81 ] + ( xx [
-239 ] - xx [ 14 ] * xx [ 177 ] * xx [ 177 ] ) * state [ 82 ] ; motionData [
-234 ] = xx [ 14 ] * ( xx [ 174 ] * xx [ 179 ] + xx [ 169 ] * xx [ 167 ] ) *
-state [ 81 ] + state [ 83 ] ; motionData [ 235 ] = xx [ 53 ] ; motionData [
-236 ] = xx [ 53 ] ; motionData [ 237 ] = xx [ 53 ] ; motionData [ 238 ] = (
-xx [ 239 ] - ( xx [ 180 ] * xx [ 180 ] + xx [ 170 ] * xx [ 170 ] ) * xx [ 14
-] ) * state [ 87 ] + xx [ 14 ] * xx [ 183 ] * xx [ 0 ] * state [ 88 ] ;
-motionData [ 239 ] = xx [ 14 ] * ( xx [ 170 ] * xx [ 184 ] - xx [ 175 ] * xx
-[ 180 ] ) * state [ 87 ] + ( xx [ 239 ] - xx [ 14 ] * xx [ 0 ] * xx [ 0 ] ) *
-state [ 88 ] ; motionData [ 240 ] = xx [ 14 ] * ( xx [ 180 ] * xx [ 184 ] +
-xx [ 175 ] * xx [ 170 ] ) * state [ 87 ] + state [ 89 ] ; motionData [ 241 ]
-= xx [ 53 ] ; motionData [ 242 ] = xx [ 53 ] ; motionData [ 243 ] = xx [ 53 ]
-; } static size_t computeAssemblyError_0 ( const RuntimeDerivedValuesBundle *
-rtdv , const int * modeVector , const double * motionData , double * error )
-{ const double * rtdvd = rtdv -> mDoubles . mValues ; const int * rtdvi =
-rtdv -> mInts . mValues ; ( void ) rtdvd ; ( void ) rtdvi ; ( void )
-modeVector ; ( void ) motionData ; ( void ) error ; return 0 ; } static
-size_t computeAssemblyError_1 ( const RuntimeDerivedValuesBundle * rtdv ,
-const int * modeVector , const double * motionData , double * error ) { const
-double * rtdvd = rtdv -> mDoubles . mValues ; const int * rtdvi = rtdv ->
-mInts . mValues ; ( void ) rtdvd ; ( void ) rtdvi ; ( void ) modeVector ; (
-void ) motionData ; ( void ) error ; return 0 ; } size_t
-draft7_a151ee3d_1_computeAssemblyError ( const void * mech , const
-RuntimeDerivedValuesBundle * rtdv , size_t constraintIdx , const int *
-modeVector , const double * motionData , double * error ) { ( void ) mech ; (
-void ) rtdv ; ( void ) modeVector ; ( void ) motionData ; ( void ) error ;
-switch ( constraintIdx ) { case 0 : return computeAssemblyError_0 ( rtdv ,
-modeVector , motionData , error ) ; case 1 : return computeAssemblyError_1 (
-rtdv , modeVector , motionData , error ) ; } return 0 ; } static size_t
-computeAssemblyJacobian_0 ( const RuntimeDerivedValuesBundle * rtdv , const
+[ 33 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 95 , xx + 47 , xx + 53 ) ;
+xx [ 42 ] = xx [ 85 ] * xx [ 98 ] - xx [ 86 ] * xx [ 97 ] ; xx [ 43 ] = xx [
+98 ] + xx [ 86 ] * xx [ 96 ] ; xx [ 56 ] = xx [ 85 ] * xx [ 96 ] + xx [ 97 ]
+; xx [ 57 ] = xx [ 42 ] ; xx [ 58 ] = xx [ 43 ] ; xx [ 59 ] = - xx [ 56 ] ;
+pm_math_Vector3_cross_ra ( xx + 96 , xx + 57 , xx + 65 ) ; xx [ 57 ] = xx [
+83 ] ; xx [ 58 ] = xx [ 88 ] ; xx [ 59 ] = xx [ 89 ] ;
+pm_math_Quaternion_inverseXform_ra ( xx + 91 , xx + 57 , xx + 70 ) ; xx [ 57
+] = ( xx [ 219 ] + xx [ 14 ] * ( xx [ 65 ] - xx [ 95 ] * xx [ 42 ] ) ) *
+state [ 27 ] + xx [ 70 ] * state [ 28 ] - xx [ 87 ] * state [ 29 ] ; xx [ 42
+] = ( xx [ 14 ] * ( xx [ 66 ] - xx [ 95 ] * xx [ 43 ] ) - xx [ 85 ] ) * state
+[ 27 ] + xx [ 71 ] * state [ 28 ] - xx [ 89 ] * state [ 29 ] ; xx [ 43 ] = (
+xx [ 14 ] * ( xx [ 67 ] + xx [ 95 ] * xx [ 56 ] ) - xx [ 86 ] ) * state [ 27
+] + xx [ 72 ] * state [ 28 ] + xx [ 88 ] * state [ 29 ] ;
+pm_math_Vector3_cross_ra ( xx + 47 , xx + 196 , xx + 65 ) ; xx [ 47 ] = xx [
+65 ] + xx [ 29 ] ; xx [ 48 ] = xx [ 66 ] + xx [ 30 ] ; xx [ 49 ] = xx [ 67 ]
++ xx [ 31 ] ; pm_math_Quaternion_inverseXform_ra ( xx + 95 , xx + 47 , xx +
+65 ) ; xx [ 47 ] = xx [ 57 ] ; xx [ 48 ] = xx [ 42 ] ; xx [ 49 ] = xx [ 43 ]
+; pm_math_Vector3_cross_ra ( xx + 99 , xx + 47 , xx + 70 ) ; xx [ 47 ] = 0.0
+; motionData [ 0 ] = xx [ 8 ] ; motionData [ 1 ] = xx [ 4 ] ; motionData [ 2
+] = xx [ 13 ] ; motionData [ 3 ] = xx [ 5 ] ; motionData [ 4 ] = - xx [ 15 ]
+; motionData [ 5 ] = xx [ 12 ] ; motionData [ 6 ] = xx [ 16 ] ; motionData [
+7 ] = xx [ 19 ] ; motionData [ 8 ] = xx [ 24 ] ; motionData [ 9 ] = xx [ 25 ]
+; motionData [ 10 ] = xx [ 26 ] ; motionData [ 11 ] = xx [ 37 ] ; motionData
+[ 12 ] = xx [ 39 ] ; motionData [ 13 ] = xx [ 41 ] ; motionData [ 14 ] = xx [
+44 ] ; motionData [ 15 ] = xx [ 50 ] ; motionData [ 16 ] = xx [ 51 ] ;
+motionData [ 17 ] = xx [ 52 ] ; motionData [ 18 ] = xx [ 63 ] ; motionData [
+19 ] = xx [ 64 ] ; motionData [ 20 ] = xx [ 60 ] ; motionData [ 21 ] = xx [
+74 ] ; motionData [ 22 ] = xx [ 75 ] ; motionData [ 23 ] = xx [ 76 ] ;
+motionData [ 24 ] = xx [ 77 ] ; motionData [ 25 ] = xx [ 69 ] ; motionData [
+26 ] = xx [ 84 ] ; motionData [ 27 ] = xx [ 81 ] ; motionData [ 28 ] = xx [
+95 ] ; motionData [ 29 ] = xx [ 96 ] ; motionData [ 30 ] = xx [ 97 ] ;
+motionData [ 31 ] = xx [ 98 ] ; motionData [ 32 ] = xx [ 82 ] ; motionData [
+33 ] = xx [ 90 ] ; motionData [ 34 ] = xx [ 102 ] ; motionData [ 35 ] = xx [
+111 ] ; motionData [ 36 ] = - xx [ 104 ] ; motionData [ 37 ] = xx [ 106 ] ;
+motionData [ 38 ] = - xx [ 103 ] ; motionData [ 39 ] = xx [ 105 ] ;
+motionData [ 40 ] = xx [ 107 ] ; motionData [ 41 ] = xx [ 108 ] ; motionData
+[ 42 ] = xx [ 120 ] ; motionData [ 43 ] = - xx [ 113 ] ; motionData [ 44 ] =
+xx [ 115 ] ; motionData [ 45 ] = - xx [ 112 ] ; motionData [ 46 ] = - xx [
+105 ] ; motionData [ 47 ] = xx [ 107 ] ; motionData [ 48 ] = xx [ 108 ] ;
+motionData [ 49 ] = xx [ 126 ] ; motionData [ 50 ] = - xx [ 116 ] ;
+motionData [ 51 ] = xx [ 121 ] ; motionData [ 52 ] = - xx [ 114 ] ;
+motionData [ 53 ] = xx [ 117 ] ; motionData [ 54 ] = xx [ 122 ] ; motionData
+[ 55 ] = xx [ 123 ] ; motionData [ 56 ] = xx [ 135 ] ; motionData [ 57 ] = -
+xx [ 128 ] ; motionData [ 58 ] = xx [ 130 ] ; motionData [ 59 ] = - xx [ 127
+] ; motionData [ 60 ] = - xx [ 117 ] ; motionData [ 61 ] = xx [ 122 ] ;
+motionData [ 62 ] = xx [ 123 ] ; motionData [ 63 ] = xx [ 141 ] ; motionData
+[ 64 ] = - xx [ 131 ] ; motionData [ 65 ] = xx [ 136 ] ; motionData [ 66 ] =
+- xx [ 129 ] ; motionData [ 67 ] = xx [ 132 ] ; motionData [ 68 ] = xx [ 137
+] ; motionData [ 69 ] = xx [ 138 ] ; motionData [ 70 ] = xx [ 150 ] ;
+motionData [ 71 ] = - xx [ 143 ] ; motionData [ 72 ] = xx [ 145 ] ;
+motionData [ 73 ] = - xx [ 142 ] ; motionData [ 74 ] = xx [ 144 ] ;
+motionData [ 75 ] = xx [ 146 ] ; motionData [ 76 ] = xx [ 147 ] ; motionData
+[ 77 ] = xx [ 159 ] ; motionData [ 78 ] = - xx [ 152 ] ; motionData [ 79 ] =
+xx [ 154 ] ; motionData [ 80 ] = - xx [ 151 ] ; motionData [ 81 ] = - xx [
+132 ] ; motionData [ 82 ] = xx [ 137 ] ; motionData [ 83 ] = xx [ 138 ] ;
+motionData [ 84 ] = xx [ 164 ] ; motionData [ 85 ] = - xx [ 155 ] ;
+motionData [ 86 ] = xx [ 160 ] ; motionData [ 87 ] = - xx [ 153 ] ;
+motionData [ 88 ] = - xx [ 144 ] ; motionData [ 89 ] = xx [ 146 ] ;
+motionData [ 90 ] = xx [ 147 ] ; motionData [ 91 ] = xx [ 169 ] ; motionData
+[ 92 ] = xx [ 170 ] ; motionData [ 93 ] = xx [ 171 ] ; motionData [ 94 ] = xx
+[ 172 ] ; motionData [ 95 ] = xx [ 156 ] ; motionData [ 96 ] = xx [ 161 ] ;
+motionData [ 97 ] = xx [ 162 ] ; motionData [ 98 ] = xx [ 165 ] ; motionData
+[ 99 ] = xx [ 166 ] ; motionData [ 100 ] = xx [ 167 ] ; motionData [ 101 ] =
+xx [ 168 ] ; motionData [ 102 ] = xx [ 182 ] ; motionData [ 103 ] = xx [ 183
+] ; motionData [ 104 ] = xx [ 179 ] ; motionData [ 105 ] = xx [ 184 ] ;
+motionData [ 106 ] = xx [ 185 ] ; motionData [ 107 ] = xx [ 186 ] ;
+motionData [ 108 ] = xx [ 187 ] ; motionData [ 109 ] = xx [ 180 ] ;
+motionData [ 110 ] = xx [ 181 ] ; motionData [ 111 ] = xx [ 191 ] ;
+motionData [ 112 ] = xx [ 192 ] ; motionData [ 113 ] = xx [ 193 ] ;
+motionData [ 114 ] = xx [ 194 ] ; motionData [ 115 ] = xx [ 195 ] ;
+motionData [ 116 ] = xx [ 199 ] + xx [ 180 ] ; motionData [ 117 ] = xx [ 200
+] + xx [ 181 ] ; motionData [ 118 ] = xx [ 201 ] + xx [ 191 ] ; motionData [
+119 ] = xx [ 202 ] ; motionData [ 120 ] = xx [ 203 ] ; motionData [ 121 ] =
+xx [ 204 ] ; motionData [ 122 ] = xx [ 205 ] ; motionData [ 123 ] = xx [ 209
+] ; motionData [ 124 ] = xx [ 61 ] ; motionData [ 125 ] = xx [ 206 ] ;
+motionData [ 126 ] = xx [ 210 ] ; motionData [ 127 ] = xx [ 211 ] ;
+motionData [ 128 ] = xx [ 212 ] ; motionData [ 129 ] = xx [ 213 ] ;
+motionData [ 130 ] = xx [ 207 ] ; motionData [ 131 ] = xx [ 208 ] ;
+motionData [ 132 ] = xx [ 214 ] ; motionData [ 133 ] = xx [ 215 ] ;
+motionData [ 134 ] = xx [ 216 ] ; motionData [ 135 ] = xx [ 217 ] ;
+motionData [ 136 ] = xx [ 218 ] ; motionData [ 137 ] = xx [ 222 ] - xx [ 34 ]
+; motionData [ 138 ] = xx [ 223 ] - xx [ 35 ] + xx [ 38 ] ; motionData [ 139
+] = xx [ 224 ] - xx [ 36 ] + xx [ 40 ] ; motionData [ 140 ] = xx [ 221 ] ;
+motionData [ 141 ] = xx [ 2 ] ; motionData [ 142 ] = xx [ 3 ] ; motionData [
+143 ] = xx [ 1 ] ; motionData [ 144 ] = - xx [ 6 ] ; motionData [ 145 ] = -
+xx [ 7 ] ; motionData [ 146 ] = xx [ 20 ] ; motionData [ 147 ] = xx [ 21 ] ;
+motionData [ 148 ] = xx [ 17 ] ; motionData [ 149 ] = xx [ 9 ] ; motionData [
+150 ] = xx [ 10 ] ; motionData [ 151 ] = xx [ 11 ] ; motionData [ 152 ] = xx
+[ 18 ] ; motionData [ 153 ] = xx [ 46 ] ; motionData [ 154 ] = xx [ 22 ] ;
+motionData [ 155 ] = xx [ 23 ] ; motionData [ 156 ] = xx [ 27 ] ; motionData
+[ 157 ] = xx [ 28 ] ; motionData [ 158 ] = xx [ 32 ] ; motionData [ 159 ] =
+xx [ 45 ] ; motionData [ 160 ] = xx [ 33 ] ; motionData [ 161 ] = xx [ 29 ] ;
+motionData [ 162 ] = xx [ 30 ] ; motionData [ 163 ] = xx [ 31 ] ; motionData
+[ 164 ] = xx [ 53 ] + xx [ 57 ] ; motionData [ 165 ] = xx [ 54 ] + xx [ 42 ]
+; motionData [ 166 ] = xx [ 55 ] + xx [ 43 ] ; motionData [ 167 ] = xx [ 65 ]
++ xx [ 70 ] ; motionData [ 168 ] = xx [ 66 ] + xx [ 71 ] ; motionData [ 169 ]
+= xx [ 67 ] + xx [ 72 ] ; motionData [ 170 ] = ( xx [ 219 ] - ( xx [ 106 ] *
+xx [ 106 ] + xx [ 103 ] * xx [ 103 ] ) * xx [ 14 ] ) * state [ 33 ] + xx [ 14
+] * xx [ 110 ] * xx [ 109 ] * state [ 34 ] ; motionData [ 171 ] = xx [ 14 ] *
+( xx [ 103 ] * xx [ 111 ] - xx [ 104 ] * xx [ 106 ] ) * state [ 33 ] + ( xx [
+219 ] - xx [ 14 ] * xx [ 109 ] * xx [ 109 ] ) * state [ 34 ] ; motionData [
+172 ] = xx [ 14 ] * ( xx [ 106 ] * xx [ 111 ] + xx [ 104 ] * xx [ 103 ] ) *
+state [ 33 ] + state [ 35 ] ; motionData [ 173 ] = xx [ 47 ] ; motionData [
+174 ] = xx [ 47 ] ; motionData [ 175 ] = xx [ 47 ] ; motionData [ 176 ] = (
+xx [ 219 ] - ( xx [ 115 ] * xx [ 115 ] + xx [ 112 ] * xx [ 112 ] ) * xx [ 14
+] ) * state [ 39 ] + xx [ 14 ] * xx [ 119 ] * xx [ 118 ] * state [ 40 ] ;
+motionData [ 177 ] = xx [ 14 ] * ( xx [ 112 ] * xx [ 120 ] - xx [ 113 ] * xx
+[ 115 ] ) * state [ 39 ] + ( xx [ 219 ] - xx [ 14 ] * xx [ 118 ] * xx [ 118 ]
+) * state [ 40 ] ; motionData [ 178 ] = xx [ 14 ] * ( xx [ 115 ] * xx [ 120 ]
++ xx [ 113 ] * xx [ 112 ] ) * state [ 39 ] + state [ 41 ] ; motionData [ 179
+] = xx [ 47 ] ; motionData [ 180 ] = xx [ 47 ] ; motionData [ 181 ] = xx [ 47
+] ; motionData [ 182 ] = ( xx [ 219 ] - ( xx [ 121 ] * xx [ 121 ] + xx [ 114
+] * xx [ 114 ] ) * xx [ 14 ] ) * state [ 45 ] + xx [ 14 ] * xx [ 125 ] * xx [
+124 ] * state [ 46 ] ; motionData [ 183 ] = xx [ 14 ] * ( xx [ 114 ] * xx [
+126 ] - xx [ 116 ] * xx [ 121 ] ) * state [ 45 ] + ( xx [ 219 ] - xx [ 14 ] *
+xx [ 124 ] * xx [ 124 ] ) * state [ 46 ] ; motionData [ 184 ] = xx [ 14 ] * (
+xx [ 121 ] * xx [ 126 ] + xx [ 116 ] * xx [ 114 ] ) * state [ 45 ] + state [
+47 ] ; motionData [ 185 ] = xx [ 47 ] ; motionData [ 186 ] = xx [ 47 ] ;
+motionData [ 187 ] = xx [ 47 ] ; motionData [ 188 ] = ( xx [ 219 ] - ( xx [
+130 ] * xx [ 130 ] + xx [ 127 ] * xx [ 127 ] ) * xx [ 14 ] ) * state [ 51 ] +
+xx [ 14 ] * xx [ 134 ] * xx [ 133 ] * state [ 52 ] ; motionData [ 189 ] = xx
+[ 14 ] * ( xx [ 127 ] * xx [ 135 ] - xx [ 128 ] * xx [ 130 ] ) * state [ 51 ]
++ ( xx [ 219 ] - xx [ 14 ] * xx [ 133 ] * xx [ 133 ] ) * state [ 52 ] ;
+motionData [ 190 ] = xx [ 14 ] * ( xx [ 130 ] * xx [ 135 ] + xx [ 128 ] * xx
+[ 127 ] ) * state [ 51 ] + state [ 53 ] ; motionData [ 191 ] = xx [ 47 ] ;
+motionData [ 192 ] = xx [ 47 ] ; motionData [ 193 ] = xx [ 47 ] ; motionData
+[ 194 ] = ( xx [ 219 ] - ( xx [ 136 ] * xx [ 136 ] + xx [ 129 ] * xx [ 129 ]
+) * xx [ 14 ] ) * state [ 57 ] + xx [ 14 ] * xx [ 140 ] * xx [ 139 ] * state
+[ 58 ] ; motionData [ 195 ] = xx [ 14 ] * ( xx [ 129 ] * xx [ 141 ] - xx [
+131 ] * xx [ 136 ] ) * state [ 57 ] + ( xx [ 219 ] - xx [ 14 ] * xx [ 139 ] *
+xx [ 139 ] ) * state [ 58 ] ; motionData [ 196 ] = xx [ 14 ] * ( xx [ 136 ] *
+xx [ 141 ] + xx [ 131 ] * xx [ 129 ] ) * state [ 57 ] + state [ 59 ] ;
+motionData [ 197 ] = xx [ 47 ] ; motionData [ 198 ] = xx [ 47 ] ; motionData
+[ 199 ] = xx [ 47 ] ; motionData [ 200 ] = ( xx [ 219 ] - ( xx [ 145 ] * xx [
+145 ] + xx [ 142 ] * xx [ 142 ] ) * xx [ 14 ] ) * state [ 63 ] + xx [ 14 ] *
+xx [ 149 ] * xx [ 148 ] * state [ 64 ] ; motionData [ 201 ] = xx [ 14 ] * (
+xx [ 142 ] * xx [ 150 ] - xx [ 143 ] * xx [ 145 ] ) * state [ 63 ] + ( xx [
+219 ] - xx [ 14 ] * xx [ 148 ] * xx [ 148 ] ) * state [ 64 ] ; motionData [
+202 ] = xx [ 14 ] * ( xx [ 145 ] * xx [ 150 ] + xx [ 143 ] * xx [ 142 ] ) *
+state [ 63 ] + state [ 65 ] ; motionData [ 203 ] = xx [ 47 ] ; motionData [
+204 ] = xx [ 47 ] ; motionData [ 205 ] = xx [ 47 ] ; motionData [ 206 ] = (
+xx [ 219 ] - ( xx [ 154 ] * xx [ 154 ] + xx [ 151 ] * xx [ 151 ] ) * xx [ 14
+] ) * state [ 69 ] + xx [ 14 ] * xx [ 158 ] * xx [ 157 ] * state [ 70 ] ;
+motionData [ 207 ] = xx [ 14 ] * ( xx [ 151 ] * xx [ 159 ] - xx [ 152 ] * xx
+[ 154 ] ) * state [ 69 ] + ( xx [ 219 ] - xx [ 14 ] * xx [ 157 ] * xx [ 157 ]
+) * state [ 70 ] ; motionData [ 208 ] = xx [ 14 ] * ( xx [ 154 ] * xx [ 159 ]
++ xx [ 152 ] * xx [ 151 ] ) * state [ 69 ] + state [ 71 ] ; motionData [ 209
+] = xx [ 47 ] ; motionData [ 210 ] = xx [ 47 ] ; motionData [ 211 ] = xx [ 47
+] ; motionData [ 212 ] = ( xx [ 219 ] - ( xx [ 160 ] * xx [ 160 ] + xx [ 153
+] * xx [ 153 ] ) * xx [ 14 ] ) * state [ 75 ] + xx [ 14 ] * xx [ 163 ] * xx [
+0 ] * state [ 76 ] ; motionData [ 213 ] = xx [ 14 ] * ( xx [ 153 ] * xx [ 164
+] - xx [ 155 ] * xx [ 160 ] ) * state [ 75 ] + ( xx [ 219 ] - xx [ 14 ] * xx
+[ 0 ] * xx [ 0 ] ) * state [ 76 ] ; motionData [ 214 ] = xx [ 14 ] * ( xx [
+160 ] * xx [ 164 ] + xx [ 155 ] * xx [ 153 ] ) * state [ 75 ] + state [ 77 ]
+; motionData [ 215 ] = xx [ 47 ] ; motionData [ 216 ] = xx [ 47 ] ;
+motionData [ 217 ] = xx [ 47 ] ; } static size_t computeAssemblyError_0 (
+const RuntimeDerivedValuesBundle * rtdv , const int * modeVector , const
+double * motionData , double * error ) { const double * rtdvd = rtdv ->
+mDoubles . mValues ; const int * rtdvi = rtdv -> mInts . mValues ; ( void )
+rtdvd ; ( void ) rtdvi ; ( void ) modeVector ; ( void ) motionData ; ( void )
+error ; return 0 ; } static size_t computeAssemblyError_1 ( const
+RuntimeDerivedValuesBundle * rtdv , const int * modeVector , const double *
+motionData , double * error ) { const double * rtdvd = rtdv -> mDoubles .
+mValues ; const int * rtdvi = rtdv -> mInts . mValues ; ( void ) rtdvd ; (
+void ) rtdvi ; ( void ) modeVector ; ( void ) motionData ; ( void ) error ;
+return 0 ; } size_t draft7_a151ee3d_1_computeAssemblyError ( const void *
+mech , const RuntimeDerivedValuesBundle * rtdv , size_t constraintIdx , const
+int * modeVector , const double * motionData , double * error ) { ( void )
+mech ; ( void ) rtdv ; ( void ) modeVector ; ( void ) motionData ; ( void )
+error ; switch ( constraintIdx ) { case 0 : return computeAssemblyError_0 (
+rtdv , modeVector , motionData , error ) ; case 1 : return
+computeAssemblyError_1 ( rtdv , modeVector , motionData , error ) ; } return
+0 ; } static size_t computeAssemblyJacobian_0 ( const
+RuntimeDerivedValuesBundle * rtdv , const double * state , const int *
+modeVector , const double * motionData , double * J ) { const double * rtdvd
+= rtdv -> mDoubles . mValues ; const int * rtdvi = rtdv -> mInts . mValues ;
+( void ) rtdvd ; ( void ) rtdvi ; ( void ) state ; ( void ) modeVector ; (
+void ) motionData ; ( void ) J ; return 0 ; } static size_t
+computeAssemblyJacobian_1 ( const RuntimeDerivedValuesBundle * rtdv , const
 double * state , const int * modeVector , const double * motionData , double
 * J ) { const double * rtdvd = rtdv -> mDoubles . mValues ; const int * rtdvi
 = rtdv -> mInts . mValues ; ( void ) rtdvd ; ( void ) rtdvi ; ( void ) state
 ; ( void ) modeVector ; ( void ) motionData ; ( void ) J ; return 0 ; }
-static size_t computeAssemblyJacobian_1 ( const RuntimeDerivedValuesBundle *
-rtdv , const double * state , const int * modeVector , const double *
-motionData , double * J ) { const double * rtdvd = rtdv -> mDoubles . mValues
-; const int * rtdvi = rtdv -> mInts . mValues ; ( void ) rtdvd ; ( void )
-rtdvi ; ( void ) state ; ( void ) modeVector ; ( void ) motionData ; ( void )
-J ; return 0 ; } size_t draft7_a151ee3d_1_computeAssemblyJacobian ( const
-void * mech , const RuntimeDerivedValuesBundle * rtdv , size_t constraintIdx
-, boolean_T forVelocitySatisfaction , const double * state , const int *
-modeVector , const double * motionData , double * J ) { ( void ) mech ; (
-void ) rtdv ; ( void ) state ; ( void ) modeVector ; ( void )
-forVelocitySatisfaction ; ( void ) motionData ; ( void ) J ; switch (
-constraintIdx ) { case 0 : return computeAssemblyJacobian_0 ( rtdv , state ,
-modeVector , motionData , J ) ; case 1 : return computeAssemblyJacobian_1 (
-rtdv , state , modeVector , motionData , J ) ; } return 0 ; } size_t
+size_t draft7_a151ee3d_1_computeAssemblyJacobian ( const void * mech , const
+RuntimeDerivedValuesBundle * rtdv , size_t constraintIdx , boolean_T
+forVelocitySatisfaction , const double * state , const int * modeVector ,
+const double * motionData , double * J ) { ( void ) mech ; ( void ) rtdv ; (
+void ) state ; ( void ) modeVector ; ( void ) forVelocitySatisfaction ; (
+void ) motionData ; ( void ) J ; switch ( constraintIdx ) { case 0 : return
+computeAssemblyJacobian_0 ( rtdv , state , modeVector , motionData , J ) ;
+case 1 : return computeAssemblyJacobian_1 ( rtdv , state , modeVector ,
+motionData , J ) ; } return 0 ; } size_t
 draft7_a151ee3d_1_computeFullAssemblyJacobian ( const void * mech , const
 RuntimeDerivedValuesBundle * rtdv , const double * state , const int *
 modeVector , const double * motionData , double * J ) { const double * rtdvd
@@ -1012,23 +908,23 @@ isInKinematicSingularity_0 ( const RuntimeDerivedValuesBundle * rtdv , const
 int * modeVector , const double * motionData ) { const double * rtdvd = rtdv
 -> mDoubles . mValues ; const int * rtdvi = rtdv -> mInts . mValues ; double
 xx [ 12 ] ; ( void ) rtdvd ; ( void ) rtdvi ; ( void ) modeVector ; xx [ 0 ]
-= - motionData [ 126 ] ; xx [ 1 ] = - motionData [ 127 ] ; xx [ 2 ] = -
-motionData [ 128 ] ; xx [ 3 ] = - motionData [ 129 ] ; xx [ 4 ] =
-0.9993181225840584 ; xx [ 5 ] = 0.03619150900402053 ; xx [ 6 ] =
-5.246456256884902e-3 ; xx [ 7 ] = 5.093058789132701e-3 ;
+= - motionData [ 112 ] ; xx [ 1 ] = - motionData [ 113 ] ; xx [ 2 ] = -
+motionData [ 114 ] ; xx [ 3 ] = - motionData [ 115 ] ; xx [ 4 ] =
+0.9994226636119462 ; xx [ 5 ] = 0.03397557150075099 ; xx [ 6 ] = -
+3.268676406922499e-11 ; xx [ 7 ] = - 2.051400253076505e-10 ;
 pm_math_Quaternion_compose_ra ( xx + 0 , xx + 4 , xx + 8 ) ; return fabs ( (
 xx [ 9 ] * xx [ 11 ] + xx [ 8 ] * xx [ 10 ] ) * 2.0 ) > 0.99999999999999 ; }
 static boolean_T isInKinematicSingularity_1 ( const
 RuntimeDerivedValuesBundle * rtdv , const int * modeVector , const double *
 motionData ) { const double * rtdvd = rtdv -> mDoubles . mValues ; const int
 * rtdvi = rtdv -> mInts . mValues ; double xx [ 12 ] ; ( void ) rtdvd ; (
-void ) rtdvi ; ( void ) modeVector ; xx [ 0 ] = - motionData [ 126 ] ; xx [ 1
-] = - motionData [ 127 ] ; xx [ 2 ] = - motionData [ 128 ] ; xx [ 3 ] = -
-motionData [ 129 ] ; xx [ 4 ] = 0.9958524573065585 ; xx [ 5 ] = -
-0.09068858100887965 ; xx [ 6 ] = 4.55902949587172e-3 ; xx [ 7 ] =
-5.716624978144062e-3 ; pm_math_Quaternion_compose_ra ( xx + 0 , xx + 4 , xx +
-8 ) ; return fabs ( ( xx [ 9 ] * xx [ 11 ] + xx [ 8 ] * xx [ 10 ] ) * 2.0 ) >
-0.99999999999999 ; } boolean_T draft7_a151ee3d_1_isInKinematicSingularity (
+void ) rtdvi ; ( void ) modeVector ; xx [ 0 ] = - motionData [ 112 ] ; xx [ 1
+] = - motionData [ 113 ] ; xx [ 2 ] = - motionData [ 114 ] ; xx [ 3 ] = -
+motionData [ 115 ] ; xx [ 4 ] = - 0.9956754524795487 ; xx [ 5 ] =
+0.09289991027792205 ; xx [ 6 ] = 6.437320495472446e-12 ; xx [ 7 ] =
+2.076280636928651e-10 ; pm_math_Quaternion_compose_ra ( xx + 0 , xx + 4 , xx
++ 8 ) ; return fabs ( ( xx [ 9 ] * xx [ 11 ] + xx [ 8 ] * xx [ 10 ] ) * 2.0 )
+> 0.99999999999999 ; } boolean_T draft7_a151ee3d_1_isInKinematicSingularity (
 const void * mech , const RuntimeDerivedValuesBundle * rtdv , size_t
 constraintIdx , const int * modeVector , const double * motionData ) { ( void
 ) mech ; ( void ) rtdv ; ( void ) modeVector ; ( void ) motionData ; switch (
@@ -1085,10 +981,4 @@ simState [ 81 ] = asmState [ 81 ] ; simState [ 82 ] = asmState [ 82 ] ;
 simState [ 83 ] = asmState [ 83 ] ; simState [ 84 ] = asmState [ 84 ] ;
 simState [ 85 ] = asmState [ 85 ] ; simState [ 86 ] = asmState [ 86 ] ;
 simState [ 87 ] = asmState [ 87 ] ; simState [ 88 ] = asmState [ 88 ] ;
-simState [ 89 ] = asmState [ 89 ] ; simState [ 90 ] = asmState [ 90 ] ;
-simState [ 91 ] = asmState [ 91 ] ; simState [ 92 ] = asmState [ 92 ] ;
-simState [ 93 ] = asmState [ 93 ] ; simState [ 94 ] = asmState [ 94 ] ;
-simState [ 95 ] = asmState [ 95 ] ; simState [ 96 ] = asmState [ 96 ] ;
-simState [ 97 ] = asmState [ 97 ] ; simState [ 98 ] = asmState [ 98 ] ;
-simState [ 99 ] = asmState [ 99 ] ; simState [ 100 ] = asmState [ 100 ] ;
-simState [ 101 ] = asmState [ 101 ] ; }
+simState [ 89 ] = asmState [ 89 ] ; }

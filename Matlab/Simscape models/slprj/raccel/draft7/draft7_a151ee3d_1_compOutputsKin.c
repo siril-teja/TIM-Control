@@ -12,7 +12,7 @@ RuntimeDerivedValuesBundle * rtdv , const double * state , const int *
 modeVector , const double * input , const double * inputDot , const double *
 inputDdot , const double * discreteState , double * output ,
 NeuDiagnosticManager * neDiagMgr ) { const double * rtdvd = rtdv -> mDoubles
-. mValues ; const int * rtdvi = rtdv -> mInts . mValues ; double xx [ 190 ] ;
+. mValues ; const int * rtdvi = rtdv -> mInts . mValues ; double xx [ 188 ] ;
 ( void ) rtdvd ; ( void ) rtdvi ; ( void ) modeVector ; ( void ) input ; (
 void ) inputDot ; ( void ) inputDdot ; ( void ) discreteState ; ( void )
 neDiagMgr ; xx [ 0 ] = 9.87654321 ; xx [ 1 ] = 0.5 ; xx [ 2 ] = xx [ 1 ] *
@@ -88,51 +88,52 @@ xx + 41 , xx + 30 , xx + 34 ) ; pm_math_Quaternion_compose_ra ( xx + 26 , xx
 + 34 , xx + 30 ) ; xx [ 2 ] = xx [ 1 ] * state [ 24 ] ; xx [ 3 ] = sin ( xx [
 2 ] ) ; xx [ 38 ] = cos ( xx [ 2 ] ) ; xx [ 39 ] = xx [ 3 ] ; xx [ 40 ] = - (
 1.82992095932877e-11 * xx [ 3 ] ) ; xx [ 41 ] = - ( 5.235917730680519e-12 *
-xx [ 3 ] ) ; xx [ 42 ] = 0.9991449255755711 ; xx [ 43 ] = -
-0.04069340420070983 ; xx [ 44 ] = - 5.269348941183292e-3 ; xx [ 45 ] = -
-5.069370067487187e-3 ; pm_math_Quaternion_compose_ra ( xx + 38 , xx + 42 , xx
-+ 46 ) ; xx [ 2 ] = xx [ 1 ] * state [ 25 ] ; xx [ 3 ] = sin ( xx [ 2 ] ) ;
-xx [ 38 ] = cos ( xx [ 2 ] ) ; xx [ 39 ] = - ( 0.01017403174547095 * xx [ 3 ]
-) ; xx [ 40 ] = 0.9992497622599684 * xx [ 3 ] ; xx [ 41 ] =
-0.03736845864413881 * xx [ 3 ] ; pm_math_Quaternion_compose_ra ( xx + 46 , xx
-+ 38 , xx + 42 ) ; xx [ 2 ] = xx [ 1 ] * state [ 26 ] ; xx [ 1 ] = sin ( xx [
-2 ] ) ; xx [ 38 ] = cos ( xx [ 2 ] ) ; xx [ 39 ] = 0.01050408723065136 * xx [
-1 ] ; xx [ 40 ] = - ( 0.03726153110399754 * xx [ 1 ] ) ; xx [ 41 ] =
-0.9992503402307336 * xx [ 1 ] ; pm_math_Quaternion_compose_ra ( xx + 42 , xx
-+ 38 , xx + 1 ) ; xx [ 38 ] = - 1.160451719412536e-3 ; xx [ 39 ] = -
-0.02864342077244468 ; xx [ 40 ] = - 0.1242034406115433 ;
-pm_math_Quaternion_xform_ra ( xx + 1 , xx + 38 , xx + 41 ) ; xx [ 8 ] =
-4.855313199912053e-13 - xx [ 41 ] ; xx [ 38 ] = 0.01419776350117569 - xx [ 42
-] ; xx [ 39 ] = 0.0153662351784256 - xx [ 43 ] ; xx [ 40 ] = xx [ 8 ] ; xx [
-41 ] = xx [ 38 ] ; xx [ 42 ] = xx [ 39 ] ; pm_math_Quaternion_xform_ra ( xx +
-30 , xx + 40 , xx + 43 ) ; xx [ 40 ] = 2.484784205278315e-13 ; xx [ 41 ] =
-0.01055813361575447 ; xx [ 42 ] = - 0.01718904409441589 ;
-pm_math_Quaternion_xform_ra ( xx + 34 , xx + 40 , xx + 46 ) ; xx [ 40 ] =
-7.111565911668068e-14 + xx [ 46 ] ; xx [ 41 ] = 0.01482354797278426 - xx [ 47
-] ; xx [ 42 ] = 0.01597192626903846 - xx [ 48 ] ; xx [ 46 ] = - xx [ 40 ] ;
-xx [ 47 ] = xx [ 41 ] ; xx [ 48 ] = xx [ 42 ] ; pm_math_Quaternion_xform_ra (
-xx + 26 , xx + 46 , xx + 49 ) ; xx [ 46 ] = - 3.478043091554657e-14 ; xx [ 47
-] = 8.616599387917045e-3 ; xx [ 48 ] = - 0.01781379291801384 ;
-pm_math_Quaternion_xform_ra ( xx + 22 , xx + 46 , xx + 52 ) ; xx [ 46 ] =
-1.222885353421585e-13 - xx [ 52 ] ; xx [ 47 ] = 0.01371330802384472 - xx [ 53
-] ; xx [ 48 ] = 0.01482112808326479 - xx [ 54 ] ; pm_math_Quaternion_xform_ra
-( xx + 18 , xx + 46 , xx + 52 ) ; xx [ 55 ] = 6.664202092713185e-14 ; xx [ 56
-] = 6.161981679940124e-3 ; xx [ 57 ] = - 0.01687376340899878 ;
-pm_math_Quaternion_xform_ra ( xx + 14 , xx + 55 , xx + 58 ) ; xx [ 55 ] =
-0.01018286292250497 - xx [ 59 ] ; xx [ 56 ] = 0.01643121746247235 - xx [ 60 ]
-; xx [ 59 ] = - xx [ 58 ] ; xx [ 60 ] = xx [ 55 ] ; xx [ 61 ] = xx [ 56 ] ;
-pm_math_Quaternion_xform_ra ( xx + 10 , xx + 59 , xx + 62 ) ; xx [ 57 ] =
-0.0187094325596859 ; xx [ 59 ] = 8.538390167322628e-3 ; xx [ 60 ] = xx [ 57 ]
-* xx [ 9 ] + xx [ 6 ] * xx [ 59 ] ; xx [ 65 ] = xx [ 5 ] ; xx [ 66 ] = xx [ 9
-] ; xx [ 67 ] = xx [ 6 ] ; xx [ 61 ] = xx [ 57 ] * xx [ 5 ] ; xx [ 57 ] = xx
-[ 59 ] * xx [ 5 ] ; xx [ 68 ] = - xx [ 60 ] ; xx [ 69 ] = xx [ 61 ] ; xx [ 70
-] = xx [ 57 ] ; pm_math_Vector3_cross_ra ( xx + 65 , xx + 68 , xx + 71 ) ; xx
-[ 59 ] = 2.0 ; xx [ 68 ] = ( xx [ 7 ] * xx [ 60 ] + xx [ 71 ] ) * xx [ 59 ] ;
-xx [ 60 ] = xx [ 43 ] + xx [ 49 ] + xx [ 52 ] + xx [ 62 ] - xx [ 68 ] ;
+xx [ 3 ] ) ; xx [ 42 ] = 0.9992594490823861 ; xx [ 43 ] = -
+0.03847796017939601 ; xx [ 44 ] = 3.657873200514057e-11 ; xx [ 45 ] =
+1.959485864323585e-10 ; pm_math_Quaternion_compose_ra ( xx + 38 , xx + 42 ,
+xx + 46 ) ; xx [ 2 ] = xx [ 1 ] * state [ 25 ] ; xx [ 3 ] = sin ( xx [ 2 ] )
+; xx [ 4 ] = 0.9994592018341244 ; xx [ 8 ] = 0.03288318520300273 ; xx [ 38 ]
+= cos ( xx [ 2 ] ) ; xx [ 39 ] = 4.103512650758317e-10 * xx [ 3 ] ; xx [ 40 ]
+= xx [ 4 ] * xx [ 3 ] ; xx [ 41 ] = xx [ 8 ] * xx [ 3 ] ;
+pm_math_Quaternion_compose_ra ( xx + 46 , xx + 38 , xx + 42 ) ; xx [ 2 ] = xx
+[ 1 ] * state [ 26 ] ; xx [ 1 ] = sin ( xx [ 2 ] ) ; xx [ 38 ] = cos ( xx [ 2
+] ) ; xx [ 39 ] = - ( 6.492504809889092e-11 * xx [ 1 ] ) ; xx [ 40 ] = - ( xx
+[ 8 ] * xx [ 1 ] ) ; xx [ 41 ] = xx [ 4 ] * xx [ 1 ] ;
+pm_math_Quaternion_compose_ra ( xx + 42 , xx + 38 , xx + 1 ) ; xx [ 38 ] =
+3.04214492957313e-11 ; xx [ 39 ] = - 0.02935858602823881 ; xx [ 40 ] = -
+0.1242654207645331 ; pm_math_Quaternion_xform_ra ( xx + 1 , xx + 38 , xx + 41
+) ; xx [ 8 ] = 4.855313199912053e-13 - xx [ 41 ] ; xx [ 38 ] =
+0.01419776350117569 - xx [ 42 ] ; xx [ 39 ] = 0.0153662351784256 - xx [ 43 ]
+; xx [ 40 ] = xx [ 8 ] ; xx [ 41 ] = xx [ 38 ] ; xx [ 42 ] = xx [ 39 ] ;
+pm_math_Quaternion_xform_ra ( xx + 30 , xx + 40 , xx + 43 ) ; xx [ 40 ] =
+2.484784205278315e-13 ; xx [ 41 ] = 0.01055813361575447 ; xx [ 42 ] = -
+0.01718904409441589 ; pm_math_Quaternion_xform_ra ( xx + 34 , xx + 40 , xx +
+46 ) ; xx [ 40 ] = 7.111565911668068e-14 + xx [ 46 ] ; xx [ 41 ] =
+0.01482354797278426 - xx [ 47 ] ; xx [ 42 ] = 0.01597192626903846 - xx [ 48 ]
+; xx [ 46 ] = - xx [ 40 ] ; xx [ 47 ] = xx [ 41 ] ; xx [ 48 ] = xx [ 42 ] ;
+pm_math_Quaternion_xform_ra ( xx + 26 , xx + 46 , xx + 49 ) ; xx [ 46 ] = -
+3.478043091554657e-14 ; xx [ 47 ] = 8.616599387917045e-3 ; xx [ 48 ] = -
+0.01781379291801384 ; pm_math_Quaternion_xform_ra ( xx + 22 , xx + 46 , xx +
+52 ) ; xx [ 46 ] = 1.222885353421585e-13 - xx [ 52 ] ; xx [ 47 ] =
+0.01371330802384472 - xx [ 53 ] ; xx [ 48 ] = 0.01482112808326479 - xx [ 54 ]
+; pm_math_Quaternion_xform_ra ( xx + 18 , xx + 46 , xx + 52 ) ; xx [ 55 ] =
+6.664202092713185e-14 ; xx [ 56 ] = 6.161981679940124e-3 ; xx [ 57 ] = -
+0.01687376340899878 ; pm_math_Quaternion_xform_ra ( xx + 14 , xx + 55 , xx +
+58 ) ; xx [ 55 ] = 0.01018286292250497 - xx [ 59 ] ; xx [ 56 ] =
+0.01643121746247235 - xx [ 60 ] ; xx [ 59 ] = - xx [ 58 ] ; xx [ 60 ] = xx [
+55 ] ; xx [ 61 ] = xx [ 56 ] ; pm_math_Quaternion_xform_ra ( xx + 10 , xx +
+59 , xx + 62 ) ; xx [ 57 ] = 0.0187094325596859 ; xx [ 59 ] =
+8.538390167322628e-3 ; xx [ 60 ] = xx [ 57 ] * xx [ 9 ] + xx [ 6 ] * xx [ 59
+] ; xx [ 65 ] = xx [ 5 ] ; xx [ 66 ] = xx [ 9 ] ; xx [ 67 ] = xx [ 6 ] ; xx [
+61 ] = xx [ 57 ] * xx [ 5 ] ; xx [ 57 ] = xx [ 59 ] * xx [ 5 ] ; xx [ 68 ] =
+- xx [ 60 ] ; xx [ 69 ] = xx [ 61 ] ; xx [ 70 ] = xx [ 57 ] ;
+pm_math_Vector3_cross_ra ( xx + 65 , xx + 68 , xx + 71 ) ; xx [ 59 ] = 2.0 ;
+xx [ 68 ] = ( xx [ 7 ] * xx [ 60 ] + xx [ 71 ] ) * xx [ 59 ] ; xx [ 60 ] = xx
+[ 43 ] + xx [ 49 ] + xx [ 52 ] + xx [ 62 ] - xx [ 68 ] ;
 pm_math_Quaternion_compose_ra ( xx + 30 , xx + 1 , xx + 74 ) ; xx [ 78 ] = -
 xx [ 74 ] ; xx [ 79 ] = - xx [ 75 ] ; xx [ 80 ] = - xx [ 76 ] ; xx [ 81 ] = -
-xx [ 77 ] ; xx [ 82 ] = 1.621693191737018e-3 ; xx [ 83 ] =
-0.01603935194780268 ; xx [ 84 ] = 0.1973953748196041 ;
+xx [ 77 ] ; xx [ 82 ] = 3.290524933036545e-11 ; xx [ 83 ] =
+0.01673590256851844 ; xx [ 84 ] = 0.1971461327241312 ;
 pm_math_Quaternion_xform_ra ( xx + 78 , xx + 82 , xx + 85 ) ; xx [ 69 ] =
 0.06197538565817786 - xx [ 59 ] * ( xx [ 72 ] - xx [ 61 ] * xx [ 7 ] ) ; xx [
 61 ] = xx [ 63 ] + xx [ 69 ] ; xx [ 70 ] = xx [ 53 ] + xx [ 61 ] ; xx [ 78 ]
@@ -164,8 +165,8 @@ xx + 62 , xx + 71 ) ; xx [ 62 ] = xx [ 71 ] + xx [ 46 ] +
 80 ) ; xx [ 62 ] = xx [ 80 ] - xx [ 40 ] - 8.947197148478258e-14 ; xx [ 63 ]
 = xx [ 81 ] + xx [ 41 ] + 0.0386335011732275 ; xx [ 64 ] = xx [ 82 ] + xx [
 42 ] - 2.940430357145393e-3 ; pm_math_Quaternion_xform_ra ( xx + 26 , xx + 62
-, xx + 80 ) ; xx [ 62 ] = - 6.605394032297572e-4 ; xx [ 63 ] = -
-0.08234236971698156 ; xx [ 64 ] = - 0.130840158189375 ;
+, xx + 80 ) ; xx [ 62 ] = 8.599010959602973e-12 ; xx [ 63 ] = -
+0.08308907864317851 ; xx [ 64 ] = - 0.1306612955003031 ;
 pm_math_Quaternion_xform_ra ( xx + 1 , xx + 62 , xx + 88 ) ; xx [ 62 ] = xx [
 88 ] + xx [ 8 ] + 5.287708455224579e-13 ; xx [ 63 ] = xx [ 89 ] + xx [ 38 ] +
 0.03767096436270765 ; xx [ 64 ] = xx [ 90 ] + xx [ 39 ] -
@@ -212,82 +213,80 @@ xx [ 64 ] = 5.644585223800618e-3 ; pm_math_Quaternion_xform_ra ( xx + 34 , xx
 + 62 , xx + 106 ) ; xx [ 62 ] = xx [ 106 ] - xx [ 40 ] - 0.03295989990236177
 ; xx [ 63 ] = xx [ 107 ] + xx [ 41 ] + 0.01601356214944519 ; xx [ 64 ] = xx [
 108 ] + xx [ 42 ] - 0.01475302284711638 ; pm_math_Quaternion_xform_ra ( xx +
-26 , xx + 62 , xx + 106 ) ; xx [ 62 ] = - 0.02855975561335375 ; xx [ 63 ] = -
-0.06190209972411849 ; xx [ 64 ] = - 0.1103901590767691 ;
+26 , xx + 62 , xx + 106 ) ; xx [ 62 ] = - 0.02788730047518068 ; xx [ 63 ] = -
+0.06226499915804137 ; xx [ 64 ] = - 0.1105856995801309 ;
 pm_math_Quaternion_xform_ra ( xx + 1 , xx + 62 , xx + 109 ) ; xx [ 62 ] = xx
 [ 109 ] + xx [ 8 ] + 0.03234149932875941 ; xx [ 63 ] = xx [ 110 ] + xx [ 38 ]
 + 0.02029712378537596 ; xx [ 64 ] = xx [ 111 ] + xx [ 39 ] -
 0.01526834402904475 ; pm_math_Quaternion_xform_ra ( xx + 30 , xx + 62 , xx +
-109 ) ; xx [ 62 ] = 0.02720888144130509 ; xx [ 63 ] = - 0.06131317982669802 ;
-xx [ 64 ] = - 0.1109544366642564 ; pm_math_Quaternion_xform_ra ( xx + 1 , xx
+109 ) ; xx [ 62 ] = 0.02788730050748512 ; xx [ 63 ] = - 0.06226499918103524 ;
+xx [ 64 ] = - 0.1105856995772642 ; pm_math_Quaternion_xform_ra ( xx + 1 , xx
 + 62 , xx + 112 ) ; xx [ 62 ] = xx [ 112 ] + xx [ 8 ] - 0.03234149932846699 ;
 xx [ 63 ] = xx [ 113 ] + xx [ 38 ] + 0.02029712378655961 ; xx [ 64 ] = xx [
 114 ] + xx [ 39 ] - 0.01526834402870608 ; pm_math_Quaternion_xform_ra ( xx +
 30 , xx + 62 , xx + 112 ) ; xx [ 54 ] = 0.01688944435119629 ; xx [ 62 ] =
 0.1319682159423828 ; xx [ 63 ] = 0.8089576416015625 ; xx [ 115 ] =
-0.01519594655146509 ; xx [ 116 ] = 0.1066526728995764 ; xx [ 117 ] = -
-0.03585936688742598 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 115 , xx +
-118 ) ; xx [ 115 ] = - 0.01857933020468612 ; xx [ 116 ] = 0.1062960041055536
-; xx [ 117 ] = - 0.03551762226730922 ; pm_math_Quaternion_xform_ra ( xx + 74
+0.01688944443296599 ; xx [ 116 ] = 0.1061533353579484 ; xx [ 117 ] = -
+0.0363534993916424 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 115 , xx +
+118 ) ; xx [ 115 ] = - 0.01688944426942647 ; xx [ 116 ] = 0.1061533353718742
+; xx [ 117 ] = - 0.03635349939337851 ; pm_math_Quaternion_xform_ra ( xx + 74
 , xx + 115 , xx + 121 ) ; xx [ 64 ] = 9.709312438964843e-3 ; xx [ 83 ] = -
 2.232642650604248e-3 ; xx [ 84 ] = 0.8689576416015625 ; xx [ 115 ] =
-0.01045379203557594 ; xx [ 116 ] = - 0.08550357325700537 ; xx [ 117 ] =
-4.618692289715317e-3 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 115 , xx
-+ 124 ) ; xx [ 115 ] = - 8.962756426230073e-3 ; xx [ 116 ] = -
-0.08570861308462711 ; xx [ 117 ] = 4.815152588944403e-3 ;
+9.709312439494935e-3 ; xx [ 116 ] = - 0.08575875923336911 ; xx [ 117 ] =
+4.916076512637418e-3 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 115 , xx
++ 124 ) ; xx [ 115 ] = - 9.709312438434646e-3 ; xx [ 116 ] = -
+0.0857587592253635 ; xx [ 117 ] = 4.916076511639372e-3 ;
 pm_math_Quaternion_xform_ra ( xx + 74 , xx + 115 , xx + 127 ) ; xx [ 115 ] =
 0.06488653564453126 ; xx [ 116 ] = 0.03644176864624023 ; xx [ 117 ] =
-0.9499576416015625 ; xx [ 130 ] = 0.1049001030020798 ; xx [ 131 ] =
-0.02043269096374428 ; xx [ 132 ] = - 0.1631011914932122 ;
+0.9499576416015625 ; xx [ 130 ] = 0.1069609375520753 ; xx [ 131 ] =
+0.01842456453313058 ; xx [ 132 ] = - 0.1622978990106889 ;
 pm_math_Quaternion_xform_ra ( xx + 74 , xx + 130 , xx + 133 ) ; xx [ 130 ] =
 0.1324676666259766 ; xx [ 131 ] = 0.1263068237304688 ; xx [ 132 ] =
-0.9199576416015626 ; xx [ 136 ] = 0.09519527419625862 ; xx [ 137 ] = -
-0.07787409280153862 ; xx [ 138 ] = - 0.0859897565171039 ;
+0.9199576416015626 ; xx [ 136 ] = 0.09543898773968792 ; xx [ 137 ] = -
+0.07942755025287042 ; xx [ 138 ] = - 0.08485896084049524 ;
 pm_math_Quaternion_xform_ra ( xx + 74 , xx + 136 , xx + 139 ) ; xx [ 136 ] =
-xx [ 139 ] + xx [ 60 ] ; xx [ 137 ] = xx [ 140 ] + xx [ 79 ] ; xx [ 138 ] =
-xx [ 141 ] + xx [ 51 ] ; xx [ 139 ] = - 0.1089988975238918 ; xx [ 140 ] =
-0.01817390566611121 ; xx [ 141 ] = - 0.1609369210652937 ;
-pm_math_Quaternion_xform_ra ( xx + 74 , xx + 139 , xx + 142 ) ; xx [ 139 ] =
-- 0.09566229085706808 ; xx [ 140 ] = - 0.0798895592638616 ; xx [ 141 ] = -
-0.08405862367883098 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 139 , xx +
-145 ) ; xx [ 139 ] = 0.0 ; xx [ 148 ] = - 5.113793264997846e-4 ; xx [ 149 ] =
-- 0.09338152545463696 ; xx [ 150 ] = - 0.1276196231940676 ;
-pm_math_Quaternion_xform_ra ( xx + 74 , xx + 148 , xx + 151 ) ; xx [ 140 ] =
-0.019933675415717 ; xx [ 141 ] = 0.904526583782246 ; xx [ 154 ] = -
-8.371860108687535e-13 ; xx [ 155 ] = - 0.05202883057027102 ; xx [ 156 ] = -
-5.800535526395379e-3 ; pm_math_Quaternion_xform_ra ( xx + 30 , xx + 154 , xx
-+ 157 ) ; xx [ 160 ] = 1.4285959311088e-13 ; xx [ 161 ] = -
-0.05524484988788111 ; xx [ 162 ] = - 7.469488033553544e-3 ;
-pm_math_Quaternion_xform_ra ( xx + 26 , xx + 160 , xx + 163 ) ; xx [ 166 ] =
-- 3.166185351073283e-13 ; xx [ 167 ] = - 0.0513211464694144 ; xx [ 168 ] = -
-0.01219126570664875 ; pm_math_Quaternion_xform_ra ( xx + 18 , xx + 166 , xx +
-169 ) ; xx [ 172 ] = - 3.88840995326696e-5 ; xx [ 173 ] = -
-0.04658678468440397 ; xx [ 174 ] = - 0.0171197768192325 ;
-pm_math_Quaternion_xform_ra ( xx + 10 , xx + 172 , xx + 175 ) ; xx [ 151 ] =
-xx [ 176 ] + xx [ 69 ] - xx [ 140 ] ; xx [ 69 ] = xx [ 177 ] + xx [ 43 ] - xx
-[ 141 ] ; xx [ 172 ] = 3.589592652997154e-4 ; xx [ 173 ] = -
-0.0992696951755801 ; xx [ 174 ] = - 0.04774769892825004 ;
-pm_math_Quaternion_xform_ra ( xx + 74 , xx + 172 , xx + 178 ) ; xx [ 172 ] =
-- 2.379801354292325e-4 ; xx [ 173 ] = - 0.09302601482760833 ; xx [ 174 ] = -
-0.1002280204038836 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 172 , xx +
-181 ) ; xx [ 172 ] = 2.260746069722036e-3 ; xx [ 173 ] = -
-0.04605411151762104 ; xx [ 174 ] = 0.1957490784859245 ;
-pm_math_Quaternion_xform_ra ( xx + 74 , xx + 172 , xx + 184 ) ; xx [ 172 ] =
-1.609776826571665e-3 ; xx [ 173 ] = - 0.0784239666300556 ; xx [ 174 ] =
-0.09762907436900872 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 172 , xx +
-187 ) ; xx [ 43 ] = xx [ 175 ] - xx [ 68 ] ; pm_math_Quaternion_xform_ra ( xx
-+ 14 , xx + 166 , xx + 74 ) ; xx [ 14 ] = xx [ 74 ] - xx [ 58 ] ; xx [ 15 ] =
+- 0.1069609374479245 ; xx [ 137 ] = 0.01842456462132292 ; xx [ 138 ] = -
+0.1622978990216837 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 136 , xx +
+142 ) ; xx [ 136 ] = - 0.09543898772417915 ; xx [ 137 ] = -
+0.07942755017417825 ; xx [ 138 ] = - 0.08485896085030567 ;
+pm_math_Quaternion_xform_ra ( xx + 74 , xx + 136 , xx + 145 ) ; xx [ 136 ] =
+3.885494606759522e-12 ; xx [ 137 ] = - 0.09411462191877414 ; xx [ 138 ] = -
+0.1273910586185666 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 136 , xx +
+148 ) ; xx [ 151 ] = 0.019933675415717 ; xx [ 148 ] = 0.904526583782246 ; xx
+[ 152 ] = - 8.371860108687535e-13 ; xx [ 153 ] = - 0.05202883057027102 ; xx [
+154 ] = - 5.800535526395379e-3 ; pm_math_Quaternion_xform_ra ( xx + 30 , xx +
+152 , xx + 155 ) ; xx [ 158 ] = 1.4285959311088e-13 ; xx [ 159 ] = -
+0.05524484988788111 ; xx [ 160 ] = - 7.469488033553544e-3 ;
+pm_math_Quaternion_xform_ra ( xx + 26 , xx + 158 , xx + 161 ) ; xx [ 164 ] =
+- 3.166185351073283e-13 ; xx [ 165 ] = - 0.0513211464694144 ; xx [ 166 ] = -
+0.01219126570664875 ; pm_math_Quaternion_xform_ra ( xx + 18 , xx + 164 , xx +
+167 ) ; xx [ 170 ] = - 3.88840995326696e-5 ; xx [ 171 ] = -
+0.04658678468440397 ; xx [ 172 ] = - 0.0171197768192325 ;
+pm_math_Quaternion_xform_ra ( xx + 10 , xx + 170 , xx + 173 ) ; xx [ 155 ] =
+xx [ 174 ] + xx [ 69 ] - xx [ 151 ] ; xx [ 69 ] = xx [ 175 ] + xx [ 43 ] - xx
+[ 148 ] ; xx [ 170 ] = - 2.504410750965726e-12 ; xx [ 171 ] = -
+0.09965295527533023 ; xx [ 172 ] = - 0.04748937414644091 ;
+pm_math_Quaternion_xform_ra ( xx + 74 , xx + 170 , xx + 176 ) ; xx [ 170 ] =
+2.673753481903913e-12 ; xx [ 171 ] = - 0.09363902851404965 ; xx [ 172 ] = -
+0.09999991316511406 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 170 , xx +
+179 ) ; xx [ 170 ] = 7.372473583872229e-12 ; xx [ 171 ] = -
+0.04536761330787328 ; xx [ 172 ] = 0.1957785797555702 ;
+pm_math_Quaternion_xform_ra ( xx + 74 , xx + 170 , xx + 182 ) ; xx [ 170 ] =
+- 1.114658466207941e-12 ; xx [ 171 ] = - 0.07816903966177527 ; xx [ 172 ] =
+0.09779984268466979 ; pm_math_Quaternion_xform_ra ( xx + 74 , xx + 170 , xx +
+185 ) ; xx [ 43 ] = xx [ 173 ] - xx [ 68 ] ; pm_math_Quaternion_xform_ra ( xx
++ 14 , xx + 164 , xx + 74 ) ; xx [ 14 ] = xx [ 74 ] - xx [ 58 ] ; xx [ 15 ] =
 xx [ 75 ] + xx [ 55 ] + 0.04705808460307085 ; xx [ 16 ] = xx [ 76 ] + xx [ 56
 ] + 9.875319015864496e-3 ; pm_math_Quaternion_xform_ra ( xx + 10 , xx + 14 ,
-xx + 74 ) ; pm_math_Quaternion_xform_ra ( xx + 22 , xx + 160 , xx + 10 ) ; xx
+xx + 74 ) ; pm_math_Quaternion_xform_ra ( xx + 22 , xx + 158 , xx + 10 ) ; xx
 [ 13 ] = xx [ 10 ] + xx [ 46 ] + 3.146640243071065e-13 ; xx [ 14 ] = xx [ 11
 ] + xx [ 47 ] + 0.05113078984265527 ; xx [ 15 ] = xx [ 12 ] + xx [ 48 ] +
 8.028332428854309e-3 ; pm_math_Quaternion_xform_ra ( xx + 18 , xx + 13 , xx +
-10 ) ; pm_math_Quaternion_xform_ra ( xx + 34 , xx + 154 , xx + 13 ) ; xx [ 16
+10 ) ; pm_math_Quaternion_xform_ra ( xx + 34 , xx + 152 , xx + 13 ) ; xx [ 16
 ] = xx [ 13 ] - xx [ 40 ] - 1.392865120001009e-13 ; xx [ 17 ] = xx [ 14 ] +
 xx [ 41 ] + 0.05459122458051579 ; xx [ 18 ] = xx [ 15 ] + xx [ 42 ] +
 4.374450014251545e-3 ; pm_math_Quaternion_xform_ra ( xx + 26 , xx + 16 , xx +
-13 ) ; pm_math_Quaternion_xform_ra ( xx + 1 , xx + 148 , xx + 16 ) ; xx [ 1 ]
+13 ) ; pm_math_Quaternion_xform_ra ( xx + 1 , xx + 136 , xx + 16 ) ; xx [ 1 ]
 = xx [ 16 ] + xx [ 8 ] + 7.867570466502235e-13 ; xx [ 2 ] = xx [ 17 ] + xx [
 38 ] + 0.05039051001790674 ; xx [ 3 ] = xx [ 18 ] + xx [ 39 ] +
 1.894890190564144e-3 ; pm_math_Quaternion_xform_ra ( xx + 30 , xx + 1 , xx +
@@ -334,34 +333,30 @@ xx [ 129 ] + xx [ 51 ] ; output [ 81 ] = xx [ 115 ] ; output [ 82 ] = xx [
 116 ] ; output [ 83 ] = xx [ 117 ] ; output [ 84 ] = xx [ 133 ] + xx [ 60 ] ;
 output [ 85 ] = xx [ 134 ] + xx [ 79 ] ; output [ 86 ] = xx [ 135 ] + xx [ 51
 ] ; output [ 87 ] = xx [ 130 ] ; output [ 88 ] = xx [ 131 ] ; output [ 89 ] =
-xx [ 132 ] ; output [ 90 ] = xx [ 136 ] ; output [ 91 ] = xx [ 137 ] ; output
-[ 92 ] = xx [ 138 ] ; output [ 93 ] = - xx [ 115 ] ; output [ 94 ] = xx [ 116
-] ; output [ 95 ] = xx [ 117 ] ; output [ 96 ] = xx [ 142 ] + xx [ 60 ] ;
-output [ 97 ] = xx [ 143 ] + xx [ 79 ] ; output [ 98 ] = xx [ 144 ] + xx [ 51
-] ; output [ 99 ] = - xx [ 130 ] ; output [ 100 ] = xx [ 131 ] ; output [ 101
-] = xx [ 132 ] ; output [ 102 ] = xx [ 145 ] + xx [ 60 ] ; output [ 103 ] =
-xx [ 146 ] + xx [ 79 ] ; output [ 104 ] = xx [ 147 ] + xx [ 51 ] ; output [
-105 ] = xx [ 130 ] ; output [ 106 ] = xx [ 131 ] ; output [ 107 ] = xx [ 132
-] ; output [ 108 ] = xx [ 136 ] ; output [ 109 ] = xx [ 137 ] ; output [ 110
-] = xx [ 138 ] ; output [ 111 ] = xx [ 139 ] ; output [ 112 ] = xx [ 139 ] ;
-output [ 113 ] = xx [ 139 ] ; output [ 114 ] = - 0.08572967529296877 ; output
-[ 115 ] = - 0.0228299789428711 ; output [ 116 ] = 0.08705419921875011 ;
-output [ 117 ] = xx [ 152 ] + xx [ 79 ] - xx [ 140 ] ; output [ 118 ] = xx [
-153 ] + xx [ 51 ] - xx [ 141 ] ; output [ 119 ] = xx [ 158 ] + xx [ 78 ] - xx
-[ 140 ] ; output [ 120 ] = xx [ 159 ] + xx [ 50 ] - xx [ 141 ] ; output [ 121
-] = xx [ 164 ] + xx [ 70 ] - xx [ 140 ] ; output [ 122 ] = xx [ 165 ] + xx [
-49 ] - xx [ 141 ] ; output [ 123 ] = xx [ 170 ] + xx [ 61 ] - xx [ 140 ] ;
-output [ 124 ] = xx [ 171 ] + xx [ 44 ] - xx [ 141 ] ; output [ 125 ] = xx [
-151 ] ; output [ 126 ] = xx [ 69 ] ; output [ 127 ] = xx [ 179 ] + xx [ 79 ]
-- xx [ 140 ] ; output [ 128 ] = xx [ 180 ] + xx [ 51 ] - xx [ 141 ] ; output
-[ 129 ] = xx [ 182 ] + xx [ 79 ] - xx [ 140 ] ; output [ 130 ] = xx [ 183 ] +
-xx [ 51 ] - xx [ 141 ] ; output [ 131 ] = xx [ 185 ] + xx [ 79 ] - xx [ 140 ]
-; output [ 132 ] = xx [ 186 ] + xx [ 51 ] - xx [ 141 ] ; output [ 133 ] = xx
-[ 188 ] + xx [ 79 ] - xx [ 140 ] ; output [ 134 ] = xx [ 189 ] + xx [ 51 ] -
-xx [ 141 ] ; output [ 135 ] = sqrt ( xx [ 43 ] * xx [ 43 ] + xx [ 151 ] * xx
-[ 151 ] + xx [ 69 ] * xx [ 69 ] ) ; output [ 136 ] = sqrt ( xx [ 74 ] * xx [
-74 ] + xx [ 75 ] * xx [ 75 ] + xx [ 76 ] * xx [ 76 ] ) ; output [ 137 ] =
-sqrt ( xx [ 10 ] * xx [ 10 ] + xx [ 11 ] * xx [ 11 ] + xx [ 12 ] * xx [ 12 ]
-) ; output [ 138 ] = sqrt ( xx [ 13 ] * xx [ 13 ] + xx [ 14 ] * xx [ 14 ] +
-xx [ 15 ] * xx [ 15 ] ) ; output [ 139 ] = sqrt ( xx [ 16 ] * xx [ 16 ] + xx
-[ 17 ] * xx [ 17 ] + xx [ 18 ] * xx [ 18 ] ) ; return NULL ; }
+xx [ 132 ] ; output [ 90 ] = xx [ 139 ] + xx [ 60 ] ; output [ 91 ] = xx [
+140 ] + xx [ 79 ] ; output [ 92 ] = xx [ 141 ] + xx [ 51 ] ; output [ 93 ] =
+- xx [ 115 ] ; output [ 94 ] = xx [ 116 ] ; output [ 95 ] = xx [ 117 ] ;
+output [ 96 ] = xx [ 142 ] + xx [ 60 ] ; output [ 97 ] = xx [ 143 ] + xx [ 79
+] ; output [ 98 ] = xx [ 144 ] + xx [ 51 ] ; output [ 99 ] = - xx [ 130 ] ;
+output [ 100 ] = xx [ 131 ] ; output [ 101 ] = xx [ 132 ] ; output [ 102 ] =
+xx [ 145 ] + xx [ 60 ] ; output [ 103 ] = xx [ 146 ] + xx [ 79 ] ; output [
+104 ] = xx [ 147 ] + xx [ 51 ] ; output [ 105 ] = xx [ 149 ] + xx [ 79 ] - xx
+[ 151 ] ; output [ 106 ] = xx [ 150 ] + xx [ 51 ] - xx [ 148 ] ; output [ 107
+] = xx [ 156 ] + xx [ 78 ] - xx [ 151 ] ; output [ 108 ] = xx [ 157 ] + xx [
+50 ] - xx [ 148 ] ; output [ 109 ] = xx [ 162 ] + xx [ 70 ] - xx [ 151 ] ;
+output [ 110 ] = xx [ 163 ] + xx [ 49 ] - xx [ 148 ] ; output [ 111 ] = xx [
+168 ] + xx [ 61 ] - xx [ 151 ] ; output [ 112 ] = xx [ 169 ] + xx [ 44 ] - xx
+[ 148 ] ; output [ 113 ] = xx [ 155 ] ; output [ 114 ] = xx [ 69 ] ; output [
+115 ] = xx [ 177 ] + xx [ 79 ] - xx [ 151 ] ; output [ 116 ] = xx [ 178 ] +
+xx [ 51 ] - xx [ 148 ] ; output [ 117 ] = xx [ 180 ] + xx [ 79 ] - xx [ 151 ]
+; output [ 118 ] = xx [ 181 ] + xx [ 51 ] - xx [ 148 ] ; output [ 119 ] = xx
+[ 183 ] + xx [ 79 ] - xx [ 151 ] ; output [ 120 ] = xx [ 184 ] + xx [ 51 ] -
+xx [ 148 ] ; output [ 121 ] = xx [ 186 ] + xx [ 79 ] - xx [ 151 ] ; output [
+122 ] = xx [ 187 ] + xx [ 51 ] - xx [ 148 ] ; output [ 123 ] = sqrt ( xx [ 43
+] * xx [ 43 ] + xx [ 155 ] * xx [ 155 ] + xx [ 69 ] * xx [ 69 ] ) ; output [
+124 ] = sqrt ( xx [ 74 ] * xx [ 74 ] + xx [ 75 ] * xx [ 75 ] + xx [ 76 ] * xx
+[ 76 ] ) ; output [ 125 ] = sqrt ( xx [ 10 ] * xx [ 10 ] + xx [ 11 ] * xx [
+11 ] + xx [ 12 ] * xx [ 12 ] ) ; output [ 126 ] = sqrt ( xx [ 13 ] * xx [ 13
+] + xx [ 14 ] * xx [ 14 ] + xx [ 15 ] * xx [ 15 ] ) ; output [ 127 ] = sqrt (
+xx [ 16 ] * xx [ 16 ] + xx [ 17 ] * xx [ 17 ] + xx [ 18 ] * xx [ 18 ] ) ;
+return NULL ; }
