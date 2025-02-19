@@ -2403,8 +2403,8 @@ rtwCAPI_ModelMappingStaticInfo mmiStatic = { { rtBlockSignals , 526 ,
 rtRootInputs , 0 , rtRootOutputs , 0 } , { rtBlockParameters , 492 ,
 rtModelParameters , 15 } , { ( NULL ) , 0 } , { rtDataTypeMap ,
 rtDimensionMap , rtFixPtMap , rtElementMap , rtSampleTimeMap ,
-rtDimensionArray } , "float" , { 619447055U , 793229641U , 352458180U ,
-1964927758U } , ( NULL ) , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ;
+rtDimensionArray } , "float" , { 3647260254U , 2342433552U , 4045754210U ,
+1465138732U } , ( NULL ) , 0 , ( boolean_T ) 0 , rt_LoggedStateIdxList } ;
 const rtwCAPI_ModelMappingStaticInfo * draft7_GetCAPIStaticMap ( void ) {
 return & mmiStatic ; }
 #ifndef HOST_CAPI_BUILD
