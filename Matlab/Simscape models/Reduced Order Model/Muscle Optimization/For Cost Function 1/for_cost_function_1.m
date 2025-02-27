@@ -7,7 +7,7 @@ open_system('ROM_draft3');
 
 %% Define Different Initial Values
 initial_values = [0, 50, 100, 150, 200, 250]; % Values to test
-
+%initial_values = [0]; 
 %% Specify Design Variables Manually (Instead of Loading a Session)
 DesignVars = sdo.getParameterFromModel('ROM_draft3', ...
     {'Left_EO', 'Left_IO', 'Left_LongThor', 'Left_MF', 'Left_Psoas', 'Left_RA'});
@@ -26,7 +26,7 @@ optimization_data = struct();
 optimization_data.Cost1 = [];
 optimization_data.X = [];
 optimization_data.Y = [];
-optimization_data.InitialDesignVars = {};  % Store initial design variables for each run
+optimization_data.InitialDesignVars = [];  % Store initial design variables for each run
 optimization_data.U = []; 
 
 
@@ -34,8 +34,8 @@ optimization_data.U = [];
     colors = lines(6); % MATLAB's built-in colormap (or use jet, parula, etc.)
     scatterPlots = gobjects(1, 6); % Array to store scatter plots for each dataset
     closestPoints = gobjects(1, 6); % Array to store closest point markers
-
-    figure;
+    
+    hFig = figure; % Store the figure handle
     hold on;
     xlabel('U = max(|X|, |Y|)');
     ylabel('Sum of Cubes of Forces x 10E6');
@@ -133,7 +133,15 @@ for i = 1:length(initial_values)
 
     %% Optimization Options
     Options = sdo.OptimizeOptions;
-    Options.MethodOptions.Algorithm = 'active-set';
+    
+    %Options.MethodOptions.Algorithm = 'interior-point';
+    %Options.MethodOptions.MaxIterations = 2 ;
+    
+    Options.Method = 'surrogateopt';
+    Options.MethodOptions.MaxFunctionEvaluations = 100;
+    Options.MethodOptions.ObjectiveLimit = 0.001;
+    
+    
     Options.OptimizedModel = Simulator;
 
     %% Run Optimization
@@ -171,7 +179,7 @@ function Vals = ROM_draft3_optFcn(P,Simulator,Requirements)
 
 % Simulate the model.
 Simulator.Parameters = P;
-Simulator = sim(Simulator, 'Timeout', 120);
+Simulator = sim(Simulator, 'Timeout', 300);
 
 % Retrieve logged signal data.
 SimLog = find(Simulator.LoggedData,get_param('ROM_draft3','SignalLoggingName'));
@@ -191,14 +199,15 @@ U = max(abs(X), abs(Y));
  optimization_data.U = [optimization_data.U; U];
 
  % Store the initial and optimized design variables in each run
- optimization_data.InitialDesignVars{i} = initial_design_vars;
+ %optimization_data.InitialDesignVars{i} = initial_design_vars;
  %optimization_data.OptimizedDesignVars{i} = Optimized_DesignVars;
+ optimization_data.InitialDesignVars = [optimization_data.InitialDesignVars; initial_values(1)];
 
  
 
 
 % Inside the loop, print the values
-fprintf('%-15d%-10.4f%-10.4f%-10.4f%-10.4f\n', initial_values(i), Cost1, X, Y, U);
+%fprintf('%-15d%-10.4f%-10.4f%-10.4f%-10.4f\n', initial_values(i), Cost1, X, Y, U);
 
 
 % Identify which dataset this point belongs to (assuming 6 different initial conditions)
@@ -239,11 +248,11 @@ Vals.Cleq = [...
 end
 
 % Save the accumulated optimization data at the end of the loop
-save('optim_data.mat', 'optimization_data');
+save('optim_data_L1-S1_MuscleForces.mat', 'optimization_data');
 
+savefig(hFig, 'optim_progress_L1-S1_MuscleForces.fig');
 
-%% Save results for later analysis
-save('optim_variables.mat', 'results');
+save('optim_variables_L1-S1_MuscleForces.mat', 'results');
 
 fprintf('Optimization runs completed and saved.\n');
 
