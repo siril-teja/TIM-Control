@@ -1,0 +1,155 @@
+LabJack .NET Beta Drivers
+2-01-05
+
+This file shows what the proper method is for calling all of the
+LabJack functions.  The paramter format should be similiar to
+what is listed in the users guide.  The only major differences are
+how some arrays are defined, and what parameters need to be listed
+with the ref keyword.  There are also a few type changes, such as 
+using a byte[] instead of an unsigned char*. 
+
+ 
+
+public static void GetErrorString(int errorCode, StringBuilder errorString);
+
+public static int ListAll( int[] productIDList,
+	int[] serialNumList,  int[] localIDList,
+	int[] powerList,  int[,] calMatrix,
+	ref int numFound, ref int reserved1, ref int reserved2);
+
+public static int EAnalogIn(ref int idnum, int demo, int channel,
+	int gain, ref int overVoltage, ref float voltage);
+
+public static int EAnalogOut(ref int idnum, int demo,
+	float analogOut0, float analogOut1);
+ 
+public static int ECount(ref int idnum, int demo,
+	int resetCounter, ref double count, ref double ms);
+ 
+public static int EDigitalIn(ref int idnum, int demo, int channel,
+	int readD, ref int state);
+
+public static int EDigitalOut(ref int idnum, int demo, int channel,
+	int writeD, int state);
+
+public static int AsynchConfig(ref int idnum, int demo, int timeoutMult,
+	int configA, int configB, int configTE, int fullA, int fullB,
+	int fullC, int halfA, int halfB, int halfC);
+
+public static int Asynch(ref int idnum, int demo, int portB,
+	int enableTE, int enableTO, int enableDel, int baudrate,
+	int numWrite, int numRead,  int[] data);
+
+public static int AISample(ref int idnum, int demo,  
+	ref int stateIO, int updateIO, int ledOn,
+	int numChannels,  int[] channels, 
+	int[] gains,
+	int disableCal, ref int overVoltage,
+	float[] voltages);
+
+public static int AIBurst(ref int idnum, int demo, int stateIOin, int updateIO,
+	int ledOn, int numChannels,  int[] channels, 
+	int[] gains, ref float scanRate,
+	int disableCal, int triggerIO, int triggerState,
+	int numScans, int timeout,  float[,] voltages,
+	int[] stateIOout, ref int overVoltage,
+	int transferMode);
+
+public static int AIStreamStart(ref int idnum, int demo, int stateIOin,
+	int updateIO, int ledOn, int numChannels,
+	int[]channels,  int[]gains,
+	ref float scanRate, int disableCal, int reserved1,
+	int readCount);
+
+public static int AIStreamRead(int localID, int numScans,
+	int timeout,  float[,] voltages,
+	int[]stateIOout, ref int reserved,
+	ref int ljScanBacklog, ref int overVoltage);
+
+public static int AIStreamClear(int localID);
+
+public static int AOUpdate(ref int idnum, int demo, int trisD,
+	int trisIO, ref int stateD, ref int stateIO,
+	int updateDigital, int resetCounter,
+	ref uint count, float analogOut0, float analogOut1);
+
+public static int BitsToVolts(int chnum, int chgain,
+	int bits, ref float volts);
+ 
+public static int VoltsToBits(int chnum, int chgain,
+	float volts, ref int bits);
+
+public static int Counter(ref int idnum, int demo, 
+	ref int stateD, ref int stateIO,
+	int resetCounter, int enableSTB, ref uint count);
+
+public static int DigitalIO(ref int idnum, int demo, ref int trisD,
+	int trisIO, ref int stateD, ref int stateIO,
+	int updateDigital, ref int outputD);
+
+public static float GetDriverVersion();
+
+public static void GetErrorString(int errorcode,
+	 char[] errorString);
+
+public static float GetFirmwareVersion(ref int idnum);
+
+public static int GetWinVersion(ref uint majorVersion,
+	ref uint minorVersion, ref uint buildNumber,
+	ref uint platformID, ref uint servicePackMajor,	
+	ref uint servicePackMinor);
+
+public static int LocalID(ref int idnum, int localID);
+
+public static int NoThread(ref int idnum, int noThread);
+
+public static int PulseOut(ref int idnum, int demo,int lowFirst,
+	int bitSelect, int numPulses, int timeB1,
+	int timeC1, int timeB2, int timeC2);
+
+public static int PulseOutStart(ref int idnum, int demo,int lowFirst,
+	int bitSelect, int numPulses, int timeB1,
+	int timeC1, int timeB2, int timeC2);
+
+public static int PulseOutFinish(ref int idnum, int demo,int timeoutMS);
+
+public static int PulseOutCalc(ref float frequency, ref int timeB,
+	ref int timeC);
+
+public static int ReEnum(ref int idnum);
+
+public static int Reset(ref int idnum);
+
+public static int ResetLJ(ref int idnum);
+
+public static int SHT1X(ref int idnum, int demo, int softComm,
+	int mode, int statusReg, ref float tempC,
+	ref float tempF, ref float rh);
+
+public static int SHTComm(ref int idnum, int softComm,
+	int waitMeas, int serialReset, int dataRate,
+	int numWrite, int numRead,
+	byte[] datatx,
+	byte[] datarx);
+
+public static int SHTCRC(int statusReg,
+	int numWrite, int numRead,
+	byte[] datatx,
+	byte[] datarx);
+
+public static int Synch(ref int idnum, int demo, int mode,
+	int msDelay, int husDelay, int controlCS,
+	int csLine, int csState, int configD,
+	int numWriteRead,  int[] data);
+
+public static int Watchdog(ref int idnum, int demo, int active,
+	int timeout, int reset, int activeD0, int activeD1, int activeD8,
+	int stateD0, int stateD1, int stateD8);
+
+public static int ReadMem(ref int idnum, int address,
+	ref int data3, ref int data2, ref int data1,
+	ref int data0);
+	
+public static int WriteMem(ref int idnum, int unlocked, int address,
+	int data3, int data2, int data1,
+	int data0);
